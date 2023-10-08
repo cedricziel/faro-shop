@@ -1,7 +1,7 @@
 {
     "type": "project",
     "license": "proprietary",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": ">=8.1",
@@ -10,6 +10,23 @@
         "doctrine/doctrine-bundle": "^2.10",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.16",
+        "guzzlehttp/guzzle": "^7.8",
+        "guzzlehttp/promises": "^2.0",
+        "nyholm/psr7": "^1.8",
+        "open-telemetry/api": "@beta",
+        "open-telemetry/exporter-otlp": "@beta",
+        "open-telemetry/exporter-zipkin": "@beta",
+        "open-telemetry/opentelemetry-auto-laravel": "^0.0.13",
+        "open-telemetry/opentelemetry-auto-pdo": "^0.0.9",
+        "open-telemetry/opentelemetry-auto-psr3": "^0.0.4",
+        "open-telemetry/opentelemetry-auto-psr15": "^1.0@beta",
+        "open-telemetry/opentelemetry-auto-psr18": "^1.0@beta",
+        "open-telemetry/opentelemetry-auto-slim": "^1.0@beta",
+        "open-telemetry/opentelemetry-auto-symfony": "^1.0@beta",
+        "open-telemetry/opentelemetry-instrumentation-installer": "^0.0.6",
+        "open-telemetry/sdk": "@beta",
+        "open-telemetry/transport-grpc": "^1.0@RC",
+        "php-http/httplug": "^2.4",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.24",
         "symfony/asset": "6.3.*",
@@ -43,7 +60,7 @@
     },
     "config": {
         "allow-plugins": {
-            "php-http/discovery": true,
+            "php-http/discovery": false,
             "symfony/flex": true,
             "symfony/runtime": true
         },
@@ -91,12 +108,14 @@
         }
     },
     "require-dev": {
+        "dbrekelmans/bdi": "^1.1",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
         "phpunit/phpunit": "^9.5",
         "symfony/browser-kit": "6.3.*",
         "symfony/css-selector": "6.3.*",
         "symfony/debug-bundle": "6.3.*",
         "symfony/maker-bundle": "^1.0",
+        "symfony/panther": "^2.1",
         "symfony/phpunit-bridge": "^6.3",
         "symfony/stopwatch": "6.3.*",
         "symfony/web-profiler-bundle": "6.3.*"

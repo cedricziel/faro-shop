@@ -1,3 +1,4 @@
+*.iml
 
 ###> symfony/framework-bundle ###
 /.env.local
