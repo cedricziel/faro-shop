@@ -90,7 +90,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - lint
-      - build
+      - tests
     if: success() && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
