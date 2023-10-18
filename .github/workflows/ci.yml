@@ -92,6 +92,9 @@ jobs:
       - lint
       - tests
     if: success() && github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
