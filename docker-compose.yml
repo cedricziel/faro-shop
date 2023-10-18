@@ -22,7 +22,7 @@ services:
       - php_socket:/var/run/php
     environment:
       OTEL_PHP_AUTOLOAD_ENABLED: true
-      OTEL_SERVICE_NAME: your-service-name
+      OTEL_SERVICE_NAME: faros-shop
       OTEL_TRACES_EXPORTER: otlp
       OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otelcol:4317

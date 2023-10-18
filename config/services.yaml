@@ -19,6 +19,14 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+    OpenTelemetry\SDK\Logs\LoggerProvider:
+        factory: [OpenTelemetry\API\Globals, loggerProvider]
+
+    OpenTelemetry\Contrib\Logs\Monolog\Handler:
+        arguments:
+            - '@OpenTelemetry\SDK\Logs\LoggerProvider'
+            - 'info'
+            - true
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
