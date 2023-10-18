@@ -13,7 +13,7 @@ concurrency:
 
 env:
   REGISTRY: ghcr.io
-  IMAGES_PREFIX: ${{ github.repository }}-
+  IMAGES_PREFIX: ghcr.io/${{ github.repository }}-
 
 jobs:
   tests:
