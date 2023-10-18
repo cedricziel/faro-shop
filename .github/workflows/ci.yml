@@ -106,11 +106,22 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ghcr.io/${{ github.repository }}-app-caddy
+            ghcr.io/${{ github.repository }}-app-php
+            ghcr.io/${{ github.repository }}-database
+            ghcr.io/${{ github.repository }}-otelcol
+
       - name: Build Docker images
         uses: docker/bake-action@v3
         with:
           push: true
           files: |
+            ${{ steps.docker-metadata.outputs.bake-file }}
             docker-compose.yml
             docker-compose.override.yml
           set: |
