@@ -2,6 +2,17 @@
 
 {% block title %}{{ product.name }}{% endblock %}
 
+{% block javascripts %}
+    <script>
+        function trackChangeQuantity(quantity) {
+            faro.api.pushEvent('change_quantity', {quantity: quantity.toString()}, '{{ app.current_route }}');
+        }
+        function trackAddToCart() {
+            faro.api.pushEvent('add_to_cart', {product_id: '{{ app.current_route_parameters.id }}'}, '{{ app.current_route }}');
+        }
+    </script>
+{% endblock %}
+
 {% block body %}
     <div class="container">
         <div class="row mt-3 mb-4">
@@ -18,14 +29,20 @@
                     {{ form_label(form.quantity) }}
                     {{ form_widget(form.quantity, {
                         'attr': {
-                            'class': 'form-control ' ~ (form.quantity.vars.valid ? '' : 'is-invalid')
+                            'class': 'form-control ' ~ (form.quantity.vars.valid ? '' : 'is-invalid'),
+                            'onchange': 'trackChangeQuantity(this.value)',
                         }
                     }) }}
                     <div class="invalid-feedback">
                         {{ form_errors(form.quantity) }}
                     </div>
                 </div>
-                {{ form_widget(form.add, {'attr': {'class': 'btn btn-warning w-25'}}) }}
+                {{ form_widget(form.add, {
+                    'attr': {
+                        'class': 'btn btn-warning w-25',
+                        'onclick': 'trackAddToCart()'
+                    }
+                }) }}
                 {{ form_end(form) }}
             </div>
         </div>
