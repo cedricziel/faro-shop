@@ -6,9 +6,6 @@ receivers:
       http:
         endpoint: 0.0.0.0:4318
 
-  opencensus:
-    endpoint: 0.0.0.0:55678
-
   # Collect own metrics
   prometheus:
     config:
@@ -18,31 +15,15 @@ receivers:
           static_configs:
             - targets: ['0.0.0.0:8888']
 
-  jaeger:
-    protocols:
-      grpc:
-        endpoint: 0.0.0.0:14250
-      thrift_binary:
-        endpoint: 0.0.0.0:6832
-      thrift_compact:
-        endpoint: 0.0.0.0:6831
-      thrift_http:
-        endpoint: 0.0.0.0:14268
-
-  zipkin:
-    endpoint: 0.0.0.0:9411
-
 processors:
   batch:
 
 exporters:
   logging:
-    verbosity: detailed
   otlphttp/grafanacloud:
     auth:
       authenticator: basicauth/grafanacloud
     endpoint: ${GRAFANA_OTLP_ENDPOINT}
-
 
 extensions:
   health_check:
@@ -57,14 +38,14 @@ service:
   extensions: [health_check, pprof, zpages, basicauth/grafanacloud]
   pipelines:
     traces:
-      receivers: [otlp, opencensus, jaeger, zipkin]
+      receivers: [otlp]
       processors: [batch]
-      exporters: [logging, otlphttp/grafanacloud]
+      exporters: [otlphttp/grafanacloud]
     metrics:
-      receivers: [otlp, opencensus, prometheus]
+      receivers: [otlp, prometheus]
       processors: [batch]
-      exporters: [logging, otlphttp/grafanacloud]
+      exporters: [otlphttp/grafanacloud]
     logs:
       receivers: [otlp]
       processors: [batch]
-      exporters: [logging, otlphttp/grafanacloud]
+      exporters: [otlphttp/grafanacloud]
