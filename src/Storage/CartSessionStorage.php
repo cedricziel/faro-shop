@@ -4,6 +4,8 @@ namespace App\Storage;
 
 use App\Entity\Order;
 use App\Repository\OrderRepository;
+use OpenTelemetry\API\Globals;
+use OpenTelemetry\API\Trace\TracerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -28,16 +30,22 @@ class CartSessionStorage
      */
     const CART_KEY_NAME = 'cart_id';
 
+    private TracerInterface $tracer;
+
     /**
      * CartSessionStorage constructor.
      *
      * @param RequestStack $requestStack
      * @param OrderRepository $cartRepository
      */
-    public function __construct(RequestStack $requestStack, OrderRepository $cartRepository)
+    public function __construct(
+        RequestStack $requestStack,
+        OrderRepository $cartRepository,
+    )
     {
         $this->requestStack = $requestStack;
         $this->cartRepository = $cartRepository;
+        $this->tracer = Globals::tracerProvider()->getTracer(static::class);;
     }
 
     /**
@@ -47,10 +55,19 @@ class CartSessionStorage
      */
     public function getCart(): ?Order
     {
-        return $this->cartRepository->findOneBy([
+        $span = $this
+            ->tracer
+            ->spanBuilder(static::class . '::getCart')
+            ->startSpan();
+
+        $cart = $this->cartRepository->findOneBy([
             'id' => $this->getCartId(),
             'status' => Order::STATUS_CART
         ]);
+
+        $span->end();
+
+        return $cart;
     }
 
     /**
@@ -60,7 +77,14 @@ class CartSessionStorage
      */
     public function setCart(Order $cart): void
     {
+        $span = $this
+            ->tracer
+            ->spanBuilder(static::class . '::setCart')
+            ->startSpan();
+
         $this->getSession()->set(self::CART_KEY_NAME, $cart->getId());
+
+        $span->end();
     }
 
     /**
@@ -70,7 +94,16 @@ class CartSessionStorage
      */
     private function getCartId(): ?int
     {
-        return $this->getSession()->get(self::CART_KEY_NAME);
+        $span = $this
+            ->tracer
+            ->spanBuilder(static::class . '::getCartId')
+            ->startSpan();
+
+        $cartId = $this->getSession()->get(self::CART_KEY_NAME);
+
+        $span->end();
+
+        return $cartId;
     }
 
     private function getSession(): SessionInterface
