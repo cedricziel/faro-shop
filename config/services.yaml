@@ -19,6 +19,15 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+
+    OpenTelemetry\SDK\Trace\TracerProviderInterface:
+        factory: [ OpenTelemetry\API\Globals, tracerProvider ]
+
+    OpenTelemetry\API\Trace\TracerInterface:
+        factory: ['@OpenTelemetry\SDK\Trace\TracerProviderInterface', getTracer]
+        arguments:
+            $name: 'com.grafana.faros-shop'
+
     OpenTelemetry\SDK\Logs\LoggerProvider:
         factory: [OpenTelemetry\API\Globals, loggerProvider]
 
