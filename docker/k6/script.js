@@ -37,8 +37,8 @@ export default async function () {
         });
 
         // Product detail page
-        page.locator('input[name="add_to_cart[quantity]"]').type('1');
-        const addButton = page.locator('input#add_to_cart_add')
+        page.locator('input[name="add_to_cart[quantity]"]').type(1);
+        const addButton = page.locator('button#add_to_cart_add')
 
         await Promise.all([page.waitForNavigation(), addButton.click()]);
 
