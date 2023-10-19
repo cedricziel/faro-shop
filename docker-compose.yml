@@ -25,7 +25,10 @@ services:
       - 13133 # health_check extension
       - 4317 # OTLP gRPC receiver
       - 4318 # OTLP http receiver
-      - 55679 # zpages extension
+    environment:
+      - GRAFANA_OTLP_ENDPOINT
+      - GRAFANA_INSTANCE_ID
+      - GRAFANA_CLOUD_APIKEY
   php:
     image: ${IMAGES_PREFIX:-}app-php
     build:
@@ -33,12 +36,19 @@ services:
     restart: unless-stopped
     volumes:
       - php_socket:/var/run/php
+    depends_on:
+      otelcol:
+        condition: service_started
+        restart: true
     environment:
       OTEL_PHP_AUTOLOAD_ENABLED: true
       OTEL_SERVICE_NAME: faros-shop
       OTEL_TRACES_EXPORTER: otlp
+      OTEL_METRICS_EXPORTER: otlp
+      OTEL_LOGS_EXPORTER: otlp
       OTEL_EXPORTER_OTLP_PROTOCOL: grpc
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otelcol:4317
+      OTEL_RESOURCE_ATTRIBUTES: service.namespace=faros-shop,service.instance.id=1234
       OTEL_PROPAGATORS: baggage,tracecontext
       TRUSTED_PROXIES: ${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}
       TRUSTED_HOSTS: ^${SERVER_NAME:-example\.com|localhost}|caddy$$
