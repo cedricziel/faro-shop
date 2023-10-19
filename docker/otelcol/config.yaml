@@ -38,24 +38,33 @@ processors:
 exporters:
   logging:
     verbosity: detailed
+  otlphttp/grafanacloud:
+    auth:
+      authenticator: basicauth/grafanacloud
+    endpoint: ${GRAFANA_OTLP_ENDPOINT}
+
 
 extensions:
   health_check:
   pprof:
   zpages:
+  basicauth/grafanacloud:
+    client_auth:
+      username: ${GRAFANA_INSTANCE_ID}
+      password: ${GRAFANA_CLOUD_APIKEY}
 
 service:
-  extensions: [health_check, pprof, zpages]
+  extensions: [health_check, pprof, zpages, basicauth/grafanacloud]
   pipelines:
     traces:
       receivers: [otlp, opencensus, jaeger, zipkin]
       processors: [batch]
-      exporters: [logging]
+      exporters: [logging, otlphttp/grafanacloud]
     metrics:
       receivers: [otlp, opencensus, prometheus]
       processors: [batch]
-      exporters: [logging]
+      exporters: [logging, otlphttp/grafanacloud]
     logs:
       receivers: [otlp]
       processors: [batch]
-      exporters: [logging]
+      exporters: [logging, otlphttp/grafanacloud]
