@@ -25,20 +25,25 @@
                     // Mandatory, the URL of the Grafana Cloud collector with embedded application key.
                     url: '{{ faroUrl }}',
 
+                    metas: [
+                        () => ({
+                            page: {
+                                id: '{{ app.current_route }}',
+                                url: location.href,
+                                attributes: {
+                                    {%- for arg, value in app.current_route_parameters -%}
+                                    {{ arg }}: '{{ value }}',
+                                    {%- endfor -%}
+                                },
+                            },
+                        }),
+                    ],
+
                     // Mandatory, the identification label(s) of your application
                     app: {
                         name: 'faros-shop',
                         version: "1.0.0",
                     },
-                    page: {
-                        id: '{{ app.current_route }}',
-                        url: location.href,
-                        attributes: {
-                        {%- for arg, value in app.current_route_parameters -%}
-                            {{ arg }}: '{{ value }}',
-                        {%- endfor -%}
-                        }
-                    }
                 });
 
                 // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
