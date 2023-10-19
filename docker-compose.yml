@@ -11,6 +11,9 @@ services:
     environment:
       WEB_HOST: caddy
     restart: always
+    depends_on:
+      caddy:
+        condition: service_started
   otelcol:
     image: ${IMAGES_PREFIX:-}otelcol
     build:
