@@ -14,6 +14,8 @@ services:
     depends_on:
       caddy:
         condition: service_started
+    profiles:
+      - live
   otelcol:
     image: ${IMAGES_PREFIX:-}otelcol
     build:
@@ -29,6 +31,8 @@ services:
       - GRAFANA_OTLP_ENDPOINT
       - GRAFANA_INSTANCE_ID
       - GRAFANA_CLOUD_APIKEY
+    profiles:
+      - live
   php:
     image: ${IMAGES_PREFIX:-}app-php
     build:
@@ -36,10 +40,6 @@ services:
     restart: unless-stopped
     volumes:
       - php_socket:/var/run/php
-    depends_on:
-      otelcol:
-        condition: service_started
-        restart: true
     environment:
       OTEL_PHP_AUTOLOAD_ENABLED: true
       OTEL_SERVICE_NAME: faros-shop
@@ -61,7 +61,6 @@ services:
       MERCURE_URL: ${CADDY_MERCURE_URL:-http://caddy/.well-known/mercure}
       MERCURE_PUBLIC_URL: https://${SERVER_NAME:-localhost}/.well-known/mercure
       MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
-
   caddy:
     image: ${IMAGES_PREFIX:-}app-caddy
     depends_on:
