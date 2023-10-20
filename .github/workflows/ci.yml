@@ -116,6 +116,7 @@ jobs:
           images: |
             ghcr.io/${{ github.repository }}-app-caddy
             ghcr.io/${{ github.repository }}-app-php
+            ghcr.io/${{ github.repository }}-php-cache
             ghcr.io/${{ github.repository }}-database
             ghcr.io/${{ github.repository }}-otelcol
 
