@@ -66,6 +66,8 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
 
+    needs: bump
+
     permissions:
       contents: read
       packages: write
