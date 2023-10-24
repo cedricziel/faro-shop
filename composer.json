@@ -18,7 +18,7 @@
         "open-telemetry/exporter-zipkin": "@beta",
         "open-telemetry/opentelemetry-auto-laravel": "^0.0.13",
         "open-telemetry/opentelemetry-auto-pdo": "^0.0.9",
-        "open-telemetry/opentelemetry-auto-psr3": "^0.0.4",
+        "open-telemetry/opentelemetry-auto-psr3": "^0.0.5",
         "open-telemetry/opentelemetry-auto-psr15": "^1.0@beta",
         "open-telemetry/opentelemetry-auto-psr18": "^1.0@beta",
         "open-telemetry/opentelemetry-auto-slim": "^1.0@beta",
