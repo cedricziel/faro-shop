@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94a069c7aafd89bee7caa484c47beebd",
+    "content-hash": "ffcb6d96a3785b4fbaff84705c336d05",
     "packages": [
         {
             "name": "brick/math",
@@ -4051,22 +4051,22 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr3",
-            "version": "0.0.4",
+            "version": "0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-psr3.git",
-                "reference": "1b88584709d7ed5f8c0ecb7a84eaf97b2ca2c4bf"
+                "reference": "f4a74b743bf10dd55c98cb3ee9c33640773346cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr3/zipball/1b88584709d7ed5f8c0ecb7a84eaf97b2ca2c4bf",
-                "reference": "1b88584709d7ed5f8c0ecb7a84eaf97b2ca2c4bf",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr3/zipball/f4a74b743bf10dd55c98cb3ee9c33640773346cf",
+                "reference": "f4a74b743bf10dd55c98cb3ee9c33640773346cf",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "open-telemetry/api": ">=1.0.0RC2",
-                "open-telemetry/sem-conv": "^1",
+                "open-telemetry/sem-conv": "^1.22",
                 "php": "^8.0",
                 "psr/log": "^1 || ^2 || ^3"
             },
@@ -4110,9 +4110,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-psr3/tree/0.0.4"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-psr3/tree/0.0.5"
             },
-            "time": "2023-10-04T11:07:13+00:00"
+            "time": "2023-10-19T20:17:35+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-slim",
