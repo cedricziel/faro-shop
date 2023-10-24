@@ -4487,7 +4487,7 @@
         },
         {
             "name": "open-telemetry/transport-grpc",
-            "version": "1.0.0RC1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/transport-grpc.git",
@@ -14300,7 +14300,7 @@
         "open-telemetry/opentelemetry-auto-psr18": 10,
         "open-telemetry/opentelemetry-auto-slim": 10,
         "open-telemetry/opentelemetry-auto-symfony": 10,
-        "open-telemetry/transport-grpc": 5
+        "open-telemetry/sdk": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
