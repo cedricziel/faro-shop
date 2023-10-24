@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - main
-  pull_request: ~
+  pull_request:
+    branches:
+      - main
   workflow_dispatch: ~
 
 concurrency:
@@ -16,6 +18,50 @@ env:
   IMAGES_PREFIX: ghcr.io/${{ github.repository }}-
 
 jobs:
+  bump:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    name: Bump version
+    outputs:
+      bumped_sha: ${{ steps.sha.outputs.SHA }}
+      new_version: ${{ steps.version.outputs.VERSION }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Bump version
+        uses: remorses/bump-version@js
+        with:
+          version_file: ./VERSION
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: github.ref == 'refs/heads/main'
+
+      - name: Get Version
+        id: version
+        run: |
+          echo ::set-output name=VERSION::$(cat ./VERSION)
+        if: github.ref == 'refs/heads/main'
+
+      - name: Push changes to main
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tags: true
+        if: github.ref == 'refs/heads/main'
+      - name: get sha
+        id: sha
+        run: |
+          sha_new=$(git rev-parse HEAD)
+          echo $sha_new
+          echo "::set-output name=SHA::$sha_new"
+        if: github.ref == 'refs/heads/main'
+      - run:
+          echo ${{ steps.sha.outputs.SHA }}
+        if: github.ref == 'refs/heads/master'
+
   tests:
     name: Tests
     runs-on: ubuntu-latest
@@ -132,3 +178,27 @@ jobs:
             *.cache-from=type=gha,scope=${{github.ref}}
             *.cache-from=type=gha,scope=refs/heads/main
             *.cache-to=type=gha,scope=${{github.ref}},mode=max
+
+  create_release:
+    needs:
+      - bump
+      - build-images
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ needs.bump.outputs.SHA }}
+          fetch-depth: 0
+
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create ${{ needs.bump.outputs.new_version }} \
+            --title "v${{ needs.bump.outputs.new_version }}" \
+            --generate-notes
+    if: github.ref == 'refs/heads/main'
