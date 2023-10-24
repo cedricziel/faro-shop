@@ -74,8 +74,20 @@ jobs:
 
     steps:
       -
-        name: Checkout
+        name: Fetch updated source through SHA from bump
         uses: actions/checkout@v3
+        with:
+          ref: ${{ needs.bump.outputs.bumped_sha }}
+          fetch-depth: 0
+          if: github.ref == 'refs/heads/main'
+
+      - name: Fetch source from event
+        uses: actions/checkout@v3
+        if: github.ref != 'refs/heads/main'
+
+      - run: cp env.template .env
+        shell: bash
+
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
