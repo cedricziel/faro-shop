@@ -1,0 +1,57 @@
+name: Release
+on:
+  release:
+    types: [prereleased, released]
+
+jobs:
+  release_asset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Package Helm Chart
+        uses: WyriHaximus/github-action-helm3@v2
+        with:
+          exec: helm package k8s/charts/faro-shop
+      - name: Upload Release Asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ github.event.release.tag_name }} faro-shop-${{ github.event.release.tag_name }}.tgz
+      - uses: actions/upload-artifact@v3
+        with:
+          name: chart-archive
+          path: faro-shop-${{ github.event.release.tag_name }}.tgz
+
+  release_chart:
+    needs: release_asset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: chart-archive
+
+      - name: Package Helm Chart
+        uses: WyriHaximus/github-action-helm3@v2
+        with:
+          exec: helm repo index . --merge index.yaml --url https://github.com/cedricziel/faro-shop/releases/download/${{ github.event.release.tag_name }}/
+
+      - run: rm *.tgz
+
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          message: "Update helm repo for version ${{ github.event.release.tag_name }}"
