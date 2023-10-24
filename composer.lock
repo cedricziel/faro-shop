@@ -4347,16 +4347,16 @@
         },
         {
             "name": "open-telemetry/sdk",
-            "version": "1.0.0RC2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/sdk.git",
-                "reference": "f95a0cdc1db476da985853264201ad419c8ce982"
+                "reference": "1c6020b4f1b85fdd647538ee46f6c83360d7c11e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/sdk/zipball/f95a0cdc1db476da985853264201ad419c8ce982",
-                "reference": "f95a0cdc1db476da985853264201ad419c8ce982",
+                "url": "https://api.github.com/repos/opentelemetry-php/sdk/zipball/1c6020b4f1b85fdd647538ee46f6c83360d7c11e",
+                "reference": "1c6020b4f1b85fdd647538ee46f6c83360d7c11e",
                 "shasum": ""
             },
             "require": {
@@ -4426,7 +4426,7 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2023-09-27T23:15:51+00:00"
+            "time": "2023-10-18T20:53:08+00:00"
         },
         {
             "name": "open-telemetry/sem-conv",
@@ -14300,7 +14300,6 @@
         "open-telemetry/opentelemetry-auto-psr18": 10,
         "open-telemetry/opentelemetry-auto-slim": 10,
         "open-telemetry/opentelemetry-auto-symfony": 10,
-        "open-telemetry/sdk": 10,
         "open-telemetry/transport-grpc": 5
     },
     "prefer-stable": true,
