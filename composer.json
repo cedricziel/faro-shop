@@ -24,7 +24,7 @@
         "open-telemetry/opentelemetry-auto-slim": "^1.0@beta",
         "open-telemetry/opentelemetry-auto-symfony": "^1.0@beta",
         "open-telemetry/opentelemetry-instrumentation-installer": "^0.0.6",
-        "open-telemetry/opentelemetry-logger-monolog": "^0.0.4",
+        "open-telemetry/opentelemetry-logger-monolog": "^0.0.5",
         "open-telemetry/sdk": "@beta",
         "open-telemetry/transport-grpc": "^1.0@RC",
         "php-http/httplug": "^2.4",
