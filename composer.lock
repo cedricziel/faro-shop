@@ -3992,22 +3992,22 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr18",
-            "version": "1.0.0beta7",
+            "version": "1.0.0beta9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-psr18.git",
-                "reference": "d1d83f5fe3089e06611f855417adee6f28a888c8"
+                "reference": "f63c81e7db518c4336c23a9943d168aec9277477"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr18/zipball/d1d83f5fe3089e06611f855417adee6f28a888c8",
-                "reference": "d1d83f5fe3089e06611f855417adee6f28a888c8",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr18/zipball/f63c81e7db518c4336c23a9943d168aec9277477",
+                "reference": "f63c81e7db518c4336c23a9943d168aec9277477",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "open-telemetry/api": "^1.0.0beta10",
-                "open-telemetry/sem-conv": "^1",
+                "open-telemetry/sem-conv": "^1.22",
                 "php": "^8.0",
                 "psr/http-client": "^1"
             },
@@ -4047,9 +4047,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-psr18/tree/1.0.0beta7"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-psr18/tree/1.0.0beta9"
             },
-            "time": "2023-08-23T22:02:17+00:00"
+            "time": "2023-10-20T00:14:08+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr3",
@@ -14297,10 +14297,10 @@
         "open-telemetry/exporter-otlp": 10,
         "open-telemetry/exporter-zipkin": 10,
         "open-telemetry/opentelemetry-auto-psr15": 10,
-        "open-telemetry/opentelemetry-auto-psr18": 10,
         "open-telemetry/opentelemetry-auto-slim": 10,
         "open-telemetry/opentelemetry-auto-symfony": 10,
-        "open-telemetry/sdk": 10
+        "open-telemetry/sdk": 10,
+        "open-telemetry/transport-grpc": 5
     },
     "prefer-stable": true,
     "prefer-lowest": false,
