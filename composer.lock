@@ -14160,16 +14160,16 @@
         },
         {
             "name": "symfony/web-profiler-bundle",
-            "version": "v6.3.2",
+            "version": "v6.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/web-profiler-bundle.git",
-                "reference": "6101b5ab7857c373d237e121f9060c68b32e1373"
+                "reference": "249cb2486597d3ab810d8bcc8e4db5ad0fc3e3bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/web-profiler-bundle/zipball/6101b5ab7857c373d237e121f9060c68b32e1373",
-                "reference": "6101b5ab7857c373d237e121f9060c68b32e1373",
+                "url": "https://api.github.com/repos/symfony/web-profiler-bundle/zipball/249cb2486597d3ab810d8bcc8e4db5ad0fc3e3bd",
+                "reference": "249cb2486597d3ab810d8bcc8e4db5ad0fc3e3bd",
                 "shasum": ""
             },
             "require": {
@@ -14221,7 +14221,7 @@
                 "dev"
             ],
             "support": {
-                "source": "https://github.com/symfony/web-profiler-bundle/tree/v6.3.2"
+                "source": "https://github.com/symfony/web-profiler-bundle/tree/v6.3.6"
             },
             "funding": [
                 {
@@ -14237,7 +14237,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-07-19T20:17:28+00:00"
+            "time": "2023-10-11T18:18:20+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -14300,7 +14300,8 @@
         "open-telemetry/opentelemetry-auto-psr18": 10,
         "open-telemetry/opentelemetry-auto-slim": 10,
         "open-telemetry/opentelemetry-auto-symfony": 10,
-        "open-telemetry/sdk": 10
+        "open-telemetry/sdk": 10,
+        "open-telemetry/transport-grpc": 5
     },
     "prefer-stable": true,
     "prefer-lowest": false,
