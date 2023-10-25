@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1870b88a10e321aaa0efb53f5077cbd3",
+    "content-hash": "7f00065be1e19a40edd5990244c99403",
     "packages": [
         {
             "name": "brick/math",
@@ -4289,16 +4289,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-logger-monolog",
-            "version": "0.0.4",
+            "version": "0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-logger-monolog.git",
-                "reference": "0339e33db4bc8df4f2dc206124ffbde1655967b7"
+                "reference": "da70f3678aba1e8187f889e78f3a2a55f43f6395"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-logger-monolog/zipball/0339e33db4bc8df4f2dc206124ffbde1655967b7",
-                "reference": "0339e33db4bc8df4f2dc206124ffbde1655967b7",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-logger-monolog/zipball/da70f3678aba1e8187f889e78f3a2a55f43f6395",
+                "reference": "da70f3678aba1e8187f889e78f3a2a55f43f6395",
                 "shasum": ""
             },
             "require": {
@@ -4341,9 +4341,9 @@
                 "otel"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-logger-monolog/tree/0.0.4"
+                "source": "https://github.com/opentelemetry-php/contrib-logger-monolog/tree/0.0.5"
             },
-            "time": "2023-08-28T22:34:44+00:00"
+            "time": "2023-10-17T21:44:43+00:00"
         },
         {
             "name": "open-telemetry/sdk",
