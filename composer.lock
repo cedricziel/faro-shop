@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f00065be1e19a40edd5990244c99403",
+    "content-hash": "39aef6febdc902eec2d2e00c9ae8cd45",
     "packages": [
         {
             "name": "brick/math",
@@ -3871,23 +3871,23 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-pdo",
-            "version": "0.0.9",
+            "version": "0.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-pdo.git",
-                "reference": "fe285220708f672a7450fd6b26db734b9dd73c73"
+                "reference": "3de28140dd53e07cdec27b184ec08c70cd8fd898"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/fe285220708f672a7450fd6b26db734b9dd73c73",
-                "reference": "fe285220708f672a7450fd6b26db734b9dd73c73",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/3de28140dd53e07cdec27b184ec08c70cd8fd898",
+                "reference": "3de28140dd53e07cdec27b184ec08c70cd8fd898",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "ext-pdo": "*",
                 "open-telemetry/api": "^1.0.0beta10",
-                "open-telemetry/sem-conv": "^1",
+                "open-telemetry/sem-conv": "^1.22",
                 "php": "^8.2"
             },
             "require-dev": {
@@ -3925,9 +3925,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.9"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.10"
             },
-            "time": "2023-08-23T22:02:17+00:00"
+            "time": "2023-10-19T20:17:35+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr15",
@@ -14296,6 +14296,7 @@
         "open-telemetry/api": 10,
         "open-telemetry/exporter-otlp": 10,
         "open-telemetry/exporter-zipkin": 10,
+        "open-telemetry/opentelemetry-auto-psr15": 10,
         "open-telemetry/opentelemetry-auto-psr18": 10,
         "open-telemetry/opentelemetry-auto-slim": 10,
         "open-telemetry/opentelemetry-auto-symfony": 10,
