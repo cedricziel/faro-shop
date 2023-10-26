@@ -3613,16 +3613,16 @@
         },
         {
             "name": "open-telemetry/exporter-otlp",
-            "version": "1.0.0RC1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/exporter-otlp.git",
-                "reference": "9bffc8aae8ef4a98bf70b4bad4bd352dce5aec41"
+                "reference": "756092bdff472ea49adb7843c74011606d065b36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/exporter-otlp/zipball/9bffc8aae8ef4a98bf70b4bad4bd352dce5aec41",
-                "reference": "9bffc8aae8ef4a98bf70b4bad4bd352dce5aec41",
+                "url": "https://api.github.com/repos/opentelemetry-php/exporter-otlp/zipball/756092bdff472ea49adb7843c74011606d065b36",
+                "reference": "756092bdff472ea49adb7843c74011606d065b36",
                 "shasum": ""
             },
             "require": {
@@ -3673,7 +3673,7 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2023-09-05T03:38:44+00:00"
+            "time": "2023-10-13T00:48:23+00:00"
         },
         {
             "name": "open-telemetry/exporter-zipkin",
@@ -3740,7 +3740,7 @@
         },
         {
             "name": "open-telemetry/gen-otlp-protobuf",
-            "version": "1.0.0RC1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/gen-otlp-protobuf.git",
@@ -14296,10 +14296,11 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "open-telemetry/api": 10,
-        "open-telemetry/exporter-otlp": 10,
+        "open-telemetry/exporter-zipkin": 10,
         "open-telemetry/opentelemetry-auto-psr15": 10,
         "open-telemetry/opentelemetry-auto-psr18": 10,
         "open-telemetry/opentelemetry-auto-slim": 10,
+        "open-telemetry/opentelemetry-auto-symfony": 10,
         "open-telemetry/sdk": 10,
         "open-telemetry/transport-grpc": 5
     },
