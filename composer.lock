@@ -3677,7 +3677,7 @@
         },
         {
             "name": "open-telemetry/exporter-zipkin",
-            "version": "1.0.0RC1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/exporter-zipkin.git",
@@ -14295,7 +14295,6 @@
     "stability-flags": {
         "open-telemetry/api": 10,
         "open-telemetry/exporter-otlp": 10,
-        "open-telemetry/exporter-zipkin": 10,
         "open-telemetry/opentelemetry-auto-psr15": 10,
         "open-telemetry/opentelemetry-auto-psr18": 10,
         "open-telemetry/opentelemetry-auto-slim": 10,
