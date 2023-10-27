@@ -60,7 +60,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
       - run:
           echo ${{ steps.sha.outputs.SHA }}
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
 
   tests:
     name: Tests
