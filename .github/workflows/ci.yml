@@ -49,7 +49,7 @@ jobs:
 
       - name: Push changes to main
         run: |
-          git tag ${{ needs.bump.outputs.new_version }}
+          git tag -f ${{ steps.version.outputs.VERSION }}
           git push origin --tags
         if: github.ref == 'refs/heads/main'
       - name: get sha
