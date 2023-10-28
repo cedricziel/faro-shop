@@ -161,7 +161,7 @@ jobs:
         with:
           ref: ${{ needs.bump.outputs.bumped_sha }}
           fetch-depth: 0
-          if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
 
       - name: Fetch source from event
         uses: actions/checkout@v3
@@ -205,6 +205,7 @@ jobs:
             *.cache-to=type=gha,scope=${{github.ref}},mode=max
 
   create_release:
+    if: github.ref == 'refs/heads/main'
     needs:
       - bump
       - build-images
@@ -227,4 +228,3 @@ jobs:
             --title "v${{ needs.bump.outputs.new_version }}" \
             --target ${{ needs.bump.outputs.bumped_sha }} \
             --generate-notes
-    if: github.ref == 'refs/heads/main'
