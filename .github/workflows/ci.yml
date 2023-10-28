@@ -220,11 +220,15 @@ jobs:
           ref: ${{ needs.bump.outputs.bumped_sha }}
           fetch-depth: 0
 
+      - run: |
+          git tag ${{ needs.bump.outputs.new_version }}
+          git push origin --tags
+
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: |
           gh release create ${{ needs.bump.outputs.new_version }} \
             --title "v${{ needs.bump.outputs.new_version }}" \
-            --target ${{ needs.bump.outputs.bumped_sha }} \
+            --verify-tag \
             --generate-notes
