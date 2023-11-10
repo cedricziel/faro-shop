@@ -3992,7 +3992,7 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr18",
-            "version": "1.0.0beta9",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-psr18.git",
@@ -4047,7 +4047,7 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-psr18/tree/1.0.0beta9"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-psr18/tree/1.0.0"
             },
             "time": "2023-10-20T00:14:08+00:00"
         },
@@ -14299,7 +14299,6 @@
         "open-telemetry/exporter-otlp": 10,
         "open-telemetry/exporter-zipkin": 10,
         "open-telemetry/opentelemetry-auto-psr15": 10,
-        "open-telemetry/opentelemetry-auto-psr18": 10,
         "open-telemetry/opentelemetry-auto-slim": 10,
         "open-telemetry/opentelemetry-auto-symfony": 10,
         "open-telemetry/sdk": 10,
