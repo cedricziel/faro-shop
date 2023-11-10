@@ -10,7 +10,7 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
   # [bump]
-  version: 0.0.29
+  version: 0.0.30
 
 imagePullSecrets: []
 nameOverride: ""
