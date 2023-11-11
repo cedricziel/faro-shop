@@ -12,68 +12,16 @@
     {% endblock %}
 
     <script>
-        (function () {
-            // Create a script tag for loading the library
-            var script = document.createElement("script");
-
-            // Set the source of the script tag to the CDN
-            script.src =
-                "https://unpkg.com/@grafana/faro-web-sdk@^1.0.0/dist/bundle/faro-web-sdk.iife.js";
-
-            // Initialize the Web-SDK at the onLoad event of the script tag above so it will be called when the library is loaded.
-            script.onload = () => {
-                window.GrafanaFaroWebSdk.initializeFaro({
-                    // Mandatory, the URL of the Grafana Cloud collector with embedded application key.
-                    url: '{{ faroUrl }}',
-
-                    metas: [
-                        () => ({
-                            page: {
-                                id: '{{ app.current_route }}',
-                                url: location.href,
-                                attributes: {
-                                    {%- for arg, value in app.current_route_parameters -%}
-                                    {{ arg }}: '{{ value }}',
-                                    {%- endfor -%}
-                                },
-                            },
-                        }),
-                    ],
-
-                    // Mandatory, the identification label(s) of your application
-                    app: {
-                        name: 'faros-shop',
-                        version: "1.0.0",
-                    },
-                });
-
-                // Load instrumentations at the onLoad event of the web-SDK and after the above configuration.
-                // This is important because we need to ensure that the Web-SDK has been loaded and initialized before we add further instruments!
-                var webTracingScript = document.createElement("script");
-
-                webTracingScript.src =
-                    "https://unpkg.com/@grafana/faro-web-tracing@^1.0.0/dist/bundle/faro-web-tracing.iife.js";
-
-                // Initialize, configure (if necessary) and add the new instrumentation to the already loaded and configured Web-SDK.
-                webTracingScript.onload = () => {
-                    window.GrafanaFaroWebSdk.faro.instrumentations.add(
-                        new window.GrafanaFaroWebTracing.TracingInstrumentation()
-                    );
-                };
-
-                // Append the Web Tracing script tag to the HTML page
-                document.head.appendChild(webTracingScript);
-
-                window.faro.api.pushEvent("page_changed", {
-                    name: "{{ app.current_route }}",
-                });
-
-                window.faro.api.pushError(new Error("Foooo!"));
-            };
-
-            // Append the script tag to the head of the HTML page
-            document.head.appendChild(script);
-        })();
+        window.faroPageMeta = {
+            id: '{{ app.current_route }}',
+            url: location.href,
+            attributes: {
+                {%- for arg, value in app.current_route_parameters -%}
+                {{ arg }}: '{{ value }}',
+                {%- endfor -%}
+            },
+        };
+        window.faroUrl = '{{ faroUrl }}';
     </script>
 
     {% block javascripts %}
