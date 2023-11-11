@@ -3,6 +3,11 @@ on:
   release:
     types: [prereleased, released]
 
+permissions:
+  contents: write
+  pull-requests: write
+  repository-projects: write
+
 jobs:
   release_asset:
     runs-on: ubuntu-latest
