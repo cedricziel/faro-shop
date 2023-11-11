@@ -6,11 +6,13 @@ on:
       - main
     paths:
       - docker/php-ext/**
+      - .github/workflows/build-extensions.yml
   push:
     branches:
       - main
     paths:
       - docker/php-ext/**
+      - .github/workflows/build-extensions.yml
 env:
   REGISTRY: ghcr.io
   IMAGES_PREFIX: ghcr.io/${{ github.repository }}-
