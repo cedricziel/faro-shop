@@ -92,7 +92,7 @@ jobs:
         run: npm install
 
       - name: NPM build
-        run: npm run encore production
+        run: npm run build
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
