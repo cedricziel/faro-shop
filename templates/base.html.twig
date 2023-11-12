@@ -11,28 +11,28 @@
               crossorigin="anonymous">
     {% endblock %}
 
-    <script>
-        window.faroPageMeta = {
-            id: '{{ app.current_route }}',
-            url: location.href,
-            attributes: {
+    {% block javascripts %}
+        <script>
+            window.faroPageMeta = {
+                id: '{{ app.current_route }}',
+                url: location.href,
+                attributes: {
                 {%- for arg, value in app.current_route_parameters -%}
                 {{ arg }}: '{{ value }}',
                 {%- endfor -%}
-            },
-        };
-        window.faroUrl = '{{ faroUrl }}';
-    </script>
+                },
+            };
+            window.faroUrl = '{{ faroUrl }}';
+        </script>
 
-    {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+        {{ encore_entry_script_tags('app') }}
     {% endblock %}
 </head>
 <body>
 {% block header %}
     <nav class="navbar navbar-dark bg-dark sticky-top">
         <a href="{{ path('home') }}" class="navbar-brand">
-            Faros Shop
+            Faro Shop
         </a>
 
         <div class="navbar-nav">

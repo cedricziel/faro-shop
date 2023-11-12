@@ -18,6 +18,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "@grafana/faro-instrumentation-performance-timeline": "^1.2.5",
         "@grafana/faro-web-sdk": "^1.2.5",
         "@grafana/faro-web-tracing": "^1.2.5"
     }

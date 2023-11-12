@@ -67,7 +67,10 @@ Encore
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    .autoProvideVariables({
+        faro: 'faro',
+        'window.faro': 'faro',
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();
