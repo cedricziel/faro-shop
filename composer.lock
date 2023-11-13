@@ -4118,7 +4118,7 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-slim",
-            "version": "1.0.0beta11",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-slim.git",
@@ -4176,7 +4176,7 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-slim/tree/1.0.0beta11"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-slim/tree/1.0.0"
             },
             "time": "2023-10-19T20:17:35+00:00"
         },
@@ -14299,7 +14299,7 @@
         "open-telemetry/exporter-otlp": 10,
         "open-telemetry/exporter-zipkin": 10,
         "open-telemetry/opentelemetry-auto-psr15": 10,
-        "open-telemetry/opentelemetry-auto-slim": 10,
+        "open-telemetry/opentelemetry-auto-psr18": 10,
         "open-telemetry/opentelemetry-auto-symfony": 10,
         "open-telemetry/sdk": 10,
         "open-telemetry/transport-grpc": 5
