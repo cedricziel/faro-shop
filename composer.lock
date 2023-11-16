@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ddf82ef11889e59f04d6b0fb423284d",
+    "content-hash": "3a0100c96b92531bc996e86d22f1d364",
     "packages": [
         {
             "name": "brick/math",
@@ -3812,16 +3812,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-laravel",
-            "version": "0.0.15",
+            "version": "0.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-laravel.git",
-                "reference": "6044b4f2cee59ef4990b58e0c0b002e7130abc8f"
+                "reference": "9fe9fd565b510bd202eea13a3db89a1983ab945e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-laravel/zipball/6044b4f2cee59ef4990b58e0c0b002e7130abc8f",
-                "reference": "6044b4f2cee59ef4990b58e0c0b002e7130abc8f",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-laravel/zipball/9fe9fd565b510bd202eea13a3db89a1983ab945e",
+                "reference": "9fe9fd565b510bd202eea13a3db89a1983ab945e",
                 "shasum": ""
             },
             "require": {
@@ -3874,9 +3874,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-laravel/tree/0.0.15"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-laravel/tree/0.0.16"
             },
-            "time": "2023-10-20T00:14:08+00:00"
+            "time": "2023-11-14T22:35:50+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-pdo",
