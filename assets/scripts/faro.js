@@ -2,6 +2,8 @@ import {BaseInstrumentation, TransportItem} from "@grafana/faro-web-sdk";
 import { getWebInstrumentations, initializeFaro as initializeFaroReal } from '@grafana/faro-web-sdk';
 import { TracingInstrumentation } from '@grafana/faro-web-tracing';
 import {PerformanceTimelineInstrumentation} from "@grafana/faro-instrumentation-performance-timeline";
+import {FetchInstrumentation} from "@grafana/faro-instrumentation-fetch";
+import {XHRInstrumentation} from "@grafana/faro-instrumentation-xhr";
 
 const faroPage = window.faroPageMeta || {};
 const faroUrl = window.faroUrl || null;
@@ -15,7 +17,9 @@ class PageLoadInstrumentation extends BaseInstrumentation {
             const eventName = `${entry.name}`;
             const attributes = {
                 duration: `${entry.duration}`,
-                startTime: `${entry.startTime}`
+                startTime: `${entry.startTime}`,
+                entryType: `${entry.entryType}`,
+                timeOrigin: `${performance.timeOrigin}`
             };
 
             if (entry.serverTiming !== undefined) {
@@ -56,6 +60,13 @@ class PageLoadInstrumentation extends BaseInstrumentation {
 
 /** @param {TransportItem} event */
 function beforeSend(event) {
+
+    if (event.payload.attributes && event.payload.attributes.entryType === 'resource') {
+        if (event.payload.attributes.name.endsWith('.js')) {
+            event.name = event.payload.attributes.name;
+        }
+    }
+
     if (event.payload.attributes && event.payload.attributes.serverTiming_traceparent !== undefined) {
         const traceparent = event.payload.attributes.serverTiming_traceparent;
         const traceparentParts = traceparent.split('-');
@@ -65,6 +76,12 @@ function beforeSend(event) {
         event.payload.trace = {};
         event.payload.trace.trace_id = traceId;
         event.payload.trace.span_id = spanId;
+    }
+
+    if (event.payload.attributes && event.payload.attributes.entryType === 'navigation') {
+        if (typeof event.payload.attributes.timeOrigin == 'number') {
+            event.payload.timestamp = new Date(event.payload.attributes.timeOrigin).toISOString();
+        }
     }
 
     return event;
@@ -88,6 +105,8 @@ export function initializeFaro() {
             new TracingInstrumentation(),
             new PerformanceTimelineInstrumentation(),
             new PageLoadInstrumentation(),
+            new FetchInstrumentation(),
+            new XHRInstrumentation(),
         ],
         metas: [
             () => ({
