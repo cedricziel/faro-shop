@@ -3,6 +3,8 @@
 {% block title %}{{ product.name }}{% endblock %}
 
 {% block javascripts %}
+    {{ parent() }}
+
     <script>
         function trackChangeQuantity(quantity) {
             faro.api.pushEvent('change_quantity', {quantity: quantity.toString()}, '{{ app.current_route }}');

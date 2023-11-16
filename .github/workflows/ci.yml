@@ -60,11 +60,53 @@ jobs:
           echo "SHA=$sha_new" >> $GITHUB_OUTPUT
         if: github.ref == 'refs/heads/main'
 
+  assets:
+    name: Assets
+    runs-on: ubuntu-latest
+
+    needs: bump
+
+    steps:
+      - name: Fetch updated source through SHA from bump
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ needs.bump.outputs.bumped_sha }}
+          fetch-depth: 0
+        if: github.ref == 'refs/heads/main'
+
+      - name: Fetch source from event
+        uses: actions/checkout@v3
+        if: github.ref != 'refs/heads/main'
+
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        id: npm-cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-cache-node-modules-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-cache-node-modules-
+
+      - name: NPM install
+        if: steps.npm-cache-node-modules.outputs.cache-hit != 'true'
+        run: npm install
+
+      - name: NPM build
+        run: npm run build
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: public/build
+
   tests:
     name: Tests
     runs-on: ubuntu-latest
 
-    needs: bump
+    needs:
+      - bump
+      - assets
 
     permissions:
       contents: read
@@ -82,6 +124,12 @@ jobs:
       - name: Fetch source from event
         uses: actions/checkout@v3
         if: github.ref != 'refs/heads/main'
+
+      - name: Download assets
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: public/build
 
       - run: cp env.template .env
         shell: bash
