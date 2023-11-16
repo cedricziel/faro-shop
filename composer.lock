@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "30ccff9289a2d781e6b676611f5edd65",
+    "content-hash": "8ddf82ef11889e59f04d6b0fb423284d",
     "packages": [
         {
             "name": "brick/math",
@@ -4298,7 +4298,7 @@
         },
         {
             "name": "open-telemetry/opentelemetry-logger-monolog",
-            "version": "0.0.5",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-logger-monolog.git",
@@ -4350,7 +4350,7 @@
                 "otel"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-logger-monolog/tree/0.0.5"
+                "source": "https://github.com/opentelemetry-php/contrib-logger-monolog/tree/1.0.0"
             },
             "time": "2023-10-17T21:44:43+00:00"
         },
@@ -14392,5 +14392,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
