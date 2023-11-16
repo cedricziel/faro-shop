@@ -1,4 +1,7 @@
 const Encore = require('@symfony/webpack-encore');
+const webpack = require('webpack');
+const {GitRevisionPlugin} = require("git-revision-webpack-plugin");
+const gitRevisionPlugin = new GitRevisionPlugin();
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -66,10 +69,16 @@ Encore
     // requires WebpackEncoreBundle 1.4 or higher
     //.enableIntegrityHashes(Encore.isProduction())
 
-    // uncomment if you're having problems with a jQuery plugin
+    .addPlugin(gitRevisionPlugin)
+    .addPlugin(new webpack.DefinePlugin({
+        VERSION: JSON.stringify(gitRevisionPlugin.version()),
+        COMMITHASH: JSON.stringify(gitRevisionPlugin.commithash()),
+        BRANCH: JSON.stringify(gitRevisionPlugin.branch()),
+        LASTCOMMITDATETIME: JSON.stringify(gitRevisionPlugin.lastcommitdatetime()),
+    }))
     .autoProvideVariables({
-        faro: 'faro',
-        'window.faro': 'faro',
+        faro: require.resolve('./assets/scripts/faro.js'),
+        'window.faro': require.resolve('./assets/scripts/faro.js'),
     })
 ;
 
