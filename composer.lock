@@ -4118,16 +4118,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-slim",
-            "version": "1.0.0beta11",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-slim.git",
-                "reference": "1bd8da8d6d3f558a15fb0456aa2c3366f4742353"
+                "reference": "9ed93f09d6c1e2afa5ebd2621e6ab66f8f51e51b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-slim/zipball/1bd8da8d6d3f558a15fb0456aa2c3366f4742353",
-                "reference": "1bd8da8d6d3f558a15fb0456aa2c3366f4742353",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-slim/zipball/9ed93f09d6c1e2afa5ebd2621e6ab66f8f51e51b",
+                "reference": "9ed93f09d6c1e2afa5ebd2621e6ab66f8f51e51b",
                 "shasum": ""
             },
             "require": {
@@ -4176,9 +4176,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-slim/tree/1.0.0beta11"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-slim/tree/1.0.1"
             },
-            "time": "2023-10-19T20:17:35+00:00"
+            "time": "2023-11-14T22:35:50+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-symfony",
@@ -14371,7 +14371,6 @@
         "open-telemetry/exporter-zipkin": 10,
         "open-telemetry/opentelemetry-auto-psr15": 10,
         "open-telemetry/opentelemetry-auto-psr18": 10,
-        "open-telemetry/opentelemetry-auto-slim": 10,
         "open-telemetry/opentelemetry-auto-symfony": 10,
         "open-telemetry/sdk": 10,
         "open-telemetry/transport-grpc": 5
@@ -14384,5 +14383,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
