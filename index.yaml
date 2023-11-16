@@ -3,6 +3,16 @@ entries:
   faro-shop:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-11-16T13:18:44.696621998Z"
+    description: A Helm chart for Kubernetes
+    digest: b3ef3a67168f0c21dbb3dcc860208e11c14b63e1364964ac0dced4c7504a6418
+    name: faro-shop
+    type: application
+    urls:
+    - https://github.com/cedricziel/faro-shop/releases/download/0.0.40/faro-shop-0.0.40.tgz
+    version: 0.0.40
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-11-16T08:19:56.706279445Z"
     description: A Helm chart for Kubernetes
     digest: 9ae0aaf79085965686d94770503d1b534c4eaecacd50f9da41cbdc56d2dbba20
@@ -61,4 +71,4 @@ entries:
     urls:
     - https://github.com/cedricziel/faro-shop/releases/download/0.0.34/faro-shop-0.0.34.tgz
     version: 0.0.34
-generated: "2023-11-16T08:19:56.705780225Z"
+generated: "2023-11-16T13:18:44.696074113Z"
