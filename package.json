@@ -19,7 +19,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "@grafana/faro-instrumentation-fetch": "^1.2.5",
+        "@grafana/faro-instrumentation-fetch": "^1.2.9",
         "@grafana/faro-instrumentation-performance-timeline": "^1.2.7",
         "@grafana/faro-instrumentation-xhr": "^1.2.5",
         "@grafana/faro-web-sdk": "^1.2.7",
