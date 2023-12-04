@@ -23,6 +23,6 @@
         "@grafana/faro-instrumentation-performance-timeline": "^1.2.7",
         "@grafana/faro-instrumentation-xhr": "^1.2.5",
         "@grafana/faro-web-sdk": "^1.2.7",
-        "@grafana/faro-web-tracing": "^1.2.7"
+        "@grafana/faro-web-tracing": "^1.3.0"
     }
 }
