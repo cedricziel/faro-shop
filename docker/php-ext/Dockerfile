@@ -48,8 +48,8 @@ RUN set -eux; \
 
 FROM scratch as ext-grpc
 
-COPY --from=grpc-extension-build /usr/local/lib/php/extensions/no-debug-non-zts-20220830/grpc.so /
+COPY --from=grpc-extension-build /usr/local/lib/php/extensions/no-debug-non-zts-20230831/grpc.so /
 
 FROM scratch as ext-protobuf
 
-COPY --from=protobuf-extension-build /usr/local/lib/php/extensions/no-debug-non-zts-20220830/protobuf.so /
+COPY --from=protobuf-extension-build /usr/local/lib/php/extensions/no-debug-non-zts-20230831/protobuf.so /
