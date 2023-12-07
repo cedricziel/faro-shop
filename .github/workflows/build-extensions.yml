@@ -64,7 +64,7 @@ jobs:
           build-args: |
             protobuf_version=3.24.4
           tags: |
-            ghcr.io/${{ github.repository }}-app-php-ext:protobuf-3.24.4-8.2
+            ghcr.io/${{ github.repository }}-app-php-ext:protobuf-3.24.4-8.3
           cache-from: type=gha
           cache-to: type=gha
 
@@ -79,6 +79,6 @@ jobs:
           build-args: |
             grpc_version=1.59.1
           tags: |
-            ghcr.io/${{ github.repository }}-app-php-ext:grpc-1.59.1-8.2
+            ghcr.io/${{ github.repository }}-app-php-ext:grpc-1.59.1-8.3
           cache-from: type=gha
           cache-to: type=gha
