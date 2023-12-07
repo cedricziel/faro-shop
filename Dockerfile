@@ -23,8 +23,8 @@ RUN apk add --no-cache \
 # php extensions installer: https://github.com/mlocati/docker-php-extension-installer
 COPY --from=php_extension_installer_upstream --link /usr/bin/install-php-extensions /usr/local/bin/
 
-COPY --from=ghcr.io/cedricziel/faro-shop-app-php-ext:grpc-1.59.1 /grpc.so /usr/local/lib/php/extensions/no-debug-non-zts-20220829/
-COPY --from=ghcr.io/cedricziel/faro-shop-app-php-ext:protobuf-3.24.4 /protobuf.so /usr/local/lib/php/extensions/no-debug-non-zts-20220829/
+COPY --from=ghcr.io/cedricziel/faro-shop-app-php-ext:grpc-1.59.1-8.3 /grpc.so /usr/local/lib/php/extensions/no-debug-non-zts-20220830/
+COPY --from=ghcr.io/cedricziel/faro-shop-app-php-ext:protobuf-3.24.4-8.3 /protobuf.so /usr/local/lib/php/extensions/no-debug-non-zts-20220830/
 
 RUN docker-php-ext-enable grpc protobuf
 

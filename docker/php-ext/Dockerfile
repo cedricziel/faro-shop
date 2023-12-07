@@ -1,4 +1,4 @@
-FROM php:8.2.11-fpm-alpine AS php_upstream
+FROM php:8.3.0-fpm-alpine AS php_upstream
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 
 FROM php_upstream as grpc-extension-build
@@ -48,8 +48,8 @@ RUN set -eux; \
 
 FROM scratch as ext-grpc
 
-COPY --from=grpc-extension-build /usr/local/lib/php/extensions/no-debug-non-zts-20220829/grpc.so /
+COPY --from=grpc-extension-build /usr/local/lib/php/extensions/no-debug-non-zts-20220830/grpc.so /
 
 FROM scratch as ext-protobuf
 
-COPY --from=protobuf-extension-build /usr/local/lib/php/extensions/no-debug-non-zts-20220829/protobuf.so /
+COPY --from=protobuf-extension-build /usr/local/lib/php/extensions/no-debug-non-zts-20220830/protobuf.so /
