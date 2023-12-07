@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ccdd496a7918e4e2cbfa36019dca591",
+    "content-hash": "c1e8024ed221bbc7d97091161aeed559",
     "packages": [
         {
             "name": "brick/math",
@@ -14528,12 +14528,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "open-telemetry/opentelemetry-auto-psr15": 10,
-        "open-telemetry/opentelemetry-auto-psr18": 10,
-        "open-telemetry/opentelemetry-auto-slim": 10,
-        "open-telemetry/opentelemetry-auto-symfony": 10
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
