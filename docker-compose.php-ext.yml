@@ -1,14 +1,14 @@
 version: "3"
 services:
   utility-php-ext-protobuf:
-    image: ${IMAGES_PREFIX:-}app-php-ext:protobuf-3.24.4
+    image: ${IMAGES_PREFIX:-}app-php-ext:protobuf-3.24.4-8.2
     build:
       context: docker/php-ext
       target: ext-protobuf
       args:
         - protobuf_version=3.24.4
   utility-php-ext-grpc:
-    image: ${IMAGES_PREFIX:-}app-php-ext:grpc-1.59.1
+    image: ${IMAGES_PREFIX:-}app-php-ext:grpc-1.59.1-8.2
     build:
       context: docker/php-ext
       target: ext-grpc
