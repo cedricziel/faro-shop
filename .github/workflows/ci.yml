@@ -202,6 +202,12 @@ jobs:
     permissions:
       contents: read
       packages: write
+    strategy:
+      matrix:
+        service:
+          - otelcol
+    env:
+      IMAGES_PREFIX: ghcr.io/${{ github.repository }}-
     steps:
       - name: Fetch updated source through SHA from bump
         uses: actions/checkout@v3
@@ -226,6 +232,16 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull service ${{matrix.service}}
+        run: docker-compose -f docker-compose.yaml -f docker-compose-load.yaml -f docker-compose.override.yml pull --ignore-pull-failures ${{matrix.service}}
+
+      - name: Build service ${{matrix.service}}
+        run: docker-compose -f docker-compose.yaml -f docker-compose-load.yaml -f docker-compose.override.yml build ${{matrix.service}}
+
+      - name: Push service ${{matrix.service}}
+        run: docker-compose -f docker-compose.yaml -f docker-compose-load.yaml -f docker-compose.override.yml push ${{matrix.service}}
+        if: github.ref == 'refs/heads/main'
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
