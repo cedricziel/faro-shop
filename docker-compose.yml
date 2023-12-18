@@ -77,7 +77,6 @@ services:
     depends_on:
       php:
         condition: service_healthy
-        restart: true
     environment:
       SERVER_NAME: ${SERVER_NAME:-localhost}, caddy:80
       MERCURE_PUBLISHER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
