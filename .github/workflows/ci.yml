@@ -200,7 +200,7 @@ jobs:
       - bump
       - lint
       - tests
-    if: success() && github.ref == 'refs/heads/main'
+    if: success()
     permissions:
       contents: read
       packages: write
@@ -225,6 +225,12 @@ jobs:
       - run: cp env.template .env
         shell: bash
 
+      - name: Download assets
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: public/build
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -239,38 +245,20 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pull service ${{matrix.service}}
-        run: docker-compose -f docker-compose.yaml -f docker-compose-load.yaml -f docker-compose.override.yml pull --ignore-pull-failures ${{matrix.service}}
+        run: docker compose -f docker-compose.yml -f docker-compose.override.yml pull --ignore-pull-failures ${{matrix.service}}
 
       - name: Build service ${{matrix.service}}
-        run: docker-compose -f docker-compose.yaml -f docker-compose-load.yaml -f docker-compose.override.yml build ${{matrix.service}}
+        run: docker compose -f docker-compose.yml -f docker-compose.override.yml build ${{matrix.service}}
+
+      - name: Pull service ${{matrix.service}} (prod)
+        run: docker compose -f docker-compose.yml -f docker-compose.prod.yml pull --ignore-pull-failures ${{matrix.service}}
+
+      - name: Build service ${{matrix.service}} (prod)
+        run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml build ${{matrix.service}}
 
       - name: Push service ${{matrix.service}}
-        run: docker-compose -f docker-compose.yaml -f docker-compose-load.yaml -f docker-compose.override.yml push ${{matrix.service}}
+        run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml push ${{matrix.service}}
         if: github.ref == 'refs/heads/main'
-
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ghcr.io/${{ github.repository }}-app-caddy
-            ghcr.io/${{ github.repository }}-app-php
-            ghcr.io/${{ github.repository }}-php-cache
-            ghcr.io/${{ github.repository }}-database
-            ghcr.io/${{ github.repository }}-otelcol
-
-      - name: Build Docker images
-        uses: docker/bake-action@v3
-        with:
-          push: true
-          files: |
-            ${{ steps.docker-metadata.outputs.bake-file }}
-            docker-compose.yml
-            docker-compose.override.yml
-          set: |
-            *.cache-from=type=gha,scope=${{github.ref}}
-            *.cache-from=type=gha,scope=refs/heads/main
-            *.cache-to=type=gha,scope=${{github.ref}},mode=max
 
   create_release:
     if: github.ref == 'refs/heads/main'
