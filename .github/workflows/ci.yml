@@ -207,7 +207,11 @@ jobs:
     strategy:
       matrix:
         service:
+          - k6
           - otelcol
+          - php
+          - caddy
+          - database
     env:
       IMAGES_PREFIX: ghcr.io/${{ github.repository }}-
     steps:

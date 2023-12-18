@@ -6,8 +6,6 @@ services:
     build:
       context: .
       target: php_dev
-      cache_from:
-        - ${IMAGES_PREFIX:-}php-cache
     volumes:
       - ./:/srv/app
       - ./docker/php/conf.d/app.dev.ini:/usr/local/etc/php/conf.d/app.dev.ini:ro

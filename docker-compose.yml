@@ -33,21 +33,10 @@ services:
       - GRAFANA_CLOUD_APIKEY
     profiles:
       - live
-  php_cache:
-    image: ${IMAGES_PREFIX:-}php-cache
-    build:
-      context: .
-      target: php_base
-      cache_from:
-        - ${IMAGES_PREFIX:-}php-cache
-    profiles:
-      - no-start
   php:
     image: ${IMAGES_PREFIX:-}app-php:${PROJECT_VERSION}
     build:
       context: .
-      cache_from:
-        - ${IMAGES_PREFIX:-}php-cache
     restart: unless-stopped
     volumes:
       - php_socket:/var/run/php
