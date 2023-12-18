@@ -1,4 +1,14 @@
-version: '3.8'
+version: '3.9'
+x-default-logging: &logging
+  driver: "json-file"
+  options:
+    max-size: "5m"
+    max-file: "2"
+
+networks:
+  default:
+    name: opentelemetry-demo
+    driver: bridge
 
 services:
   k6:
@@ -16,6 +26,8 @@ services:
         condition: service_started
     profiles:
       - live
+    logging: *logging
+
   otelcol:
     image: ${IMAGES_PREFIX:-}otelcol:${PROJECT_VERSION}
     build:
@@ -40,6 +52,7 @@ services:
     restart: unless-stopped
     volumes:
       - php_socket:/var/run/php
+    logging: *logging
     environment:
       OTEL_PHP_AUTOLOAD_ENABLED: 'true'
       OTEL_SERVICE_NAME: faros-shop
@@ -61,6 +74,7 @@ services:
       MERCURE_URL: ${CADDY_MERCURE_URL:-http://caddy/.well-known/mercure}
       MERCURE_PUBLIC_URL: https://${SERVER_NAME:-localhost}/.well-known/mercure
       MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
+
   caddy:
     image: ${IMAGES_PREFIX:-}app-caddy:${PROJECT_VERSION}
     depends_on:
@@ -71,6 +85,7 @@ services:
       MERCURE_PUBLISHER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
       MERCURE_SUBSCRIBER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
     restart: unless-stopped
+    logging: *logging
     volumes:
       - php_socket:/var/run/php
       - caddy_data:/data
@@ -96,6 +111,7 @@ services:
       # You should definitely change the password in production
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
       POSTGRES_USER: ${POSTGRES_USER:-app}
+    logging: *logging
     volumes:
       - database_data:/var/lib/postgresql/data:rw
       # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
