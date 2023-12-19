@@ -317,6 +317,7 @@ jobs:
   create_release:
     if: success() && github.ref == 'refs/heads/main'
     needs:
+      - bump
       - push_images
     runs-on: ubuntu-latest
 
