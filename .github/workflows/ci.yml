@@ -161,7 +161,7 @@ jobs:
           context: docker/k6
           platforms: linux/amd64,linux/arm64
           push: false
-          tags: ${IMAGES_PREFIX:-}k6:${PROJECT_VERSION},${IMAGES_PREFIX:-}k6:latest
+          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.new_version }},${{ env.IMAGES_PREFIX }}k6:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -171,7 +171,7 @@ jobs:
           context: docker/otelcol
           platforms: linux/amd64,linux/arm64
           push: false
-          tags: ${IMAGES_PREFIX:-}otelcol:${PROJECT_VERSION},${IMAGES_PREFIX:-}otelcol:latest
+          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.new_version }},${{ env.IMAGES_PREFIX }}otelcol:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -182,7 +182,7 @@ jobs:
           target: php_dev
           platforms: linux/amd64,linux/arm64
           push: false
-          tags: ${IMAGES_PREFIX:-}php:${PROJECT_VERSION},${IMAGES_PREFIX:-}php:latest
+          tags: ${{ env.IMAGES_PREFIX }}php:${{ needs.bump.outputs.new_version }},${{ env.IMAGES_PREFIX }}php:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -193,7 +193,7 @@ jobs:
           target: caddy_base
           platforms: linux/amd64,linux/arm64
           push: false
-          tags: ${IMAGES_PREFIX:-}caddy:${PROJECT_VERSION},${IMAGES_PREFIX:-}caddy:latest
+          tags: ${{ env.IMAGES_PREFIX }}caddy:${{ needs.bump.outputs.new_version }},${{ env.IMAGES_PREFIX }}caddy:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
