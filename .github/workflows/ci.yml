@@ -267,6 +267,70 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Build and push - k6
+        uses: docker/build-push-action@v5
+        with:
+          context: docker/k6
+          platforms: linux/amd64,linux/arm64
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.new_version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - otelcol
+        uses: docker/build-push-action@v5
+        with:
+          context: docker/otelcol
+          platforms: linux/amd64,linux/arm64
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.new_version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - php
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: php_dev
+          platforms: linux/amd64,linux/arm64
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - php-prod
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: php_prod
+          platforms: linux/amd64,linux/arm64
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}-prod
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - caddy
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: caddy_base
+          platforms: linux/amd64,linux/arm64
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}caddy:${{ needs.bump.outputs.new_version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - caddy-prod
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: caddy_prod
+          platforms: linux/amd64,linux/arm64
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.new_version }}-prod
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
       - name: Start services
         run: docker compose up --wait --no-build
 
@@ -342,31 +406,69 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push
+      - name: Build and push - k6
+        uses: docker/build-push-action@v5
+        with:
+          context: docker/k6
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.new_version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - otelcol
+        uses: docker/build-push-action@v5
+        with:
+          context: docker/otelcol
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.new_version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - php
         uses: docker/build-push-action@v5
         with:
           context: .
+          target: php_dev
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: user/app:latest
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
-      - name: Pull service ${{matrix.service}}
-        run: docker compose -f docker-compose.yml -f docker-compose.override.yml pull --ignore-pull-failures ${{matrix.service}}
+      - name: Build and push - php-prod
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: php_prod
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}-prod
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
-      - name: Build service ${{matrix.service}}
-        run: docker compose -f docker-compose.yml -f docker-compose.override.yml build ${{matrix.service}}
+      - name: Build and push - caddy
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: caddy_base
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}caddy:${{ needs.bump.outputs.new_version }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
-      - name: Push service ${{matrix.service}}
-        run: docker-compose -f docker-compose.yml -f docker-compose.override.yml push ${{matrix.service}}
-
-      - name: Pull service ${{matrix.service}} (prod)
-        run: docker compose -f docker-compose.yml -f docker-compose.prod.yml pull --ignore-pull-failures ${{matrix.service}}
-
-      - name: Build service ${{matrix.service}} (prod)
-        run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml build ${{matrix.service}}
-
-      - name: Push service ${{matrix.service}} (prod)
-        run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml push ${{matrix.service}}
+      - name: Build and push - caddy-prod
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: caddy_prod
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.new_version }}-prod
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
   create_release:
     if: success() && github.ref == 'refs/heads/main'
