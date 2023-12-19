@@ -312,10 +312,9 @@ jobs:
         run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml push ${{matrix.service}}
 
   create_release:
-    if: github.ref == 'refs/heads/main'
+    if: success() && github.ref == 'refs/heads/main'
     needs:
-      - bump
-      - build-images
+      - push_images
     runs-on: ubuntu-latest
 
     permissions:
