@@ -10,5 +10,11 @@ class E2eTest extends PantherTestCase
     {
         $pantherClient = static::createPantherClient();
         $pantherClient->get("/");
+
+        $this->assertSelectorTextContains('h1', 'Products');
+
+        // Product Details
+        $crawler = $pantherClient->clickLink('View Details');
+        $this->assertSelectorTextContains('h1', 'Faros');
     }
 }

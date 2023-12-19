@@ -18,8 +18,19 @@ env:
   IMAGES_PREFIX: ghcr.io/${{ github.repository }}-
 
 jobs:
+  lint:
+    name: Docker Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+
   bump:
     runs-on: ubuntu-latest
+    needs:
+      - lint
 
     permissions:
       contents: write
@@ -28,6 +39,7 @@ jobs:
     outputs:
       bumped_sha: ${{ steps.sha.outputs.SHA }}
       new_version: ${{ steps.version.outputs.VERSION }}
+
     steps:
       - uses: actions/checkout@v3
 
@@ -100,21 +112,84 @@ jobs:
           name: build
           path: public/build
 
-  tests:
-    name: Tests
+  build-images:
     runs-on: ubuntu-latest
-
     needs:
       - bump
       - assets
+    if: success()
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      matrix:
+        service:
+          - k6
+          - otelcol
+          - php
+          - caddy
+          - database
+    steps:
+      - name: Fetch updated source through SHA from bump
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ needs.bump.outputs.bumped_sha }}
+          fetch-depth: 0
+        if: github.ref == 'refs/heads/main'
+
+      - name: Fetch source from event
+        uses: actions/checkout@v3
+        if: github.ref != 'refs/heads/main'
+
+      - run: cp env.template .env
+        shell: bash
+
+      - name: Download assets
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: public/build
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull service ${{matrix.service}}
+        run: docker compose -f docker-compose.yml -f docker-compose.override.yml pull --ignore-pull-failures ${{matrix.service}}
+
+      - name: Build service ${{matrix.service}}
+        run: docker compose -f docker-compose.yml -f docker-compose.override.yml build ${{matrix.service}}
+
+      - name: Pull service ${{matrix.service}} (prod)
+        run: docker compose -f docker-compose.yml -f docker-compose.prod.yml pull --ignore-pull-failures ${{matrix.service}}
+
+      - name: Build service ${{matrix.service}} (prod)
+        run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml build ${{matrix.service}}
+
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    if: success()
+
+    needs:
+      - assets
+      - build-images
 
     permissions:
       contents: read
       packages: write
 
     steps:
-      -
-        name: Fetch updated source through SHA from bump
+      - name: Fetch updated source through SHA from bump
         uses: actions/checkout@v3
         with:
           ref: ${{ needs.bump.outputs.bumped_sha }}
@@ -134,74 +209,59 @@ jobs:
       - run: cp env.template .env
         shell: bash
 
-      -
-        name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
 
-      -
-        name: Log in to the Container registry
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to the Container registry
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      -
-        name: Build Docker images
-        uses: docker/bake-action@v3
-        with:
-          pull: true
-          load: true
-          files: |
-            docker-compose.yml
-            docker-compose.override.yml
-          set: |
-            *.cache-from=type=gha,scope=${{github.ref}}
-            *.cache-from=type=gha,scope=refs/heads/main
-            *.cache-to=type=gha,scope=${{github.ref}},mode=max
-      -
-        name: Start services
+      - name: Start services
         run: docker compose up --wait --no-build
-      -
-        name: Check HTTP reachability
+
+      - name: Check HTTP reachability
         run: curl -v -o /dev/null http://localhost
-      -
-        name: Check HTTPS reachability
+
+      - name: Check HTTPS reachability
         run: curl -vk -o /dev/null https://localhost
-      -
-        name: Create test database
+
+      - name: Create test database
         run: docker compose exec -T php bin/console -e test doctrine:database:create
-      -
-        name: Run migrations
+
+      - name: Run migrations
         run: docker compose exec -T php bin/console -e test doctrine:migrations:migrate --no-interaction
-      -
-        name: Run PHPUnit
+
+      - name: Run PHPUnit
         if: false # Remove this line if PHPUnit is installed
         run: docker compose exec -T php bin/phpunit
-      -
-        name: Doctrine Schema Validator
+
+      - name: Doctrine Schema Validator
         if: false # Remove this line if Doctrine ORM is installed
         run: docker compose exec -T php bin/console -e test doctrine:schema:validate
-  lint:
-    name: Docker Lint
-    runs-on: ubuntu-latest
-    steps:
-      -
-        name: Checkout
-        uses: actions/checkout@v3
-      -
-        name: Lint Dockerfile
-        uses: hadolint/hadolint-action@v3.1.0
-  build-images:
+
+  push_images:
     runs-on: ubuntu-latest
     needs:
-      - bump
-      - lint
       - tests
+      - build-images
     if: success() && github.ref == 'refs/heads/main'
     permissions:
       contents: read
       packages: write
+    strategy:
+      matrix:
+        service:
+          - k6
+          - otelcol
+          - php
+          - caddy
+          - database
     steps:
       - name: Fetch updated source through SHA from bump
         uses: actions/checkout@v3
@@ -217,8 +277,17 @@ jobs:
       - run: cp env.template .env
         shell: bash
 
+      - name: Download assets
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: public/build
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
 
       - name: Log in to the Container registry
         uses: docker/login-action@v3
@@ -227,35 +296,28 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ghcr.io/${{ github.repository }}-app-caddy
-            ghcr.io/${{ github.repository }}-app-php
-            ghcr.io/${{ github.repository }}-php-cache
-            ghcr.io/${{ github.repository }}-database
-            ghcr.io/${{ github.repository }}-otelcol
+      - name: Pull service ${{matrix.service}}
+        run: docker compose -f docker-compose.yml -f docker-compose.override.yml pull --ignore-pull-failures ${{matrix.service}}
 
-      - name: Build Docker images
-        uses: docker/bake-action@v3
-        with:
-          push: true
-          files: |
-            ${{ steps.docker-metadata.outputs.bake-file }}
-            docker-compose.yml
-            docker-compose.override.yml
-          set: |
-            *.cache-from=type=gha,scope=${{github.ref}}
-            *.cache-from=type=gha,scope=refs/heads/main
-            *.cache-to=type=gha,scope=${{github.ref}},mode=max
+      - name: Build service ${{matrix.service}}
+        run: docker compose -f docker-compose.yml -f docker-compose.override.yml build ${{matrix.service}}
+
+      - name: Push service ${{matrix.service}}
+        run: docker-compose -f docker-compose.yml -f docker-compose.override.yml push ${{matrix.service}}
+
+      - name: Pull service ${{matrix.service}} (prod)
+        run: docker compose -f docker-compose.yml -f docker-compose.prod.yml pull --ignore-pull-failures ${{matrix.service}}
+
+      - name: Build service ${{matrix.service}} (prod)
+        run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml build ${{matrix.service}}
+
+      - name: Push service ${{matrix.service}} (prod)
+        run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml push ${{matrix.service}}
 
   create_release:
-    if: github.ref == 'refs/heads/main'
+    if: success() && github.ref == 'refs/heads/main'
     needs:
-      - bump
-      - build-images
+      - push_images
     runs-on: ubuntu-latest
 
     permissions:

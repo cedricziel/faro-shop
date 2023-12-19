@@ -45,31 +45,16 @@ services:
       - GRAFANA_CLOUD_APIKEY
     profiles:
       - live
-    logging: *logging
-
-  php_cache:
-    image: ${IMAGES_PREFIX:-}php-cache
-    build:
-      context: .
-      target: php_base
-      cache_from:
-        - ${IMAGES_PREFIX:-}php-cache
-    profiles:
-      - no-start
-    logging: *logging
-
   php:
     image: ${IMAGES_PREFIX:-}app-php:${PROJECT_VERSION}
     build:
       context: .
-      cache_from:
-        - ${IMAGES_PREFIX:-}php-cache
     restart: unless-stopped
     volumes:
       - php_socket:/var/run/php
     logging: *logging
     environment:
-      OTEL_PHP_AUTOLOAD_ENABLED: true
+      OTEL_PHP_AUTOLOAD_ENABLED: 'true'
       OTEL_SERVICE_NAME: faros-shop
       OTEL_TRACES_EXPORTER: otlp
       OTEL_METRICS_EXPORTER: otlp
@@ -80,9 +65,6 @@ services:
       OTEL_PROPAGATORS: baggage,tracecontext
       TRUSTED_PROXIES: ${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}
       TRUSTED_HOSTS: ^${SERVER_NAME:-example\.com|localhost}|caddy$$
-      # The two next lines can be removed after initial installation
-      SYMFONY_VERSION: ${SYMFONY_VERSION:-}
-      STABILITY: ${STABILITY:-stable}
       # Run "composer require symfony/orm-pack" to install and configure Doctrine ORM
       DATABASE_URL: postgresql://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD:-!ChangeMe!}@database:5432/${POSTGRES_DB:-app}?serverVersion=${POSTGRES_VERSION:-15}&charset=${POSTGRES_CHARSET:-utf8}
       # Run "composer require symfony/mercure-bundle" to install and configure the Mercure integration
@@ -95,7 +77,6 @@ services:
     depends_on:
       php:
         condition: service_healthy
-        restart: true
     environment:
       SERVER_NAME: ${SERVER_NAME:-localhost}, caddy:80
       MERCURE_PUBLISHER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
