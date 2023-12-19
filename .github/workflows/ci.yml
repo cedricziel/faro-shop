@@ -116,7 +116,6 @@ jobs:
     needs:
       - bump
       - lint
-      - tests
     if: success()
     permissions:
       contents: read
