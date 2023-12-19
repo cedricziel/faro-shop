@@ -116,6 +116,7 @@ jobs:
     needs:
       - bump
       - lint
+      - assets
     if: success()
     permissions:
       contents: read
