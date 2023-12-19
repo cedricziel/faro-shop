@@ -121,19 +121,6 @@ jobs:
     permissions:
       contents: read
       packages: write
-    strategy:
-      matrix:
-        service:
-          - k6
-          - otelcol
-          - php
-          - caddy
-          - database
-        platform:
-          - linux/amd64
-          - linux/arm64
-    env:
-      DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
     steps:
       - name: Fetch updated source through SHA from bump
         uses: actions/checkout@v3
@@ -167,6 +154,48 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push - k6
+        uses: docker/build-push-action@v5
+        with:
+          context: docker/k6
+          platforms: linux/amd64,linux/arm64
+          push: false
+          tags: ${IMAGES_PREFIX:-}k6:${PROJECT_VERSION},${IMAGES_PREFIX:-}k6:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - otelcol
+        uses: docker/build-push-action@v5
+        with:
+          context: docker/otelcol
+          platforms: linux/amd64,linux/arm64
+          push: false
+          tags: ${IMAGES_PREFIX:-}otelcol:${PROJECT_VERSION},${IMAGES_PREFIX:-}otelcol:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - php
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: php_dev
+          platforms: linux/amd64,linux/arm64
+          push: false
+          tags: ${IMAGES_PREFIX:-}php:${PROJECT_VERSION},${IMAGES_PREFIX:-}php:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - caddy
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: caddy_base
+          platforms: linux/amd64,linux/arm64
+          push: false
+          tags: ${IMAGES_PREFIX:-}caddy:${PROJECT_VERSION},${IMAGES_PREFIX:-}caddy:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       - name: Pull service ${{matrix.service}}
         run: docker compose -f docker-compose.yml -f docker-compose.override.yml pull --ignore-pull-failures ${{matrix.service}}
@@ -269,11 +298,6 @@ jobs:
           - php
           - caddy
           - database
-        platform:
-          - linux/amd64
-          - linux/arm64
-    env:
-      DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
     steps:
       - name: Fetch updated source through SHA from bump
         uses: actions/checkout@v3
@@ -307,6 +331,14 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: user/app:latest
 
       - name: Pull service ${{matrix.service}}
         run: docker compose -f docker-compose.yml -f docker-compose.override.yml pull --ignore-pull-failures ${{matrix.service}}
