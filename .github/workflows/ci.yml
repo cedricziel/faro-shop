@@ -302,6 +302,9 @@ jobs:
       - name: Build service ${{matrix.service}}
         run: docker compose -f docker-compose.yml -f docker-compose.override.yml build ${{matrix.service}}
 
+      - name: Push service ${{matrix.service}}
+        run: docker-compose -f docker-compose.yml -f docker-compose.override.yml push ${{matrix.service}}
+
       - name: Pull service ${{matrix.service}} (prod)
         run: docker compose -f docker-compose.yml -f docker-compose.prod.yml pull --ignore-pull-failures ${{matrix.service}}
 
