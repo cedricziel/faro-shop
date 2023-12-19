@@ -271,7 +271,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: docker/k6
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           load: true
           tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.new_version }}
           cache-from: type=gha
@@ -281,7 +281,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: docker/otelcol
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           load: true
           tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.new_version }}
           cache-from: type=gha
@@ -292,7 +292,7 @@ jobs:
         with:
           context: .
           target: php_dev
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           load: true
           tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}
           cache-from: type=gha
@@ -303,7 +303,7 @@ jobs:
         with:
           context: .
           target: php_prod
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           load: true
           tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}-prod
           cache-from: type=gha
@@ -314,7 +314,7 @@ jobs:
         with:
           context: .
           target: caddy_base
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           load: true
           tags: ${{ env.IMAGES_PREFIX }}caddy:${{ needs.bump.outputs.new_version }}
           cache-from: type=gha
@@ -325,7 +325,7 @@ jobs:
         with:
           context: .
           target: caddy_prod
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           load: true
           tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.new_version }}-prod
           cache-from: type=gha
