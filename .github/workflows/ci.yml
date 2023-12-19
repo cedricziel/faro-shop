@@ -57,13 +57,13 @@ jobs:
           version=$(cat ./VERSION)
           echo $version
           echo "VERSION=$version" >> $GITHUB_OUTPUT
-        if: github.ref == 'refs/heads/main'
 
       - name: Push changes to main
         run: |
           git tag -f ${{ steps.version.outputs.VERSION }}
           git push -f origin --tags
         if: github.ref == 'refs/heads/main'
+
       - name: get sha
         id: sha
         run: |
