@@ -49,7 +49,7 @@
         "symfony/property-access": "6.4.*",
         "symfony/property-info": "6.4.*",
         "symfony/runtime": "6.4.*",
-        "symfony/security-bundle": "6.4.*",
+        "symfony/security-bundle": "7.0.*",
         "symfony/serializer": "6.4.*",
         "symfony/string": "6.4.*",
         "symfony/translation": "6.4.*",
