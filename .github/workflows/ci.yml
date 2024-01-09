@@ -91,7 +91,7 @@ jobs:
         if: github.ref != 'refs/heads/main'
 
       - name: Cache node_modules
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         id: npm-cache-node-modules
         with:
           path: node_modules
