@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1e8024ed221bbc7d97091161aeed559",
+    "content-hash": "5c2a5d45f865833bd0a96b41a588305e",
     "packages": [
         {
             "name": "brick/math",
@@ -3954,22 +3954,22 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-pdo",
-            "version": "0.0.10",
+            "version": "0.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-pdo.git",
-                "reference": "3de28140dd53e07cdec27b184ec08c70cd8fd898"
+                "reference": "38910f71b9cf75da989bd06711339ff5459442d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/3de28140dd53e07cdec27b184ec08c70cd8fd898",
-                "reference": "3de28140dd53e07cdec27b184ec08c70cd8fd898",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/38910f71b9cf75da989bd06711339ff5459442d1",
+                "reference": "38910f71b9cf75da989bd06711339ff5459442d1",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "ext-pdo": "*",
-                "open-telemetry/api": "^1.0.0beta10",
+                "open-telemetry/api": "^1.0",
                 "open-telemetry/sem-conv": "^1.22",
                 "php": "^8.2"
             },
@@ -4008,9 +4008,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.10"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.11"
             },
-            "time": "2023-10-19T20:17:35+00:00"
+            "time": "2023-12-12T11:41:45+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr15",
@@ -14537,5 +14537,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
