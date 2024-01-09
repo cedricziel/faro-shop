@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Lint Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
 
@@ -41,7 +41,7 @@ jobs:
       new_version: ${{ steps.version.outputs.VERSION }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Bump version
         uses: remorses/bump-version@js
@@ -80,14 +80,14 @@ jobs:
 
     steps:
       - name: Fetch updated source through SHA from bump
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.bump.outputs.bumped_sha }}
           fetch-depth: 0
         if: github.ref == 'refs/heads/main'
 
       - name: Fetch source from event
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: github.ref != 'refs/heads/main'
 
       - name: Cache node_modules
@@ -134,14 +134,14 @@ jobs:
           - linux/arm64
     steps:
       - name: Fetch updated source through SHA from bump
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.bump.outputs.bumped_sha }}
           fetch-depth: 0
         if: github.ref == 'refs/heads/main'
 
       - name: Fetch source from event
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: github.ref != 'refs/heads/main'
 
       - run: cp env.template .env
@@ -202,14 +202,14 @@ jobs:
 
     steps:
       - name: Fetch updated source through SHA from bump
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.bump.outputs.bumped_sha }}
           fetch-depth: 0
         if: github.ref == 'refs/heads/main'
 
       - name: Fetch source from event
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: github.ref != 'refs/heads/main'
 
       - name: Download assets
@@ -280,14 +280,14 @@ jobs:
           - linux/arm64
     steps:
       - name: Fetch updated source through SHA from bump
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.bump.outputs.bumped_sha }}
           fetch-depth: 0
         if: github.ref == 'refs/heads/main'
 
       - name: Fetch source from event
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: github.ref != 'refs/heads/main'
 
       - run: cp env.template .env
@@ -353,7 +353,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ needs.bump.outputs.bumped_sha }}
           fetch-depth: 0
