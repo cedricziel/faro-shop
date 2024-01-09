@@ -18,7 +18,7 @@ jobs:
           ref: ${{ github.event.release.tag_name }}
           fetch-depth: 0
       - name: Package Helm Chart
-        uses: WyriHaximus/github-action-helm3@v2
+        uses: WyriHaximus/github-action-helm3@v3
         with:
           exec: helm package k8s/charts/faro-shop
       - name: Upload Release Asset
@@ -49,7 +49,7 @@ jobs:
           name: chart-archive
 
       - name: Package Helm Chart
-        uses: WyriHaximus/github-action-helm3@v2
+        uses: WyriHaximus/github-action-helm3@v3
         with:
           exec: helm repo index . --merge index.yaml --url https://github.com/cedricziel/faro-shop/releases/download/${{ github.event.release.tag_name }}/
 
