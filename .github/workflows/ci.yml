@@ -215,7 +215,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Start services
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose up --wait --no-build --pull=never
+        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose up --wait --no-build --pull=missing
 
       - name: Check HTTP reachability
         run: curl -v -o /dev/null http://localhost
