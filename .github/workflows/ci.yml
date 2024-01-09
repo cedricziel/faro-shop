@@ -246,6 +246,7 @@ jobs:
           tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.new_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+        if: github.ref == 'refs/heads/main'
 
       - name: Build and push - otelcol
         uses: docker/build-push-action@v5
@@ -256,6 +257,7 @@ jobs:
           tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.new_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+        if: github.ref == 'refs/heads/main'
 
       - name: Build and push - php
         uses: docker/build-push-action@v5
@@ -267,6 +269,7 @@ jobs:
           tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+        if: github.ref == 'refs/heads/main'
 
       - name: Build and push - php-prod
         uses: docker/build-push-action@v5
@@ -278,6 +281,7 @@ jobs:
           tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
+        if: github.ref == 'refs/heads/main'
 
       - name: Build and push - caddy
         uses: docker/build-push-action@v5
@@ -289,6 +293,7 @@ jobs:
           tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.new_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+        if: github.ref == 'refs/heads/main'
 
       - name: Build and push - caddy-prod
         uses: docker/build-push-action@v5
@@ -300,6 +305,7 @@ jobs:
           tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.new_version }}-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
+        if: github.ref == 'refs/heads/main'
 
   create_release:
     if: success() && github.ref == 'refs/heads/main'
