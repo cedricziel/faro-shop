@@ -4,6 +4,8 @@ FROM php:8.3.1-fpm-alpine AS php_upstream
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 FROM composer/composer:2-bin AS composer_upstream
 FROM --platform=$BUILDPLATFORM caddy:2-alpine AS caddy_upstream
+FROM --platform=$BUILDPLATFORM ghcr.io/cedricziel/faro-shop-app-php-ext:grpc-1.59.1-8.3 AS grpc_ext
+FROM --platform=$BUILDPLATFORM ghcr.io/cedricziel/faro-shop-app-php-ext:protobuf-3.24.4-8.3 AS protobuf_ext
 
 # Base PHP image
 FROM php_upstream AS php_base
@@ -23,8 +25,8 @@ RUN apk add --no-cache \
 # php extensions installer: https://github.com/mlocati/docker-php-extension-installer
 COPY --from=php_extension_installer_upstream --link /usr/bin/install-php-extensions /usr/local/bin/
 
-COPY --from=ghcr.io/cedricziel/faro-shop-app-php-ext:grpc-1.59.1-8.3 /grpc.so /usr/local/lib/php/extensions/no-debug-non-zts-20230831/
-COPY --from=ghcr.io/cedricziel/faro-shop-app-php-ext:protobuf-3.24.4-8.3 /protobuf.so /usr/local/lib/php/extensions/no-debug-non-zts-20230831/
+COPY --from=grpc_ext /grpc.so /usr/local/lib/php/extensions/no-debug-non-zts-20230831/
+COPY --from=protobuf_ext /protobuf.so /usr/local/lib/php/extensions/no-debug-non-zts-20230831/
 
 RUN docker-php-ext-enable grpc protobuf
 
