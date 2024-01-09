@@ -215,10 +215,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Start services
-        run: docker compose up --wait --no-build --pull=never
-        with:
-          env:
-            PROJECT_VERSION: ${{ needs.bump.outputs.test_version }}
+        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose up --wait --no-build --pull=never
 
       - name: Check HTTP reachability
         run: curl -v -o /dev/null http://localhost
@@ -227,30 +224,18 @@ jobs:
         run: curl -vk -o /dev/null https://localhost
 
       - name: Create test database
-        run: docker compose exec -T php bin/console -e test doctrine:database:create
-        with:
-          env:
-            PROJECT_VERSION: ${{ needs.bump.outputs.test_version }}
+        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:database:create
 
       - name: Run migrations
-        run: docker compose exec -T php bin/console -e test doctrine:migrations:migrate --no-interaction
-        with:
-          env:
-            PROJECT_VERSION: ${{ needs.bump.outputs.test_version }}
+        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:migrations:migrate --no-interaction
 
       - name: Run PHPUnit
         if: false # Remove this line if PHPUnit is installed
-        run: docker compose exec -T php bin/phpunit
-        with:
-          env:
-            PROJECT_VERSION: ${{ needs.bump.outputs.test_version }}
+        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/phpunit
 
       - name: Doctrine Schema Validator
         if: false # Remove this line if Doctrine ORM is installed
-        run: docker compose exec -T php bin/console -e test doctrine:schema:validate
-        with:
-          env:
-            PROJECT_VERSION: ${{ needs.bump.outputs.test_version }}
+        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:schema:validate
 
       - name: Build and push - k6
         uses: docker/build-push-action@v5
