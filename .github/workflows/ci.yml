@@ -286,7 +286,7 @@ jobs:
           target: caddy_base
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}caddy:${{ needs.bump.outputs.new_version }}
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.new_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
