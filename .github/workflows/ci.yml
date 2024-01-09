@@ -200,7 +200,7 @@ jobs:
           context: .
           target: caddy_base
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}caddy:${{ needs.bump.outputs.test_version }}
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
