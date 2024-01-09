@@ -38,3 +38,7 @@ updates:
         update-types:
         - "minor"
         - "patch"
+      open-telemetry:
+        patterns:
+        - "open-telemetry/*"
+        
