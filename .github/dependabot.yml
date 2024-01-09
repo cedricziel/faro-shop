@@ -28,3 +28,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      symfony:
+        patterns:
+        - "symfony/*"
+        update-types:
+        - "minor"
+        - "patch"
