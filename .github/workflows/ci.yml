@@ -332,7 +332,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Start services
-        run: docker compose up --wait --no-build
+        run: docker compose up --wait --no-build --pull=never
 
       - name: Check HTTP reachability
         run: curl -v -o /dev/null http://localhost
