@@ -3,7 +3,7 @@ version: '3.8'
 # Production environment override
 services:
   php:
-    image: ${IMAGES_PREFIX:-}app-php:${PROJECT_VERSION}-prod
+    image: ${IMAGES_PREFIX:-}app-php:${PROJECT_VERSION:-latest}-prod
     build:
       context: .
       target: php_prod
@@ -12,7 +12,7 @@ services:
       MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET}
 
   caddy:
-    image: ${IMAGES_PREFIX:-}app-caddy:${PROJECT_VERSION}-prod
+    image: ${IMAGES_PREFIX:-}app-caddy:${PROJECT_VERSION:-latest}-prod
     build:
       context: .
       target: caddy_prod
