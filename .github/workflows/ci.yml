@@ -39,6 +39,7 @@ jobs:
     outputs:
       bumped_sha: ${{ steps.sha.outputs.SHA }}
       new_version: ${{ steps.version.outputs.VERSION }}
+      test_version: test-${{ steps.version.outputs.VERSION }}
 
     steps:
       - uses: actions/checkout@v3
@@ -112,7 +113,7 @@ jobs:
           name: build
           path: public/build
 
-  build-images:
+  build-test-push:
     runs-on: ubuntu-latest
     needs:
       - bump
@@ -159,9 +160,8 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: docker/k6
-          platforms: linux/amd64,linux/arm64
-          push: false
-          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.new_version }}
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -169,9 +169,8 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: docker/otelcol
-          platforms: linux/amd64,linux/arm64
-          push: false
-          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.new_version }}
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -180,9 +179,8 @@ jobs:
         with:
           context: .
           target: php_dev
-          platforms: linux/amd64,linux/arm64
-          push: false
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -191,9 +189,8 @@ jobs:
         with:
           context: .
           target: php_prod
-          platforms: linux/amd64,linux/arm64
-          push: false
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}-prod
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.test_version }}-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -202,9 +199,8 @@ jobs:
         with:
           context: .
           target: caddy_base
-          platforms: linux/amd64,linux/arm64
-          push: false
-          tags: ${{ env.IMAGES_PREFIX }}caddy:${{ needs.bump.outputs.new_version }}
+          load: true
+          tags: ${{ env.IMAGES_PREFIX }}caddy:${{ needs.bump.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -213,126 +209,16 @@ jobs:
         with:
           context: .
           target: caddy_prod
-          platforms: linux/amd64,linux/arm64
-          push: false
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.new_version }}-prod
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-  tests:
-    name: Tests
-    runs-on: ubuntu-latest
-    if: success()
-
-    needs:
-      - bump
-      - assets
-      - build-images
-
-    permissions:
-      contents: read
-      packages: write
-
-    steps:
-      - name: Fetch updated source through SHA from bump
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ needs.bump.outputs.bumped_sha }}
-          fetch-depth: 0
-        if: github.ref == 'refs/heads/main'
-
-      - name: Fetch source from event
-        uses: actions/checkout@v3
-        if: github.ref != 'refs/heads/main'
-
-      - name: Download assets
-        uses: actions/download-artifact@v3
-        with:
-          name: build
-          path: public/build
-
-      - run: cp env.template .env
-        shell: bash
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Log in to the Container registry
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push - k6
-        uses: docker/build-push-action@v5
-        with:
-          context: docker/k6
-          platforms: linux/amd64
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.new_version }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Build and push - otelcol
-        uses: docker/build-push-action@v5
-        with:
-          context: docker/otelcol
-          platforms: linux/amd64
-          load: true
-          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.new_version }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Build and push - php
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          target: php_dev
-          platforms: linux/amd64
-          load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Build and push - php-prod
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          target: php_prod
-          platforms: linux/amd64
-          load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}-prod
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Build and push - caddy
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          target: caddy_base
-          platforms: linux/amd64
-          load: true
-          tags: ${{ env.IMAGES_PREFIX }}caddy:${{ needs.bump.outputs.new_version }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Build and push - caddy-prod
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          target: caddy_prod
-          platforms: linux/amd64
-          load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.new_version }}-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.test_version }}-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
       - name: Start services
         run: docker compose up --wait --no-build --pull=never
+        with:
+          env:
+            PROJECT_VERSION: ${{ needs.bump.outputs.test_version }}
 
       - name: Check HTTP reachability
         run: curl -v -o /dev/null http://localhost
@@ -342,69 +228,29 @@ jobs:
 
       - name: Create test database
         run: docker compose exec -T php bin/console -e test doctrine:database:create
+        with:
+          env:
+            PROJECT_VERSION: ${{ needs.bump.outputs.test_version }}
 
       - name: Run migrations
         run: docker compose exec -T php bin/console -e test doctrine:migrations:migrate --no-interaction
+        with:
+          env:
+            PROJECT_VERSION: ${{ needs.bump.outputs.test_version }}
 
       - name: Run PHPUnit
         if: false # Remove this line if PHPUnit is installed
         run: docker compose exec -T php bin/phpunit
+        with:
+          env:
+            PROJECT_VERSION: ${{ needs.bump.outputs.test_version }}
 
       - name: Doctrine Schema Validator
         if: false # Remove this line if Doctrine ORM is installed
         run: docker compose exec -T php bin/console -e test doctrine:schema:validate
-
-  push_images:
-    runs-on: ubuntu-latest
-    needs:
-      - bump
-      - tests
-      - build-images
-    if: success() && github.ref == 'refs/heads/main'
-    permissions:
-      contents: read
-      packages: write
-    strategy:
-      matrix:
-        service:
-          - k6
-          - otelcol
-          - php
-          - caddy
-          - database
-    steps:
-      - name: Fetch updated source through SHA from bump
-        uses: actions/checkout@v3
         with:
-          ref: ${{ needs.bump.outputs.bumped_sha }}
-          fetch-depth: 0
-        if: github.ref == 'refs/heads/main'
-
-      - name: Fetch source from event
-        uses: actions/checkout@v3
-        if: github.ref != 'refs/heads/main'
-
-      - run: cp env.template .env
-        shell: bash
-
-      - name: Download assets
-        uses: actions/download-artifact@v3
-        with:
-          name: build
-          path: public/build
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Log in to the Container registry
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          env:
+            PROJECT_VERSION: ${{ needs.bump.outputs.test_version }}
 
       - name: Build and push - k6
         uses: docker/build-push-action@v5
@@ -474,7 +320,7 @@ jobs:
     if: success() && github.ref == 'refs/heads/main'
     needs:
       - bump
-      - push_images
+      - build-test-push
     runs-on: ubuntu-latest
 
     permissions:
