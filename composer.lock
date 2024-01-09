@@ -4014,21 +4014,21 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr15",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-psr15.git",
-                "reference": "9c6cd8773ec8f6d66f2dd38e7cbd0b783ec54262"
+                "reference": "291db44aff3a62e5c3538aef5abdd354cb1f1871"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr15/zipball/9c6cd8773ec8f6d66f2dd38e7cbd0b783ec54262",
-                "reference": "9c6cd8773ec8f6d66f2dd38e7cbd0b783ec54262",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr15/zipball/291db44aff3a62e5c3538aef5abdd354cb1f1871",
+                "reference": "291db44aff3a62e5c3538aef5abdd354cb1f1871",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
-                "open-telemetry/api": "^1.0.0beta10",
+                "open-telemetry/api": "^1.0",
                 "open-telemetry/sem-conv": "^1.22",
                 "php": "^8.0",
                 "psr/http-server-middleware": "^1"
@@ -4069,9 +4069,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-psr15/tree/1.0.2"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-psr15/tree/1.0.3"
             },
-            "time": "2023-11-24T01:02:07+00:00"
+            "time": "2023-12-12T11:41:45+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr18",
@@ -14537,5 +14537,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
