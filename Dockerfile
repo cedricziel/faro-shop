@@ -3,7 +3,7 @@
 FROM php:8.3.1-fpm-alpine AS php_upstream
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 FROM composer/composer:2-bin AS composer_upstream
-FROM caddy:2-alpine AS caddy_upstream
+FROM --platform=$BUILDPLATFORM caddy:2-alpine AS caddy_upstream
 
 # Base PHP image
 FROM php_upstream AS php_base

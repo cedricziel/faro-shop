@@ -132,8 +132,6 @@ jobs:
         platform:
           - linux/amd64
           - linux/arm64
-    env:
-      DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
     steps:
       - name: Fetch updated source through SHA from bump
         uses: actions/checkout@v3
@@ -170,15 +168,23 @@ jobs:
 
       - name: Pull service ${{matrix.service}}
         run: docker compose -f docker-compose.yml -f docker-compose.override.yml pull --ignore-pull-failures ${{matrix.service}}
+        env:
+          DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
 
       - name: Build service ${{matrix.service}}
         run: docker compose -f docker-compose.yml -f docker-compose.override.yml build ${{matrix.service}}
+        env:
+          DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
 
       - name: Pull service ${{matrix.service}} (prod)
         run: docker compose -f docker-compose.yml -f docker-compose.prod.yml pull --ignore-pull-failures ${{matrix.service}}
+        env:
+          DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
 
       - name: Build service ${{matrix.service}} (prod)
         run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml build ${{matrix.service}}
+        env:
+          DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
 
   tests:
     name: Tests
@@ -272,8 +278,6 @@ jobs:
         platform:
           - linux/amd64
           - linux/arm64
-    env:
-      DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
     steps:
       - name: Fetch updated source through SHA from bump
         uses: actions/checkout@v3
@@ -310,21 +314,33 @@ jobs:
 
       - name: Pull service ${{matrix.service}}
         run: docker compose -f docker-compose.yml -f docker-compose.override.yml pull --ignore-pull-failures ${{matrix.service}}
+        env:
+          DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
 
       - name: Build service ${{matrix.service}}
         run: docker compose -f docker-compose.yml -f docker-compose.override.yml build ${{matrix.service}}
+        env:
+          DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
 
       - name: Push service ${{matrix.service}}
         run: docker-compose -f docker-compose.yml -f docker-compose.override.yml push ${{matrix.service}}
+        env:
+          DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
 
       - name: Pull service ${{matrix.service}} (prod)
         run: docker compose -f docker-compose.yml -f docker-compose.prod.yml pull --ignore-pull-failures ${{matrix.service}}
+        env:
+          DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
 
       - name: Build service ${{matrix.service}} (prod)
         run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml build ${{matrix.service}}
+        env:
+          DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
 
       - name: Push service ${{matrix.service}} (prod)
         run: docker-compose -f docker-compose.yml -f docker-compose.prod.yml push ${{matrix.service}}
+        env:
+          DOCKER_DEFAULT_PLATFORM: ${{ matrix.platform }}
 
   create_release:
     if: success() && github.ref == 'refs/heads/main'
