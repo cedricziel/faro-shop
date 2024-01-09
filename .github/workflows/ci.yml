@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Lint Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
 
@@ -42,7 +42,7 @@ jobs:
       test_version: test-${{ steps.version.outputs.VERSION }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Bump version
         uses: remorses/bump-version@js
@@ -81,18 +81,18 @@ jobs:
 
     steps:
       - name: Fetch updated source through SHA from bump
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.bump.outputs.bumped_sha }}
           fetch-depth: 0
         if: github.ref == 'refs/heads/main'
 
       - name: Fetch source from event
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: github.ref != 'refs/heads/main'
 
       - name: Cache node_modules
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         id: npm-cache-node-modules
         with:
           path: node_modules
@@ -108,7 +108,7 @@ jobs:
         run: npm run build
 
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: public/build
@@ -124,21 +124,21 @@ jobs:
       packages: write
     steps:
       - name: Fetch updated source through SHA from bump
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.bump.outputs.bumped_sha }}
           fetch-depth: 0
         if: github.ref == 'refs/heads/main'
 
       - name: Fetch source from event
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: github.ref != 'refs/heads/main'
 
       - run: cp env.template .env
         shell: bash
 
       - name: Download assets
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build
           path: public/build
@@ -318,7 +318,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ needs.bump.outputs.bumped_sha }}
           fetch-depth: 0
