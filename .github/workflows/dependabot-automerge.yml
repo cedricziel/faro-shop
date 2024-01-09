@@ -5,11 +5,6 @@ permissions:
   contents: write
   pull-requests: write
 
-env:
-  RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-  GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-  GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-
 jobs:
   dependabot:
     runs-on: ubuntu-latest
@@ -19,9 +14,10 @@ jobs:
         id: metadata
         uses: dependabot/fetch-metadata@v1
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: "${{ secrets.RELEASE_TOKEN }}"
       - name: Enable auto-merge for Dependabot PRs
         if: ${{steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
         run: gh pr merge --auto --squash "$PR_URL"
         env:
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
           PR_URL: ${{github.event.pull_request.html_url}}
