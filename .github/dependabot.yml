@@ -4,6 +4,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      github-actions:
+        patterns:
+        - "actions/*"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -28,3 +32,17 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    ignore:
+      - dependency-name: "symfony/*"
+        update-types: ["version-update:semver-major"]
+    groups:
+      symfony:
+        patterns:
+        - "symfony/*"
+        update-types:
+        - "minor"
+        - "patch"
+      open-telemetry:
+        patterns:
+        - "open-telemetry/*"
+        
