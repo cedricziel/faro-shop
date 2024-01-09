@@ -12,7 +12,7 @@ networks:
 
 services:
   k6:
-    image: ${IMAGES_PREFIX:-}k6:${PROJECT_VERSION}
+    image: ${IMAGES_PREFIX:-}k6:${PROJECT_VERSION:-latest}
     build:
       context: docker/k6
     volumes:
@@ -29,7 +29,7 @@ services:
     logging: *logging
 
   otelcol:
-    image: ${IMAGES_PREFIX:-}otelcol:${PROJECT_VERSION}
+    image: ${IMAGES_PREFIX:-}otelcol:${PROJECT_VERSION:-latest}
     build:
       context: docker/otelcol
     ports:
@@ -46,7 +46,7 @@ services:
     profiles:
       - live
   php:
-    image: ${IMAGES_PREFIX:-}app-php:${PROJECT_VERSION}
+    image: ${IMAGES_PREFIX:-}app-php:${PROJECT_VERSION:-latest}
     build:
       context: .
     restart: unless-stopped
@@ -73,7 +73,7 @@ services:
       MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
 
   caddy:
-    image: ${IMAGES_PREFIX:-}app-caddy:${PROJECT_VERSION}
+    image: ${IMAGES_PREFIX:-}app-caddy:${PROJECT_VERSION:-latest}
     depends_on:
       php:
         condition: service_healthy
