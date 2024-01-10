@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.0](https://github.com/cedricziel/faro-shop/compare/v0.0.101...v0.1.0) (2024-01-10)
+
+
+### Features
+
+* Enhance scenario ([#150](https://github.com/cedricziel/faro-shop/issues/150)) ([f841a48](https://github.com/cedricziel/faro-shop/commit/f841a487bf18ee145de714d6b02167e413d525ad))
+
+
+### Bug Fixes
+
+* Bump the open-telemetry group with 1 update ([#159](https://github.com/cedricziel/faro-shop/issues/159)) ([66c8e49](https://github.com/cedricziel/faro-shop/commit/66c8e49485018270560f8ad9288642a34c6c2e07))
+
 ## [0.0.101](https://github.com/cedricziel/faro-shop/compare/v0.0.100...v0.0.101) (2024-01-10)
 
 
