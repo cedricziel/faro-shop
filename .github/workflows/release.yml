@@ -18,8 +18,6 @@ jobs:
     name: Assets
     runs-on: ubuntu-latest
 
-    needs: version
-
     steps:
       - name: Fetch source from event
         uses: actions/checkout@v4
@@ -49,7 +47,6 @@ jobs:
   build-test-push:
     runs-on: ubuntu-latest
     needs:
-      - version
       - assets
     if: success()
     permissions:
