@@ -17,6 +17,10 @@ env:
   REGISTRY: ghcr.io
   IMAGES_PREFIX: ghcr.io/${{ github.repository }}-
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   lint:
     name: Docker Lint
@@ -27,7 +31,7 @@ jobs:
       - name: Lint Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
 
-  bump:
+  version:
     runs-on: ubuntu-latest
     needs:
       - lint
@@ -35,61 +39,30 @@ jobs:
     permissions:
       contents: write
 
-    name: Bump version
+    name: Get version
     outputs:
-      bumped_sha: ${{ steps.sha.outputs.SHA }}
-      new_version: ${{ steps.version.outputs.VERSION }}
       test_version: test-${{ steps.version.outputs.VERSION }}
+      version: ${{ steps.version.outputs.VERSION }}
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Bump version
-        uses: remorses/bump-version@js
-        with:
-          version_file: ./VERSION
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: github.ref == 'refs/heads/main'
-
       - name: Get Version
         id: version
         run: |
-          version=$(cat ./VERSION)
+          version=$(cat ./version.txt)
           echo $version
           echo "VERSION=$version" >> $GITHUB_OUTPUT
-
-      - name: Push changes to main
-        run: |
-          git tag -f ${{ steps.version.outputs.VERSION }}
-          git push -f origin --tags
-        if: github.ref == 'refs/heads/main'
-
-      - name: get sha
-        id: sha
-        run: |
-          sha_new=$(git rev-parse HEAD)
-          echo $sha_new
-          echo "SHA=$sha_new" >> $GITHUB_OUTPUT
-        if: github.ref == 'refs/heads/main'
 
   assets:
     name: Assets
     runs-on: ubuntu-latest
 
-    needs: bump
+    needs: version
 
     steps:
-      - name: Fetch updated source through SHA from bump
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ needs.bump.outputs.bumped_sha }}
-          fetch-depth: 0
-        if: github.ref == 'refs/heads/main'
-
       - name: Fetch source from event
         uses: actions/checkout@v4
-        if: github.ref != 'refs/heads/main'
 
       - name: Cache node_modules
         uses: actions/cache@v3
@@ -116,23 +89,15 @@ jobs:
   build-test-push:
     runs-on: ubuntu-latest
     needs:
-      - bump
+      - version
       - assets
     if: success()
     permissions:
       contents: read
       packages: write
     steps:
-      - name: Fetch updated source through SHA from bump
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ needs.bump.outputs.bumped_sha }}
-          fetch-depth: 0
-        if: github.ref == 'refs/heads/main'
-
       - name: Fetch source from event
         uses: actions/checkout@v4
-        if: github.ref != 'refs/heads/main'
 
       - run: cp env.template .env
         shell: bash
@@ -161,7 +126,7 @@ jobs:
         with:
           context: docker/k6
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.test_version }}
+          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.version.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -170,7 +135,7 @@ jobs:
         with:
           context: docker/otelcol
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.test_version }}
+          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.version.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -180,7 +145,7 @@ jobs:
           context: .
           target: php_dev
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.test_version }}
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -190,7 +155,7 @@ jobs:
           context: .
           target: php_prod
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.test_version }}-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.test_version }}-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -200,7 +165,7 @@ jobs:
           context: .
           target: caddy_base
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.test_version }}
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -210,12 +175,12 @@ jobs:
           context: .
           target: caddy_prod
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.test_version }}-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.test_version }}-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
       - name: Start services
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose up --wait --no-build --pull=missing
+        run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose up --wait --no-build --pull=missing
 
       - name: Check HTTP reachability
         run: curl -v -o /dev/null http://localhost
@@ -224,18 +189,18 @@ jobs:
         run: curl -vk -o /dev/null https://localhost
 
       - name: Create test database
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:database:create
+        run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:database:create
 
       - name: Run migrations
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:migrations:migrate --no-interaction
+        run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:migrations:migrate --no-interaction
 
       - name: Run PHPUnit
         if: false # Remove this line if PHPUnit is installed
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/phpunit
+        run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose exec -T php bin/phpunit
 
       - name: Doctrine Schema Validator
         if: false # Remove this line if Doctrine ORM is installed
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:schema:validate
+        run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:schema:validate
 
       - name: Build and push - k6
         uses: docker/build-push-action@v5
@@ -243,7 +208,7 @@ jobs:
           context: docker/k6
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.new_version }},${{ env.IMAGES_PREFIX }}k6:latest
+          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}k6:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
@@ -254,7 +219,7 @@ jobs:
           context: docker/otelcol
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.new_version }},${{ env.IMAGES_PREFIX }}otelcol:latest
+          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}otelcol:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
@@ -266,7 +231,7 @@ jobs:
           target: php_dev
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }},${{ env.IMAGES_PREFIX }}app-php:latest
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}app-php:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
@@ -278,7 +243,7 @@ jobs:
           target: php_prod
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.new_version }}-prod,${{ env.IMAGES_PREFIX }}app-php:latest-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.version }}-prod,${{ env.IMAGES_PREFIX }}app-php:latest-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
@@ -290,7 +255,7 @@ jobs:
           target: caddy_base
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.new_version }},${{ env.IMAGES_PREFIX }}app-caddy:latest
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}app-caddy:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
@@ -302,32 +267,17 @@ jobs:
           target: caddy_prod
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.new_version }}-prod,${{ env.IMAGES_PREFIX }}app-caddy:latest-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.version }}-prod,${{ env.IMAGES_PREFIX }}app-caddy:latest-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
 
-  create_release:
-    if: success() && github.ref == 'refs/heads/main'
-    needs:
-      - bump
-      - build-test-push
+  release-please:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
+    needs:
+      - build-test-push
     steps:
-      - uses: actions/checkout@v4
+      - uses: google-github-actions/release-please-action@v4
         with:
-          ref: ${{ needs.bump.outputs.bumped_sha }}
-          fetch-depth: 0
-
-      - name: Create Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        run: |
-          gh release create ${{ needs.bump.outputs.new_version }} \
-            --title "v${{ needs.bump.outputs.new_version }}" \
-            --verify-tag \
-            --generate-notes
+          token: ${{ secrets.RELEASE_TOKEN }}
+          release-type: simple
