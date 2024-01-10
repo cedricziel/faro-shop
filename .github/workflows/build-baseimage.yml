@@ -6,13 +6,13 @@ on:
       - main
     paths:
       - Dockerfile
-      - .github/workflows/build-image.yml
+      - .github/workflows/build-baseimage.yml
   push:
     branches:
       - main
     paths:
       - Dockerfile
-      - .github/workflows/build-image.yml
+      - .github/workflows/build-baseimage.yml
 env:
   REGISTRY: ghcr.io
   IMAGES_PREFIX: ghcr.io/${{ github.repository }}-
