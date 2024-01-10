@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CheckoutController!{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        function setFailure() {
+            faro.api.pushError(new Error('Checkout failed'));
+            faro.api.pushEvent('app_checkout_failed');
+        }
+
+        setTimeout(setFailure, 1000);
+    </script>
+{% endblock %}
+
+{% block body %}
+    <h1>Checkout failed!</h1>
+{% endblock %}
