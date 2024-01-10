@@ -208,7 +208,7 @@ jobs:
           context: docker/k6
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}k6:latest
+          tags: ${{ env.IMAGES_PREFIX }}k6:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
@@ -219,7 +219,7 @@ jobs:
           context: docker/otelcol
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}otelcol:latest
+          tags: ${{ env.IMAGES_PREFIX }}otelcol:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
@@ -231,7 +231,7 @@ jobs:
           target: php_dev
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}app-php:latest
+          tags: ${{ env.IMAGES_PREFIX }}app-php:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
@@ -243,7 +243,7 @@ jobs:
           target: php_prod
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.version }}-prod,${{ env.IMAGES_PREFIX }}app-php:latest-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-php:latest-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
@@ -255,7 +255,7 @@ jobs:
           target: caddy_base
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}app-caddy:latest
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
@@ -267,7 +267,7 @@ jobs:
           target: caddy_prod
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.version }}-prod,${{ env.IMAGES_PREFIX }}app-caddy:latest-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:latest-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
         if: github.ref == 'refs/heads/main'
