@@ -13,6 +13,11 @@ on:
     paths:
       - Dockerfile
       - .github/workflows/build-baseimage.yml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 env:
   REGISTRY: ghcr.io
   IMAGES_PREFIX: ghcr.io/${{ github.repository }}-
