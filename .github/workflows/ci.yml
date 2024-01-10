@@ -58,7 +58,7 @@ jobs:
     name: Assets
     runs-on: ubuntu-latest
 
-    needs: bump
+    needs: version
 
     steps:
       - name: Fetch source from event
@@ -126,7 +126,7 @@ jobs:
         with:
           context: docker/k6
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.bump.outputs.test_version }}
+          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.version.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -135,7 +135,7 @@ jobs:
         with:
           context: docker/otelcol
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.bump.outputs.test_version }}
+          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.version.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -145,7 +145,7 @@ jobs:
           context: .
           target: php_dev
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.test_version }}
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -155,7 +155,7 @@ jobs:
           context: .
           target: php_prod
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.bump.outputs.test_version }}-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.test_version }}-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -165,7 +165,7 @@ jobs:
           context: .
           target: caddy_base
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.test_version }}
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.test_version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -175,12 +175,12 @@ jobs:
           context: .
           target: caddy_prod
           load: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.bump.outputs.test_version }}-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.test_version }}-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
       - name: Start services
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose up --wait --no-build --pull=missing
+        run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose up --wait --no-build --pull=missing
 
       - name: Check HTTP reachability
         run: curl -v -o /dev/null http://localhost
@@ -189,18 +189,18 @@ jobs:
         run: curl -vk -o /dev/null https://localhost
 
       - name: Create test database
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:database:create
+        run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:database:create
 
       - name: Run migrations
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:migrations:migrate --no-interaction
+        run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:migrations:migrate --no-interaction
 
       - name: Run PHPUnit
         if: false # Remove this line if PHPUnit is installed
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/phpunit
+        run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose exec -T php bin/phpunit
 
       - name: Doctrine Schema Validator
         if: false # Remove this line if Doctrine ORM is installed
-        run: PROJECT_VERSION=${{ needs.bump.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:schema:validate
+        run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:schema:validate
 
       - name: Build and push - k6
         uses: docker/build-push-action@v5
