@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.101](https://github.com/cedricziel/faro-shop/compare/v0.0.100...v0.0.101) (2024-01-10)
+
+
+### Bug Fixes
+
+* Dont depend on version step ([#157](https://github.com/cedricziel/faro-shop/issues/157)) ([a6a4ffb](https://github.com/cedricziel/faro-shop/commit/a6a4ffb9f71697394f81424813698c280b6022ce))
+
 ## [0.0.100](https://github.com/cedricziel/faro-shop/compare/v0.0.99...v0.0.100) (2024-01-10)
 
 
