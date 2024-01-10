@@ -57,14 +57,14 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: docker/php-ext
-          platforms: linux/amd64,linux/arm64,linux/arm64/v8
+          platforms: linux/amd64,linux/arm64
           push: true
           pull: true
           target: ext-protobuf
           build-args: |
             protobuf_version=3.24.4
           tags: |
-            ghcr.io/${{ github.repository }}-app-php-ext:protobuf-3.24.4-8.3
+            ghcr.io/${{ github.repository }}-app-php-ext:protobuf-3.24.4-8.3.1
           cache-from: type=gha
           cache-to: type=gha
 
@@ -72,13 +72,13 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: docker/php-ext
-          platforms: linux/amd64,linux/arm64,linux/arm64/v8
+          platforms: linux/amd64,linux/arm64
           push: true
           pull: true
           target: ext-grpc
           build-args: |
             grpc_version=1.59.1
           tags: |
-            ghcr.io/${{ github.repository }}-app-php-ext:grpc-1.59.1-8.3
+            ghcr.io/${{ github.repository }}-app-php-ext:grpc-1.59.1-8.3.1
           cache-from: type=gha
           cache-to: type=gha
