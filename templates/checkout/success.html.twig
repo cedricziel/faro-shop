@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CheckoutController!{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        function setSuccess() {
+            faro.api.pushEvent('app_checkout_succeeded');
+        }
+
+        setTimeout(setSuccess, 1000);
+    </script>
+{% endblock %}
+
+{% block body %}
+    <h1>Checkout Succeeded!</h1>
+{% endblock %}

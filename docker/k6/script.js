@@ -46,6 +46,11 @@ export default async function () {
         const cartButton = page.locator('.navbar-nav a.btn');
 
         await Promise.all([page.waitForNavigation(), cartButton.click()]);
+
+        // checkout
+        const checkoutButton = page.locator('a#checkout');
+
+        await Promise.all([page.waitForNavigation(), checkoutButton.click()]);
     } finally {
         page.close();
     }
