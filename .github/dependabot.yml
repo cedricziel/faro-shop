@@ -8,30 +8,42 @@ updates:
       github-actions:
         patterns:
         - "actions/*"
+    commit-message:
+      prefix: "fix: "
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "fix: "
 
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "fix: "
 
   - package-ecosystem: "docker"
     directory: "/docker/otelcol"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "fix: "
 
   - package-ecosystem: "docker"
     directory: "/docker/k6"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "fix: "
 
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "fix: "
     ignore:
       - dependency-name: "symfony/*"
         update-types: ["version-update:semver-major"]
