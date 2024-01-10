@@ -9,6 +9,160 @@ permissions:
   repository-projects: write
 
 jobs:
+  version:
+    runs-on: ubuntu-latest
+    needs:
+      - lint
+
+    permissions:
+      contents: write
+
+    name: Get version
+    outputs:
+      test_version: test-${{ steps.version.outputs.VERSION }}
+      version: ${{ steps.version.outputs.VERSION }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get Version
+        id: version
+        run: |
+          version=$(cat ./version.txt)
+          echo $version
+          echo "VERSION=$version" >> $GITHUB_OUTPUT
+
+  assets:
+    name: Assets
+    runs-on: ubuntu-latest
+
+    needs: version
+
+    steps:
+      - name: Fetch source from event
+        uses: actions/checkout@v4
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        id: npm-cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-cache-node-modules-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-cache-node-modules-
+
+      - name: NPM install
+        if: steps.npm-cache-node-modules.outputs.cache-hit != 'true'
+        run: npm install
+
+      - name: NPM build
+        run: npm run build
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: public/build
+
+  build-test-push:
+    runs-on: ubuntu-latest
+    needs:
+      - version
+      - assets
+    if: success()
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Fetch source from event
+        uses: actions/checkout@v4
+
+      - run: cp env.template .env
+        shell: bash
+
+      - name: Download assets
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: public/build
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push - k6
+        uses: docker/build-push-action@v5
+        with:
+          context: docker/k6
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}k6:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - otelcol
+        uses: docker/build-push-action@v5
+        with:
+          context: docker/otelcol
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}otelcol:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - php
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: php_dev
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}app-php:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - php-prod
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: php_prod
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.version }}-prod,${{ env.IMAGES_PREFIX }}app-php:latest-prod
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - caddy
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: caddy_base
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}app-caddy:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push - caddy-prod
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          target: caddy_prod
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.version }}-prod,${{ env.IMAGES_PREFIX }}app-caddy:latest-prod
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
   release_asset:
     runs-on: ubuntu-latest
     steps:
