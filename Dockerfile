@@ -63,6 +63,8 @@ COPY --from=composer_upstream --link /composer /usr/bin/composer
 # Dev PHP image
 FROM php_base_image AS php_dev
 
+WORKDIR /srv/app
+
 ENV APP_ENV=dev XDEBUG_MODE=off
 VOLUME /srv/app/var/
 
@@ -77,6 +79,8 @@ COPY --link docker/php/conf.d/app.dev.ini $PHP_INI_DIR/conf.d/
 
 # Prod PHP image
 FROM php_base_image AS php_prod
+
+WORKDIR /srv/app
 
 ENV APP_ENV=prod
 
