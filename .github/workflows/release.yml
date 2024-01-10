@@ -3,33 +3,17 @@ on:
   release:
     types: [prereleased, released]
 
+env:
+  REGISTRY: ghcr.io
+  IMAGES_PREFIX: ghcr.io/${{ github.repository }}-
+
 permissions:
   contents: write
+  packages: write
   pull-requests: write
   repository-projects: write
 
 jobs:
-  version:
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
-    name: Get version
-    outputs:
-      test_version: test-${{ steps.version.outputs.VERSION }}
-      version: ${{ steps.version.outputs.VERSION }}
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Get Version
-        id: version
-        run: |
-          version=$(cat ./version.txt)
-          echo $version
-          echo "VERSION=$version" >> $GITHUB_OUTPUT
-
   assets:
     name: Assets
     runs-on: ubuntu-latest
@@ -103,7 +87,7 @@ jobs:
           context: docker/k6
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}k6:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}k6:latest
+          tags: ${{ env.IMAGES_PREFIX }}k6:${{ github.event.release.tag_name }},${{ env.IMAGES_PREFIX }}k6:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -113,7 +97,7 @@ jobs:
           context: docker/otelcol
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}otelcol:latest
+          tags: ${{ env.IMAGES_PREFIX }}otelcol:${{ github.event.release.tag_name }},${{ env.IMAGES_PREFIX }}otelcol:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -124,7 +108,7 @@ jobs:
           target: php_dev
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}app-php:latest
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ github.event.release.tag_name }},${{ env.IMAGES_PREFIX }}app-php:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -135,7 +119,7 @@ jobs:
           target: php_prod
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ needs.version.outputs.version }}-prod,${{ env.IMAGES_PREFIX }}app-php:latest-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-php:${{ github.event.release.tag_name }}-prod,${{ env.IMAGES_PREFIX }}app-php:latest-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -146,7 +130,7 @@ jobs:
           target: caddy_base
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.version }},${{ env.IMAGES_PREFIX }}app-caddy:latest
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ github.event.release.tag_name }},${{ env.IMAGES_PREFIX }}app-caddy:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -157,7 +141,7 @@ jobs:
           target: caddy_prod
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.version.outputs.version }}-prod,${{ env.IMAGES_PREFIX }}app-caddy:latest-prod
+          tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ github.event.release.tag_name }}-prod,${{ env.IMAGES_PREFIX }}app-caddy:latest-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -172,7 +156,7 @@ jobs:
       - name: Package Helm Chart
         uses: WyriHaximus/github-action-helm3@v3
         with:
-          exec: helm package k8s/charts/faro-shop
+          exec: helm package k8s/charts/faro-shop --app-version ${{ github.event.release.tag_name }} --version ${{ github.event.release.tag_name }}
       - name: Upload Release Asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
