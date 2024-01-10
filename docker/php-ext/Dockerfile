@@ -1,4 +1,4 @@
-FROM php:8.3.0-fpm-alpine AS php_upstream
+FROM php:8.3.1-fpm-alpine AS php_upstream
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 
 FROM php_upstream as grpc-extension-build
