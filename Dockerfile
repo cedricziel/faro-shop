@@ -1,6 +1,7 @@
 #syntax=docker/dockerfile:1.4
 
 FROM php:8.3.1-fpm-alpine AS php_upstream
+FROM ghcr.io/cedricziel/faro-shop-php:8.3.1 AS php_base_image
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 FROM composer/composer:2-bin AS composer_upstream
 FROM --platform=$BUILDPLATFORM caddy:2-alpine AS caddy_upstream
@@ -60,7 +61,9 @@ ENV PATH="${PATH}:/root/.composer/vendor/bin"
 COPY --from=composer_upstream --link /composer /usr/bin/composer
 
 # Dev PHP image
-FROM php_base AS php_dev
+FROM php_base_image AS php_dev
+
+WORKDIR /srv/app
 
 ENV APP_ENV=dev XDEBUG_MODE=off
 VOLUME /srv/app/var/
@@ -75,7 +78,9 @@ RUN set -eux; \
 COPY --link docker/php/conf.d/app.dev.ini $PHP_INI_DIR/conf.d/
 
 # Prod PHP image
-FROM php_base AS php_prod
+FROM php_base_image AS php_prod
+
+WORKDIR /srv/app
 
 ENV APP_ENV=prod
 
