@@ -5,12 +5,11 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: ghcr.io/cedricziel/faro-shop-app-php
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
-  # [bump]
-  version: 0.0.100
+  version: 0.0.100 #x-release-please-version
 
 imagePullSecrets: []
 nameOverride: ""
