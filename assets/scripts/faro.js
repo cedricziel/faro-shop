@@ -1,12 +1,12 @@
-import {BaseInstrumentation, TransportItem} from "@grafana/faro-web-sdk";
+import {BaseInstrumentation} from "@grafana/faro-web-sdk";
 import { getWebInstrumentations, initializeFaro as initializeFaroReal } from '@grafana/faro-web-sdk';
-import { TracingInstrumentation } from '@grafana/faro-web-tracing';
 import {PerformanceTimelineInstrumentation} from "@grafana/faro-instrumentation-performance-timeline";
 import {FetchInstrumentation} from "@grafana/faro-instrumentation-fetch";
 import {XHRInstrumentation} from "@grafana/faro-instrumentation-xhr";
 
 const faroPage = window.faroPageMeta || {};
 const faroUrl = window.faroUrl || null;
+const VERSION = window.VERSION || 'unknown';
 
 class PageLoadInstrumentation extends BaseInstrumentation {
     name = 'page-load';
@@ -58,7 +58,6 @@ class PageLoadInstrumentation extends BaseInstrumentation {
     }
 }
 
-/** @param {TransportItem} event */
 function beforeSend(event) {
 
     if (event.payload.attributes && event.payload.attributes.entryType === 'resource') {
@@ -92,7 +91,7 @@ export function initializeFaro() {
         beforeSend: beforeSend,
         url: faroUrl,
         app: {
-            name: 'faros-shop',
+            name: 'faros-shop-frontend',
             version: VERSION,
             environment: 'production'
         },
@@ -102,7 +101,7 @@ export function initializeFaro() {
 
             // Initialization of the tracing package.
             // This packages is optional because it increases the bundle size noticeably. Only add it if you want tracing data.
-            new TracingInstrumentation(),
+            //new TracingInstrumentation(),
             new PerformanceTimelineInstrumentation(),
             new PageLoadInstrumentation(),
             new FetchInstrumentation(),
