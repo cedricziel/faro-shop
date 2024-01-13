@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.2](https://github.com/cedricziel/faro-shop/compare/v0.1.1...v0.1.2) (2024-01-13)
+
+
+### Bug Fixes
+
+* Allow fixtures bundle in production ([#173](https://github.com/cedricziel/faro-shop/issues/173)) ([69a28db](https://github.com/cedricziel/faro-shop/commit/69a28db3399d13e22036b727131ed487eba9b8ed))
+* Allow fixtures bundle in production ([#175](https://github.com/cedricziel/faro-shop/issues/175)) ([9bef726](https://github.com/cedricziel/faro-shop/commit/9bef726e11cb9963511fb8a80686ef6bc63e8237))
+* Dont create dynamic property ([#177](https://github.com/cedricziel/faro-shop/issues/177)) ([b1d8247](https://github.com/cedricziel/faro-shop/commit/b1d8247e1738411fee6f042a6e3b586da07449f0))
+* Set environment variables for faro and loadgen ([#176](https://github.com/cedricziel/faro-shop/issues/176)) ([588fe7e](https://github.com/cedricziel/faro-shop/commit/588fe7e192a29f706a1296faa283d6d08db0cf1b))
+
 ## [0.1.1](https://github.com/cedricziel/faro-shop/compare/v0.1.0...v0.1.1) (2024-01-12)
 
 
