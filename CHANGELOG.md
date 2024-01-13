@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/cedricziel/faro-shop/compare/v0.1.2...v0.2.0) (2024-01-13)
+
+
+### Features
+
+* Emit some telemtry on checkout ([#178](https://github.com/cedricziel/faro-shop/issues/178)) ([f1a08de](https://github.com/cedricziel/faro-shop/commit/f1a08de97f3373924f47c2c7e5537d93b64c49cf))
+
 ## [0.1.2](https://github.com/cedricziel/faro-shop/compare/v0.1.1...v0.1.2) (2024-01-13)
 
 
