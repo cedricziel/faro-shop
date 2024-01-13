@@ -19,7 +19,7 @@ services:
       - ./docker/k6/script.js:/etc/script.js
     command: run /etc/script.js
     environment:
-      WEB_HOST: caddy
+      WEB_HOST: ${WEB_HOST:-caddy}
     restart: always
     depends_on:
       caddy:
