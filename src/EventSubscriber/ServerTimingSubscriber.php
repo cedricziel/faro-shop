@@ -12,7 +12,6 @@ class ServerTimingSubscriber implements EventSubscriberInterface
     public function onKernelRequest(RequestEvent $event): void
     {
         $rootSpan = Span::getCurrent();
-        $this->rootContext = $rootSpan->getContext();
 
         $faroSession = $event->getRequest()->headers->get('x-faro-session', '');
         if ($faroSession !== '') {
