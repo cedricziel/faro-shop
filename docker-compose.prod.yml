@@ -10,6 +10,7 @@ services:
     environment:
       APP_SECRET: ${APP_SECRET}
       MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET}
+      FARO_URL: ${FARO_URL}
 
   caddy:
     image: ${IMAGES_PREFIX:-}app-caddy:${PROJECT_VERSION:-latest}-prod
