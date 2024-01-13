@@ -28,7 +28,9 @@ export default async function () {
     try {
         await page.goto(`http://${__ENV.WEB_HOST}`);
 
-        const detailPageButton = page.locator('.card-body a.btn');
+        const productToFind = Math.floor(Math.random() * 9) + 1;
+
+        const detailPageButton = page.locator(`#product-list div.product:nth-child(${productToFind}) a.btn`);
 
         await Promise.all([page.waitForNavigation(), detailPageButton.click()]);
 
