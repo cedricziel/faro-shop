@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.1](https://github.com/cedricziel/faro-shop/compare/v0.2.0...v0.2.1) (2024-01-15)
+
+
+### Bug Fixes
+
+* bump @grafana/faro-instrumentation-fetch from 1.3.5 to 1.3.6 ([#182](https://github.com/cedricziel/faro-shop/issues/182)) ([9d1eeb1](https://github.com/cedricziel/faro-shop/commit/9d1eeb1b2138b36c7a30a1826f5e6c7f934dccbe))
+* bump @grafana/faro-instrumentation-performance-timeline from 1.3.5 to 1.3.6 ([#183](https://github.com/cedricziel/faro-shop/issues/183)) ([aa6e41c](https://github.com/cedricziel/faro-shop/commit/aa6e41c0d16e7d47a8cf06d335f032e2b826adc2))
+* bump @grafana/faro-web-tracing from 1.3.5 to 1.3.6 ([#184](https://github.com/cedricziel/faro-shop/issues/184)) ([8d67f05](https://github.com/cedricziel/faro-shop/commit/8d67f059ef48c571a849169fbd54911f625d0b0c))
+* Correct k6 selector used ([#180](https://github.com/cedricziel/faro-shop/issues/180)) ([3721fe7](https://github.com/cedricziel/faro-shop/commit/3721fe70221ec904c7464277481373c127d3c578))
+
 ## [0.2.0](https://github.com/cedricziel/faro-shop/compare/v0.1.2...v0.2.0) (2024-01-13)
 
 
