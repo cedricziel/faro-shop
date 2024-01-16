@@ -3,6 +3,7 @@ import { getWebInstrumentations, initializeFaro as initializeFaroReal } from '@g
 import {PerformanceTimelineInstrumentation} from "@grafana/faro-instrumentation-performance-timeline";
 import {FetchInstrumentation} from "@grafana/faro-instrumentation-fetch";
 import {XHRInstrumentation} from "@grafana/faro-instrumentation-xhr";
+import { TracingInstrumentation } from '@grafana/faro-web-tracing';
 
 const faroPage = window.faroPageMeta || {};
 const faroUrl = window.faroUrl || null;
@@ -101,7 +102,7 @@ export function initializeFaro() {
 
             // Initialization of the tracing package.
             // This packages is optional because it increases the bundle size noticeably. Only add it if you want tracing data.
-            //new TracingInstrumentation(),
+            new TracingInstrumentation(),
             new PerformanceTimelineInstrumentation(),
             new PageLoadInstrumentation(),
             new FetchInstrumentation(),
