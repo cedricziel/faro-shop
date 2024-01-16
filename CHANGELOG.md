@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/cedricziel/faro-shop/compare/v0.2.1...v0.3.0) (2024-01-16)
+
+
+### Features
+
+* Enable Performance instrumentation ([#187](https://github.com/cedricziel/faro-shop/issues/187)) ([0a6ecf8](https://github.com/cedricziel/faro-shop/commit/0a6ecf85a0116e40b4bff13c4ef9a3c052c244e2))
+* reenable tracing instrumentation ([#188](https://github.com/cedricziel/faro-shop/issues/188)) ([0a79704](https://github.com/cedricziel/faro-shop/commit/0a79704af4f2167b2d2132fc87d11f123cb37f41))
+
 ## [0.2.1](https://github.com/cedricziel/faro-shop/compare/v0.2.0...v0.2.1) (2024-01-15)
 
 
