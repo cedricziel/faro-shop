@@ -16,6 +16,13 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "fix: "
+    groups:
+      grafana:
+        patterns:
+          - "@grafana/*"
+        update-types:
+          - "minor"
+          - "patch"
 
   - package-ecosystem: "docker"
     directory: "/"
