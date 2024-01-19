@@ -53,6 +53,12 @@ export default async function () {
         const checkoutButton = page.locator('a#checkout');
 
         await Promise.all([page.waitForNavigation(), checkoutButton.click()]);
+
+        check(page, {
+            'header': p => p.locator('h1').textContent() == 'Checkout Succeeded!',
+        });
+
+        page.waitForTimeout(5000);
     } finally {
         page.close();
     }
