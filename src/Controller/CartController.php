@@ -8,7 +8,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 class CartController extends AbstractController
 {
@@ -30,6 +30,8 @@ class CartController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $cart->setUpdatedAt(new \DateTimeImmutable());
             $cartManager->save($cart);
+
+            $this->addFlash('success', sprintf('Cart updated, total amount %s', $cart->getTotal()));
 
             $this->logger->info(sprintf('Updating cart, total amount %s', $cart->getTotal()));
 
