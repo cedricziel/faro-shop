@@ -31,6 +31,8 @@ class CartController extends AbstractController
             $cart->setUpdatedAt(new \DateTimeImmutable());
             $cartManager->save($cart);
 
+            $this->addFlash('success', sprintf('Cart updated, total amount %s', $cart->getTotal()));
+
             $this->logger->info(sprintf('Updating cart, total amount %s', $cart->getTotal()));
 
             return $this->redirectToRoute('cart');

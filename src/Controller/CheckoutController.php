@@ -58,13 +58,23 @@ class CheckoutController extends AbstractController
             'total' => $order->getTotal(),
         ]);
 
-        return $this->render('checkout/success.html.twig');
+        return $this->redirectToRoute('app_checkout_success', [
+            'id' => $order->getId(),
+        ]);
     }
 
     #[Route('/checkout/{id}/failed', name: 'app_checkout_failed')]
     public function failed(Order $order): Response {
 
         return $this->render('checkout/failed.html.twig', [
+            'order' => $order,
+        ]);
+    }
+
+    #[Route('/checkout/{id}/success', name: 'app_checkout_success')]
+    public function success(Order $order): Response {
+
+        return $this->render('checkout/success.html.twig', [
             'order' => $order,
         ]);
     }

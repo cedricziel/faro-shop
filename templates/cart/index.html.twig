@@ -6,7 +6,7 @@
     <div class="container mt-4">
         <h1>Your Cart</h1>
         {% if cart.items.count > 0 %}
-            <div class="row mt-4">
+            <div class="row mt-4" {{ stimulus_controller('checkout', {'api': url('app_checkout', {'id': cart.id} ), 'failureUrl': url('app_checkout_failed', {'id': cart.id}), 'successUrl': url('app_checkout_success', {'id': cart.id})}) }} {{ stimulus_target('checkout', 'form') }}>
                 <!-- List of items -->
                 <div class="col-md-8">
                     {{ form_start(form) }}
@@ -61,7 +61,10 @@
                             </li>
                         </ul>
                         <div class="card-body">
-                            <a id="checkout" href="{{ path('app_checkout', {'id': cart.id}) }}" class="btn btn-warning w-100">Checkout</a>
+                            <a id="checkout" href="{{ path('app_checkout', {'id': cart.id}) }}"
+                               class="btn btn-warning w-100" {{ stimulus_target('checkout', 'submit') }}>
+                                Checkout
+                            </a>
                         </div>
                     </div>
                 </div>
