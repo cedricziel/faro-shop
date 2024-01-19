@@ -5,6 +5,9 @@ import {FetchInstrumentation} from "@grafana/faro-instrumentation-fetch";
 import {XHRInstrumentation} from "@grafana/faro-instrumentation-xhr";
 import { TracingInstrumentation } from '@grafana/faro-web-tracing';
 
+import { FetchInstrumentation as OTelFetchInstrumentation } from '@opentelemetry/instrumentation-fetch';
+import { XMLHttpRequestInstrumentation as OTelXHRInstrumentation } from '@opentelemetry/instrumentation-xml-http-request';
+
 const faroPage = window.faroPageMeta || {};
 const faroUrl = window.faroUrl || null;
 const VERSION = window.VERSION || 'unknown';
@@ -88,6 +91,10 @@ function beforeSend(event) {
 }
 
 export function initializeFaro() {
+    const ignoreUrls = [
+        faroUrl
+    ];
+
     return initializeFaroReal({
         beforeSend: beforeSend,
         url: faroUrl,
