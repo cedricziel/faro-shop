@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.1](https://github.com/cedricziel/faro-shop/compare/v0.3.0...v0.3.1) (2024-01-19)
+
+
+### Bug Fixes
+
+* bump @grafana/faro-instrumentation-xhr from 1.3.5 to 1.3.6 ([#190](https://github.com/cedricziel/faro-shop/issues/190)) ([ff445dd](https://github.com/cedricziel/faro-shop/commit/ff445dde9e428903f6ee1a26d7b8b5bcb1c359e2))
+* bump doctrine/orm from 2.17.2 to 2.17.3 ([#194](https://github.com/cedricziel/faro-shop/issues/194)) ([6bcf8e2](https://github.com/cedricziel/faro-shop/commit/6bcf8e298336153202eab3e3214cf7fa72f9b8cb))
+* bump the open-telemetry group with 1 update ([#191](https://github.com/cedricziel/faro-shop/issues/191)) ([865afc0](https://github.com/cedricziel/faro-shop/commit/865afc0107295ac679f699ffb19a9ccf977c9545))
+* initialize faro directly ([#192](https://github.com/cedricziel/faro-shop/issues/192)) ([a30500d](https://github.com/cedricziel/faro-shop/commit/a30500d14fb1433e9cd34039071a604cfc2b8bb8))
+* pin opentelemetry dependency to solve build issue ([#195](https://github.com/cedricziel/faro-shop/issues/195)) ([312a0e5](https://github.com/cedricziel/faro-shop/commit/312a0e5176816a3e255186c1a2f11a59ca690722))
+
 ## [0.3.0](https://github.com/cedricziel/faro-shop/compare/v0.2.1...v0.3.0) (2024-01-16)
 
 
