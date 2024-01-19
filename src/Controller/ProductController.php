@@ -9,7 +9,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 class ProductController extends AbstractController
 {
@@ -41,9 +41,9 @@ class ProductController extends AbstractController
 
             $cartManager->save($cart);
 
-            return $this->redirectToRoute('product_detail', [
-                'id' => $product->getId(),
-            ]);
+            $this->addFlash('success', sprintf('Product %s added to cart', $product->getName()));
+
+            return $this->redirectToRoute('cart');
         }
 
         return $this->render('product/detail.html.twig', [

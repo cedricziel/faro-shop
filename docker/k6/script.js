@@ -44,11 +44,6 @@ export default async function () {
 
         await Promise.all([page.waitForNavigation(), addButton.click()]);
 
-        // cart
-        const cartButton = page.locator('.navbar-nav a.btn');
-
-        await Promise.all([page.waitForNavigation(), cartButton.click()]);
-
         // checkout
         const checkoutButton = page.locator('a#checkout');
 
