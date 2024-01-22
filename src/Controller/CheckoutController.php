@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Order;
 use App\O11y\Metrics;
+use App\Service\CheckoutService;
 use Doctrine\ORM\EntityManagerInterface;
 use OpenTelemetry\API\Globals;
 use OpenTelemetry\API\Trace\Span;
@@ -19,15 +20,28 @@ class CheckoutController extends AbstractController
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly LoggerInterface $logger,
+        private readonly CheckoutService $checkoutService,
     ) {
     }
 
     #[Route('/checkout/{id}', name: 'app_checkout')]
     public function index(Order $order): Response
     {
-        $order->setStatus(random_int(1, 2) == 1 ? Order::STATUS_CHECKOUT : Order::STATUS_FAILED);
-        $this->entityManager->persist($order);
-        $this->entityManager->flush();
+        try {
+            $this->checkoutService->checkout($order);
+        } catch (\Exception $e) {
+            $this->logger->error('Checkout failed', [
+                'order' => $order->getId(),
+                'total' => $order->getTotal(),
+                'error' => $e->getMessage(),
+            ]);
+
+            return $this->redirectToRoute('app_checkout_failed', [
+                'id' => $order->getId(),
+            ]);
+        }
+
+
 
         $span = Span::getCurrent()->setAttributes([
             'app.order.id' => $order->getId(),
