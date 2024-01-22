@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.0](https://github.com/cedricziel/faro-shop/compare/v0.3.1...v0.4.0) (2024-01-19)
+
+
+### Features
+
+* add controller for checkout and control behavior async ([ea3a977](https://github.com/cedricziel/faro-shop/commit/ea3a9770b4f171cb2155536300c6bb866c97b444))
+* extend demo ([#200](https://github.com/cedricziel/faro-shop/issues/200)) ([ea3a977](https://github.com/cedricziel/faro-shop/commit/ea3a9770b4f171cb2155536300c6bb866c97b444))
+
+
+### Bug Fixes
+
+* bump the github-actions group with 1 update ([#193](https://github.com/cedricziel/faro-shop/issues/193)) ([84a5698](https://github.com/cedricziel/faro-shop/commit/84a56987bb93a6b1259a48243d195e57c70e8bdf))
+* Bump webpack-cli from 4.10.0 to 5.1.4 ([#46](https://github.com/cedricziel/faro-shop/issues/46)) ([e77129e](https://github.com/cedricziel/faro-shop/commit/e77129e2d4e633bb4d705e2a906614918a6a4c12))
+* k6 should wait for checkout to succeed or fail ([#198](https://github.com/cedricziel/faro-shop/issues/198)) ([9f4f352](https://github.com/cedricziel/faro-shop/commit/9f4f352dfa94618f36327f5f0882944b244f2338))
+
 ## [0.3.1](https://github.com/cedricziel/faro-shop/compare/v0.3.0...v0.3.1) (2024-01-19)
 
 
