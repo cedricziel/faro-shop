@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/cedricziel/faro-shop/compare/v0.4.0...v0.5.0) (2024-01-22)
+
+
+### Features
+
+* Encapsulate transaction in span ([#201](https://github.com/cedricziel/faro-shop/issues/201)) ([dc511c8](https://github.com/cedricziel/faro-shop/commit/dc511c8359eb379732d925af1533c8a747fa83e8))
+
 ## [0.4.0](https://github.com/cedricziel/faro-shop/compare/v0.3.1...v0.4.0) (2024-01-19)
 
 
