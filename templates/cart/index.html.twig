@@ -62,7 +62,7 @@
                         </ul>
                         <div class="card-body">
                             <a id="checkout" href="{{ path('app_checkout', {'id': cart.id}) }}"
-                               class="btn btn-warning w-100" {{ stimulus_action('checkout', 'submit', 'click:prevent') }}>
+                               class="btn btn-warning w-100" {{ stimulus_action('checkout', 'submit:prevent', 'click') }}>
                                 Checkout
                             </a>
                         </div>
