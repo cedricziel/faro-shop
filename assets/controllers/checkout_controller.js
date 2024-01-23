@@ -32,6 +32,7 @@ export default class extends Controller {
 
             location.href = this.successUrlValue;
         } catch (e) {
+            faro.api.pushEvent('checkout_failed');
             faro.api.pushError(new Error('checkout_failed'));
 
             location.href = this.failureUrlValue;
