@@ -9,7 +9,6 @@ const VERSION = window.VERSION || 'unknown';
 
 export function initializeFaro() {
     return initializeFaroReal({
-        beforeSend: beforeSend,
         url: faroUrl,
         app: {
             name: 'faros-shop-frontend',
