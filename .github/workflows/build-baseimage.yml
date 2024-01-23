@@ -67,6 +67,6 @@ jobs:
           pull: true
           target: php_base
           tags: |
-            ghcr.io/${{ github.repository }}-php:8.3.1
+            ghcr.io/${{ github.repository }}-php:8.3.2
           cache-from: type=gha
           cache-to: type=gha
