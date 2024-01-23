@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.1](https://github.com/cedricziel/faro-shop/compare/v0.5.0...v0.5.1) (2024-01-23)
+
+
+### Bug Fixes
+
+* bump core-js from 3.35.0 to 3.35.1 ([#206](https://github.com/cedricziel/faro-shop/issues/206)) ([4630d23](https://github.com/cedricziel/faro-shop/commit/4630d23be76e4a64d7e87c5f4c7d71c7c6bbe678))
+* bump php from 8.3.1-fpm-alpine to 8.3.2-fpm-alpine ([#203](https://github.com/cedricziel/faro-shop/issues/203)) ([828ee65](https://github.com/cedricziel/faro-shop/commit/828ee6546fc5456c776c475ba463f54843593294))
+* prevent default correctly ([#207](https://github.com/cedricziel/faro-shop/issues/207)) ([065629d](https://github.com/cedricziel/faro-shop/commit/065629d5fc1c3c4c59a041928e84a6cfe9003961))
+
 ## [0.5.0](https://github.com/cedricziel/faro-shop/compare/v0.4.0...v0.5.0) (2024-01-22)
 
 
