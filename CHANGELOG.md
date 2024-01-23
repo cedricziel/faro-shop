@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.2](https://github.com/cedricziel/faro-shop/compare/v0.5.1...v0.5.2) (2024-01-23)
+
+
+### Bug Fixes
+
+* reduce instrumentation ([#209](https://github.com/cedricziel/faro-shop/issues/209)) ([729cbca](https://github.com/cedricziel/faro-shop/commit/729cbca00ea9e3b5d3c05a80387d9918f1790de4))
+
 ## [0.5.1](https://github.com/cedricziel/faro-shop/compare/v0.5.0...v0.5.1) (2024-01-23)
 
 
