@@ -3703,16 +3703,16 @@
         },
         {
             "name": "open-telemetry/api",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/api.git",
-                "reference": "401d04c6afe349afa78250ac862db2f89dbf94f6"
+                "reference": "87de95d926f46262885d0d390060c095af13e2e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/api/zipball/401d04c6afe349afa78250ac862db2f89dbf94f6",
-                "reference": "401d04c6afe349afa78250ac862db2f89dbf94f6",
+                "url": "https://api.github.com/repos/opentelemetry-php/api/zipball/87de95d926f46262885d0d390060c095af13e2e5",
+                "reference": "87de95d926f46262885d0d390060c095af13e2e5",
                 "shasum": ""
             },
             "require": {
@@ -3766,7 +3766,7 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2024-01-10T13:04:59+00:00"
+            "time": "2024-02-06T01:32:25+00:00"
         },
         {
             "name": "open-telemetry/context",
