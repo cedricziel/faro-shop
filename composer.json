@@ -10,7 +10,7 @@
         "doctrine/doctrine-bundle": "^2.10",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
         "doctrine/doctrine-migrations-bundle": "^3.2",
-        "doctrine/orm": "^2.16",
+        "doctrine/orm": "^3.0",
         "google/protobuf": "^3.25",
         "guzzlehttp/guzzle": "^7.8",
         "guzzlehttp/promises": "^2.0",
