@@ -10,6 +10,9 @@ updates:
         - "actions/*"
     commit-message:
       prefix: "fix: "
+    assignees:
+      - "cedricziel"
+      
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -23,6 +26,8 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    assignees:
+      - "cedricziel"
 
   - package-ecosystem: "docker"
     directory: "/"
@@ -30,6 +35,8 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "fix: "
+    assignees:
+      - "cedricziel"
 
   - package-ecosystem: "docker"
     directory: "/docker/otelcol"
@@ -37,6 +44,8 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "fix: "
+    assignees:
+      - "cedricziel"
 
   - package-ecosystem: "docker"
     directory: "/docker/k6"
@@ -44,6 +53,8 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "fix: "
+    assignees:
+      - "cedricziel"
 
   - package-ecosystem: "composer"
     directory: "/"
@@ -64,4 +75,6 @@ updates:
       open-telemetry:
         patterns:
         - "open-telemetry/*"
+    assignees:
+      - "cedricziel"
         
