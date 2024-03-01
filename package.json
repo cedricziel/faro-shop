@@ -21,11 +21,11 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "@grafana/faro-instrumentation-fetch": "^1.3.9",
-        "@grafana/faro-instrumentation-performance-timeline": "^1.3.9",
-        "@grafana/faro-instrumentation-xhr": "^1.3.9",
-        "@grafana/faro-web-sdk": "^1.3.9",
-        "@grafana/faro-web-tracing": "^1.3.9"
+        "@grafana/faro-instrumentation-fetch": "^1.4.0",
+        "@grafana/faro-instrumentation-performance-timeline": "^1.4.0",
+        "@grafana/faro-instrumentation-xhr": "^1.4.0",
+        "@grafana/faro-web-sdk": "^1.4.0",
+        "@grafana/faro-web-tracing": "^1.4.0"
     },
     "overrides": {
         "@opentelemetry/instrumentation": "0.45.0"
