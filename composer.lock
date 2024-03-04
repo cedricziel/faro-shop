@@ -7476,16 +7476,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v2.4.4",
+            "version": "v2.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "bec213c39511eda66663baa2ee7440c65f89c695"
+                "reference": "b0a405f40614c9f584b489d54f91091817b0e26e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/bec213c39511eda66663baa2ee7440c65f89c695",
-                "reference": "bec213c39511eda66663baa2ee7440c65f89c695",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/b0a405f40614c9f584b489d54f91091817b0e26e",
+                "reference": "b0a405f40614c9f584b489d54f91091817b0e26e",
                 "shasum": ""
             },
             "require": {
@@ -7521,7 +7521,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v2.4.4"
+                "source": "https://github.com/symfony/flex/tree/v2.4.5"
             },
             "funding": [
                 {
@@ -7537,7 +7537,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-05T18:04:53+00:00"
+            "time": "2024-03-02T08:16:47+00:00"
         },
         {
             "name": "symfony/form",
@@ -13929,16 +13929,16 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.55.1",
+            "version": "v1.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "11a9d3125c5b93ab4043f0f2e9927fdc55881c17"
+                "reference": "bbb7949ae048363df7c8439abeddef8befd155ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/11a9d3125c5b93ab4043f0f2e9927fdc55881c17",
-                "reference": "11a9d3125c5b93ab4043f0f2e9927fdc55881c17",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/bbb7949ae048363df7c8439abeddef8befd155ce",
+                "reference": "bbb7949ae048363df7c8439abeddef8befd155ce",
                 "shasum": ""
             },
             "require": {
@@ -14001,7 +14001,7 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony/maker-bundle/issues",
-                "source": "https://github.com/symfony/maker-bundle/tree/v1.55.1"
+                "source": "https://github.com/symfony/maker-bundle/tree/v1.56.0"
             },
             "funding": [
                 {
@@ -14017,7 +14017,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-21T13:41:51+00:00"
+            "time": "2024-03-04T13:36:45+00:00"
         },
         {
             "name": "symfony/panther",
