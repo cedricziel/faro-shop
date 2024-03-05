@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4af18059baac96a4b23b8bdd9b05d73",
+    "content-hash": "b34ffd5f188baf80845bdc76589ae647",
     "packages": [
         {
             "name": "brick/math",
@@ -4042,16 +4042,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr15",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-psr15.git",
-                "reference": "fbc5221a9ee628bfd21448f60a6677121184e899"
+                "reference": "f56f8db7c3ca322ecc5e147efa53d357cddd3bc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr15/zipball/fbc5221a9ee628bfd21448f60a6677121184e899",
-                "reference": "fbc5221a9ee628bfd21448f60a6677121184e899",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr15/zipball/f56f8db7c3ca322ecc5e147efa53d357cddd3bc6",
+                "reference": "f56f8db7c3ca322ecc5e147efa53d357cddd3bc6",
                 "shasum": ""
             },
             "require": {
@@ -4086,7 +4086,7 @@
             "license": [
                 "Apache-2.0"
             ],
-            "description": "OpenTelemetry auto-instrumentation for psr15 middleware.",
+            "description": "OpenTelemetry auto-instrumentation for PSR-15 (HTTP Server Request Handlers).",
             "homepage": "https://opentelemetry.io/docs/php",
             "keywords": [
                 "instrumentation",
@@ -4097,9 +4097,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-psr15/tree/1.0.4"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-psr15/tree/1.0.5"
             },
-            "time": "2024-01-21T05:05:24+00:00"
+            "time": "2024-02-28T22:30:37+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr18",
@@ -4461,16 +4461,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-propagation-server-timing",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-propagator-server-timing.git",
-                "reference": "818db003e0ddb38485d8d19c1a4e52aca92d2d49"
+                "reference": "8f652d632db0ee08115ec21f631e63fde80d20e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-propagator-server-timing/zipball/818db003e0ddb38485d8d19c1a4e52aca92d2d49",
-                "reference": "818db003e0ddb38485d8d19c1a4e52aca92d2d49",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-propagator-server-timing/zipball/8f652d632db0ee08115ec21f631e63fde80d20e0",
+                "reference": "8f652d632db0ee08115ec21f631e63fde80d20e0",
                 "shasum": ""
             },
             "require": {
@@ -4511,10 +4511,9 @@
                 "propagator"
             ],
             "support": {
-                "issues": "https://github.com/opentelemetry-php/contrib-propagator-server-timing/issues",
-                "source": "https://github.com/opentelemetry-php/contrib-propagator-server-timing/tree/0.0.1"
+                "source": "https://github.com/opentelemetry-php/contrib-propagator-server-timing/tree/0.0.2"
             },
-            "time": "2023-11-26T22:41:55+00:00"
+            "time": "2024-03-04T11:59:57+00:00"
         },
         {
             "name": "open-telemetry/sdk",
