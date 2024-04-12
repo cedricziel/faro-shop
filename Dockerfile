@@ -1,6 +1,6 @@
 #syntax=docker/dockerfile:1.4
 
-FROM php:8.3.4-fpm-alpine AS php_upstream
+FROM php:8.3.6-fpm-alpine AS php_upstream
 FROM ghcr.io/cedricziel/faro-shop-php:8.3.2 AS php_base_image
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 FROM composer/composer:2-bin AS composer_upstream
