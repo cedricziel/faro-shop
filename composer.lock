@@ -4292,16 +4292,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-symfony",
-            "version": "1.0.0beta23",
+            "version": "1.0.0beta24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-symfony.git",
-                "reference": "793f49c68e4ad614a42bc63ceb9459c1ade12172"
+                "reference": "92cf68427b558a4c01090d69f5a003c5725a6083"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-symfony/zipball/793f49c68e4ad614a42bc63ceb9459c1ade12172",
-                "reference": "793f49c68e4ad614a42bc63ceb9459c1ade12172",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-symfony/zipball/92cf68427b558a4c01090d69f5a003c5725a6083",
+                "reference": "92cf68427b558a4c01090d69f5a003c5725a6083",
                 "shasum": ""
             },
             "require": {
@@ -4322,10 +4322,10 @@
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.16",
+                "psalm/plugin-phpunit": "^0.18.4",
                 "symfony/http-client": "^5.4||^6.0",
                 "symfony/messenger": "^5.4||^6.0",
-                "vimeo/psalm": "^4.0"
+                "vimeo/psalm": "^5.0"
             },
             "suggest": {
                 "open-telemetry/opentelemetry-propagation-server-timing": "Automatically propagate the context to the client through server-timing headers.",
@@ -4355,9 +4355,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-symfony/tree/1.0.0beta23"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-symfony/tree/1.0.0beta24"
             },
-            "time": "2024-02-15T18:16:25+00:00"
+            "time": "2024-05-01T23:23:30+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-instrumentation-installer",
