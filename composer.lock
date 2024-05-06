@@ -4228,16 +4228,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-slim",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-slim.git",
-                "reference": "6c8343feddb0f8a4c3ef10e469317cca690b271a"
+                "reference": "610cfbc92148aacf054bb3ccb65a6a23205adb02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-slim/zipball/6c8343feddb0f8a4c3ef10e469317cca690b271a",
-                "reference": "6c8343feddb0f8a4c3ef10e469317cca690b271a",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-slim/zipball/610cfbc92148aacf054bb3ccb65a6a23205adb02",
+                "reference": "610cfbc92148aacf054bb3ccb65a6a23205adb02",
                 "shasum": ""
             },
             "require": {
@@ -4252,6 +4252,8 @@
                 "friendsofphp/php-cs-fixer": "^3",
                 "mockery/mockery": "^1.5",
                 "nyholm/psr7": "*",
+                "open-telemetry/opentelemetry-propagation-server-timing": "*",
+                "open-telemetry/opentelemetry-propagation-traceresponse": "*",
                 "open-telemetry/sdk": "^1.0",
                 "phan/phan": "^5.0",
                 "php-http/mock-client": "*",
@@ -4259,8 +4261,8 @@
                 "phpstan/phpstan-mockery": "^1.1.0",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.16",
-                "vimeo/psalm": "^4.0"
+                "psalm/plugin-phpunit": "^0.18.4",
+                "vimeo/psalm": "^5.0"
             },
             "type": "library",
             "autoload": {
@@ -4286,9 +4288,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-slim/tree/1.0.4"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-slim/tree/1.0.5"
             },
-            "time": "2024-01-21T05:05:24+00:00"
+            "time": "2024-04-08T02:39:49+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-symfony",
@@ -5093,16 +5095,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.28.0",
+            "version": "1.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb"
+                "reference": "536889f2b340489d328f5ffb7b02bb6b183ddedc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb",
-                "reference": "cd06d6b1a1b3c75b0b83f97577869fd85a3cd4fb",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/536889f2b340489d328f5ffb7b02bb6b183ddedc",
+                "reference": "536889f2b340489d328f5ffb7b02bb6b183ddedc",
                 "shasum": ""
             },
             "require": {
@@ -5134,9 +5136,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.28.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.29.0"
             },
-            "time": "2024-04-03T18:51:33+00:00"
+            "time": "2024-05-06T12:04:23+00:00"
         },
         {
             "name": "psr/cache",
@@ -5995,16 +5997,16 @@
         },
         {
             "name": "slim/slim",
-            "version": "4.x-dev",
+            "version": "4.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "7354f85722b89ac08763baf326a15cc11c162837"
+                "reference": "038fd5713d5a41636fdff0e8dcceedecdd17fc17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/7354f85722b89ac08763baf326a15cc11c162837",
-                "reference": "7354f85722b89ac08763baf326a15cc11c162837",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/038fd5713d5a41636fdff0e8dcceedecdd17fc17",
+                "reference": "038fd5713d5a41636fdff0e8dcceedecdd17fc17",
                 "shasum": ""
             },
             "require": {
@@ -6027,13 +6029,13 @@
                 "laminas/laminas-diactoros": "^2.17 || ^3",
                 "nyholm/psr7": "^1.8",
                 "nyholm/psr7-server": "^1.1",
-                "phpspec/prophecy": "^1.18",
+                "phpspec/prophecy": "^1.19",
                 "phpspec/prophecy-phpunit": "^2.1",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.6",
                 "slim/http": "^1.3",
                 "slim/psr7": "^1.6",
-                "squizlabs/php_codesniffer": "^3.8"
+                "squizlabs/php_codesniffer": "^3.9"
             },
             "suggest": {
                 "ext-simplexml": "Needed to support XML format in BodyParsingMiddleware",
@@ -6041,7 +6043,6 @@
                 "php-di/php-di": "PHP-DI is the recommended container library to be used with Slim",
                 "slim/psr7": "Slim PSR-7 implementation. See https://www.slimframework.com/docs/v4/start/installation.html for more information."
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -6107,7 +6108,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-01T20:50:49+00:00"
+            "time": "2024-03-03T21:25:30+00:00"
         },
         {
             "name": "symfony/asset",
