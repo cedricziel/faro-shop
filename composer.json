@@ -19,7 +19,7 @@
         "open-telemetry/exporter-otlp": "^1",
         "open-telemetry/exporter-zipkin": "^1",
         "open-telemetry/opentelemetry-auto-laravel": "^0.0.25",
-        "open-telemetry/opentelemetry-auto-pdo": "^0.0.12",
+        "open-telemetry/opentelemetry-auto-pdo": "^0.0.13",
         "open-telemetry/opentelemetry-auto-psr3": "^0.0.6",
         "open-telemetry/opentelemetry-auto-psr15": "^1",
         "open-telemetry/opentelemetry-auto-psr18": "^1",
