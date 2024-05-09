@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f02275d43571eee962f0cc0dc064b272",
+    "content-hash": "c6cf75e69d4596c35fbc185b1b174948",
     "packages": [
         {
             "name": "brick/math",
@@ -3981,16 +3981,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-pdo",
-            "version": "0.0.12",
+            "version": "0.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-pdo.git",
-                "reference": "f257f88d083d7a20f3686dfa70e5b7b28ad2eecc"
+                "reference": "a1305b08666ae63dd9dcc7c6db9e3dc52f565a48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/f257f88d083d7a20f3686dfa70e5b7b28ad2eecc",
-                "reference": "f257f88d083d7a20f3686dfa70e5b7b28ad2eecc",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/a1305b08666ae63dd9dcc7c6db9e3dc52f565a48",
+                "reference": "a1305b08666ae63dd9dcc7c6db9e3dc52f565a48",
                 "shasum": ""
             },
             "require": {
@@ -4008,8 +4008,8 @@
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.16",
-                "vimeo/psalm": "^4.0"
+                "psalm/plugin-phpunit": "^0.18.4",
+                "vimeo/psalm": "^5.0"
             },
             "type": "library",
             "autoload": {
@@ -4035,9 +4035,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.12"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.13"
             },
-            "time": "2024-01-21T05:05:24+00:00"
+            "time": "2024-05-08T11:57:36+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr15",
