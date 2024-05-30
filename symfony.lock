@@ -182,7 +182,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "1.0",
-            "ref": "292a3236e81f55b545b09b9954ab097248972ab3"
+            "ref": "673836afb0eac2b0ec36c44f2ff0379e5a4b2177"
         }
     },
     "symfony/phpunit-bridge": {
