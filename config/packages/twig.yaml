@@ -2,6 +2,7 @@ twig:
     default_path: '%kernel.project_dir%/templates'
     globals:
         faroUrl: '%env(resolve:FARO_URL)%'
+    file_name_pattern: '*.twig'
 
 when@test:
     twig:
