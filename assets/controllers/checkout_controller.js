@@ -20,22 +20,33 @@ export default class extends Controller {
         console.log(this.apiValue);
     }
 
-    async submit() {
+    async submit(event) {
+        event.preventDefault();
+
         faro.api.pushEvent('checkout');
 
         try {
             await fetch(this.apiValue, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
                 method: 'POST',
+                body: {},
             });
 
             faro.api.pushEvent('checkout_success');
 
-            location.href = this.successUrlValue;
+            setTimeout(() => {
+                location.href = this.successUrlValue;
+            }, 250);
         } catch (e) {
             faro.api.pushEvent('checkout_failed');
             faro.api.pushError(new Error('checkout_failed'));
 
-            location.href = this.failureUrlValue;
+            setTimeout(() => {
+                location.href = this.failureUrlValue;
+            }, 250)
         }
     }
 }

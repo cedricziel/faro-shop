@@ -8,6 +8,33 @@ const VERSION = window.VERSION || 'unknown';
 export function initializeFaro() {
     return initializeFaroReal({
         url: faroUrl,
+        beforeSend: (event) => {
+            if(event.type !== 'event') return event;
+            if(event.payload.name !== 'faro.performance.navigation') return event;
+
+            for (const entryType of ["navigation"]) {
+                for (const { name: url, serverTiming } of performance.getEntriesByType(
+                    entryType,
+                )) {
+                    if (serverTiming) {
+                        for (const { name, description, duration } of serverTiming) {
+                            console.log(description);
+                            if ("traceparent" === name) {
+                                const [version, traceId, spanId, sampled] = description.split("-");
+                                // Logs "traceId: 00-0af7651916cd43dd8448eb211c80319c, spanId: 0af7651916cd43dd"
+
+                                event.payload.trace = {};
+                                event.payload.trace.trace_id = traceId;
+
+                                event.payload.trace.span_id = spanId;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return event;
+        },
         app: {
             name: 'faros-shop-frontend',
             version: VERSION,

@@ -6,6 +6,7 @@ use App\Form\CartType;
 use App\Manager\CartManager;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -30,6 +31,10 @@ class CartController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $cart->setUpdatedAt(new \DateTimeImmutable());
             $cartManager->save($cart);
+
+            if ($cart->getId() % 10 === 0) {
+                throw new BadRequestException('Unable to checkout cart, please try again later.');
+            }
 
             $this->addFlash('success', sprintf('Cart updated, total amount %s', $cart->getTotal()));
 

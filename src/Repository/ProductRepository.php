@@ -45,4 +45,13 @@ class ProductRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+    public function findAdvertised(int $amount = 3): array
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.price < :price')
+            ->setParameter('price', 10)
+            ->setMaxResults($amount)
+            ->getQuery()
+            ->getResult();
+    }
 }

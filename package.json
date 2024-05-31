@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "@grafana/faro-web-sdk": "^1.7.3",
-        "@grafana/faro-web-tracing": "^1.7.3"
+        "@grafana/faro-web-tracing": "^1.7.3",
+        "@stimulus-components/content-loader": "^5.0.0"
     }
 }
