@@ -10,6 +10,7 @@ use OpenTelemetry\API\Trace\Span;
 use OpenTelemetry\API\Trace\StatusCode;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -79,10 +80,11 @@ class CheckoutController extends AbstractController
 
     #[Route('/checkout/{id}/failed', name: 'app_checkout_failed')]
     public function failed(Order $order): Response {
+        Span::getCurrent()->setStatus(StatusCode::STATUS_ERROR);
 
         return $this->render('checkout/failed.html.twig', [
             'order' => $order,
-        ]);
+        ], new Response('', Response::HTTP_BAD_REQUEST));
     }
 
     #[Route('/checkout/{id}/success', name: 'app_checkout_success')]
