@@ -79,7 +79,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push - k6
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: docker/k6
           platforms: linux/amd64,linux/arm64
@@ -89,7 +89,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build and push - otelcol
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: docker/otelcol
           platforms: linux/amd64,linux/arm64
@@ -99,7 +99,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build and push - php
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           target: php_dev
@@ -110,7 +110,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build and push - php-prod
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           target: php_prod
@@ -121,7 +121,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build and push - caddy
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           target: caddy_base
@@ -132,7 +132,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build and push - caddy-prod
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           target: caddy_prod
