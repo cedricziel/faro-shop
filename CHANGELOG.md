@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.4](https://github.com/cedricziel/faro-shop/compare/v0.5.3...v0.5.4) (2024-06-17)
+
+
+### Bug Fixes
+
+* Update Recipe ([#375](https://github.com/cedricziel/faro-shop/issues/375)) ([e6746cf](https://github.com/cedricziel/faro-shop/commit/e6746cfe61c9e0a0b219752b9701e7f760b5c26c))
+
 ## [0.5.3](https://github.com/cedricziel/faro-shop/compare/v0.5.2...v0.5.3) (2024-02-22)
 
 
