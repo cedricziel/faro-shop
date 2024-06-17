@@ -1,5 +1,9 @@
 {
 	{$CADDY_GLOBAL_OPTIONS}
+	servers {
+		metrics
+	}
+	admin :2019
 }
 
 {$SERVER_NAME:localhost}
