@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  labels:
+      {{- include "faro-shop.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+          {{- include "faro-shop.labels" . | nindent 4 }}
+    spec:
+      containers:
+        - name: postgres
+          image: {{ .Values.postgres.image.repository }}:{{ .Values.postgres.image.tag }}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5432
+          envFrom:
+            - configMapRef:
+                name: postgres-secret
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgresdata
+      volumes:
+        - name: postgresdata
+          persistentVolumeClaim:
+            claimName: postgres-volume-claim

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  labels:
+      {{- include "faro-shop.labels" . | nindent 4 }}
+spec:
+  type: NodePort
+  ports:
+    - port: 5432
+  selector:
+    app: postgres

@@ -4,6 +4,12 @@
 
 replicaCount: 1
 
+postgres:
+  image:
+    repository: postgres
+    pullPolicy: IfNotPresent
+    tag: 15-alpine
+
 image:
   repository: ghcr.io/cedricziel/faro-shop-app-php
   pullPolicy: IfNotPresent
