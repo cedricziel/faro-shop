@@ -16,14 +16,18 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
-  version: 0.0.100
+
+caddy:
+  image:
+    repository: ghcr.io/cedricziel/faro-shop-app-caddy
+    pullPolicy: IfNotPresent
+    tag: ""
 
 load:
   image:
-    repository: ghcr.io/cedricziel/faro-shop-app-k6
+    repository: ghcr.io/cedricziel/faro-shop-k6
     pullPolicy: IfNotPresent
     tag: ""
-    version: 0.0.100
   env:
     - name: WEB_HOST
       value: caddy
