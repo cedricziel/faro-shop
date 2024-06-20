@@ -38,8 +38,6 @@ load:
     pullPolicy: IfNotPresent
     tag: ""
   env:
-    - name: WEB_HOST
-      value: caddy
 
 imagePullSecrets: []
 nameOverride: ""
