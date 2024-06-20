@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.5.5](https://github.com/cedricziel/faro-shop/compare/v0.5.4...v0.5.5) (2024-06-20)
+
+
+### Bug Fixes
+
+* bump otel/opentelemetry-collector-contrib from 0.102.1 to 0.103.0 in /docker/otelcol ([#378](https://github.com/cedricziel/faro-shop/issues/378)) ([a5b9ddd](https://github.com/cedricziel/faro-shop/commit/a5b9dddd7685b72c8c7b5458d04f38f09effa01c))
+* bump phpunit/phpunit from 11.2.2 to 11.2.3 ([#379](https://github.com/cedricziel/faro-shop/issues/379)) ([5a79a48](https://github.com/cedricziel/faro-shop/commit/5a79a486cbb16a15b443419e1529962c9e16a111))
+* bump phpunit/phpunit from 11.2.3 to 11.2.5 ([#382](https://github.com/cedricziel/faro-shop/issues/382)) ([3664895](https://github.com/cedricziel/faro-shop/commit/36648951d804df03efa65b3dad8bffa4a28dc228))
+* bump webpack from 5.92.0 to 5.92.1 ([#381](https://github.com/cedricziel/faro-shop/issues/381)) ([9c27973](https://github.com/cedricziel/faro-shop/commit/9c279730a185bd568381e3a49c021277b3abf991))
+
 ## [0.5.4](https://github.com/cedricziel/faro-shop/compare/v0.5.3...v0.5.4) (2024-06-17)
 
 
