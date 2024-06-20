@@ -18,6 +18,16 @@ image:
   tag: ""
   version: 0.0.100
 
+load:
+  image:
+    repository: ghcr.io/cedricziel/faro-shop-app-k6
+    pullPolicy: IfNotPresent
+    tag: ""
+    version: 0.0.100
+  env:
+    - name: WEB_HOST
+      value: caddy
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
