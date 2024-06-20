@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-postgres-secret
+  labels:
+      {{- include "faro-shop.labels" . | nindent 4 }}
+data:
+  POSTGRES_DB: ps_db
+  POSTGRES_USER: ps_user
+  POSTGRES_PASSWORD: SecurePassword
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Release.Name }}-postgres
+  labels:
+      {{- include "faro-shop.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  serviceName: {{ .Release.Name }}-postgres
+  selector:
+    matchLabels:
+      service: {{ .Release.Name }}-postgres
+  template:
+    metadata:
+      labels:
+        {{- include "faro-shop.labels" . | nindent 8 }}
+        service: {{ .Release.Name }}-postgres
+    spec:
+      containers:
+        - name: {{ .Release.Name }}-postgres
+          image: {{ .Values.postgres.image.repository }}:{{ .Values.postgres.image.tag }}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5432
+          envFrom:
+            - configMapRef:
+                name: {{ .Release.Name }}-postgres-secret
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: {{ .Release.Name }}-postgres-data
+  volumeClaimTemplates:
+    - metadata:
+        name: {{ .Release.Name }}-postgres-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+          {{ if not .Values.openshift }}
+        storageClassName: {{ .Values.postgres.storageClassName }}
+        volumeMode: Filesystem
+          {{ end }}
+        resources:
+          requests:
+            storage: 1Gi

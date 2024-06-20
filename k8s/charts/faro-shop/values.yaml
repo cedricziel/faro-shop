@@ -9,6 +9,7 @@ postgres:
     repository: postgres
     pullPolicy: IfNotPresent
     tag: 15-alpine
+    storageClassName: standard
 
 image:
   repository: ghcr.io/cedricziel/faro-shop-app-php
