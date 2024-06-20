@@ -5,9 +5,9 @@ metadata:
   labels:
       {{- include "faro-shop.labels" . | nindent 4 }}
 data:
-  POSTGRES_DB: ps_db
-  POSTGRES_USER: ps_user
-  POSTGRES_PASSWORD: SecurePassword
+  POSTGRES_DB: "app"
+  POSTGRES_USER: "app"
+  POSTGRES_PASSWORD: "!ChangeMe!"
 ---
 apiVersion: apps/v1
 kind: StatefulSet

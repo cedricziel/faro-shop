@@ -4,6 +4,15 @@
 
 replicaCount: 1
 
+app:
+  env:
+    - name: APP_ENV
+      value: production
+    - name: APP_SECRET
+      value: "changeme"
+    - name: DATABASE_URL
+      value: "postgresql://app:!ChangeMe!@database:5432/app?serverVersion=15&charset=utf8"
+
 postgres:
   image:
     repository: postgres

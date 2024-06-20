@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "faro-shop.fullname" . }}
+  name: {{ .Release.Name }}-caddy
   labels:
     {{- include "faro-shop.labels" . | nindent 4 }}
 spec:
@@ -31,10 +31,10 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name }}
+        - name: {{ .Chart.Name }}-caddy
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}-prod"
+          image: "{{ .Values.caddy.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}-prod"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
@@ -52,10 +52,6 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}
           volumeMounts:
-            {{- toYaml . | nindent 12 }}
-          {{- end }}
-          {{- with .Values.env }}
-          env:
             {{- toYaml . | nindent 12 }}
           {{- end }}
       {{- with .Values.volumes }}

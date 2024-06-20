@@ -32,6 +32,10 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Release.Name }}-k6
+          command:
+            - k6
+            - run
+            - /etc/script.js
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.load.image.repository }}:{{ .Values.load.image.tag | default .Chart.AppVersion }}"
