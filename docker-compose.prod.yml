@@ -18,5 +18,7 @@ services:
       context: .
       target: caddy_prod
     environment:
+      OTEL_SERVICE_NAME: faros-shop-proxy
       MERCURE_PUBLISHER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET}
       MERCURE_SUBSCRIBER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET}
+      OTEL_EXPORTER_OTLP_TRACES_ENDPOINT: http://otelcol:4317

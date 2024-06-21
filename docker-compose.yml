@@ -78,6 +78,8 @@ services:
       php:
         condition: service_healthy
     environment:
+      OTEL_SERVICE_NAME: faros-shop-proxy
+      OTEL_EXPORTER_OTLP_TRACES_ENDPOINT: http://otelcol:4317
       SERVER_NAME: ${SERVER_NAME:-localhost}, caddy:80
       MERCURE_PUBLISHER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
       MERCURE_SUBSCRIBER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
