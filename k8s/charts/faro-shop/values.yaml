@@ -43,10 +43,10 @@ caddy:
     pullPolicy: IfNotPresent
     tag: ""
   env:
-    - name: MERCURE_PUBLISHER_JWT_KEY
-      value: '!ChangeThisMercureHubJWTSecretKey!'
-    - name: MERCURE_SUBSCRIBER_JWT_KEY
-      value: '!ChangeThisMercureHubJWTSecretKey!'
+    OTEL_SERVICE_NAME: faros-shop-proxy
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT: http://otelcol:4317
+    MERCURE_PUBLISHER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
+    MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
 
 load:
   image:

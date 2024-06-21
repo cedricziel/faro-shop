@@ -25,6 +25,7 @@ helm repo add grafana https://grafana.github.io/helm-charts &&
 helm upgrade --install \
   --create-namespace \
   --namespace faro-shop \
+  --set caddy.env.OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4317 \
   --set app.env.OTEL_EXPORTER_OTLP_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4318 \
   faro-shop \
   k8s/charts/faro-shop
