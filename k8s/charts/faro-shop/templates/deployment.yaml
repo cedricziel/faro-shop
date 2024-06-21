@@ -59,8 +59,6 @@ spec:
           env:
             - name: SERVER_NAME
               value: "http://{{ include "faro-shop.fullname" . }}"
-            - name: OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
-              value: "http://otelcol:4317"
           {{ range $key, $value := .Values.caddy.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
