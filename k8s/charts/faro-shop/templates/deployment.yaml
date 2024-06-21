@@ -56,8 +56,10 @@ spec:
               mountPath: /var/run/php
             {{- toYaml . | nindent 12 }}
           {{- end }}
-          {{- with .Values.caddy.env }}
           env:
+            - name: SERVER_NAME
+              value: "http://{{ include "faro-shop.fullname" . }}"
+          {{- with .Values.caddy.env }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
         - name: {{ .Chart.Name }}-php
