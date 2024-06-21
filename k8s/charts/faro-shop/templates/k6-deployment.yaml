@@ -42,12 +42,9 @@ spec:
           imagePullPolicy: {{ .Values.load.image.pullPolicy }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.load.env}}
           env:
             - name: WEB_HOST
               value: {{ include "faro-shop.fullname" . }}
-            {{- toYaml . | nindent 12 }}
-          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
