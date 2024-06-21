@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/cedricziel/faro-shop/compare/v0.5.5...v0.6.0) (2024-06-21)
+
+
+### Features
+
+* enable tracing in caddy ([#383](https://github.com/cedricziel/faro-shop/issues/383)) ([d991ed6](https://github.com/cedricziel/faro-shop/commit/d991ed6fb86a38a5c04d73d643c9e3381213843d))
+
 ## [0.5.5](https://github.com/cedricziel/faro-shop/compare/v0.5.4...v0.5.5) (2024-06-20)
 
 
