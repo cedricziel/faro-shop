@@ -4,12 +4,25 @@
 
 replicaCount: 1
 
+otel:
+  http:
+    endpoint: 'http://grafana-k8s-monitoring-grafana-agent.faro-shop.svc.cluster.local:4318'
+  grpc:
+    endpoint: 'http://grafana-k8s-monitoring-grafana-agent.faro-shop.svc.cluster.local:4317'
+
 app:
   env:
-    - name: APP_ENV
-      value: production
-    - name: APP_SECRET
-      value: "changeme"
+    APP_ENV: production
+    APP_SECRET: changeme
+    OTEL_PHP_AUTOLOAD_ENABLED: 'true'
+    OTEL_SERVICE_NAME: faros-shop-backend
+    OTEL_TRACES_EXPORTER: otlp
+    OTEL_METRICS_EXPORTER: otlp
+    OTEL_LOGS_EXPORTER: otlp
+    OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otelcol:4318
+    OTEL_RESOURCE_ATTRIBUTES: deployment.environment=production,service.namespace=faros-shop,service.instance.id=1234
+    OTEL_PROPAGATORS: baggage,tracecontext
 
 postgres:
   image:
@@ -29,6 +42,11 @@ caddy:
     repository: ghcr.io/cedricziel/faro-shop-app-caddy
     pullPolicy: IfNotPresent
     tag: ""
+  env:
+    - name: MERCURE_PUBLISHER_JWT_KEY
+      value: '!ChangeThisMercureHubJWTSecretKey!'
+    - name: MERCURE_SUBSCRIBER_JWT_KEY
+      value: '!ChangeThisMercureHubJWTSecretKey!'
 
 load:
   image:

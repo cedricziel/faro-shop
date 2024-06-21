@@ -56,6 +56,10 @@ spec:
               mountPath: /var/run/php
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          {{- with .Values.caddy.env }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
         - name: {{ .Chart.Name }}-php
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
@@ -70,9 +74,10 @@ spec:
           env:
             - name: DATABASE_URL
               value: "postgresql://app:!ChangeMe!@{{ .Release.Name }}-postgres:5432/app?serverVersion=15&charset=utf8"
-          {{- with .Values.app.env }}
-            {{- toYaml . | nindent 12 }}
-          {{- end }}
+            {{ range $key, $value := .Values.app.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
       {{- with .Values.volumes }}
       volumes:
         - name: shared-data
