@@ -14,6 +14,7 @@ app:
   env:
     APP_ENV: production
     APP_SECRET: changeme
+    FARO_URL: ''
     OTEL_PHP_AUTOLOAD_ENABLED: 'true'
     OTEL_SERVICE_NAME: faros-shop-backend
     OTEL_TRACES_EXPORTER: otlp
