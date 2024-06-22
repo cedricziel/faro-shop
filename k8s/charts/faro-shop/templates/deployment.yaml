@@ -19,9 +19,9 @@ spec:
       {{- end }}
       labels:
         {{- include "faro-shop.labels" . | nindent 8 }}
-	{{- with .Values.podLabels }}
+      {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
-        {{- end }}
+      {{- end }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
@@ -31,7 +31,7 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name }}-caddy
+        - name: caddy
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.caddy.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}-prod"
@@ -63,7 +63,7 @@ spec:
             - name: {{ $key }}
               value: {{ $value | quote }}
           {{- end }}
-        - name: {{ .Chart.Name }}-php
+        - name: php
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}-prod"
@@ -71,7 +71,7 @@ spec:
           {{- with .Values.volumeMounts }}
           volumeMounts:
             - name: shared-data
-              mountPath: /var/run
+              mountPath: /var/run/php
             {{- toYaml . | nindent 12 }}
           {{- end }}
           env:
