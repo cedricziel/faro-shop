@@ -5,6 +5,7 @@ FROM ghcr.io/cedricziel/faro-shop-php:8.3.2 AS php_base_image
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 FROM composer/composer:2-bin AS composer_upstream
 FROM --platform=$BUILDPLATFORM caddy:2-alpine AS caddy_upstream
+FROM --platform=$BUILDPLATFORM caddy:2-builder-alpine AS caddy_build_upstream
 
 # Base PHP image
 FROM php_upstream AS php_base
@@ -97,6 +98,15 @@ RUN set -eux; \
 	composer run-script --no-dev post-install-cmd; \
 	chmod +x bin/console; sync;
 
+FROM caddy_build_upstream AS caddy_built
+
+RUN git clone --branch <branchname> <remote-repo-url>
+
+RUN xcaddy build \
+    --with github.com/caddyserver/caddy/v2=github.com/cedricziel/caddy/v2@trace-servicegraph \
+    --with github.com/dunglas/mercure/caddy \
+    --with github.com/dunglas/vulcain/caddy
+
 
 # Base Caddy image
 FROM caddy_upstream AS caddy_base
@@ -105,8 +115,7 @@ ARG TARGETARCH
 
 WORKDIR /srv/app
 
-# Download Caddy compiled with the Mercure and Vulcain modules
-ADD --chmod=500 https://caddyserver.com/api/download?os=linux&arch=$TARGETARCH&p=github.com/dunglas/mercure/caddy&p=github.com/dunglas/vulcain/caddy /usr/bin/caddy
+COPY --from=caddy_built /usr/bin/caddy /usr/bin/caddy
 
 COPY --link docker/caddy/Caddyfile /etc/caddy/Caddyfile
 HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://localhost:2019/metrics -O - || exit 1
