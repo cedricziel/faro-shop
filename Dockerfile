@@ -100,8 +100,6 @@ RUN set -eux; \
 
 FROM caddy_build_upstream AS caddy_built
 
-RUN git clone --branch <branchname> <remote-repo-url>
-
 RUN xcaddy build \
     --with github.com/caddyserver/caddy/v2=github.com/cedricziel/caddy/v2@trace-servicegraph \
     --with github.com/dunglas/mercure/caddy \
