@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/cedricziel/faro-shop/compare/0.7.0...0.7.1) (2024-06-22)
+
+
+### Bug Fixes
+
+* dont release chart before building images ([#390](https://github.com/cedricziel/faro-shop/issues/390)) ([b0a3abd](https://github.com/cedricziel/faro-shop/commit/b0a3abd1ae414ce3547ad1089680f66f2c4ebc25))
+
 ## [0.7.0](https://github.com/cedricziel/faro-shop/compare/v0.6.1...0.7.0) (2024-06-22)
 
 
