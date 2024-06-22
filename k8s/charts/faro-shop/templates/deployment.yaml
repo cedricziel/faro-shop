@@ -50,10 +50,10 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.volumeMounts }}
           volumeMounts:
             - name: shared-data
               mountPath: /var/run/php
+          {{- with .Values.volumeMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
           env:
@@ -68,10 +68,10 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}-prod"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          {{- with .Values.volumeMounts }}
           volumeMounts:
             - name: shared-data
               mountPath: /var/run/php
+          {{- with .Values.volumeMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
           env:
@@ -81,10 +81,10 @@ spec:
             - name: {{ $key }}
               value: {{ $value | quote }}
             {{- end }}
-      {{- with .Values.volumes }}
       volumes:
         - name: shared-data
           emptyDir: { }
+      {{- with .Values.volumes }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{- with .Values.nodeSelector }}
