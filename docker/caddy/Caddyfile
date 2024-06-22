@@ -23,9 +23,6 @@ log {
 }
 
 route {
-	tracing {
-		span app_proxy
-	}
 	root * /srv/app/public
 	mercure {
 		# Transport to use (default to Bolt)
