@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/cedricziel/faro-shop/compare/v0.6.0...v0.6.1) (2024-06-22)
+
+
+### Bug Fixes
+
+* build custom caddy version to inject client spans ([#385](https://github.com/cedricziel/faro-shop/issues/385)) ([b108ca9](https://github.com/cedricziel/faro-shop/commit/b108ca96bd9ec32910ac83e1b0417bdbce53e88c))
+
 ## [0.6.0](https://github.com/cedricziel/faro-shop/compare/v0.5.5...v0.6.0) (2024-06-21)
 
 
