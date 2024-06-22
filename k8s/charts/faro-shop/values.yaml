@@ -4,12 +4,59 @@
 
 replicaCount: 1
 
+otel:
+  http:
+    endpoint: 'http://grafana-k8s-monitoring-grafana-agent.faro-shop.svc.cluster.local:4318'
+  grpc:
+    endpoint: 'http://grafana-k8s-monitoring-grafana-agent.faro-shop.svc.cluster.local:4317'
+
+app:
+  env:
+    APP_ENV: production
+    APP_SECRET: changeme
+    FARO_URL: ''
+    OTEL_PHP_AUTOLOAD_ENABLED: 'true'
+    OTEL_SERVICE_NAME: faros-shop-backend
+    OTEL_TRACES_EXPORTER: otlp
+    OTEL_METRICS_EXPORTER: otlp
+    OTEL_LOGS_EXPORTER: otlp
+    OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otelcol:4318
+    OTEL_RESOURCE_ATTRIBUTES: deployment.environment=production,service.namespace=faros-shop,service.instance.id=1234
+    OTEL_PROPAGATORS: baggage,tracecontext
+    TRUSTED_PROXIES: ${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}
+    TRUSTED_HOSTS: ^${SERVER_NAME:-example\.com|localhost}|caddy$$
+
+postgres:
+  image:
+    repository: postgres
+    pullPolicy: IfNotPresent
+    tag: 15-alpine
+    storageClassName: standard
+
 image:
   repository: ghcr.io/cedricziel/faro-shop-app-php
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
-  version: 0.0.100 #x-release-please-version
+
+caddy:
+  image:
+    repository: ghcr.io/cedricziel/faro-shop-app-caddy
+    pullPolicy: IfNotPresent
+    tag: ""
+  env:
+    OTEL_SERVICE_NAME: faros-shop-proxy
+    OTEL_EXPORTER_OTLP_TRACES_ENDPOINT: http://otelcol:4317
+    MERCURE_PUBLISHER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
+    MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
+
+load:
+  image:
+    repository: ghcr.io/cedricziel/faro-shop-k6
+    pullPolicy: IfNotPresent
+    tag: ""
+  env:
 
 imagePullSecrets: []
 nameOverride: ""
