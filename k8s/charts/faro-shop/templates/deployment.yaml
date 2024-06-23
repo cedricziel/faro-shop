@@ -60,7 +60,7 @@ spec:
             - name: SERVER_NAME
               value: "http://{{ include "faro-shop.fullname" . }}"
             - name: OTEL_RESOURCE_ATTRIBUTES
-              value: "service.namespace={{ .Release.Namespace}},{{ .Values.worker.otel.resource }}"
+              value: "service.namespace={{ .Release.Namespace}},service.version={{ .Chart.AppVersion }},{{ .Values.app.otel.resource }}"
           {{ range $key, $value := .Values.caddy.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
@@ -82,7 +82,7 @@ spec:
             - name: FARO_NAMESPACE
               value: "{{ .Release.Namespace }}"
             - name: OTEL_RESOURCE_ATTRIBUTES
-              value: "service.namespace={{ .Release.Namespace }},{{ .Values.worker.otel.resource }}"
+              value: "service.namespace={{ .Release.Namespace }},service.version={{ .Chart.AppVersion }},{{ .Values.app.otel.resource }}"
             {{ range $key, $value := .Values.app.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
