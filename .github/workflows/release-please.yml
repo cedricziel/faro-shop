@@ -222,3 +222,28 @@ jobs:
           tags: ${{ env.IMAGES_PREFIX }}app-caddy:${{ needs.release-please.outputs.app_release_tag_name }}-prod,${{ env.IMAGES_PREFIX }}app-caddy:latest-prod
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  bump_pr:
+    needs:
+      - release-please
+      - build-test-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch source from event
+        uses: actions/checkout@v4
+
+      - name: Bump appVersion in chart
+        uses: mikefarah/yq@master
+        with:
+            cmd: yq -i '.appVersion = "${{ needs.release-please.outputs.app_release_tag_name }}"' 'k8s/charts/faro-shop/Chart.yaml'
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          assignees: cedricziel
+          branch: update-app-in-helm-chart
+          branch-suffix: random
+          title: 'feat: Bump app to ${{ needs.release-please.outputs.app_release_tag_name }}'
+          add-paths: |
+            k8s/charts/faro-shop/Chart.yaml
