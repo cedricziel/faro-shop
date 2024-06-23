@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/cedricziel/faro-shop/compare/0.8.0...0.8.1) (2024-06-23)
+
+
+### Bug Fixes
+
+* Distinguish app && worker ([#396](https://github.com/cedricziel/faro-shop/issues/396)) ([1eb5d58](https://github.com/cedricziel/faro-shop/commit/1eb5d5811485c4682dde2f9fe479d70184bd9d0f))
+
 ## [0.8.0](https://github.com/cedricziel/faro-shop/compare/0.7.0...0.8.0) (2024-06-23)
 
 
