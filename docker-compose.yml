@@ -72,6 +72,7 @@ services:
       MERCURE_PUBLIC_URL: https://${SERVER_NAME:-localhost}/.well-known/mercure
       MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET:-!ChangeThisMercureHubJWTSecretKey!}
     profiles:
+      - base
       - live
 
   caddy:
@@ -105,6 +106,7 @@ services:
         published: ${HTTP3_PORT:-443}
         protocol: udp
     profiles:
+      - base
       - live
 ###> doctrine/doctrine-bundle ###
   database:
