@@ -19,6 +19,7 @@ RUN apk add --no-cache \
         file \
         gettext \
         git \
+        rabbitmq-c-dev \
     ;
 
 # php extensions installer: https://github.com/mlocati/docker-php-extension-installer
@@ -33,6 +34,7 @@ RUN set -eux; \
         pdo_pgsql \
         protobuf \
         zip \
+        amqp \
         opentelemetry \
     ;
 
