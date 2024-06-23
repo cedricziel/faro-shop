@@ -49,3 +49,8 @@ services:
 
   ###> symfony/mercure-bundle ###
   ###< symfony/mercure-bundle ###
+
+  rabbitmq:
+    ports:
+      - "5672"
+      - "15672"
