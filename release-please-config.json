@@ -13,11 +13,6 @@
       "extra-files": [
         {
           "type": "yaml",
-          "path": "k8s/charts/faro-shop/Chart.yaml",
-          "jsonpath": "$.appVersion"
-        },
-        {
-          "type": "yaml",
           "path": "config/packages/twig.yaml",
           "jsonpath": "$.twig.globals.appVersion"
         }
