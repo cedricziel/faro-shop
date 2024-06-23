@@ -14,9 +14,70 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4.1.3
+        id: release
         with:
-          # this assumes that you have created a personal access token
-          # (PAT) and configured it as a GitHub action secret named
-          # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
           token: ${{ secrets.RELEASE_TOKEN }}
           config-file: release-please-config.json
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      helm_release_created: ${{ steps.release.outputs['k8s/charts/faro-shop--release_created'] }}
+      helm_release_tag_name: ${{ steps.release.outputs['k8s/charts/faro-shop--tag_name'] }}
+
+  release_asset:
+    needs:
+      - release-please
+    runs-on: ubuntu-latest
+    if: ${{ jobs.release-please.outputs.helm_release_created }}
+    steps:
+      # Add Helm Chart to Release
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Package Helm Chart
+        uses: WyriHaximus/github-action-helm3@v4
+        with:
+          exec: helm package k8s/charts/faro-shop
+      - name: Upload Release Asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ jobs.release-please.outputs.helm_release_tag_name }} ${{ jobs.release-please.outputs.helm_release_tag_name }}.tgz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chart-archive
+          path: ${{ jobs.release-please.outputs.helm_release_tag_name }}.tgz
+
+  release_chart:
+    needs:
+      - release-please
+      - release_asset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: chart-archive
+
+      - name: Package Helm Chart
+        uses: WyriHaximus/github-action-helm3@v4
+        with:
+          exec: helm repo index . --merge index.yaml --url https://github.com/cedricziel/faro-shop/releases/download/${{ jobs.release-please.outputs.helm_release_tag_name }}/
+
+      - run: rm *.tgz
+
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          message: "Update helm repo for version ${{ jobs.release-please.outputs.helm_release_tag_name }}"
+
