@@ -1,9 +1,9 @@
 import { getWebInstrumentations, initializeFaro as initializeFaroReal } from '@grafana/faro-web-sdk';
 import { TracingInstrumentation } from '@grafana/faro-web-tracing';
 
+const appVersion = window.version || 'unknown';
 const faroPage = window.faroPageMeta || {};
 const faroUrl = window.faroUrl || null;
-const VERSION = window.VERSION || 'unknown';
 const faroNamespace = window.faroNamespace || undefined;
 
 export function initializeFaro() {
@@ -38,7 +38,7 @@ export function initializeFaro() {
         },
         app: {
             name: 'faros-shop-frontend',
-            version: VERSION,
+            version: appVersion,
             environment: 'production'
         },
         instrumentations: [
