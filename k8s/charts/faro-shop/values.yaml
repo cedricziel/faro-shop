@@ -44,6 +44,10 @@ worker:
     OTEL_EXPORTER_OTLP_ENDPOINT: http://otelcol:4318
     OTEL_PROPAGATORS: baggage,tracecontext
 
+rabbitmq:
+  user: guest
+  password: guest
+
 postgres:
   image:
     repository: postgres

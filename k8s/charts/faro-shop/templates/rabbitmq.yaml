@@ -1,0 +1,53 @@
+# RabbitMQ Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-rabbitmq
+  labels:
+    service: {{ .Release.Name }}-postgres
+    {{- include "faro-shop.labels" . | nindent 4 }}
+spec:
+    ports:
+      - name: amqp
+        port: 5672
+        targetPort: 5672
+        protocol: TCP
+    selector:
+      service: {{ .Release.Name }}-rabbitmq
+    type: ClusterIP
+---
+# RabbitMQ Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "faro-shop.fullname" . }}-rabbitmq
+  labels:
+    {{- include "faro-shop.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: {{ .Release.Name }}-rabbitmq
+  template:
+    metadata:
+      labels:
+        {{- include "faro-shop.selectorLabels" . | nindent 8 }}
+        service: {{ .Release.Name }}-rabbitmq
+    spec:
+      containers:
+        - name: rabbitmq
+          image: "rabbitmq:3.13-management-alpine"
+          ports:
+            - containerPort: 5672
+              name: amqp
+          env:
+            - name: RABBITMQ_DEFAULT_USER
+              value: {{ .Values.rabbitmq.user }}
+            - name: RABBITMQ_DEFAULT_PASS
+              value: {{ .Values.rabbitmq.password }}
+          volumeMounts:
+            - name: rabbitmq-data
+              mountPath: /var/lib/rabbitmq
+      volumes:
+        - name: rabbitmq-data
+          emptyDir: {}
