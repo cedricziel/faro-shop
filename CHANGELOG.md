@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/cedricziel/faro-shop/compare/0.10.0...0.11.0) (2024-06-23)
+
+
+### Features
+
+* add add amqp-messenger ([#405](https://github.com/cedricziel/faro-shop/issues/405)) ([41baa72](https://github.com/cedricziel/faro-shop/commit/41baa72e55fb99cc3978c422df4cc868fca74604))
+
 ## [0.10.0](https://github.com/cedricziel/faro-shop/compare/0.9.0...0.10.0) (2024-06-23)
 
 
