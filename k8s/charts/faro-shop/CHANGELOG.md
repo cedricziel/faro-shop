@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.7.0...faro-shop-0.7.1) (2024-06-23)
+
+
+### Bug Fixes
+
+* do not declare faro_namespace doubly ([#418](https://github.com/cedricziel/faro-shop/issues/418)) ([22636f6](https://github.com/cedricziel/faro-shop/commit/22636f6793bc79784ea4be9aeac9d3cb4cf4586b))
+
 ## [0.7.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-v0.12.0...faro-shop-0.7.0) (2024-06-23)
 
 
