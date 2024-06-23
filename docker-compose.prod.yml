@@ -11,6 +11,19 @@ services:
       APP_SECRET: ${APP_SECRET}
       MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET}
       FARO_URL: ${FARO_URL}
+  worker:
+    image: ${IMAGES_PREFIX:-}app-php:${PROJECT_VERSION:-latest}-prod
+    build:
+      context: .
+      target: php_prod
+    environment:
+      APP_SECRET: ${APP_SECRET}
+      MERCURE_JWT_SECRET: ${CADDY_MERCURE_JWT_SECRET}
+      FARO_URL: ${FARO_URL}
+    command:
+      - 'bin/console'
+      - 'messenger:consume'
+      - 'async'
 
   caddy:
     image: ${IMAGES_PREFIX:-}app-caddy:${PROJECT_VERSION:-latest}-prod

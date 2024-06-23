@@ -41,3 +41,31 @@ helm upgrade --install \
   faro-shop \
   k8s/charts/faro-shop
 ```
+
+## Development
+
+### Requirements
+
+- Docker
+- PHP 8.3 (`brew install php`)
+  - Composer (`brew install composer`)
+  - ext-opentelemetey (`pecl install opentelemetry`)
+- node.js (`brew install node` OR `nvm use`)
+
+### Running the application
+
+```bash
+# Clone the repository
+git clone https://github.com/cedricziel/faro-shop.git
+
+# set the variables
+cp env.template .env
+
+# Set the variables in the `.env` file
+
+# Install dependencies
+composer install
+
+# Run the application
+symfony serve
+```
