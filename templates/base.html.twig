@@ -13,6 +13,7 @@
     {% endblock %}
     {% block javascripts %}
         <script>
+            window.version = '{{ appVersion }}';
             window.faroPageMeta = {
                 id: '{{ app.current_route }}',
                 url: location.href,
