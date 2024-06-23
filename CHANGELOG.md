@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.1](https://github.com/cedricziel/faro-shop/compare/0.14.0...0.14.1) (2024-06-23)
+
+
+### Bug Fixes
+
+* assets need release-please ([#426](https://github.com/cedricziel/faro-shop/issues/426)) ([5e7256c](https://github.com/cedricziel/faro-shop/commit/5e7256c8da46ba26c60aa90d9d373f1b69dda363))
+
 ## [0.14.0](https://github.com/cedricziel/faro-shop/compare/0.13.0...0.14.0) (2024-06-23)
 
 
