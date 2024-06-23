@@ -1,6 +1,7 @@
 const Encore = require('@symfony/webpack-encore');
 const webpack = require('webpack');
 const {GitRevisionPlugin} = require("git-revision-webpack-plugin");
+const FaroSourceMapUploaderPlugin = require("@grafana/faro-webpack-plugin");
 const gitRevisionPlugin = new GitRevisionPlugin();
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
@@ -84,5 +85,17 @@ Encore
         'window.faro': require.resolve('./assets/scripts/faro.js'),
     })
 ;
+
+if (process.env.FARO_API_KEY !== '') {
+    Encore
+        .addPlugin(new FaroSourceMapUploaderPlugin({
+            appName: process.env.FARO_APP_NAME,
+            endpoint: process.env.FARO_SOURCEMAP_ENDPOINT,
+            appId: process.env.FARO_APP_ID,
+            stackId: process.env.FARO_STACK_ID,
+            apiKey: process.env.FARO_API_KEY,
+            gzipContents: true,
+        }))
+}
 
 module.exports = Encore.getWebpackConfig();
