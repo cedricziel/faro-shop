@@ -11,6 +11,8 @@ otel:
     endpoint: 'http://grafana-k8s-monitoring-grafana-agent.faro-shop.svc.cluster.local:4317'
 
 app:
+  otel:
+    resource: deployment.environment=production
   env:
     APP_ENV: production
     APP_SECRET: changeme
@@ -26,6 +28,21 @@ app:
     OTEL_PROPAGATORS: baggage,tracecontext
     TRUSTED_PROXIES: ${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}
     TRUSTED_HOSTS: ^${SERVER_NAME:-example\.com|localhost}|caddy$$
+
+worker:
+  otel:
+    resource: deployment.environment=production
+  env:
+    APP_ENV: production
+    APP_SECRET: changeme
+    OTEL_PHP_AUTOLOAD_ENABLED: 'true'
+    OTEL_SERVICE_NAME: faros-shop-worker
+    OTEL_TRACES_EXPORTER: otlp
+    OTEL_METRICS_EXPORTER: otlp
+    OTEL_LOGS_EXPORTER: otlp
+    OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otelcol:4318
+    OTEL_PROPAGATORS: baggage,tracecontext
 
 postgres:
   image:

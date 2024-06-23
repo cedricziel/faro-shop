@@ -37,6 +37,7 @@ helm upgrade --install \
   --namespace faro-shop \
   --set caddy.env.OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=$OTLP_ENDPOINT_GRPC \
   --set app.env.OTEL_EXPORTER_OTLP_ENDPOINT=$OTLP_ENDPOINT_HTTP \
+  --set worker.env.OTEL_EXPORTER_OTLP_ENDPOINT=$OTLP_ENDPOINT_HTTP \
   --set app.env.FARO_URL=$FARO_URL \
   faro-shop \
   k8s/charts/faro-shop

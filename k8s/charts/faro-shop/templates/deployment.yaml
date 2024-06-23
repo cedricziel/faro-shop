@@ -59,6 +59,8 @@ spec:
           env:
             - name: SERVER_NAME
               value: "http://{{ include "faro-shop.fullname" . }}"
+            - name: OTEL_RESOURCE_ATTRIBUTES
+              value: "service.namespace={{ .Release.Namespace}},{{ .Values.worker.otel.resource }}"
           {{ range $key, $value := .Values.caddy.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
@@ -77,6 +79,8 @@ spec:
           env:
             - name: DATABASE_URL
               value: "postgresql://app:!ChangeMe!@{{ .Release.Name }}-postgres:5432/app?serverVersion=15&charset=utf8"
+            - name: OTEL_RESOURCE_ATTRIBUTES
+              value: "service.namespace={{ .Release.Namespace}},{{ .Values.worker.otel.resource }}"
             {{ range $key, $value := .Values.app.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
