@@ -33,6 +33,7 @@ RUN set -eux; \
         pdo_pgsql \
         protobuf \
         zip \
+        amqp \
         opentelemetry \
     ;
 
