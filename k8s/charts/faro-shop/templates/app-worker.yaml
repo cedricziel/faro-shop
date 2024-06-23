@@ -37,7 +37,7 @@ spec:
             - name: DATABASE_URL
               value: "postgresql://app:!ChangeMe!@{{ .Release.Name }}-postgres:5432/app?serverVersion=15&charset=utf8"
             - name: OTEL_RESOURCE_ATTRIBUTES
-              value: "service.namespace={{ .Release.Namespace}}"
+              value: "service.namespace={{ .Release.Namespace}},service.version={{ .Chart.AppVersion }},{{ .Values.worker.otel.resource }}"
             {{ range $key, $value := .Values.worker.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
