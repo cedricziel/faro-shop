@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "faro-shop.fullname" . }}-worker
+  labels:
+    {{- include "faro-shop.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "faro-shop.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "faro-shop.labels" . | nindent 8 }}
+      {{- with .Values.podLabels }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "faro-shop.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: php
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}-prod"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://app:!ChangeMe!@{{ .Release.Name }}-postgres:5432/app?serverVersion=15&charset=utf8"
+            {{ range $key, $value := .Values.app.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
+          command:
+            - 'bin/console'
+            - 'messenger:consume'
+            - 'async'
+            - '--time-limit=3600'
+      initContainers:
+        - name: create-schema
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}-prod"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: ["sh", "-c", "php bin/console doctrine:migrations:migrate --no-interaction"]
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://app:!ChangeMe!@{{ .Release.Name }}-postgres:5432/app?serverVersion=15&charset=utf8"
+            {{ range $key, $value := .Values.app.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}

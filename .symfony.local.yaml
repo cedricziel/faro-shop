@@ -1,0 +1,5 @@
+workers:
+  npm_encore_watch:
+    cmd: ['npx', 'encore', 'dev', '--watch']
+  messenger_consume_async: ~
+  docker_compose: ~
