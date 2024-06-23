@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.13.0](https://github.com/cedricziel/faro-shop/compare/0.12.0...0.13.0) (2024-06-23)
+
+
+### Features
+
+* Add amqp instrumentation ([#412](https://github.com/cedricziel/faro-shop/issues/412)) ([3fdd440](https://github.com/cedricziel/faro-shop/commit/3fdd44019d38cce69dc1bf9cf6b4eb231397a1ff))
+* switch chart to use amqp ([#409](https://github.com/cedricziel/faro-shop/issues/409)) ([0a25924](https://github.com/cedricziel/faro-shop/commit/0a2592456b0d0317e5d4ea1b531d20acced1abeb))
+
 ## [0.12.0](https://github.com/cedricziel/faro-shop/compare/0.11.0...0.12.0) (2024-06-23)
 
 
