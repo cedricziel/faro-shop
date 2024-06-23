@@ -4,6 +4,7 @@ import { TracingInstrumentation } from '@grafana/faro-web-tracing';
 const faroPage = window.faroPageMeta || {};
 const faroUrl = window.faroUrl || null;
 const VERSION = window.VERSION || 'unknown';
+const faroNamespace = window.faroNamespace || undefined;
 
 export function initializeFaro() {
     return initializeFaroReal({
@@ -46,7 +47,11 @@ export function initializeFaro() {
 
             // Initialization of the tracing package.
             // This packages is optional because it increases the bundle size noticeably. Only add it if you want tracing data.
-            new TracingInstrumentation(),
+            new TracingInstrumentation({
+                resourceAttributes: {
+                    ['service.namespace']: faroNamespace,
+                }
+            }),
         ],
         metas: [
             () => ({
