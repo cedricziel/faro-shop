@@ -36,6 +36,10 @@ spec:
           env:
             - name: DATABASE_URL
               value: "postgresql://app:!ChangeMe!@{{ .Release.Name }}-postgres:5432/app?serverVersion=15&charset=utf8"
+            - name: MESSENGER_TRANSPORT_DSN
+              value: amqp://guest:guest@{{ .Release.Name}}-rabbitmq:5672/%2f/messages
+            - name: RABBITMQ_URL
+              value: amqp://guest:guest@{{ .Release.Name}}-rabbitmq:5672/%2f/messages
             - name: OTEL_RESOURCE_ATTRIBUTES
               value: "service.namespace={{ .Release.Namespace}},service.version={{ .Chart.AppVersion }},{{ .Values.worker.otel.resource }}"
             {{ range $key, $value := .Values.worker.env }}
@@ -55,6 +59,8 @@ spec:
           env:
             - name: DATABASE_URL
               value: "postgresql://app:!ChangeMe!@{{ .Release.Name }}-postgres:5432/app?serverVersion=15&charset=utf8"
+            - name: RABBITMQ_URL
+              value: amqp://guest:guest@{{ .Release.Name}}-rabbitmq:5672/%2f/messages
             {{ range $key, $value := .Values.app.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
