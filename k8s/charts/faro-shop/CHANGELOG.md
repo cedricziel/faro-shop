@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/cedricziel/faro-shop/compare/0.7.0...0.8.0) (2024-06-23)
+
+
+### Features
+
+* Introduce worker to consume messages ([#395](https://github.com/cedricziel/faro-shop/issues/395)) ([49bb0ba](https://github.com/cedricziel/faro-shop/commit/49bb0ba53df124e84524631b9717ed4132117dad))
+
 ## [0.7.0](https://github.com/cedricziel/faro-shop/compare/v0.1.0...0.7.0) (2024-06-22)
 
 

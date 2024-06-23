@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.8.0](https://github.com/cedricziel/faro-shop/compare/0.7.1...0.8.0) (2024-06-23)
+
+
+### Features
+
+* fail server transactions ([#392](https://github.com/cedricziel/faro-shop/issues/392)) ([055897a](https://github.com/cedricziel/faro-shop/commit/055897a13671f693dfa62fb804577d47096bd7f0))
+* Introduce worker to consume messages ([#395](https://github.com/cedricziel/faro-shop/issues/395)) ([49bb0ba](https://github.com/cedricziel/faro-shop/commit/49bb0ba53df124e84524631b9717ed4132117dad))
+* SourceMap upload ([#394](https://github.com/cedricziel/faro-shop/issues/394)) ([dc5de18](https://github.com/cedricziel/faro-shop/commit/dc5de186288ec96792a755a8e54b73a59b907951))
+
 ## [0.7.1](https://github.com/cedricziel/faro-shop/compare/0.7.0...0.7.1) (2024-06-22)
 
 
