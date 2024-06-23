@@ -3,23 +3,28 @@
 namespace App\Service;
 
 use App\Entity\Order;
+use App\Message\Order\CheckoutCart;
 use Doctrine\ORM\EntityManagerInterface;
-use OpenTelemetry\API\Globals;
 use OpenTelemetry\API\Trace\SpanKind;
 use OpenTelemetry\API\Trace\StatusCode;
+use OpenTelemetry\API\Trace\TracerInterface;
 use OpenTelemetry\SemConv\TraceAttributes;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\Messenger\MessageBus;
 
 class CheckoutService
 {
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
         private readonly LoggerInterface $logger,
+        private readonly TracerInterface $tracer,
+        private readonly MessageBus $messageBus,
     ) {
     }
+
     public function checkout(Order $order): bool
     {
-        $span = Globals::tracerProvider()->getTracer('com.grafana.demo.faros-shop')
+        $span = $this->tracer
             ->spanBuilder('CheckoutService.checkout')
             ->startSpan();
 
@@ -43,7 +48,7 @@ class CheckoutService
     private function doCheckout(Order $order): void {
         try {
             // fake call to payment gateway in tracing
-            $span = Globals::tracerProvider()->getTracer('com.grafana.demo.faros-shop')
+            $span = $this->tracer
                 ->spanBuilder('POST /checkout')
                 ->setSpanKind(SpanKind::KIND_CLIENT)
                 ->setAttributes([
@@ -67,6 +72,7 @@ class CheckoutService
 
                 throw $exception;
             } else {
+                $this->messageBus->dispatch(new CheckoutCart($order->getId()));
                 $span->setAttribute(TraceAttributes::HTTP_RESPONSE_STATUS_CODE, 201);
             }
         } finally {

@@ -1,4 +1,6 @@
 workers:
+  fixtures_load:
+    cmd: ['bin/console', 'doctrine:fixtures:load', '--no-interaction']
   npm_encore_watch:
     cmd: ['npx', 'encore', 'dev', '--watch']
   messenger_consume_async: ~
