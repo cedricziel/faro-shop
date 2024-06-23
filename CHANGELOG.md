@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.0](https://github.com/cedricziel/faro-shop/compare/0.9.0...0.10.0) (2024-06-23)
+
+
+### Features
+
+* add ext-amqp ([#402](https://github.com/cedricziel/faro-shop/issues/402)) ([0ae882f](https://github.com/cedricziel/faro-shop/commit/0ae882ffc80b8ba4ff34b423819d3b7e5ee5aa39))
+* add service.version ([#403](https://github.com/cedricziel/faro-shop/issues/403)) ([2fc7b30](https://github.com/cedricziel/faro-shop/commit/2fc7b3000e13016962f82e8f12d3456a8d126f19))
+
 ## [0.9.0](https://github.com/cedricziel/faro-shop/compare/0.8.1...0.9.0) (2024-06-23)
 
 
