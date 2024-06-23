@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/cedricziel/faro-shop/compare/0.8.1...0.9.0) (2024-06-23)
+
+
+### Features
+
+* introduce service namespace for faro ([#399](https://github.com/cedricziel/faro-shop/issues/399)) ([9991378](https://github.com/cedricziel/faro-shop/commit/9991378040cef33f0ec519916ea2e8c8fce53361))
+
 ## [0.8.1](https://github.com/cedricziel/faro-shop/compare/0.8.0...0.8.1) (2024-06-23)
 
 
