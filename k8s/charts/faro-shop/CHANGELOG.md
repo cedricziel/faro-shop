@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.7.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-v0.12.0...faro-shop-0.7.0) (2024-06-23)
+
+
+### Features
+
+* Add helm chart ([#377](https://github.com/cedricziel/faro-shop/issues/377)) ([1853e9d](https://github.com/cedricziel/faro-shop/commit/1853e9d3968c54c4ea66c45d4a86638095137585))
+* add service.version ([#403](https://github.com/cedricziel/faro-shop/issues/403)) ([2fc7b30](https://github.com/cedricziel/faro-shop/commit/2fc7b3000e13016962f82e8f12d3456a8d126f19))
+* introduce service namespace for faro ([#399](https://github.com/cedricziel/faro-shop/issues/399)) ([9991378](https://github.com/cedricziel/faro-shop/commit/9991378040cef33f0ec519916ea2e8c8fce53361))
+* Introduce worker to consume messages ([#395](https://github.com/cedricziel/faro-shop/issues/395)) ([49bb0ba](https://github.com/cedricziel/faro-shop/commit/49bb0ba53df124e84524631b9717ed4132117dad))
+* switch chart to use amqp ([#409](https://github.com/cedricziel/faro-shop/issues/409)) ([0a25924](https://github.com/cedricziel/faro-shop/commit/0a2592456b0d0317e5d4ea1b531d20acced1abeb))
+
+
+### Bug Fixes
+
+* Distinguish app && worker ([#396](https://github.com/cedricziel/faro-shop/issues/396)) ([1eb5d58](https://github.com/cedricziel/faro-shop/commit/1eb5d5811485c4682dde2f9fe479d70184bd9d0f))
+
+
+### Miscellaneous Chores
+
+* release 0.6.0 ([75bf3ff](https://github.com/cedricziel/faro-shop/commit/75bf3ff8a58655297fa6c96ee69a0c3e2ef89edd))
+* release 0.7.0 ([2e66184](https://github.com/cedricziel/faro-shop/commit/2e66184254319bd45c6fadaa65cc9f0b30d573fc))
+
 ## [0.12.0](https://github.com/cedricziel/faro-shop/compare/0.11.0...0.12.0) (2024-06-23)
 
 
