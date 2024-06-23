@@ -9,6 +9,7 @@ concurrency:
 jobs:
   lint-test:
     runs-on: ubuntu-latest
+    if: ${{ github.head_ref != 'release-please--branches--main' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
