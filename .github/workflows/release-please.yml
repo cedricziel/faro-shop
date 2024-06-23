@@ -27,7 +27,7 @@ jobs:
     needs:
       - release-please
     runs-on: ubuntu-latest
-    if: ${{ jobs.release-please.outputs.helm_release_created }}
+    if: ${{ needs.release-please.outputs.helm_release_created }}
     steps:
       # Add Helm Chart to Release
       - name: Checkout
@@ -41,11 +41,11 @@ jobs:
       - name: Upload Release Asset
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload ${{ jobs.release-please.outputs.helm_release_tag_name }} ${{ jobs.release-please.outputs.helm_release_tag_name }}.tgz
+        run: gh release upload ${{ needs.release-please.outputs.helm_release_tag_name }} ${{ needs.release-please.outputs.helm_release_tag_name }}.tgz
       - uses: actions/upload-artifact@v4
         with:
           name: chart-archive
-          path: ${{ jobs.release-please.outputs.helm_release_tag_name }}.tgz
+          path: ${{ needs.release-please.outputs.helm_release_tag_name }}.tgz
 
   release_chart:
     needs:
@@ -70,7 +70,7 @@ jobs:
       - name: Package Helm Chart
         uses: WyriHaximus/github-action-helm3@v4
         with:
-          exec: helm repo index . --merge index.yaml --url https://github.com/cedricziel/faro-shop/releases/download/${{ jobs.release-please.outputs.helm_release_tag_name }}/
+          exec: helm repo index . --merge index.yaml --url https://github.com/cedricziel/faro-shop/releases/download/${{ needs.release-please.outputs.helm_release_tag_name }}/
 
       - run: rm *.tgz
 
@@ -79,5 +79,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          message: "Update helm repo for version ${{ jobs.release-please.outputs.helm_release_tag_name }}"
+          message: "Update helm repo for version ${{ needs.release-please.outputs.helm_release_tag_name }}"
 
