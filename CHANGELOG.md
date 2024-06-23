@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.14.0](https://github.com/cedricziel/faro-shop/compare/0.13.0...0.14.0) (2024-06-23)
+
+
+### Features
+
+* use app version through release-please ([#421](https://github.com/cedricziel/faro-shop/issues/421)) ([637c1c7](https://github.com/cedricziel/faro-shop/commit/637c1c7da1fb0f9dbe76d08bda6da87991e337a5))
+
+
+### Bug Fixes
+
+* do not declare faro_namespace doubly ([#418](https://github.com/cedricziel/faro-shop/issues/418)) ([22636f6](https://github.com/cedricziel/faro-shop/commit/22636f6793bc79784ea4be9aeac9d3cb4cf4586b))
+* dont run chart tester on release prs ([#424](https://github.com/cedricziel/faro-shop/issues/424)) ([59ff410](https://github.com/cedricziel/faro-shop/commit/59ff41073da8be1d85803c8434f6b5d89514f4be))
+
 ## [0.13.0](https://github.com/cedricziel/faro-shop/compare/0.12.0...0.13.0) (2024-06-23)
 
 
