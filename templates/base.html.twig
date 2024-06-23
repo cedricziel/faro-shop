@@ -23,6 +23,7 @@
                 },
             };
             window.faroUrl = '{{ faroUrl }}';
+            window.faroNamespace = '{{ faroNamespace }}' !== '' ? '{{ faroNamespace }}' : undefined;
         </script>
 
         {{ encore_entry_script_tags('app') }}

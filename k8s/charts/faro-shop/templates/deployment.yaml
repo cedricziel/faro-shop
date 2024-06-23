@@ -79,8 +79,10 @@ spec:
           env:
             - name: DATABASE_URL
               value: "postgresql://app:!ChangeMe!@{{ .Release.Name }}-postgres:5432/app?serverVersion=15&charset=utf8"
+            - name: FARO_NAMESPACE
+              value: "{{ .Release.Namespace }}"
             - name: OTEL_RESOURCE_ATTRIBUTES
-              value: "service.namespace={{ .Release.Namespace}},{{ .Values.worker.otel.resource }}"
+              value: "service.namespace={{ .Release.Namespace }},{{ .Values.worker.otel.resource }}"
             {{ range $key, $value := .Values.app.env }}
             - name: {{ $key }}
               value: {{ $value | quote }}
