@@ -1,6 +1,7 @@
 {
   "include-component-in-tag": false,
   "include-v-in-tag": false,
+  "separate-pull-requests": true,
   "packages": {
     ".": {
       "changelog-path": "CHANGELOG.md",
@@ -18,6 +19,7 @@
       ]
     },
     "k8s/charts/faro-shop": {
+      "include-component-in-tag": true,
       "changelog-path": "CHANGELOG.md",
       "release-type": "helm",
       "bump-minor-pre-major": false,
