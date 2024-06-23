@@ -10,7 +10,7 @@ use OpenTelemetry\API\Trace\StatusCode;
 use OpenTelemetry\API\Trace\TracerInterface;
 use OpenTelemetry\SemConv\TraceAttributes;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\Messenger\MessageBus;
+use Symfony\Component\Messenger\MessageBusInterface;
 
 class CheckoutService
 {
@@ -18,7 +18,7 @@ class CheckoutService
         private readonly EntityManagerInterface $entityManager,
         private readonly LoggerInterface $logger,
         private readonly TracerInterface $tracer,
-        private readonly MessageBus $messageBus,
+        private readonly MessageBusInterface $messageBus,
     ) {
     }
 
