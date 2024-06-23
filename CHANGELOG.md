@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.0](https://github.com/cedricziel/faro-shop/compare/0.11.0...0.12.0) (2024-06-23)
+
+
+### Features
+
+* switch to messenger-amqp ([#407](https://github.com/cedricziel/faro-shop/issues/407)) ([fd5b9f1](https://github.com/cedricziel/faro-shop/commit/fd5b9f18de9e162a764ecdbfec6c420e352a4661))
+
 ## [0.11.0](https://github.com/cedricziel/faro-shop/compare/0.10.0...0.11.0) (2024-06-23)
 
 
