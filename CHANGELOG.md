@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.2](https://github.com/cedricziel/faro-shop/compare/0.14.1...0.14.2) (2024-06-23)
+
+
+### Bug Fixes
+
+* bump appVersion through separate PR ([#428](https://github.com/cedricziel/faro-shop/issues/428)) ([bee3d35](https://github.com/cedricziel/faro-shop/commit/bee3d3551c007d50e6ee2e8c98ff303baf56632f))
+
 ## [0.14.1](https://github.com/cedricziel/faro-shop/compare/0.14.0...0.14.1) (2024-06-23)
 
 
