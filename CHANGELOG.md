@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.18.0](https://github.com/cedricziel/faro-shop/compare/0.17.0...0.18.0) (2024-06-25)
+
+
+### Features
+
+* Bump app to 0.17.0 ([#445](https://github.com/cedricziel/faro-shop/issues/445)) ([605230f](https://github.com/cedricziel/faro-shop/commit/605230f78d5d960d9ef62aee27cda1581ac85bd5))
+* induce more ad failures ([#446](https://github.com/cedricziel/faro-shop/issues/446)) ([b73bc60](https://github.com/cedricziel/faro-shop/commit/b73bc60f1ac830aeda568ef9edf17d74219b2f6c))
+
 ## [0.17.0](https://github.com/cedricziel/faro-shop/compare/0.16.0...0.17.0) (2024-06-25)
 
 
