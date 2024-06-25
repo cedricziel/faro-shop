@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.10.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.9.0...faro-shop-0.10.0) (2024-06-25)
+
+
+### Features
+
+* Add a healthcheck that uses the database ([#444](https://github.com/cedricziel/faro-shop/issues/444)) ([25a813b](https://github.com/cedricziel/faro-shop/commit/25a813b8894cf788217bef876ac9aff43b4d95f5))
+* Bump app to 0.16.0 ([#440](https://github.com/cedricziel/faro-shop/issues/440)) ([d2528c7](https://github.com/cedricziel/faro-shop/commit/d2528c7c3382e9d4ab20db2c889e34f7defdebe0))
+* Bump app to 0.17.0 ([#445](https://github.com/cedricziel/faro-shop/issues/445)) ([605230f](https://github.com/cedricziel/faro-shop/commit/605230f78d5d960d9ef62aee27cda1581ac85bd5))
+* Bump app to 0.18.0 ([#448](https://github.com/cedricziel/faro-shop/issues/448)) ([1bcd722](https://github.com/cedricziel/faro-shop/commit/1bcd722e6d22f5fa60d4c4e6e11f31df63303873))
+
 ## [0.9.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.8.0...faro-shop-0.9.0) (2024-06-24)
 
 
