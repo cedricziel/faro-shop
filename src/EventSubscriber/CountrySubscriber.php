@@ -34,6 +34,12 @@ class CountrySubscriber implements EventSubscriberInterface
 
     public function onKernelRequest(RequestEvent $event): void
     {
+        if ($event->getRequest()->getPathInfo() == '/health') {
+            $this->logger->info('Skipping health check');
+
+            return;
+        }
+
         /** @var Span $rootSpan */
         $rootSpan = Span::getCurrent();
 
