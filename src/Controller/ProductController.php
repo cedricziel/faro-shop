@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Product;
 use App\Form\AddToCartType;
 use App\Manager\CartManager;
+use OpenTelemetry\API\Trace\Span;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,6 +24,8 @@ class ProductController extends AbstractController
     #[Route('/product/{id}', name: 'product_detail')]
     public function detail(Request $request, Product $product, CartManager $cartManager): Response
     {
+        Span::getCurrent()->setAttribute('app.product.id', $product->getId());
+
         $form = $this->createForm(AddToCartType::class);
 
         $form->handleRequest($request);

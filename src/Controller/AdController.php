@@ -42,6 +42,8 @@ class AdController extends AbstractController
     #[Route('/ads/{id}', name: 'ads_for_product')]
     public function adsForProduct(Product $product): Response
     {
+        Span::getCurrent()->setAttribute('app.product.id', $product->getId());
+
         $products = $this->productRepository->findAdvertised(3);
 
         $response = new Response();
