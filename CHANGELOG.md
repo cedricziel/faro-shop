@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.16.0](https://github.com/cedricziel/faro-shop/compare/0.15.0...0.16.0) (2024-06-25)
+
+
+### Features
+
+* Bump app to 0.15.0 ([#435](https://github.com/cedricziel/faro-shop/issues/435)) ([39929d2](https://github.com/cedricziel/faro-shop/commit/39929d2a60d94013cffa7a632828ecb312bd59c4))
+
+
+### Bug Fixes
+
+* bump grafana/k6 from 0.51.0-with-browser to 0.52.0-with-browser in /docker/k6 ([#439](https://github.com/cedricziel/faro-shop/issues/439)) ([2ad2046](https://github.com/cedricziel/faro-shop/commit/2ad20464f7337e6c44617866ef0f2906af9b5c08))
+* bump otel/opentelemetry-collector-contrib from 0.103.0 to 0.103.1 in /docker/otelcol ([#438](https://github.com/cedricziel/faro-shop/issues/438)) ([a18ad0c](https://github.com/cedricziel/faro-shop/commit/a18ad0c097d52e5605868b0f9171616c5a03b913))
+
 ## [0.15.0](https://github.com/cedricziel/faro-shop/compare/0.14.2...0.15.0) (2024-06-24)
 
 
