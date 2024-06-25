@@ -79,7 +79,11 @@ Root Cause: Kernel listener will sleep for a second if the request comes from a 
 
 ### Ads wont load for certain products
 
-Root Cause: AdController will fail to serve ads for products with uneven ids.
+Root Cause: AdController will fail to serve ads for 'Phare du Petit Minou'.
+
+### Ads wont load for the homepage
+
+Root Cause: AdRepository injects random failure at the top of the hour and 30 minutes past
 
 ## License
 

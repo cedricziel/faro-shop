@@ -114,6 +114,8 @@ hookRepoMethod($instrumentation, 'find');
 hookRepoMethod($instrumentation, 'findOne');
 hookRepoMethod($instrumentation, 'findBy');
 hookRepoMethod($instrumentation, 'findOneBy');
+hookRepoMethod($instrumentation, 'findAdvertised');
+hookRepoMethod($instrumentation, 'findRelated');
 
 hookController($instrumentation, \App\Controller\CartController::class, 'index');
 hookController($instrumentation, \App\Controller\CheckoutController::class, 'index');

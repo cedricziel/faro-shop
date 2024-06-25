@@ -7,8 +7,8 @@ use App\Repository\ProductRepository;
 use OpenTelemetry\API\Trace\Span;
 use OpenTelemetry\API\Trace\StatusCode;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Routing\Attribute\Route;
 
 class AdController extends AbstractController
@@ -20,23 +20,19 @@ class AdController extends AbstractController
     #[Route('/ads/for-home', name: 'ads_for_home')]
     public function forHomePage(): Response
     {
-        $products = $this->productRepository->findAdvertised(3);
-
-        $response = new Response();
         try {
-            if (rand(1, 10) === 1) {
-                $response->setStatusCode(Response::HTTP_BAD_REQUEST);
-                throw new BadRequestException('Unable to fetch ads for homepage');
-            }
+            $products = $this->productRepository->findAdvertised(3);
         } catch (\Exception $e) {
             Span::getCurrent()
                 ->recordException($e)
                 ->setStatus(StatusCode::STATUS_ERROR, 'Unable to fetch ads for homepage');
+
+            throw new HttpException(Response::HTTP_BAD_REQUEST, 'Unable to fetch ads for homepage', $e);
         }
 
         return $this->render('ad/ads_for_home.html.twig', [
             'products' => $products,
-        ], $response);
+        ]);
     }
 
     #[Route('/ads/{id}', name: 'ads_for_product')]
@@ -44,23 +40,11 @@ class AdController extends AbstractController
     {
         Span::getCurrent()->setAttribute('app.product.id', $product->getId());
 
-        $products = $this->productRepository->findAdvertised(3);
-
-        $response = new Response();
-        try {
-            if ($product->getId() % 2 === 1) {
-                $response->setStatusCode(Response::HTTP_BAD_REQUEST);
-                throw new BadRequestException('Product not allowed to show ads');
-            }
-        } catch (\Exception $e) {
-            Span::getCurrent()
-                ->recordException($e)
-                ->setStatus(StatusCode::STATUS_ERROR, 'Product not allowed to show ads');
-        }
+        $products = $this->productRepository->findRelated($product, 3);
 
         return $this->render('ad/ads_for_product.html.twig', [
             'product' => $product,
             'products' => $products,
-        ], $response);
+        ]);
     }
 }
