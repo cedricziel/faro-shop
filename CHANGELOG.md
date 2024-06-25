@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.17.0](https://github.com/cedricziel/faro-shop/compare/0.16.0...0.17.0) (2024-06-25)
+
+
+### Features
+
+* Add a healthcheck that uses the database ([#444](https://github.com/cedricziel/faro-shop/issues/444)) ([25a813b](https://github.com/cedricziel/faro-shop/commit/25a813b8894cf788217bef876ac9aff43b4d95f5))
+* Add geo attribute ([8e57b4c](https://github.com/cedricziel/faro-shop/commit/8e57b4c8341c87f2f962671224c16727a36be6fc))
+* Add product id attribute ([8e57b4c](https://github.com/cedricziel/faro-shop/commit/8e57b4c8341c87f2f962671224c16727a36be6fc))
+* Bump app to 0.16.0 ([#440](https://github.com/cedricziel/faro-shop/issues/440)) ([d2528c7](https://github.com/cedricziel/faro-shop/commit/d2528c7c3382e9d4ab20db2c889e34f7defdebe0))
+* Change behavior based on attributes ([#443](https://github.com/cedricziel/faro-shop/issues/443)) ([8e57b4c](https://github.com/cedricziel/faro-shop/commit/8e57b4c8341c87f2f962671224c16727a36be6fc))
+
 ## [0.16.0](https://github.com/cedricziel/faro-shop/compare/0.15.0...0.16.0) (2024-06-25)
 
 
