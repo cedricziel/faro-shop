@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 
 /**
  * @extends ServiceEntityRepository<Product>
@@ -21,35 +22,31 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
-//    /**
-//     * @return Product[] Returns an array of Product objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('p.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
-
-//    public function findOneBySomeField($value): ?Product
-//    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
     public function findAdvertised(int $amount = 3): array
     {
+        $threshold = 10;
+        // set threshold to 'test' every 30 minutes at the top of the hour and 30 minutes past the hour
+        if ((getenv('APP_ENV') == 'dev' || getenv('APP_ENV') == 'prod') && date('i') % 30 === 0) {
+            $threshold = 'test';
+        }
+
         return $this->createQueryBuilder('p')
             ->andWhere('p.price < :price')
-            ->setParameter('price', 10)
+            ->setParameter('price', $threshold)
+            ->setMaxResults($amount)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findRelated(Product $product, int $amount): array
+    {
+        if ($product->getName() === 'Phare du Petit Minou') {
+            throw new BadRequestException('Product not allowed to show ads');
+        }
+
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.id != :id')
+            ->setParameter('id', $product->getId())
             ->setMaxResults($amount)
             ->getQuery()
             ->getResult();
