@@ -70,3 +70,17 @@ composer install
 # Run the application
 symfony serve
 ```
+
+## Scenarios
+
+### Slow requests for certain countries
+
+Root Cause: Kernel listener will sleep for a second if the request comes from a specific country.
+
+### Ads wont load for certain products
+
+Root Cause: AdController will fail to serve ads for products with uneven ids.
+
+## License
+
+Apache 2.0
