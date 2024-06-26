@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.19.0](https://github.com/cedricziel/faro-shop/compare/0.18.0...0.19.0) (2024-06-26)
+
+
+### Features
+
+* Bump app to 0.18.0 ([#448](https://github.com/cedricziel/faro-shop/issues/448)) ([1bcd722](https://github.com/cedricziel/faro-shop/commit/1bcd722e6d22f5fa60d4c4e6e11f31df63303873))
+* Upgrade symfony to 7.1 ([#451](https://github.com/cedricziel/faro-shop/issues/451)) ([604999e](https://github.com/cedricziel/faro-shop/commit/604999ea0355f6200120afa4f2bf8325449616da))
+
+
+### Bug Fixes
+
+* bump @grafana/faro-webpack-plugin from 0.1.0 to 0.1.1 in the grafana group ([#450](https://github.com/cedricziel/faro-shop/issues/450)) ([c9cbeb5](https://github.com/cedricziel/faro-shop/commit/c9cbeb58e636b48a4f3bea2dfdab71dd0053f7fb))
+
 ## [0.18.0](https://github.com/cedricziel/faro-shop/compare/0.17.0...0.18.0) (2024-06-25)
 
 
