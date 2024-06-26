@@ -1,7 +1,7 @@
 twig:
   default_path: '%kernel.project_dir%/templates'
   globals:
-    appVersion: 0.18.0
+    appVersion: 0.19.0
     faroUrl: '%env(resolve:FARO_URL)%'
     faroNamespace: '%env(resolve:FARO_NAMESPACE)%'
   file_name_pattern: '*.twig'
