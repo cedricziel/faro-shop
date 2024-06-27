@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.20.0](https://github.com/cedricziel/faro-shop/compare/0.19.0...0.20.0) (2024-06-27)
+
+
+### Features
+
+* Bump app to 0.19.0 ([#452](https://github.com/cedricziel/faro-shop/issues/452)) ([660a510](https://github.com/cedricziel/faro-shop/commit/660a5103dacd10d4d6ccf3dfd7967a9706102321))
+
+
+### Bug Fixes
+
+* generate ids in the database ([#455](https://github.com/cedricziel/faro-shop/issues/455)) ([b9ec217](https://github.com/cedricziel/faro-shop/commit/b9ec21738a1e6da1547da8435f85c2cb6cc33547))
+
 ## [0.19.0](https://github.com/cedricziel/faro-shop/compare/0.18.0...0.19.0) (2024-06-26)
 
 
