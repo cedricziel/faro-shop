@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.21.0](https://github.com/cedricziel/faro-shop/compare/0.20.0...0.21.0) (2024-06-30)
+
+
+### Features
+
+* Bump app to 0.20.0 ([#456](https://github.com/cedricziel/faro-shop/issues/456)) ([627f321](https://github.com/cedricziel/faro-shop/commit/627f3218713fe0b5e44fd31812da7b887908d2c6))
+
+
+### Bug Fixes
+
+* bump doctrine/orm from 3.2.0 to 3.2.1 ([#458](https://github.com/cedricziel/faro-shop/issues/458)) ([ac6673d](https://github.com/cedricziel/faro-shop/commit/ac6673d54765a203094f4be3d1125d2690f07633))
+* bump the symfony group with 14 updates ([#459](https://github.com/cedricziel/faro-shop/issues/459)) ([da60267](https://github.com/cedricziel/faro-shop/commit/da6026713d9f6252e0e70f6bdcff8ce62866e373))
+
 ## [0.20.0](https://github.com/cedricziel/faro-shop/compare/0.19.0...0.20.0) (2024-06-27)
 
 
