@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.22.0](https://github.com/cedricziel/faro-shop/compare/0.21.0...0.22.0) (2024-07-01)
+
+
+### Features
+
+* Bump app to 0.21.0 ([#460](https://github.com/cedricziel/faro-shop/issues/460)) ([69eca2d](https://github.com/cedricziel/faro-shop/commit/69eca2d3e41d6ac7cb5dbc15c36767fafb25d49a))
+
+
+### Bug Fixes
+
+* bump the open-telemetry group with 8 updates ([#463](https://github.com/cedricziel/faro-shop/issues/463)) ([3b430cf](https://github.com/cedricziel/faro-shop/commit/3b430cf3f7165c93fcc122cf567d5bdefd36c93a))
+
 ## [0.21.0](https://github.com/cedricziel/faro-shop/compare/0.20.0...0.21.0) (2024-06-30)
 
 
