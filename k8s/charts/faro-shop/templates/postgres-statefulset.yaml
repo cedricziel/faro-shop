@@ -27,6 +27,7 @@ spec:
         {{- include "faro-shop.labels" . | nindent 8 }}
         service: {{ .Release.Name }}-postgres
     spec:
+      restartPolicy: Always
       containers:
         - name: {{ .Release.Name }}-postgres
           image: {{ .Values.postgres.image.repository }}:{{ .Values.postgres.image.tag }}
