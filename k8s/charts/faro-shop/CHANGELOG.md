@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.13.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.12.0...faro-shop-0.13.0) (2024-07-02)
+
+
+### Features
+
+* Bump app to 0.22.0 ([#464](https://github.com/cedricziel/faro-shop/issues/464)) ([c7e8864](https://github.com/cedricziel/faro-shop/commit/c7e886441a1001e4804cd0001bcd65471e551e40))
+* Set restart policy to always ([#467](https://github.com/cedricziel/faro-shop/issues/467)) ([960fbb7](https://github.com/cedricziel/faro-shop/commit/960fbb7ed55c05d10a4c03375181bff8fc8c2e0d))
+
 ## [0.12.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.11.0...faro-shop-0.12.0) (2024-07-01)
 
 
