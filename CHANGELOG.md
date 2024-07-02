@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.23.0](https://github.com/cedricziel/faro-shop/compare/0.22.0...0.23.0) (2024-07-02)
+
+
+### Features
+
+* Bump app to 0.22.0 ([#464](https://github.com/cedricziel/faro-shop/issues/464)) ([c7e8864](https://github.com/cedricziel/faro-shop/commit/c7e886441a1001e4804cd0001bcd65471e551e40))
+* Set restart policy to always ([#467](https://github.com/cedricziel/faro-shop/issues/467)) ([960fbb7](https://github.com/cedricziel/faro-shop/commit/960fbb7ed55c05d10a4c03375181bff8fc8c2e0d))
+
+
+### Bug Fixes
+
+* bump open-telemetry/opentelemetry-auto-symfony from 1.0.0beta26 to 1.0.0beta27 in the open-telemetry group ([#468](https://github.com/cedricziel/faro-shop/issues/468)) ([dcc8548](https://github.com/cedricziel/faro-shop/commit/dcc85486436fa92da8c68ecdfeb9373d5e5c056f))
+* bump otel/opentelemetry-collector-contrib from 0.103.1 to 0.104.0 in /docker/otelcol ([#469](https://github.com/cedricziel/faro-shop/issues/469)) ([ab8e062](https://github.com/cedricziel/faro-shop/commit/ab8e06227e0a3a60a972ba58c3021422f34ce5e2))
+
 ## [0.22.0](https://github.com/cedricziel/faro-shop/compare/0.21.0...0.22.0) (2024-07-01)
 
 
