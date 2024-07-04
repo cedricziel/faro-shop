@@ -56,5 +56,11 @@
 {% endblock %}
 
 {% block body %}{% endblock %}
+
+<hr>
+
+<div class="container">
+    {{ trace_id() }}-{{ span_id() }}
+</div>
 </body>
 </html>

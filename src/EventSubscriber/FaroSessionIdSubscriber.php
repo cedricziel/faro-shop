@@ -7,7 +7,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
-class ServerTimingSubscriber implements EventSubscriberInterface
+class FaroSessionIdSubscriber implements EventSubscriberInterface
 {
     public function onKernelRequest(RequestEvent $event): void
     {
@@ -15,7 +15,7 @@ class ServerTimingSubscriber implements EventSubscriberInterface
 
         $faroSession = $event->getRequest()->headers->get('x-faro-session', '');
         if ($faroSession !== '') {
-            $rootSpan->setAttribute('faro.session.id', $faroSession);
+            $rootSpan->setAttribute('session.id', $faroSession);
         }
     }
 
