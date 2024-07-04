@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.24.0](https://github.com/cedricziel/faro-shop/compare/0.23.0...0.24.0) (2024-07-04)
+
+
+### Features
+
+* Bump app to 0.23.0 ([#470](https://github.com/cedricziel/faro-shop/issues/470)) ([95b4769](https://github.com/cedricziel/faro-shop/commit/95b4769fc4676d7197f6eb71d4eb7ef97f0dfbbb))
+* display trace and span id ([#474](https://github.com/cedricziel/faro-shop/issues/474)) ([5a1d7b4](https://github.com/cedricziel/faro-shop/commit/5a1d7b46c724a186d8336fc9cbf43bd4b152d62e))
+
+
+### Bug Fixes
+
+* bump phpunit/phpunit from 11.2.5 to 11.2.6 ([#471](https://github.com/cedricziel/faro-shop/issues/471)) ([9e74c5e](https://github.com/cedricziel/faro-shop/commit/9e74c5ec2b25abc7cb9efae8a05c76a8c415c9d6))
+
 ## [0.23.0](https://github.com/cedricziel/faro-shop/compare/0.22.0...0.23.0) (2024-07-02)
 
 
