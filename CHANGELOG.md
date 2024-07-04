@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.26.0](https://github.com/cedricziel/faro-shop/compare/0.25.0...0.26.0) (2024-07-04)
+
+
+### Features
+
+* Bump app to 0.25.0 ([#480](https://github.com/cedricziel/faro-shop/issues/480)) ([5f34811](https://github.com/cedricziel/faro-shop/commit/5f34811d6608f54d612619293b258d8b3ffb9a15))
+
+
+### Bug Fixes
+
+* bump the grafana group with 2 updates ([#482](https://github.com/cedricziel/faro-shop/issues/482)) ([0bd24a5](https://github.com/cedricziel/faro-shop/commit/0bd24a5987489b3ae9b0632da7c7c74f731eda87))
+
 ## [0.25.0](https://github.com/cedricziel/faro-shop/compare/0.24.0...0.25.0) (2024-07-04)
 
 
