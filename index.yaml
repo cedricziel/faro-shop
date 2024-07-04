@@ -2,6 +2,18 @@ apiVersion: v1
 entries:
   faro-shop:
   - apiVersion: v2
+    appVersion: 0.26.0
+    created: "2024-07-04T15:21:26.934652116Z"
+    description: Faro Demo Application
+    digest: a3e6d6bec1980bc835633d25303a8bd978f73489a8ab2ffe50b6a168d6c49bc4
+    maintainers:
+    - name: cedricziel
+    name: faro-shop
+    type: application
+    urls:
+    - https://github.com/cedricziel/faro-shop/releases/download/faro-shop-0.16.0/faro-shop-0.16.0.tgz
+    version: 0.16.0
+  - apiVersion: v2
     appVersion: 0.25.0
     created: "2024-07-04T12:13:57.298352765Z"
     description: Faro Demo Application
@@ -761,4 +773,4 @@ entries:
     urls:
     - https://github.com/cedricziel/faro-shop/releases/download/0.0.34/faro-shop-0.0.34.tgz
     version: 0.0.34
-generated: "2024-07-04T12:13:57.297094972Z"
+generated: "2024-07-04T15:21:26.933445559Z"
