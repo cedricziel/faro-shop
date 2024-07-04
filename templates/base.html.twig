@@ -30,7 +30,7 @@
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
 </head>
-<body>
+<body {{ stimulus_controller('faro') }}>
 {% block header %}
     <nav class="navbar navbar-dark bg-dark sticky-top">
         <a href="{{ path('home') }}" class="navbar-brand">
