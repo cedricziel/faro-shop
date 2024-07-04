@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.25.0](https://github.com/cedricziel/faro-shop/compare/0.24.0...0.25.0) (2024-07-04)
+
+
+### Features
+
+* Bump app to 0.24.0 ([#475](https://github.com/cedricziel/faro-shop/issues/475)) ([2e30237](https://github.com/cedricziel/faro-shop/commit/2e30237e68bd9833433ce058af221e99764f5b24))
+* Collect stimulus errors via custom controller ([#478](https://github.com/cedricziel/faro-shop/issues/478)) ([789194e](https://github.com/cedricziel/faro-shop/commit/789194e3cc4ecc8425db861a69d85a202b53b212))
+* move to Faro controller ([#479](https://github.com/cedricziel/faro-shop/issues/479)) ([89a7c83](https://github.com/cedricziel/faro-shop/commit/89a7c834bfbf8927601f8e9639df1828c28ca688))
+
 ## [0.24.0](https://github.com/cedricziel/faro-shop/compare/0.23.0...0.24.0) (2024-07-04)
 
 
