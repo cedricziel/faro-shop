@@ -195,7 +195,6 @@ jobs:
         run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose exec -T php bin/console -e test doctrine:migrations:migrate --no-interaction
 
       - name: Run PHPUnit
-        if: false # Remove this line if PHPUnit is installed
         run: PROJECT_VERSION=${{ needs.version.outputs.test_version }} docker compose exec -T php bin/phpunit
 
       - name: Doctrine Schema Validator
