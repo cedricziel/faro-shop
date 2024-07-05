@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.27.0](https://github.com/cedricziel/faro-shop/compare/0.26.0...0.27.0) (2024-07-05)
+
+
+### Features
+
+* Add country resource attribute to traces ([#486](https://github.com/cedricziel/faro-shop/issues/486)) ([c0e403b](https://github.com/cedricziel/faro-shop/commit/c0e403b04957241d2bb9e377c4eae9790041dd50))
+* Add smoke-test ([#487](https://github.com/cedricziel/faro-shop/issues/487)) ([a4f5b91](https://github.com/cedricziel/faro-shop/commit/a4f5b918b0f3c7f83b48ec9cfa6cfecae774502a))
+* Bump app to 0.26.0 ([#483](https://github.com/cedricziel/faro-shop/issues/483)) ([a1b064b](https://github.com/cedricziel/faro-shop/commit/a1b064b49a28a20b6b2210b89d89de69b76e0ea2))
+
 ## [0.26.0](https://github.com/cedricziel/faro-shop/compare/0.25.0...0.26.0) (2024-07-04)
 
 
