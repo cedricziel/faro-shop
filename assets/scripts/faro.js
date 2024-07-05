@@ -5,6 +5,7 @@ const appVersion = window.version || 'unknown';
 const faroPage = window.faroPageMeta || {};
 const faroUrl = window.faroUrl || null;
 const faroNamespace = window.faroNamespace || undefined;
+const faroCountry = window.faroCountry || undefined;
 
 export function initializeFaro() {
     return initializeFaroReal({
@@ -24,12 +25,18 @@ export function initializeFaro() {
             new TracingInstrumentation({
                 resourceAttributes: {
                     ['service.namespace']: faroNamespace,
+                    ['geo.country']: faroCountry,
                 }
             }),
         ],
         metas: [
             () => ({
                 page: faroPage,
+                session: {
+                    attributes: {
+                        country: faroCountry,
+                    }
+                },
             }),
         ],
         sessionTracking: {

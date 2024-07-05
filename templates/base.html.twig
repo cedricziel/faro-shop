@@ -25,6 +25,7 @@
             };
             window.faroUrl = '{{ faroUrl }}';
             window.faroNamespace = '{{ faroNamespace }}' !== '' ? '{{ faroNamespace }}' : undefined;
+            window.faroCountry = '{{ app.request.session.get('country') }}' !== '' ? '{{ app.request.session.get('country') }}' : undefined;
         </script>
 
         {{ encore_entry_script_tags('app') }}
