@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.28.0](https://github.com/cedricziel/faro-shop/compare/0.27.0...0.28.0) (2024-07-08)
+
+
+### Features
+
+* Add delay in discount calculation ([#492](https://github.com/cedricziel/faro-shop/issues/492)) ([d847e59](https://github.com/cedricziel/faro-shop/commit/d847e59d1804f800c0b946237b03cd2e8b33e3dc))
+* Bump app to 0.27.0 ([#488](https://github.com/cedricziel/faro-shop/issues/488)) ([127f371](https://github.com/cedricziel/faro-shop/commit/127f3717e9cd781cfda86a727c4d9f349da0e5b7))
+
 ## [0.27.0](https://github.com/cedricziel/faro-shop/compare/0.26.0...0.27.0) (2024-07-05)
 
 
