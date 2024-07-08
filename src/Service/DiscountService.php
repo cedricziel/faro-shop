@@ -35,5 +35,7 @@ readonly class DiscountService
         $this->logger->info('Discount calculated: ' . $discount);
 
         $span->end();
+
+        return $discount;
     }
 }
