@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Form\CartType;
 use App\Manager\CartManager;
+use App\Service\DiscountService;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
@@ -13,11 +14,10 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class CartController extends AbstractController
 {
-    private LoggerInterface $logger;
-
-    public function __construct(LoggerInterface $logger)
-    {
-        $this->logger = $logger;
+    public function __construct(
+        private readonly LoggerInterface $logger,
+        private readonly DiscountService $discountService,
+    ){
     }
 
     #[Route('/cart', name: 'cart')]
@@ -27,6 +27,8 @@ class CartController extends AbstractController
         $form = $this->createForm(CartType::class, $cart);
 
         $form->handleRequest($request);
+
+        $discount = $this->discountService->calculateDiscount($cart);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $cart->setUpdatedAt(new \DateTimeImmutable());
@@ -45,6 +47,7 @@ class CartController extends AbstractController
 
         return $this->render('cart/index.html.twig', [
             'cart' => $cart,
+            'discount' => $discount,
             'form' => $form->createView()
         ]);
     }
