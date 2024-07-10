@@ -22,8 +22,8 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "@grafana/faro-web-sdk": "^1.8.1",
-        "@grafana/faro-web-tracing": "^1.8.1",
+        "@grafana/faro-web-sdk": "^1.8.2",
+        "@grafana/faro-web-tracing": "^1.8.2",
         "@stimulus-components/content-loader": "^5.0.0"
     }
 }
