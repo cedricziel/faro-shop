@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.29.0](https://github.com/cedricziel/faro-shop/compare/0.28.0...0.29.0) (2024-07-10)
+
+
+### Features
+
+* Bump app to 0.28.0 ([#493](https://github.com/cedricziel/faro-shop/issues/493)) ([efcc73f](https://github.com/cedricziel/faro-shop/commit/efcc73f4a23c1aefddcf4dec6b305440f98c9815))
+
+
+### Bug Fixes
+
+* bump laravel/framework from 11.13.0 to 11.15.0 ([#499](https://github.com/cedricziel/faro-shop/issues/499)) ([651d3b0](https://github.com/cedricziel/faro-shop/commit/651d3b07557923c2678270527c813dba002bc5ec))
+* bump open-telemetry/opentelemetry-auto-pdo from 0.0.14 to 0.0.15 in the open-telemetry group ([#496](https://github.com/cedricziel/faro-shop/issues/496)) ([8bbf8d6](https://github.com/cedricziel/faro-shop/commit/8bbf8d627b359ff7c8423224c017f3a0fa09d0bb))
+* bump symfony/doctrine-bridge from 7.1.1 to 7.1.2 in the symfony group ([#498](https://github.com/cedricziel/faro-shop/issues/498)) ([c6bb33e](https://github.com/cedricziel/faro-shop/commit/c6bb33e980235e563b67b4a7b98b882a54a2dc09))
+* bump the grafana group with 2 updates ([#502](https://github.com/cedricziel/faro-shop/issues/502)) ([45fa852](https://github.com/cedricziel/faro-shop/commit/45fa85229842f6a8fe87a12a7e0c5b871f89d3b1))
+
 ## [0.28.0](https://github.com/cedricziel/faro-shop/compare/0.27.0...0.28.0) (2024-07-08)
 
 
