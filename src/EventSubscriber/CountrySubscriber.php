@@ -56,17 +56,13 @@ class CountrySubscriber implements EventSubscriberInterface
         } else {
             $session->set('country', $country);
         }
+        $event->getRequest()->attributes->set('geo.country', $country);
         $rootSpan->setAttribute('geo.country', $this->countries[$country]);
         $this->logger->info('Country: ' . $this->countries[$country]);
 
-        // if country is br, in or cn, add a delay
-        if (in_array($country, ['br', 'in', 'jp'])) {
-            sleep(1);
-        }
-
         // if country is cn, throw an exception
         if ($country === 'cn') {
-            $exception = new HttpException(500, 'China is not allowed');
+            $exception = new HttpException(403, 'China is not allowed');
             $rootSpan->recordException($exception);
             $rootSpan->setStatus(StatusCode::STATUS_ERROR, 'China is not allowed');
 

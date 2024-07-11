@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Product;
 use App\Form\AddToCartType;
 use App\Manager\CartManager;
+use App\Service\DiscountService;
 use OpenTelemetry\API\Trace\Span;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,16 +15,16 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class ProductController extends AbstractController
 {
-    private LoggerInterface $logger;
-
-    public function __construct(LoggerInterface $logger)
-    {
-        $this->logger = $logger;
+    public function __construct(
+        private readonly LoggerInterface $logger,
+        private readonly DiscountService $discountService,
+    ){
     }
 
     #[Route('/product/{id}', name: 'product_detail')]
     public function detail(Request $request, Product $product, CartManager $cartManager): Response
     {
+        $discountForOrder = $this->discountService->calculateDiscountForProduct($product);
         Span::getCurrent()->setAttribute('app.product.id', $product->getId());
 
         $form = $this->createForm(AddToCartType::class);
