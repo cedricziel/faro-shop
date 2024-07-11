@@ -3,6 +3,8 @@
 namespace App\Service;
 
 use App\Entity\Order;
+use App\Entity\Product;
+use OpenTelemetry\API\Trace\Span;
 use OpenTelemetry\API\Trace\TracerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -29,13 +31,7 @@ readonly class DiscountService
             $discount = 10;
         }
 
-        if ($country = $this->requestStack->getCurrentRequest()?->attributes->get('geo.country')) {
-            // if country is br, in or cn, add a delay
-            if (in_array($country, ['br', 'in', 'jp'])) {
-                sleep(1);
-            }
-        }
-
+        $this->delayIfNecessary();
 
         $span->addEvent('Discount calculated');
 
@@ -45,5 +41,44 @@ readonly class DiscountService
         $span->end();
 
         return $discount;
+    }
+
+    public function calculateDiscountForProduct(Product $product): int
+    {
+        $this->logger->info('Calculating discount for product: ' . $product->getId());
+        $span = $this->tracer->spanBuilder('DiscountService.calculateDiscountForProduct')
+            ->startSpan()
+            ->setAttribute('app.product.id', $product->getId())
+            ->addEvent('Calculating discount');
+
+        $discount = 0;
+        if ($product->getPrice() > 100) {
+            $discount = 10;
+        }
+
+        $this->delayIfNecessary();
+
+        $span->addEvent('Discount calculated');
+
+        $span->setAttribute('app.discount', $discount);
+        $this->logger->info('Discount calculated: ' . $discount);
+
+        $span->end();
+
+        return $discount;
+    }
+
+    private function delayIfNecessary(): void
+    {
+        if ($country = $this->requestStack->getCurrentRequest()?->attributes->get('geo.country')) {
+            // if country is br, in or cn, add a delay
+            if (in_array($country, ['br', 'in', 'jp'])) {
+                sleep(1);
+
+                Span::getCurrent()->addEvent('Aborting discount calculation due to timeout delay', [
+                    'app.country' => $country,
+                ]);
+            }
+        }
     }
 }
