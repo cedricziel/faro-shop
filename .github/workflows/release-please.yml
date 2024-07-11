@@ -250,7 +250,7 @@ jobs:
           add-paths: |
             k8s/charts/faro-shop/Chart.yaml
       - name: Approve bump PR
-        run: gh pr merge $PR --auto
+        run: gh pr merge $PR --squash --auto
         if: ${{ steps.cpr.outputs.pull-request-number }}
         env:
           GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
