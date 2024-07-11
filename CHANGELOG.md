@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.31.0](https://github.com/cedricziel/faro-shop/compare/0.30.0...0.31.0) (2024-07-11)
+
+
+### Features
+
+* Bump app to 0.30.0 ([#508](https://github.com/cedricziel/faro-shop/issues/508)) ([abf003e](https://github.com/cedricziel/faro-shop/commit/abf003e8233fb5f4ea36338a24619111722cbfb7))
+* enable automation for bump prs ([#513](https://github.com/cedricziel/faro-shop/issues/513)) ([e3031f8](https://github.com/cedricziel/faro-shop/commit/e3031f8fb2f2727139270cb661b642608ba85abd))
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.24.7 to 7.24.8 ([#512](https://github.com/cedricziel/faro-shop/issues/512)) ([1763f6b](https://github.com/cedricziel/faro-shop/commit/1763f6b168eb48f79f244e5fa52946bdf034a03f))
+* bump @babel/preset-env from 7.24.7 to 7.24.8 ([#511](https://github.com/cedricziel/faro-shop/issues/511)) ([0fc30c7](https://github.com/cedricziel/faro-shop/commit/0fc30c72ba08d44dcea5b0ff7457035735cccdeb))
+
 ## [0.30.0](https://github.com/cedricziel/faro-shop/compare/0.29.0...0.30.0) (2024-07-11)
 
 
