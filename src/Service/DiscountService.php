@@ -5,12 +5,14 @@ namespace App\Service;
 use App\Entity\Order;
 use OpenTelemetry\API\Trace\TracerInterface;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 readonly class DiscountService
 {
     public function __construct(
         private LoggerInterface $logger,
         private TracerInterface $tracer,
+        private RequestStack $requestStack,
     ){
     }
 
@@ -27,7 +29,13 @@ readonly class DiscountService
             $discount = 10;
         }
 
-        sleep(1);
+        if ($country = $this->requestStack->getCurrentRequest()?->attributes->get('geo.country')) {
+            // if country is br, in or cn, add a delay
+            if (in_array($country, ['br', 'in', 'jp'])) {
+                sleep(1);
+            }
+        }
+
 
         $span->addEvent('Discount calculated');
 
