@@ -242,8 +242,16 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           assignees: cedricziel
+          token: ${{ secrets.RELEASE_TOKEN }}
           branch: update-app-in-helm-chart
           branch-suffix: random
           title: 'feat: Bump app to ${{ needs.release-please.outputs.app_release_tag_name }}'
+          commit-message: 'feat: Bump app to ${{ needs.release-please.outputs.app_release_tag_name }}'
           add-paths: |
             k8s/charts/faro-shop/Chart.yaml
+      - name: Approve bump PR
+        run: gh pr merge $PR --auto
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
