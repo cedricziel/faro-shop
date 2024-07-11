@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.30.0](https://github.com/cedricziel/faro-shop/compare/0.29.0...0.30.0) (2024-07-11)
+
+
+### Features
+
+* add delay to discount service ([#507](https://github.com/cedricziel/faro-shop/issues/507)) ([2e9097f](https://github.com/cedricziel/faro-shop/commit/2e9097f469321bef2a72d6f04af55ac74cf57498))
+* Bump app to 0.29.0 ([#504](https://github.com/cedricziel/faro-shop/issues/504)) ([f51870a](https://github.com/cedricziel/faro-shop/commit/f51870a4fc472c2dc126cb958c55acf178ae7dde))
+
+
+### Bug Fixes
+
+* bump phpunit/phpunit from 11.2.6 to 11.2.7 ([#503](https://github.com/cedricziel/faro-shop/issues/503)) ([74b5aa4](https://github.com/cedricziel/faro-shop/commit/74b5aa4912f9968fc27a6692c17dccd4365d8275))
+
 ## [0.29.0](https://github.com/cedricziel/faro-shop/compare/0.28.0...0.29.0) (2024-07-10)
 
 
