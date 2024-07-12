@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.32.0](https://github.com/cedricziel/faro-shop/compare/0.31.0...0.32.0) (2024-07-12)
+
+
+### Features
+
+* Bump app to 0.31.0 ([#514](https://github.com/cedricziel/faro-shop/issues/514)) ([5e62bf3](https://github.com/cedricziel/faro-shop/commit/5e62bf3d13da0b752514993f4542c46c0666cebc))
+* instrument message handling ([#518](https://github.com/cedricziel/faro-shop/issues/518)) ([3f82ea3](https://github.com/cedricziel/faro-shop/commit/3f82ea35c8b2dc865e323039e23addfc46a74d00))
+* squash when auto-merging ([#515](https://github.com/cedricziel/faro-shop/issues/515)) ([5ca1226](https://github.com/cedricziel/faro-shop/commit/5ca1226a2994cd9991f2df9b84efd9a172792c04))
+
 ## [0.31.0](https://github.com/cedricziel/faro-shop/compare/0.30.0...0.31.0) (2024-07-11)
 
 
