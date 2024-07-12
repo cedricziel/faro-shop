@@ -24,6 +24,8 @@ export function initializeFaro() {
             // This packages is optional because it increases the bundle size noticeably. Only add it if you want tracing data.
             new TracingInstrumentation({
                 resourceAttributes: {
+                    ['k8s.namespace.name']: faroNamespace,
+                    ['k8s.cluster.name']: 'app-o11y-faro-shop',
                     ['service.namespace']: faroNamespace,
                     ['geo.country']: faroCountry,
                 }
