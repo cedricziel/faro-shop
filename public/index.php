@@ -1,12 +1,18 @@
 <?php
 
 use App\Kernel;
+use App\O11y\OpenTelemetryStamp;
 use Doctrine\ORM\EntityRepository;
+use OpenTelemetry\API\Globals;
 use OpenTelemetry\API\Instrumentation\CachedInstrumentation;
 use OpenTelemetry\API\Trace\Span;
+use OpenTelemetry\API\Trace\SpanKind;
 use OpenTelemetry\API\Trace\StatusCode;
 use OpenTelemetry\Context\Context;
+use OpenTelemetry\Context\Propagation\ArrayAccessGetterSetter;
 use OpenTelemetry\SemConv\TraceAttributes;
+use Symfony\Component\Messenger\Envelope;
+use Symfony\Component\Messenger\Transport\Sender\SenderInterface;
 use function OpenTelemetry\Instrumentation\hook;
 
 require_once dirname(__DIR__) . '/vendor/autoload_runtime.php';
@@ -109,6 +115,68 @@ if (!function_exists('hookRepoMethod')) {
     }
 
 }
+
+hook(
+    SenderInterface::class,
+    'send',
+    pre: static function (
+        SenderInterface $sender,
+        array  $params,
+        string $class,
+        string $function,
+        ?string $filename,
+        ?int    $lineno,
+    ) use ($instrumentation) {
+        /** @var Envelope $envelope */
+        $envelope = $params[0];
+
+        $builder = $instrumentation
+            ->tracer()->spanBuilder(sprintf('%s::%s', $class, $function))
+            ->setSpanKind(SpanKind::KIND_PRODUCER)
+            ->setAttribute(TraceAttributes::MESSAGING_SYSTEM, 'amqp')
+            ->setAttribute(TraceAttributes::MESSAGING_DESTINATION, 'amqp')
+            ->setAttribute(TraceAttributes::MESSAGING_DESTINATION_KIND, 'queue')
+            ->setAttribute(TraceAttributes::MESSAGING_OPERATION, 'send')
+            ->setAttribute(TraceAttributes::PEER_SERVICE, 'amqp')
+        ;
+
+        $span = $builder->startSpan();
+        $parent = Context::getCurrent();
+
+        $context = $span->storeInContext($parent);
+
+        $openTelemetryStamp = new OpenTelemetryStamp();
+        $propagator = Globals::propagator();
+        $propagator->inject($openTelemetryStamp, ArrayAccessGetterSetter::getInstance(), $context);
+        $envelope = $envelope->with($openTelemetryStamp);
+
+        Context::storage()->attach($context);
+
+        return [$envelope];
+    },
+    post: static function (
+        SenderInterface $sender,
+        array  $params,
+        mixed  $result,
+        ?\Throwable $exception
+    ) {
+        $scope = Context::storage()->scope();
+        if (null === $scope) {
+            return;
+        }
+        $scope->detach();
+        $span = Span::fromContext($scope->context());
+
+        if (null !== $exception) {
+            $span->recordException($exception, [
+                TraceAttributes::EXCEPTION_ESCAPED => true,
+            ]);
+            $span->setStatus(StatusCode::STATUS_ERROR, $exception->getMessage());
+        }
+
+        $span->end();
+    },
+);
 
 hookRepoMethod($instrumentation, 'find');
 hookRepoMethod($instrumentation, 'findOne');
