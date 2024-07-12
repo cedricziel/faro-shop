@@ -16,7 +16,8 @@
           "path": "config/packages/twig.yaml",
           "jsonpath": "$.twig.globals.appVersion"
         }
-      ]
+      ],
+      "exclude-paths": ["k8s/charts/faro-shop"]
     },
     "k8s/charts/faro-shop": {
       "include-component-in-tag": true,
