@@ -1,4 +1,4 @@
 {
   ".": "0.32.0",
-  "k8s/charts/faro-shop": "0.21.0"
+  "k8s/charts/faro-shop": "0.22.0"
 }
