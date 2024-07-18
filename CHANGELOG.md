@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.32.1](https://github.com/cedricziel/faro-shop/compare/0.32.0...0.32.1) (2024-07-18)
+
+
+### Bug Fixes
+
+* adding k8s resource attributes ([#524](https://github.com/cedricziel/faro-shop/issues/524)) ([d752aaf](https://github.com/cedricziel/faro-shop/commit/d752aaf5819c5da408d02d6df8b0e77e7f56e545))
+* bump @babel/core from 7.24.8 to 7.24.9 ([#526](https://github.com/cedricziel/faro-shop/issues/526)) ([352b0ff](https://github.com/cedricziel/faro-shop/commit/352b0ff479a8d29b2133b7060e6bb4fd617d224e))
+* bump guzzlehttp/guzzle from 7.8.1 to 7.9.0 ([#533](https://github.com/cedricziel/faro-shop/issues/533)) ([e836518](https://github.com/cedricziel/faro-shop/commit/e8365184a31caeee64546ecb7886242404bcc994))
+* bump guzzlehttp/promises from 2.0.2 to 2.0.3 ([#531](https://github.com/cedricziel/faro-shop/issues/531)) ([f5a6f88](https://github.com/cedricziel/faro-shop/commit/f5a6f8850bcf8d27de9f8d1b99a6bb9d643fa70f))
+* bump guzzlehttp/psr7 from 2.6.2 to 2.7.0 ([#532](https://github.com/cedricziel/faro-shop/issues/532)) ([a36ac37](https://github.com/cedricziel/faro-shop/commit/a36ac376960b67220a30e85b1671b64233b850cc))
+* bump laravel/framework from 11.15.0 to 11.16.0 ([#528](https://github.com/cedricziel/faro-shop/issues/528)) ([eedc5a7](https://github.com/cedricziel/faro-shop/commit/eedc5a73410e2f6a5cc73ef6f312688f2b336adb))
+* bump nesbot/carbon from 3.6.0 to 3.7.0 ([#530](https://github.com/cedricziel/faro-shop/issues/530)) ([409d309](https://github.com/cedricziel/faro-shop/commit/409d309959b2b25b91e5fc145c9878bf73fe5f93))
+* bump otel/opentelemetry-collector-contrib from 0.104.0 to 0.105.0 in /docker/otelcol ([#529](https://github.com/cedricziel/faro-shop/issues/529)) ([76cdb97](https://github.com/cedricziel/faro-shop/commit/76cdb97dbe0df5eb4eeaffbe3b92684fa5a99482))
+* bump phpunit/phpunit from 11.2.7 to 11.2.8 ([#534](https://github.com/cedricziel/faro-shop/issues/534)) ([dd4285c](https://github.com/cedricziel/faro-shop/commit/dd4285c61ce82fa348ef06c8dec7dbdcb8111613))
+* bump webpack from 5.92.1 to 5.93.0 ([#523](https://github.com/cedricziel/faro-shop/issues/523)) ([7fe6617](https://github.com/cedricziel/faro-shop/commit/7fe66174e01e285f5345cb6bf909c162139e5d82))
+* bump zenstruck/foundry from 2.0.6 to 2.0.7 ([#525](https://github.com/cedricziel/faro-shop/issues/525)) ([06b863e](https://github.com/cedricziel/faro-shop/commit/06b863ee9a12b341fe07d49ff507842ad90df326))
+* remove k8s attributes ([#527](https://github.com/cedricziel/faro-shop/issues/527)) ([27f42da](https://github.com/cedricziel/faro-shop/commit/27f42da0d9816300af2b577f6fd28025a9f61244))
+
 ## [0.32.0](https://github.com/cedricziel/faro-shop/compare/0.31.0...0.32.0) (2024-07-12)
 
 
