@@ -95,6 +95,7 @@ if (process.env.FARO_API_KEY !== '') {
             stackId: process.env.FARO_STACK_ID,
             apiKey: process.env.FARO_API_KEY,
             gzipContents: true,
+            verbose: true,
         }))
 }
 
