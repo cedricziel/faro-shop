@@ -7,7 +7,7 @@ x-default-logging: &logging
 
 networks:
   default:
-    name: opentelemetry-demo
+    name: faro-shop
     driver: bridge
 
 services:
