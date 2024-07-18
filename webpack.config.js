@@ -86,7 +86,7 @@ Encore
     })
 ;
 
-if (process.env.FARO_API_KEY !== '') {
+if (process.env.FARO_API_KEY) {
     Encore
         .addPlugin(new FaroSourceMapUploaderPlugin({
             appName: process.env.FARO_APP_NAME,
