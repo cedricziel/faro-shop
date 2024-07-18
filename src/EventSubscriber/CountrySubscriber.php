@@ -28,7 +28,8 @@ class CountrySubscriber implements EventSubscriberInterface
 
     public function __construct(
         private readonly LoggerInterface $logger,
-        private readonly RequestStack $requestStack
+        private readonly RequestStack $requestStack,
+        private string $env,
     ){
     }
 
@@ -61,7 +62,7 @@ class CountrySubscriber implements EventSubscriberInterface
         $this->logger->info('Country: ' . $this->countries[$country]);
 
         // if country is cn, throw an exception
-        if ($country === 'cn') {
+        if ($this->env === 'prod' && $country === 'cn') {
             $exception = new HttpException(403, 'China is not allowed');
             $rootSpan->recordException($exception);
             $rootSpan->setStatus(StatusCode::STATUS_ERROR, 'China is not allowed');
