@@ -19,6 +19,15 @@
       ],
       "exclude-paths": ["k8s/charts/faro-shop"]
     },
+    "docker/php": {
+      "include-component-in-tag": true,
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "simple",
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "draft": false,
+      "prerelease": false
+    },
     "k8s/charts/faro-shop": {
       "include-component-in-tag": true,
       "changelog-path": "CHANGELOG.md",
