@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.32.2](https://github.com/cedricziel/faro-shop/compare/0.32.1...0.32.2) (2024-07-18)
+
+
+### Bug Fixes
+
+* throw error in the backend not in the frontend ([#537](https://github.com/cedricziel/faro-shop/issues/537)) ([cff2c3b](https://github.com/cedricziel/faro-shop/commit/cff2c3b3d5891dc04faedee6c2c131397ba34ec9))
+
 ## [0.32.1](https://github.com/cedricziel/faro-shop/compare/0.32.0...0.32.1) (2024-07-18)
 
 
