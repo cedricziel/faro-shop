@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.32.4](https://github.com/cedricziel/faro-shop/compare/0.32.3...0.32.4) (2024-07-18)
+
+
+### Bug Fixes
+
+* dont block cn in tests ([#547](https://github.com/cedricziel/faro-shop/issues/547)) ([e870f2c](https://github.com/cedricziel/faro-shop/commit/e870f2c49d2ec01736fe9706098c6968bf47747a))
+* revert back to experimental k6 ([#545](https://github.com/cedricziel/faro-shop/issues/545)) ([77d9d4e](https://github.com/cedricziel/faro-shop/commit/77d9d4e9a975eba68217e4d9ee96aff84464e32a))
+* set caddy to 2.8.4 ([#544](https://github.com/cedricziel/faro-shop/issues/544)) ([75361aa](https://github.com/cedricziel/faro-shop/commit/75361aa02efd967a2f8781ac157b9ba6a3ec3ae6))
+
 ## [0.32.3](https://github.com/cedricziel/faro-shop/compare/0.32.2...0.32.3) (2024-07-18)
 
 
