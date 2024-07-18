@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.32.5](https://github.com/cedricziel/faro-shop/compare/0.32.4...0.32.5) (2024-07-18)
+
+
+### Bug Fixes
+
+* expose vars and secrets to sourcemap upload ([#551](https://github.com/cedricziel/faro-shop/issues/551)) ([94fe5a2](https://github.com/cedricziel/faro-shop/commit/94fe5a248e6f9c49dbcd88e072900fe9a2357402))
+* log verbose in faro bundler ([#549](https://github.com/cedricziel/faro-shop/issues/549)) ([6d39428](https://github.com/cedricziel/faro-shop/commit/6d394284c1aaba21cae70a8cc227754c26be60a7))
+
 ## [0.32.4](https://github.com/cedricziel/faro-shop/compare/0.32.3...0.32.4) (2024-07-18)
 
 
