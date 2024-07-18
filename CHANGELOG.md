@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.32.6](https://github.com/cedricziel/faro-shop/compare/0.32.5...0.32.6) (2024-07-18)
+
+
+### Bug Fixes
+
+* set unique docker network ([#555](https://github.com/cedricziel/faro-shop/issues/555)) ([163c17a](https://github.com/cedricziel/faro-shop/commit/163c17a1cf3c63d5e18923f87b690414b93152d0))
+
 ## [0.32.5](https://github.com/cedricziel/faro-shop/compare/0.32.4...0.32.5) (2024-07-18)
 
 
