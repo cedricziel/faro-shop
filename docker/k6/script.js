@@ -1,6 +1,6 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
-import { browser } from 'k6/browser';
+import { browser } from 'k6/experimental/browser';
 
 export const options = {
     scenarios: {
