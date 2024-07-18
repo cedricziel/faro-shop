@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.26.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.25.0...faro-shop-0.26.0) (2024-07-18)
+
+
+### Features
+
+* Bump app to 0.32.6 ([#557](https://github.com/cedricziel/faro-shop/issues/557)) ([3d9e8d9](https://github.com/cedricziel/faro-shop/commit/3d9e8d9b74697e9d16e6cb134ba50eff588cb89d))
+
 ## [0.25.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.24.0...faro-shop-0.25.0) (2024-07-18)
 
 
