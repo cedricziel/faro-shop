@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.32.3](https://github.com/cedricziel/faro-shop/compare/0.32.2...0.32.3) (2024-07-18)
+
+
+### Bug Fixes
+
+* migrate deprecated import ([#540](https://github.com/cedricziel/faro-shop/issues/540)) ([e5d47c9](https://github.com/cedricziel/faro-shop/commit/e5d47c972a76b9017c231b8ecc71905f22ae84cd))
+
 ## [0.32.2](https://github.com/cedricziel/faro-shop/compare/0.32.1...0.32.2) (2024-07-18)
 
 
