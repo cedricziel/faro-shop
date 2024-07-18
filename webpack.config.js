@@ -45,7 +45,7 @@ Encore
      */
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
-    .enableSourceMaps(!Encore.isProduction())
+    .enableSourceMaps(true)
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
 
@@ -86,7 +86,7 @@ Encore
     })
 ;
 
-if (process.env.FARO_API_KEY !== '') {
+if (process.env.FARO_API_KEY) {
     Encore
         .addPlugin(new FaroSourceMapUploaderPlugin({
             appName: process.env.FARO_APP_NAME,
@@ -95,6 +95,7 @@ if (process.env.FARO_API_KEY !== '') {
             stackId: process.env.FARO_STACK_ID,
             apiKey: process.env.FARO_API_KEY,
             gzipContents: true,
+            verbose: true,
         }))
 }
 
