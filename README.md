@@ -43,6 +43,19 @@ helm repo add faro-shop https://cedricziel.github.io/faro-shop &&
     --set app.env.FARO_URL=$FARO_URL
 ```
 
+## SourceMaps
+
+SourceMap upload can be configured by setting some environment variables
+at build time. Please take a look at the `webpack.config.js` file for the configuration.
+
+Without uploaded source-maps, the error messages look like this:
+
+![Without SourceMaps](.github/images/stacktrace-no-sourcemap.png)
+
+With uploaded source-maps, the error messages look like this:
+
+TODO: Add image
+
 ## Development
 
 ### Requirements
