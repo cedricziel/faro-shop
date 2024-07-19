@@ -70,7 +70,9 @@ jobs:
           target: php_base
           tags: |
             ghcr.io/${{ github.repository }}-php:latest
-          cache-from: type=gha
+          cache-from: |
+            ghcr.io/${{ github.repository }}-php:latest
+            type=gha
           cache-to: type=gha
 
       - name: Build and push dev image
@@ -82,5 +84,7 @@ jobs:
           target: php_dev
           tags: |
             ghcr.io/${{ github.repository }}-php:latest-dev
-          cache-from: type=gha
+          cache-from: |
+            ghcr.io/${{ github.repository }}-php:latest-dev
+            type=gha
           cache-to: type=gha
