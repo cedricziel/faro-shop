@@ -57,7 +57,7 @@ updates:
       - "cedricziel"
 
   - package-ecosystem: "docker"
-    directory: "/docker/k6/php"
+    directory: "/docker/php"
     schedule:
       interval: "daily"
     commit-message:
