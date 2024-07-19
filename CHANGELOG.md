@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.33.1](https://github.com/cedricziel/faro-shop/compare/0.33.0...0.33.1) (2024-07-19)
+
+
+### Bug Fixes
+
+* configure simple strategy ([#576](https://github.com/cedricziel/faro-shop/issues/576)) ([716f3f8](https://github.com/cedricziel/faro-shop/commit/716f3f83d3388a8f9bf1556477006ae471cf1dda))
+* dont search too deep ([#572](https://github.com/cedricziel/faro-shop/issues/572)) ([9f553d5](https://github.com/cedricziel/faro-shop/commit/9f553d5fb329b79b39b5b78bbbf70f5a43a7e846))
+
 ## [0.33.0](https://github.com/cedricziel/faro-shop/compare/0.32.6...0.33.0) (2024-07-19)
 
 
