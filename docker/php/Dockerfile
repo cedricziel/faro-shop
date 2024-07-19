@@ -1,6 +1,5 @@
 FROM php:8.3.9-fpm-alpine AS php_upstream
 
-
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 
 FROM composer/composer:2-bin AS composer_upstream
