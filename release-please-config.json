@@ -29,7 +29,8 @@
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false,
       "draft": false,
-      "prerelease": false
+      "prerelease": false,
+      "initial-version": "8.3.3"
     },
     "k8s/charts/faro-shop": {
       "include-component-in-tag": true,
