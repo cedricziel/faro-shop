@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.4.2](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.4.1...php-baseimage-8.4.2) (2024-07-19)
+
+
+### Bug Fixes
+
+* use correct tag name when publishing php ([#588](https://github.com/cedricziel/faro-shop/issues/588)) ([07b482e](https://github.com/cedricziel/faro-shop/commit/07b482ebefd168bf056aa7005b7835c2c7cfcbd4))
+
 ## [8.4.1](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.4.0...php-baseimage-8.4.1) (2024-07-19)
 
 
