@@ -25,6 +25,7 @@
       ]
     },
     "docker/php": {
+      "component": "php-baseimage",
       "include-component-in-tag": true,
       "changelog-path": "docker/php/CHANGELOG.md",
       "version-file": "docker/php/version.txt",
