@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.33.0](https://github.com/cedricziel/faro-shop/compare/0.32.6...0.33.0) (2024-07-19)
+
+
+### Features
+
+* build docker base image ([#559](https://github.com/cedricziel/faro-shop/issues/559)) ([0119824](https://github.com/cedricziel/faro-shop/commit/0119824821750d660c12e326acd59798228c2b55))
+
+
+### Bug Fixes
+
+* bootstrap php release ([#569](https://github.com/cedricziel/faro-shop/issues/569)) ([694257f](https://github.com/cedricziel/faro-shop/commit/694257fcf4b883a5eb09146a750a019e20bc5de3))
+* dependabot for docker ([#562](https://github.com/cedricziel/faro-shop/issues/562)) ([6f97650](https://github.com/cedricziel/faro-shop/commit/6f97650e6bdcc570ae3efaad7ae51cda3c08ccb8))
+* exclude docker php from main release ([#564](https://github.com/cedricziel/faro-shop/issues/564)) ([f2505f2](https://github.com/cedricziel/faro-shop/commit/f2505f2343a482b312704a8b0d62726eecd2f066))
+* fix base image reference ([#561](https://github.com/cedricziel/faro-shop/issues/561)) ([f3fb1ed](https://github.com/cedricziel/faro-shop/commit/f3fb1edbb3a23f2e7d9c8aa8fe57a56e562a9d7c))
+* release-please ([#567](https://github.com/cedricziel/faro-shop/issues/567)) ([a01971c](https://github.com/cedricziel/faro-shop/commit/a01971cf19e87ed55e29ba46ed493699236903bd))
+* set version to 8.3.3 ([#570](https://github.com/cedricziel/faro-shop/issues/570)) ([ef74d2e](https://github.com/cedricziel/faro-shop/commit/ef74d2e359638e467188e3bcd2c0d00174a9ac43))
+
 ## [0.32.6](https://github.com/cedricziel/faro-shop/compare/0.32.5...0.32.6) (2024-07-18)
 
 
