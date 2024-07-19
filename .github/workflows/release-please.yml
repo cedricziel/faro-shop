@@ -33,6 +33,9 @@ jobs:
       helm_release_tag_name: ${{ steps.release.outputs['k8s/charts/faro-shop--tag_name'] }}
       php_release_created: ${{ steps.release.outputs['docker/php--release_created'] }}
       php_release_tag_name: ${{ steps.release.outputs['docker/php--tag_name'] }}
+      php_release_major: ${{ steps.release.outputs['docker/php--major'] }}
+      php_release_minor: ${{ steps.release.outputs['docker/php--minor'] }}
+      php_release_patch: ${{ steps.release.outputs['docker/php--patch'] }}
 
   build-base-image:
     runs-on: ubuntu-latest
@@ -67,7 +70,7 @@ jobs:
           pull: true
           target: php_base
           tags: |
-            ghcr.io/${{ github.repository }}-php:${{ needs.release-please.outputs.php_release_tag_name }}
+            ghcr.io/${{ github.repository }}-php:${{ needs.release-please.outputs.php_release_major }}.${{ needs.release-please.outputs.php_release_minor }}.${{ needs.release-please.outputs.php_release_patch }}
             ghcr.io/${{ github.repository }}-php:latest
           cache-from: type=gha
           cache-to: type=gha
@@ -81,7 +84,7 @@ jobs:
           pull: true
           target: php_dev
           tags: |
-            ghcr.io/${{ github.repository }}-php:${{ needs.release-please.outputs.php_release_tag_name }}-dev
+            ghcr.io/${{ github.repository }}-php:${{ needs.release-please.outputs.php_release_major }}.${{ needs.release-please.outputs.php_release_minor }}.${{ needs.release-please.outputs.php_release_patch }}-dev
             ghcr.io/${{ github.repository }}-php:latest-dev
           cache-from: type=gha
           cache-to: type=gha

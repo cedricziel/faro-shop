@@ -6,6 +6,7 @@ FROM composer/composer:2-bin AS composer_upstream
 
 FROM php_upstream AS php_base
 
+
 WORKDIR /srv/app
 
 # persistent / runtime deps
