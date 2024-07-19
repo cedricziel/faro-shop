@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.4.1](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.4.0...php-baseimage-8.4.1) (2024-07-19)
+
+
+### Bug Fixes
+
+* bump ([#586](https://github.com/cedricziel/faro-shop/issues/586)) ([c971889](https://github.com/cedricziel/faro-shop/commit/c97188987057a930c6f0618c5ec3fe91c77b6b29))
+
 ## [8.4.0](https://github.com/cedricziel/faro-shop/compare/php-baseimage-v8.3.3...php-baseimage-8.4.0) (2024-07-19)
 
 
