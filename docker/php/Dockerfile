@@ -65,4 +65,4 @@ RUN set -eux; \
     	xdebug \
     ;
 
-COPY --link docker/php/conf.d/app.dev.ini $PHP_INI_DIR/conf.d/
+COPY --link conf.d/app.dev.ini $PHP_INI_DIR/conf.d/
