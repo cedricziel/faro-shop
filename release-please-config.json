@@ -2,6 +2,8 @@
   "include-component-in-tag": false,
   "include-v-in-tag": false,
   "separate-pull-requests": true,
+  "release-search-depth": 100,
+  "commit-search-depth": 100,
   "packages": {
     ".": {
       "changelog-path": "CHANGELOG.md",
