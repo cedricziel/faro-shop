@@ -72,7 +72,9 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}-php:${{ needs.release-please.outputs.php_release_major }}.${{ needs.release-please.outputs.php_release_minor }}.${{ needs.release-please.outputs.php_release_patch }}
             ghcr.io/${{ github.repository }}-php:latest
-          cache-from: type=gha
+          cache-from: |
+            ghcr.io/${{ github.repository }}-php:latest
+            type=gha
           cache-to: type=gha
 
       - name: Build and push dev image
@@ -86,7 +88,9 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}-php:${{ needs.release-please.outputs.php_release_major }}.${{ needs.release-please.outputs.php_release_minor }}.${{ needs.release-please.outputs.php_release_patch }}-dev
             ghcr.io/${{ github.repository }}-php:latest-dev
-          cache-from: type=gha
+          cache-from: |
+            ghcr.io/${{ github.repository }}-php:latest-dev
+            type=gha
           cache-to: type=gha
 
   release_asset:
