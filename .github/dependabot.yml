@@ -56,6 +56,15 @@ updates:
     assignees:
       - "cedricziel"
 
+  - package-ecosystem: "docker"
+    directory: "/docker/k6/php"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "fix: "
+    assignees:
+      - "cedricziel"
+
   - package-ecosystem: "composer"
     directory: "/"
     open-pull-requests-limit: 20

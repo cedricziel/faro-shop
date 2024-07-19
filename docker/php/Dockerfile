@@ -51,7 +51,7 @@ ENV PATH="${PATH}:/root/.composer/vendor/bin"
 
 COPY --from=composer_upstream --link /composer /usr/bin/composer
 
-FROM php_base_image AS php_dev
+FROM php_base AS php_dev
 
 WORKDIR /srv/app
 
