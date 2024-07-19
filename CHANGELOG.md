@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.34.0](https://github.com/cedricziel/faro-shop/compare/0.33.1...0.34.0) (2024-07-19)
+
+
+### Features
+
+* use cache from latest image ([#590](https://github.com/cedricziel/faro-shop/issues/590)) ([25b3c17](https://github.com/cedricziel/faro-shop/commit/25b3c17191343cf3d2647161065cbe61625bdfdc))
+
+
+### Bug Fixes
+
+* bump ([#578](https://github.com/cedricziel/faro-shop/issues/578)) ([603719c](https://github.com/cedricziel/faro-shop/commit/603719c7ca10730f9408772df0f18f742c6b0b90))
+* bump cedricziel/faro-shop-php from 8.3.2 to 8.4.2 ([#591](https://github.com/cedricziel/faro-shop/issues/591)) ([ab356d4](https://github.com/cedricziel/faro-shop/commit/ab356d44309049f706da00e7100d97f6f8f8ee29))
+* dont build exotic arch ([#585](https://github.com/cedricziel/faro-shop/issues/585)) ([c9330ed](https://github.com/cedricziel/faro-shop/commit/c9330eda68fb014dda5772bdcee6b4ff24c2a6ca))
+* remove unnecessary overrides ([#583](https://github.com/cedricziel/faro-shop/issues/583)) ([7b1acb2](https://github.com/cedricziel/faro-shop/commit/7b1acb2556b2e94f8733b043aef87059ccbbe013))
+* use correct tag name when publishing php ([#588](https://github.com/cedricziel/faro-shop/issues/588)) ([07b482e](https://github.com/cedricziel/faro-shop/commit/07b482ebefd168bf056aa7005b7835c2c7cfcbd4))
+
 ## [0.33.1](https://github.com/cedricziel/faro-shop/compare/0.33.0...0.33.1) (2024-07-19)
 
 
