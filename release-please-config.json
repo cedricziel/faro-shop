@@ -26,7 +26,8 @@
     },
     "docker/php": {
       "include-component-in-tag": true,
-      "changelog-path": "CHANGELOG.md",
+      "changelog-path": "docker/php/CHANGELOG.md",
+      "version-file": "docker/php/version.txt",
       "release-type": "simple",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false,
