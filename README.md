@@ -54,7 +54,7 @@ Without uploaded source-maps, the error messages look like this:
 
 With uploaded source-maps, the error messages look like this:
 
-TODO: Add image
+![With SourceMaps](.github/images/stacktrace-with-sourcemap.png)
 
 ## Development
 
