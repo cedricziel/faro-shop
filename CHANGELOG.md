@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.34.1](https://github.com/cedricziel/faro-shop/compare/0.34.0...0.34.1) (2024-07-22)
+
+
+### Bug Fixes
+
+* automerge dependabot updates ([#601](https://github.com/cedricziel/faro-shop/issues/601)) ([1a74d78](https://github.com/cedricziel/faro-shop/commit/1a74d78591e2371330f0fef73908c8bb7641a6b5))
+* bump guzzlehttp/guzzle from 7.9.0 to 7.9.1 ([#600](https://github.com/cedricziel/faro-shop/issues/600)) ([1860be3](https://github.com/cedricziel/faro-shop/commit/1860be30f4537791aac59d6ce8b0ea9d0330ba5f))
+* bump vlucas/phpdotenv from 5.6.0 to 5.6.1 ([#597](https://github.com/cedricziel/faro-shop/issues/597)) ([49ad562](https://github.com/cedricziel/faro-shop/commit/49ad562d262312ef5fee8fc20a7eef1de61b8bcd))
+* squash, not merge ([#603](https://github.com/cedricziel/faro-shop/issues/603)) ([e28b1ba](https://github.com/cedricziel/faro-shop/commit/e28b1baf073777310a0adc8ead4d4952e6cc5fc1))
+* use release-please token ([#605](https://github.com/cedricziel/faro-shop/issues/605)) ([7a66cf7](https://github.com/cedricziel/faro-shop/commit/7a66cf73fb99523b8ffe9e33e22adfd5627fbe61))
+
 ## [0.34.0](https://github.com/cedricziel/faro-shop/compare/0.33.1...0.34.0) (2024-07-19)
 
 
