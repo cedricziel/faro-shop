@@ -150,6 +150,33 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           message: "Update helm repo for version ${{ needs.release-please.outputs.helm_release_tag_name }}"
+          
+  deploy_to_appo11y:
+    environment: production
+    needs:
+      - release_chart
+    runs-on: ubuntu-latest
+    if: ${‎{ success() }‎}
+    steps:
+      - name: Helm Upgrade
+        uses: appleboy/ssh-action@v0.1.5
+        env:
+          FARO_URL: ${{ secrets.APPO11Y_FARO_URL }}
+        with:
+          envs: FARO_URL
+          host: ${‎{ secrets.APPO11Y_DEPLOY_HOST }‎}
+          username: ${‎{ secrets.APPO11Y_DEPLOY_USERNAME }‎}
+          key: ${‎{ secrets.APPO11Y_DEPLOY_KEY }‎}
+          port: 22
+          script: |
+            helm repo add faro-shop https://cedricziel.github.io/faro-shop
+            helm repo update
+            helm upgrade --install --atomic --timeout 300s faro-shop faro-shop/faro-shop \
+              --create-namespace --namespace faro-shop \
+              --set caddy.env.OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4317 \
+              --set app.env.OTEL_EXPORTER_OTLP_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4318 \
+              --set worker.env.OTEL_EXPORTER_OTLP_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4318 \
+              --set app.env.FARO_URL=$FARO_URL
 
   # Release App
   assets:
