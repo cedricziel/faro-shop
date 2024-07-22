@@ -156,7 +156,7 @@ jobs:
     needs:
       - release_chart
     runs-on: ubuntu-latest
-    if: ${‎{ success() }}
+    if: ${{ success() }}
     steps:
       - name: Helm Upgrade
         uses: appleboy/ssh-action@v0.1.5
