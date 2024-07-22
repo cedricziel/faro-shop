@@ -164,9 +164,9 @@ jobs:
           FARO_URL: ${{ secrets.APPO11Y_FARO_URL }}
         with:
           envs: FARO_URL
-          host: ${‎{ secrets.APPO11Y_DEPLOY_HOST }‎}
-          username: ${‎{ secrets.APPO11Y_DEPLOY_USERNAME }‎}
-          key: ${‎{ secrets.APPO11Y_DEPLOY_KEY }‎}
+          host: ${{ secrets.APPO11Y_DEPLOY_HOST }‎}
+          username: ${{ secrets.APPO11Y_DEPLOY_USERNAME }‎}
+          key: ${{ secrets.APPO11Y_DEPLOY_KEY }‎}
           port: 22
           script: |
             helm repo add faro-shop https://cedricziel.github.io/faro-shop
