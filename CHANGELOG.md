@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.35.0](https://github.com/cedricziel/faro-shop/compare/0.34.1...0.35.0) (2024-07-22)
+
+
+### Features
+
+* add autoupdate ([#608](https://github.com/cedricziel/faro-shop/issues/608)) ([7b53f86](https://github.com/cedricziel/faro-shop/commit/7b53f8655da3bdd65ec1922883d8afd039ce52f1))
+
+
+### Bug Fixes
+
+* close sequence ([#610](https://github.com/cedricziel/faro-shop/issues/610)) ([0888c84](https://github.com/cedricziel/faro-shop/commit/0888c84b40e05ff9002bb9c4d86500db29fd79ea))
+* sequence ([221faa8](https://github.com/cedricziel/faro-shop/commit/221faa85475d32349064a4f494dc5f0b96b987db))
+* unclosed sequence ([#609](https://github.com/cedricziel/faro-shop/issues/609)) ([8632363](https://github.com/cedricziel/faro-shop/commit/8632363d7e49edf1e4ce578a6967f14b7eb18cda))
+
 ## [0.34.1](https://github.com/cedricziel/faro-shop/compare/0.34.0...0.34.1) (2024-07-22)
 
 
