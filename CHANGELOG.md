@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.35.1](https://github.com/cedricziel/faro-shop/compare/0.35.0...0.35.1) (2024-07-23)
+
+
+### Bug Fixes
+
+* bump appleboy/ssh-action from 0.1.5 to 1.0.3 ([#614](https://github.com/cedricziel/faro-shop/issues/614)) ([62c3d31](https://github.com/cedricziel/faro-shop/commit/62c3d31a549ebd7ade9fbb34f89439e20ea58792))
+
 ## [0.35.0](https://github.com/cedricziel/faro-shop/compare/0.34.1...0.35.0) (2024-07-22)
 
 
