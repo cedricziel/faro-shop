@@ -159,7 +159,7 @@ jobs:
     if: ${{ success() }}
     steps:
       - name: Helm Upgrade
-        uses: appleboy/ssh-action@v0.1.5
+        uses: appleboy/ssh-action@v1.0.3
         env:
           FARO_URL: ${{ secrets.APPO11Y_FARO_URL }}
         with:
