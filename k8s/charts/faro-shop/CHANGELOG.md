@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.32.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.31.0...faro-shop-0.32.0) (2024-07-24)
+
+
+### Features
+
+* Bump app to 0.35.1 ([#616](https://github.com/cedricziel/faro-shop/issues/616)) ([cb54579](https://github.com/cedricziel/faro-shop/commit/cb5457916c86c9b4626f56ea442bb693fe94476d))
+
+
+### Bug Fixes
+
+* align helm chart service ([#619](https://github.com/cedricziel/faro-shop/issues/619)) ([259e207](https://github.com/cedricziel/faro-shop/commit/259e207e749db675a113187a881a30a355dbad1a)), closes [#618](https://github.com/cedricziel/faro-shop/issues/618)
+* force version update on helm release ([#622](https://github.com/cedricziel/faro-shop/issues/622)) ([9bf36d8](https://github.com/cedricziel/faro-shop/commit/9bf36d8a2875c58ba089b53b41c97f9cd6e6e7d6))
+* move rendered file ([#624](https://github.com/cedricziel/faro-shop/issues/624)) ([b1bc1a2](https://github.com/cedricziel/faro-shop/commit/b1bc1a243df24aac20890b3ab0c30d23bf5c3810))
+* render version inline ([#625](https://github.com/cedricziel/faro-shop/issues/625)) ([792168f](https://github.com/cedricziel/faro-shop/commit/792168ffa6d39df072afc573fa212ab2ab0a88c0))
+
 ## [0.31.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.30.0...faro-shop-0.31.0) (2024-07-22)
 
 
