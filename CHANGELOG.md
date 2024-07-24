@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.37.1](https://github.com/cedricziel/faro-shop/compare/0.37.0...0.37.1) (2024-07-24)
+
+
+### Bug Fixes
+
+* bump guzzlehttp/guzzle from 7.9.1 to 7.9.2 ([#639](https://github.com/cedricziel/faro-shop/issues/639)) ([61de914](https://github.com/cedricziel/faro-shop/commit/61de91479929621f085576b1f05ae68000fff33a))
+* bump laravel/framework from 11.16.0 to 11.17.0 ([#640](https://github.com/cedricziel/faro-shop/issues/640)) ([2c7a8c4](https://github.com/cedricziel/faro-shop/commit/2c7a8c4a74bf391f99cb0bdfaa4b1f435860b141))
+* bump league/commonmark from 2.5.0 to 2.5.1 ([#638](https://github.com/cedricziel/faro-shop/issues/638)) ([549978c](https://github.com/cedricziel/faro-shop/commit/549978c16e55aed832cdbec4da5da04c3cc330c2))
+
 ## [0.37.0](https://github.com/cedricziel/faro-shop/compare/0.36.0...0.37.0) (2024-07-24)
 
 
