@@ -543,7 +543,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "faro-shop-test-connection"
+  name: "faro-shop-backend-test-connection"
   labels:
     helm.sh/chart: faro-shop-0.31.0
     app.kubernetes.io/name: faro-shop
@@ -557,5 +557,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['faro-shop:80']
+      args: ['faro-shop-backend:80']
   restartPolicy: Never
