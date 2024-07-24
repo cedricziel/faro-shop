@@ -7,6 +7,23 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  check-for-example-output-changes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Helm
+        uses: azure/setup-helm@v4
+
+      - name: Check for example output changes
+        run: |
+          helm template faro-shop k8s/charts/faro-shop > k8s/faro-shop.yaml
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "Rendered Helm chart not up to date. Please run 'helm template faro-shop k8s/charts/faro-shop > k8s/faro-shop.yaml', examine changes, and commit changes." >&2
+            exit 1
+          fi
+
   lint-test:
     runs-on: ubuntu-latest
     if: ${{ github.head_ref != 'release-please--branches--main' }}

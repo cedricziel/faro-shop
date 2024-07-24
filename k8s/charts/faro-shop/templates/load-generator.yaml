@@ -45,7 +45,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
             - name: WEB_HOST
-              value: {{ include "faro-shop.fullname" . }}
+              value: {{ include "faro-shop.fullname" . }}-backend
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
