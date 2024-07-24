@@ -14,6 +14,7 @@ env:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 name: release-please
 
@@ -348,6 +349,7 @@ jobs:
           commit-message: 'feat: Bump app to ${{ needs.release-please.outputs.app_release_tag_name }}'
           add-paths: |
             k8s/charts/faro-shop/Chart.yaml
+            k8s/charts/faro-shop/rendered.yaml
       - name: Approve bump PR
         run: gh pr merge $PR --squash --auto
         if: ${{ steps.cpr.outputs.pull-request-number }}
