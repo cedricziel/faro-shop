@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.33.1](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.33.0...faro-shop-0.33.1) (2024-07-24)
+
+
+### Bug Fixes
+
+* make caddy answer the correct hostname ([#636](https://github.com/cedricziel/faro-shop/issues/636)) ([c863843](https://github.com/cedricziel/faro-shop/commit/c8638439f8485e8614c29f4b09184b5ed707cd86))
+
 ## [0.33.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.32.0...faro-shop-0.33.0) (2024-07-24)
 
 
