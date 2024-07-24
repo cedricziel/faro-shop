@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.33.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.32.0...faro-shop-0.33.0) (2024-07-24)
+
+
+### Features
+
+* Bump app to 0.35.2 ([#628](https://github.com/cedricziel/faro-shop/issues/628)) ([067b684](https://github.com/cedricziel/faro-shop/commit/067b6841fb65340053d936e9c6e410f9364890e4))
+* Bump app to 0.36.0 ([#632](https://github.com/cedricziel/faro-shop/issues/632)) ([633fc9d](https://github.com/cedricziel/faro-shop/commit/633fc9d6b2eb634ae1629357347a75848c6b3317))
+* Bump app to 0.37.0 ([#635](https://github.com/cedricziel/faro-shop/issues/635)) ([b301d89](https://github.com/cedricziel/faro-shop/commit/b301d8999310e4dede516d92cea995857676443b))
+* re-render template in bump-pr ([#629](https://github.com/cedricziel/faro-shop/issues/629)) ([64d3308](https://github.com/cedricziel/faro-shop/commit/64d3308ba39720b4adbeb225300600aa370e6f62))
+
+
+### Bug Fixes
+
+* include component consistently ([#634](https://github.com/cedricziel/faro-shop/issues/634)) ([a8650dc](https://github.com/cedricziel/faro-shop/commit/a8650dc82614aebf994180d8d5c4cfcc1b4c18ac))
+* make service names consistent ([#626](https://github.com/cedricziel/faro-shop/issues/626)) ([7a50bea](https://github.com/cedricziel/faro-shop/commit/7a50beaf95bc13dbcfc60f4d2934cfd339e5a4f3))
+
 ## [0.32.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.31.0...faro-shop-0.32.0) (2024-07-24)
 
 
