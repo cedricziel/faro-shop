@@ -28,7 +28,7 @@ services:
     OpenTelemetry\API\Trace\TracerInterface:
         factory: ['@OpenTelemetry\SDK\Trace\TracerProviderInterface', getTracer]
         arguments:
-            $name: 'com.grafana.faros-shop'
+            $name: 'com.grafana.faro-shop'
 
     OpenTelemetry\SDK\Logs\LoggerProvider:
         factory: [OpenTelemetry\API\Globals, loggerProvider]

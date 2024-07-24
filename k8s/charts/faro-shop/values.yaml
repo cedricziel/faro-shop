@@ -18,7 +18,7 @@ app:
     APP_SECRET: changeme
     FARO_URL: ''
     OTEL_PHP_AUTOLOAD_ENABLED: 'true'
-    OTEL_SERVICE_NAME: faros-shop-backend
+    OTEL_SERVICE_NAME: faro-shop-backend
     OTEL_TRACES_EXPORTER: otlp
     OTEL_METRICS_EXPORTER: otlp
     OTEL_LOGS_EXPORTER: otlp
@@ -35,7 +35,7 @@ worker:
     APP_ENV: production
     APP_SECRET: changeme
     OTEL_PHP_AUTOLOAD_ENABLED: 'true'
-    OTEL_SERVICE_NAME: faros-shop-worker
+    OTEL_SERVICE_NAME: faro-shop-worker
     OTEL_TRACES_EXPORTER: otlp
     OTEL_METRICS_EXPORTER: otlp
     OTEL_LOGS_EXPORTER: otlp
@@ -66,7 +66,7 @@ caddy:
     pullPolicy: IfNotPresent
     tag: ""
   env:
-    OTEL_SERVICE_NAME: faros-shop-proxy
+    OTEL_SERVICE_NAME: faro-shop-proxy
     OTEL_EXPORTER_OTLP_TRACES_ENDPOINT: http://otelcol:4317
     MERCURE_PUBLISHER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
     MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
