@@ -18,7 +18,7 @@ jobs:
 
       - name: Check for example output changes
         run: |
-          helm template faro-shop k8s/charts/faro-shop > k8s/faro-shop.yaml
+          helm template faro-shop k8s/charts/faro-shop > k8s/charts/faro-shop/rendered.yaml
           if [[ -n "$(git status --porcelain)" ]]; then
             git status --porcelain
             git diff
