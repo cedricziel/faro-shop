@@ -215,12 +215,14 @@ metadata:
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.37.0"
     app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: backend
 spec:
   replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: faro-shop
       app.kubernetes.io/instance: faro-shop
+      app.kubernetes.io/component: backend
   template:
     metadata:
       labels:
