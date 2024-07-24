@@ -4,10 +4,12 @@ metadata:
   name: {{ include "faro-shop.fullname" . }}-worker
   labels:
     {{- include "faro-shop.labels" . | nindent 4 }}
+    app.kubernetes.io/component: worker
 spec:
   selector:
     matchLabels:
       {{- include "faro-shop.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: worker
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -19,6 +21,7 @@ spec:
       {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
+        app.kubernetes.io/component: worker
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:

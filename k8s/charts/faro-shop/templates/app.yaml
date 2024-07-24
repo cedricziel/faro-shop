@@ -23,6 +23,7 @@ metadata:
   name: {{ include "faro-shop.fullname" . }}-backend
   labels:
     {{- include "faro-shop.labels" . | nindent 4 }}
+    app.kubernetes.io/component: backend
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -30,6 +31,7 @@ spec:
   selector:
     matchLabels:
       {{- include "faro-shop.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: backend
   template:
     metadata:
       {{- with .Values.podAnnotations }}
