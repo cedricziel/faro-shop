@@ -34,9 +34,7 @@ Create chart name and version as used by the chart label.
 Common labels
 */}}
 {{- define "faro-shop.labels" -}}
-# x-release-please-version
-helm.sh/chart: {{ include "faro-shop.chart" . }}
-# x-release-please-end
+helm.sh/chart: {{ include "faro-shop.chart" . }} # x-release-please-version
 {{ include "faro-shop.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
