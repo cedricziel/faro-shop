@@ -6,7 +6,7 @@ metadata:
   name: faro-shop
   labels:
     helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
+    app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.35.1"
     app.kubernetes.io/managed-by: Helm
@@ -19,7 +19,7 @@ metadata:
   name: faro-shop-postgres-secret
   labels:
     helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
+    app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.35.1"
     app.kubernetes.io/managed-by: Helm
@@ -27,6 +27,30 @@ data:
   POSTGRES_DB: "app"
   POSTGRES_USER: "app"
   POSTGRES_PASSWORD: "!ChangeMe!"
+---
+# Source: faro-shop/templates/app.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: faro-shop-backend
+  labels:
+    helm.sh/chart: faro-shop-0.31.0
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.35.1"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: backend
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
 ---
 # Source: faro-shop/templates/postgres-service.yaml
 apiVersion: v1
@@ -36,7 +60,7 @@ metadata:
   labels:
     service: faro-shop-postgres
     helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
+    app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.35.1"
     app.kubernetes.io/managed-by: Helm
@@ -58,7 +82,7 @@ metadata:
   labels:
     service: faro-shop-postgres
     helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
+    app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.35.1"
     app.kubernetes.io/managed-by: Helm
@@ -72,28 +96,6 @@ spec:
       service: faro-shop-rabbitmq
     type: ClusterIP
 ---
-# Source: faro-shop/templates/service.yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: faro-shop-backend
-  labels:
-    helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
-    app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.35.1"
-    app.kubernetes.io/managed-by: Helm
-spec:
-  type: ClusterIP
-  ports:
-    - port: 80
-      targetPort: http
-      protocol: TCP
-      name: http
-  selector:
-    app.kubernetes.io/name: faro-shop-backend
-    app.kubernetes.io/instance: faro-shop
----
 # Source: faro-shop/templates/app-worker.yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -101,20 +103,20 @@ metadata:
   name: faro-shop-worker
   labels:
     helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
+    app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.35.1"
     app.kubernetes.io/managed-by: Helm
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: faro-shop-backend
+      app.kubernetes.io/name: faro-shop
       app.kubernetes.io/instance: faro-shop
   template:
     metadata:
       labels:
         helm.sh/chart: faro-shop-0.31.0
-        app.kubernetes.io/name: faro-shop-backend
+        app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
         app.kubernetes.io/version: "0.35.1"
         app.kubernetes.io/managed-by: Helm
@@ -202,14 +204,14 @@ spec:
             - name: TRUSTED_PROXIES
               value: "${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}"
 ---
-# Source: faro-shop/templates/deployment.yaml
+# Source: faro-shop/templates/app.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: faro-shop-backend
   labels:
     helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
+    app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.35.1"
     app.kubernetes.io/managed-by: Helm
@@ -217,16 +219,17 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: faro-shop-backend
+      app.kubernetes.io/name: faro-shop
       app.kubernetes.io/instance: faro-shop
   template:
     metadata:
       labels:
         helm.sh/chart: faro-shop-0.31.0
-        app.kubernetes.io/name: faro-shop-backend
+        app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
         app.kubernetes.io/version: "0.35.1"
         app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/component: backend
     spec:
       serviceAccountName: faro-shop
       securityContext:
@@ -394,14 +397,14 @@ spec:
         - name: shared-data
           emptyDir: { }
 ---
-# Source: faro-shop/templates/k6-deployment.yaml
+# Source: faro-shop/templates/load-generator.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: faro-shop-load
   labels:
     helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
+    app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.35.1"
     app.kubernetes.io/managed-by: Helm
@@ -409,13 +412,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: faro-shop-backend
+      app.kubernetes.io/name: faro-shop
       app.kubernetes.io/instance: faro-shop
   template:
     metadata:
       labels:
         helm.sh/chart: faro-shop-0.31.0
-        app.kubernetes.io/name: faro-shop-backend
+        app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
         app.kubernetes.io/version: "0.35.1"
         app.kubernetes.io/managed-by: Helm
@@ -438,7 +441,7 @@ spec:
             {}
           env:
             - name: WEB_HOST
-              value: faro-shop
+              value: faro-shop-backend
 ---
 # Source: faro-shop/templates/rabbitmq.yaml
 # RabbitMQ Deployment
@@ -448,7 +451,7 @@ metadata:
   name: faro-shop-rabbitmq
   labels:
     helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
+    app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.35.1"
     app.kubernetes.io/managed-by: Helm
@@ -460,7 +463,7 @@ spec:
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: faro-shop-backend
+        app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
         service: faro-shop-rabbitmq
     spec:
@@ -489,7 +492,7 @@ metadata:
   name: faro-shop-postgres
   labels:
     helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
+    app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.35.1"
     app.kubernetes.io/managed-by: Helm
@@ -503,7 +506,7 @@ spec:
     metadata:
       labels:
         helm.sh/chart: faro-shop-0.31.0
-        app.kubernetes.io/name: faro-shop-backend
+        app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
         app.kubernetes.io/version: "0.35.1"
         app.kubernetes.io/managed-by: Helm
@@ -543,7 +546,7 @@ metadata:
   name: "faro-shop-test-connection"
   labels:
     helm.sh/chart: faro-shop-0.31.0
-    app.kubernetes.io/name: faro-shop-backend
+    app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.35.1"
     app.kubernetes.io/managed-by: Helm
