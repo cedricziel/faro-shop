@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.35.2](https://github.com/cedricziel/faro-shop/compare/0.35.1...0.35.2) (2024-07-24)
+
+
+### Bug Fixes
+
+* align helm chart service ([#619](https://github.com/cedricziel/faro-shop/issues/619)) ([259e207](https://github.com/cedricziel/faro-shop/commit/259e207e749db675a113187a881a30a355dbad1a)), closes [#618](https://github.com/cedricziel/faro-shop/issues/618)
+* extra file ([#623](https://github.com/cedricziel/faro-shop/issues/623)) ([a8dedd0](https://github.com/cedricziel/faro-shop/commit/a8dedd0a9951c28564222500a1826378ddca3c50))
+* force version update on helm release ([#622](https://github.com/cedricziel/faro-shop/issues/622)) ([9bf36d8](https://github.com/cedricziel/faro-shop/commit/9bf36d8a2875c58ba089b53b41c97f9cd6e6e7d6))
+* make service names consistent ([#626](https://github.com/cedricziel/faro-shop/issues/626)) ([7a50bea](https://github.com/cedricziel/faro-shop/commit/7a50beaf95bc13dbcfc60f4d2934cfd339e5a4f3))
+* move rendered file ([#624](https://github.com/cedricziel/faro-shop/issues/624)) ([b1bc1a2](https://github.com/cedricziel/faro-shop/commit/b1bc1a243df24aac20890b3ab0c30d23bf5c3810))
+* show diff when template diverges ([#621](https://github.com/cedricziel/faro-shop/issues/621)) ([65637fc](https://github.com/cedricziel/faro-shop/commit/65637fcaa058ee9447d7a52f67c80d045a231508))
+
 ## [0.35.1](https://github.com/cedricziel/faro-shop/compare/0.35.0...0.35.1) (2024-07-23)
 
 
