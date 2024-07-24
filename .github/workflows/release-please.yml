@@ -331,6 +331,11 @@ jobs:
         with:
             cmd: yq -i '.appVersion = "${{ needs.release-please.outputs.app_release_tag_name }}"' 'k8s/charts/faro-shop/Chart.yaml'
 
+      - name: Package Helm Chart
+        uses: WyriHaximus/github-action-helm3@v4
+        with:
+          exec: helm template faro-shop k8s/charts/faro-shop > k8s/charts/faro-shop/rendered.yaml
+
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
