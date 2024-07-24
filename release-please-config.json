@@ -43,7 +43,7 @@
       "draft": false,
       "prerelease": false,
       "extra-files": [
-          "k8s/faro-shop.yaml"
+          "../../faro-shop.yaml"
       ]
     }
   },
