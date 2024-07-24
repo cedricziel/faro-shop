@@ -158,7 +158,7 @@ spec:
             - name: OTEL_PROPAGATORS
               value: "baggage,tracecontext"
             - name: OTEL_SERVICE_NAME
-              value: "faros-shop-worker"
+              value: "faro-shop-worker"
             - name: OTEL_TRACES_EXPORTER
               value: "otlp"
           command:
@@ -196,7 +196,7 @@ spec:
             - name: OTEL_PROPAGATORS
               value: "baggage,tracecontext"
             - name: OTEL_SERVICE_NAME
-              value: "faros-shop-backend"
+              value: "faro-shop-backend"
             - name: OTEL_TRACES_EXPORTER
               value: "otlp"
             - name: TRUSTED_HOSTS
@@ -273,7 +273,7 @@ spec:
             - name: OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
               value: "http://otelcol:4317"
             - name: OTEL_SERVICE_NAME
-              value: "faros-shop-proxy"
+              value: "faro-shop-proxy"
         - name: php
           securityContext:
             {}
@@ -313,7 +313,7 @@ spec:
             - name: OTEL_PROPAGATORS
               value: "baggage,tracecontext"
             - name: OTEL_SERVICE_NAME
-              value: "faros-shop-backend"
+              value: "faro-shop-backend"
             - name: OTEL_TRACES_EXPORTER
               value: "otlp"
             - name: TRUSTED_HOSTS
@@ -350,7 +350,7 @@ spec:
             - name: OTEL_PROPAGATORS
               value: "baggage,tracecontext"
             - name: OTEL_SERVICE_NAME
-              value: "faros-shop-backend"
+              value: "faro-shop-backend"
             - name: OTEL_TRACES_EXPORTER
               value: "otlp"
             - name: TRUSTED_HOSTS
@@ -386,7 +386,7 @@ spec:
             - name: OTEL_PROPAGATORS
               value: "baggage,tracecontext"
             - name: OTEL_SERVICE_NAME
-              value: "faros-shop-backend"
+              value: "faro-shop-backend"
             - name: OTEL_TRACES_EXPORTER
               value: "otlp"
             - name: TRUSTED_HOSTS

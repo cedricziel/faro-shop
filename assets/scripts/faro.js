@@ -11,7 +11,7 @@ export function initializeFaro() {
     return initializeFaroReal({
         url: faroUrl,
         app: {
-            name: 'faros-shop-frontend',
+            name: 'faro-shop-frontend',
             namespace: faroNamespace,
             version: appVersion,
             environment: 'production'
