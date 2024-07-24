@@ -265,7 +265,7 @@ spec:
               mountPath: /var/run/php
           env:
             - name: SERVER_NAME
-              value: "http://faro-shop"
+              value: "http://faro-shop-backend"
             - name: RABBITMQ_URL
               value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
             - name: OTEL_RESOURCE_ATTRIBUTES
