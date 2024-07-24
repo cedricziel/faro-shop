@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.36.0](https://github.com/cedricziel/faro-shop/compare/0.35.2...0.36.0) (2024-07-24)
+
+
+### Features
+
+* re-render template in bump-pr ([#629](https://github.com/cedricziel/faro-shop/issues/629)) ([64d3308](https://github.com/cedricziel/faro-shop/commit/64d3308ba39720b4adbeb225300600aa370e6f62))
+
 ## [0.35.2](https://github.com/cedricziel/faro-shop/compare/0.35.1...0.35.2) (2024-07-24)
 
 
