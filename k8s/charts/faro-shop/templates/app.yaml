@@ -81,7 +81,7 @@ spec:
           {{- end }}
           env:
             - name: SERVER_NAME
-              value: "http://{{ include "faro-shop.fullname" . }}"
+              value: "http://{{ include "faro-shop.fullname" . }}-backend"
             - name: RABBITMQ_URL
               value: amqp://guest:guest@{{ .Release.Name}}-rabbitmq:5672/%2f/messages
             - name: OTEL_RESOURCE_ATTRIBUTES
