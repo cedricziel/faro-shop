@@ -107,11 +107,13 @@ metadata:
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.37.0"
     app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: worker
 spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: faro-shop
       app.kubernetes.io/instance: faro-shop
+      app.kubernetes.io/component: worker
   template:
     metadata:
       labels:
@@ -120,6 +122,7 @@ spec:
         app.kubernetes.io/instance: faro-shop
         app.kubernetes.io/version: "0.37.0"
         app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/component: worker
     spec:
       serviceAccountName: faro-shop
       securityContext:
