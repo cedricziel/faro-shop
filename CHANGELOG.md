@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.37.2](https://github.com/cedricziel/faro-shop/compare/0.37.1...0.37.2) (2024-07-26)
+
+
+### Bug Fixes
+
+* bump laravel/framework from 11.17.0 to 11.18.1 ([#645](https://github.com/cedricziel/faro-shop/issues/645)) ([17f8b11](https://github.com/cedricziel/faro-shop/commit/17f8b11b3ed89c60624e34d49a43d7d02d5b76fe))
+* bump the symfony group with 26 updates ([#644](https://github.com/cedricziel/faro-shop/issues/644)) ([980419f](https://github.com/cedricziel/faro-shop/commit/980419f61a7e4277ae327aa2936137554486eff7))
+
 ## [0.37.1](https://github.com/cedricziel/faro-shop/compare/0.37.0...0.37.1) (2024-07-24)
 
 
