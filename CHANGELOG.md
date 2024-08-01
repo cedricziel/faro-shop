@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.37.3](https://github.com/cedricziel/faro-shop/compare/0.37.2...0.37.3) (2024-08-01)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.24.9 to 7.25.2 ([#655](https://github.com/cedricziel/faro-shop/issues/655)) ([2f4e38d](https://github.com/cedricziel/faro-shop/commit/2f4e38df72830eaa17ae2e93c5ead03501bde7d9))
+* bump @babel/preset-env from 7.24.8 to 7.25.0 ([#648](https://github.com/cedricziel/faro-shop/issues/648)) ([4083985](https://github.com/cedricziel/faro-shop/commit/4083985cdfa6ec449ac2c9fa8c396a2d2ad5f8be))
+* bump @babel/preset-env from 7.25.0 to 7.25.2 ([#654](https://github.com/cedricziel/faro-shop/issues/654)) ([efd43ae](https://github.com/cedricziel/faro-shop/commit/efd43ae2e0f8ca39fab16f223c57b88d2cd18d4c))
+* bump @babel/preset-env from 7.25.2 to 7.25.3 ([#656](https://github.com/cedricziel/faro-shop/issues/656)) ([0f59688](https://github.com/cedricziel/faro-shop/commit/0f5968865cfa4a4709970166517b6836441a5aa2))
+* bump laravel/framework from 11.18.1 to 11.19.0 ([#652](https://github.com/cedricziel/faro-shop/issues/652)) ([25ea5f6](https://github.com/cedricziel/faro-shop/commit/25ea5f63be4dec3af18ba65c1223fc7e69e7ddb2))
+* bump otel/opentelemetry-collector-contrib from 0.105.0 to 0.106.0 in /docker/otelcol ([#651](https://github.com/cedricziel/faro-shop/issues/651)) ([629ccf0](https://github.com/cedricziel/faro-shop/commit/629ccf09ab068934e89bf967459e93ddddfb1c56))
+* bump otel/opentelemetry-collector-contrib from 0.106.0 to 0.106.1 in /docker/otelcol ([#658](https://github.com/cedricziel/faro-shop/issues/658)) ([1e37da6](https://github.com/cedricziel/faro-shop/commit/1e37da62bb0e2126ba4a36188a0ddb4029e81810))
+* bump phpunit/phpunit from 11.2.8 to 11.2.9 ([#653](https://github.com/cedricziel/faro-shop/issues/653)) ([fe37ee5](https://github.com/cedricziel/faro-shop/commit/fe37ee5e2cf3e1a05a615e6b362df8bf3c70f6ba))
+* bump the grafana group with 2 updates ([#659](https://github.com/cedricziel/faro-shop/issues/659)) ([77e7968](https://github.com/cedricziel/faro-shop/commit/77e7968320d0244b2f83de9848d68bde9b40f8f9))
+
 ## [0.37.2](https://github.com/cedricziel/faro-shop/compare/0.37.1...0.37.2) (2024-07-26)
 
 
