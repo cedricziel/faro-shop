@@ -151,9 +151,13 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           message: "Update helm repo for version ${{ needs.release-please.outputs.helm_release_tag_name }}"
+
+      - name: Sleep for 3 minutes
+        run: sleep 180s
+        shell: bash
           
   deploy_to_appo11y:
-    environment: production
+    environment: appo11y
     needs:
       - release_chart
     runs-on: ubuntu-latest
