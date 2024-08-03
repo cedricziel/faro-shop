@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.37.4](https://github.com/cedricziel/faro-shop/compare/0.37.3...0.37.4) (2024-08-03)
+
+
+### Bug Fixes
+
+* bump actions/checkout from 3 to 4 in the github-actions group ([#657](https://github.com/cedricziel/faro-shop/issues/657)) ([14bc968](https://github.com/cedricziel/faro-shop/commit/14bc968b7471c4c391c86dadbcaf69fdcda3624d))
+* bump cedricziel/faro-shop-php from 8.4.2 to 8.4.3 ([#667](https://github.com/cedricziel/faro-shop/issues/667)) ([303bd21](https://github.com/cedricziel/faro-shop/commit/303bd21eb0a6664f7ff320d44bb76bde7081253f))
+* bump php from 8.3.8-fpm-alpine to 8.3.10-fpm-alpine ([#661](https://github.com/cedricziel/faro-shop/issues/661)) ([6e9db9d](https://github.com/cedricziel/faro-shop/commit/6e9db9d6ac21f3c54dfd715c46d23559f9a347eb))
+* bump phpunit/phpunit from 11.2.9 to 11.3.0 ([#666](https://github.com/cedricziel/faro-shop/issues/666)) ([454e6d4](https://github.com/cedricziel/faro-shop/commit/454e6d4243695963f78d60f4d3ed115747935453))
+* bump symfony/flex from 2.4.5 to 2.4.6 in the symfony group ([#665](https://github.com/cedricziel/faro-shop/issues/665)) ([f6d9f21](https://github.com/cedricziel/faro-shop/commit/f6d9f21b6a72f3a626d2030f355e2026d750a89f))
+
 ## [0.37.3](https://github.com/cedricziel/faro-shop/compare/0.37.2...0.37.3) (2024-08-01)
 
 
