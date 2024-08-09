@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.37.5](https://github.com/cedricziel/faro-shop/compare/0.37.4...0.37.5) (2024-08-09)
+
+
+### Bug Fixes
+
+* bump core-js from 3.37.1 to 3.38.0 ([#671](https://github.com/cedricziel/faro-shop/issues/671)) ([ad79ecc](https://github.com/cedricziel/faro-shop/commit/ad79eccc562cb928da23f99ed49220cc886669ed))
+* bump doctrine/dbal from 4.0.4 to 4.0.5 ([#677](https://github.com/cedricziel/faro-shop/issues/677)) ([18fc327](https://github.com/cedricziel/faro-shop/commit/18fc327871e37ae16c7536fa6ec8cd2b76baf4d5))
+* bump doctrine/sql-formatter from 1.4.0 to 1.4.1 ([#675](https://github.com/cedricziel/faro-shop/issues/675)) ([02946a8](https://github.com/cedricziel/faro-shop/commit/02946a87399b46c067400404066f8bc08bfdfd9e))
+* bump laravel/framework from 11.19.0 to 11.20.0 ([#676](https://github.com/cedricziel/faro-shop/issues/676)) ([e95a76c](https://github.com/cedricziel/faro-shop/commit/e95a76c2479a5009a75109ad82de1c9f78db44a1))
+* bump laravel/serializable-closure from 1.3.3 to 1.3.4 ([#674](https://github.com/cedricziel/faro-shop/issues/674)) ([404a071](https://github.com/cedricziel/faro-shop/commit/404a071105b5e2d78339b1878ba34c268246dfd0))
+* bump liip/test-fixtures-bundle from 3.0.1 to 3.1.0 ([#673](https://github.com/cedricziel/faro-shop/issues/673)) ([0dd5275](https://github.com/cedricziel/faro-shop/commit/0dd52753cbcdb0fc8f48c7eda2ee934227d693d4))
+* bump nette/utils from 4.0.4 to 4.0.5 ([#678](https://github.com/cedricziel/faro-shop/issues/678)) ([da9ddc0](https://github.com/cedricziel/faro-shop/commit/da9ddc0b05ae06974a52dc54ba2b12d2263043e8))
+* bump twig/extra-bundle from 3.10.0 to 3.11.0 ([#680](https://github.com/cedricziel/faro-shop/issues/680)) ([5527669](https://github.com/cedricziel/faro-shop/commit/5527669dab705068736cc412b6a31dae9e423a8e))
+* bump twig/twig from 3.10.3 to 3.11.0 ([#679](https://github.com/cedricziel/faro-shop/issues/679)) ([172ade8](https://github.com/cedricziel/faro-shop/commit/172ade81e05efefb28ca3d570137482a9a89e3c2))
+
 ## [0.37.4](https://github.com/cedricziel/faro-shop/compare/0.37.3...0.37.4) (2024-08-03)
 
 
