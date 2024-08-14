@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.37.6](https://github.com/cedricziel/faro-shop/compare/0.37.5...0.37.6) (2024-08-13)
+
+
+### Bug Fixes
+
+* bump grafana/k6 from 0.52.0-with-browser to 0.53.0-with-browser in /docker/k6 ([#687](https://github.com/cedricziel/faro-shop/issues/687)) ([b7236f4](https://github.com/cedricziel/faro-shop/commit/b7236f403d2a9770240748165c274d749e1fca50))
+* bump phpunit/phpunit from 11.3.0 to 11.3.1 ([#686](https://github.com/cedricziel/faro-shop/issues/686)) ([e7d275a](https://github.com/cedricziel/faro-shop/commit/e7d275ab16b08924e02d57547fc868bfd5b82935))
+* bump sebastian/comparator from 6.0.1 to 6.0.2 ([#683](https://github.com/cedricziel/faro-shop/issues/683)) ([9ae5d04](https://github.com/cedricziel/faro-shop/commit/9ae5d04a5c7d0250f0bdab2ed0a6ebb0e1dbbc28))
+* bump symfony/stimulus-bundle from 2.18.1 to 2.19.0 in the symfony group ([#685](https://github.com/cedricziel/faro-shop/issues/685)) ([b5b1793](https://github.com/cedricziel/faro-shop/commit/b5b17936d466a29f773b8f96dd57be2fd967270e))
+
 ## [0.37.5](https://github.com/cedricziel/faro-shop/compare/0.37.4...0.37.5) (2024-08-09)
 
 
