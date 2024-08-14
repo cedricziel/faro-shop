@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.37.7](https://github.com/cedricziel/faro-shop/compare/0.37.6...0.37.7) (2024-08-14)
+
+
+### Bug Fixes
+
+* bump league/commonmark from 2.5.1 to 2.5.2 ([#690](https://github.com/cedricziel/faro-shop/issues/690)) ([aff76e6](https://github.com/cedricziel/faro-shop/commit/aff76e66cf0f8851c3a0122c6e1042fe277d2aca))
+
 ## [0.37.6](https://github.com/cedricziel/faro-shop/compare/0.37.5...0.37.6) (2024-08-13)
 
 
