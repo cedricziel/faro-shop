@@ -6,6 +6,8 @@ use App\Entity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
  * @extends ServiceEntityRepository<Product>
@@ -41,7 +43,7 @@ class ProductRepository extends ServiceEntityRepository
     public function findRelated(Product $product, int $amount): array
     {
         if ($product->getName() === 'Phare du Petit Minou') {
-            throw new BadRequestException('Product not allowed to show ads');
+            throw HttpException::fromStatusCode(Response::HTTP_BAD_REQUEST, 'DatabaseConnectionException: Connection to the database failed.');
         }
 
         return $this->createQueryBuilder('p')
