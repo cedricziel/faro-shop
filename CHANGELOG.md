@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.37.8](https://github.com/cedricziel/faro-shop/compare/0.37.7...0.37.8) (2024-08-14)
+
+
+### Bug Fixes
+
+* add more realistic error message ([#696](https://github.com/cedricziel/faro-shop/issues/696)) ([b01212a](https://github.com/cedricziel/faro-shop/commit/b01212a603bf783d3cd4d7a83e1bbd245dbf301d))
+* bump otel/opentelemetry-collector-contrib from 0.106.1 to 0.107.0 in /docker/otelcol ([#694](https://github.com/cedricziel/faro-shop/issues/694)) ([190b436](https://github.com/cedricziel/faro-shop/commit/190b436444840cdc5492851209aaaa433a0f6adc))
+
 ## [0.37.7](https://github.com/cedricziel/faro-shop/compare/0.37.6...0.37.7) (2024-08-14)
 
 
