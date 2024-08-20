@@ -35,7 +35,7 @@ spec:
         - name: {{ .Release.Name }}-k6
           command:
             - k6
-            {{- if .Values.load.token ne "" }}
+            {{- if .Values.load.token }}
             - "-o cloud"
             {{- end }}
             - run
@@ -51,7 +51,7 @@ spec:
               value: {{ include "faro-shop.fullname" . }}-backend
             # if load token is not empty string, stream to cloud
 
-            {{- if .Values.load.token ne "" }}
+            {{- if .Values.load.token }}
             - name: K6_CLOUD_TOKEN
               value: {{ .Values.load.token }}
             {{- end }}
