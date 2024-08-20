@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.40.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.39.0...faro-shop-0.40.0) (2024-08-20)
+
+
+### Features
+
+* stream to cloud if token is set ([#703](https://github.com/cedricziel/faro-shop/issues/703)) ([9c61ac7](https://github.com/cedricziel/faro-shop/commit/9c61ac7903ab612ed6cd4db6bf3d86284c1b3f00))
+
 ## [0.39.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.38.0...faro-shop-0.39.0) (2024-08-14)
 
 
