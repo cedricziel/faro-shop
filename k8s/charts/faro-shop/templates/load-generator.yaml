@@ -36,7 +36,8 @@ spec:
           command:
             - k6
             {{- if .Values.load.token }}
-            - "-o cloud"
+            - "-o"
+            - cloud
             {{- end }}
             - run
             - /etc/script.js
