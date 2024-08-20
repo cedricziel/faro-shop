@@ -182,10 +182,7 @@ jobs:
               --set caddy.env.OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4317 \
               --set app.env.OTEL_EXPORTER_OTLP_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4318 \
               --set worker.env.OTEL_EXPORTER_OTLP_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4318 \
-              --set app.env.FARO_URL=$FARO_URL \
-              --set load.token=$K6_CLOUD_TOKEN \
-              --set load.project_id=$APPO11Y_CLOUD_PROJECT_ID \
-              --set load.test_id=$APPO11Y_CLOUD_TEST_ID
+              --set app.env.FARO_URL=$FARO_URL
 
   # Release App
   assets:
