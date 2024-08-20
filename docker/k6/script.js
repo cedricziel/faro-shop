@@ -19,6 +19,14 @@ export const options = {
     }
 }
 
+// set cloud options if K&_CLOUD_TOKEN is set
+if (__ENV.K6_CLOUD_TOKEN) {
+    options.cloud = {
+        projectID: __ENV.CLOUD_PROJECT_ID,
+        testID: __ENV.CLOUD_TEST_ID,
+    }
+}
+
 export default async function () {
     const context = browser.newContext();
     const page = context.newPage();

@@ -73,6 +73,8 @@ caddy:
 
 load:
   token: ""
+  project_id: ""
+  test_id: ""
   image:
     repository: ghcr.io/cedricziel/faro-shop-k6
     pullPolicy: IfNotPresent
