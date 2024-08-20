@@ -72,6 +72,7 @@ caddy:
     MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
 
 load:
+  token: ""
   image:
     repository: ghcr.io/cedricziel/faro-shop-k6
     pullPolicy: IfNotPresent

@@ -1,0 +1,566 @@
+---
+# Source: faro-shop/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: faro-shop
+  labels:
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+automountServiceAccountToken: true
+---
+# Source: faro-shop/templates/postgres-statefulset.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: faro-shop-postgres-secret
+  labels:
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+data:
+  POSTGRES_DB: "app"
+  POSTGRES_USER: "app"
+  POSTGRES_PASSWORD: "!ChangeMe!"
+---
+# Source: faro-shop/templates/app.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: faro-shop-backend
+  labels:
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: backend
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+---
+# Source: faro-shop/templates/postgres-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: faro-shop-postgres
+  labels:
+    service: faro-shop-postgres
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  type: NodePort
+  ports:
+    - name: faro-shop-postgres
+      port: 5432
+      targetPort: 5432
+  selector:
+    service: faro-shop-postgres
+---
+# Source: faro-shop/templates/rabbitmq.yaml
+# RabbitMQ Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: faro-shop-rabbitmq
+  labels:
+    service: faro-shop-postgres
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+spec:
+    ports:
+      - name: amqp
+        port: 5672
+        targetPort: 5672
+        protocol: TCP
+    selector:
+      service: faro-shop-rabbitmq
+    type: ClusterIP
+---
+# Source: faro-shop/templates/app-worker.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: faro-shop-worker
+  labels:
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: worker
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: faro-shop
+      app.kubernetes.io/instance: faro-shop
+      app.kubernetes.io/component: worker
+  template:
+    metadata:
+      labels:
+        helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+        app.kubernetes.io/name: faro-shop
+        app.kubernetes.io/instance: faro-shop
+        app.kubernetes.io/version: "0.37.8"
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/component: worker
+    spec:
+      serviceAccountName: faro-shop
+      securityContext:
+        {}
+      restartPolicy: Always
+      containers:
+        - name: php
+          securityContext:
+            {}
+          image: "ghcr.io/cedricziel/faro-shop-app-php:0.37.8-prod"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://app:!ChangeMe!@faro-shop-postgres:5432/app?serverVersion=15&charset=utf8"
+            - name: MESSENGER_TRANSPORT_DSN
+              value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
+            - name: RABBITMQ_URL
+              value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
+            - name: OTEL_RESOURCE_ATTRIBUTES
+              value: "service.namespace=default,service.version=0.37.8,deployment.environment=production"
+            
+            - name: APP_ENV
+              value: "production"
+            - name: APP_SECRET
+              value: "changeme"
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "http://otelcol:4318"
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: "http/protobuf"
+            - name: OTEL_LOGS_EXPORTER
+              value: "otlp"
+            - name: OTEL_METRICS_EXPORTER
+              value: "otlp"
+            - name: OTEL_PHP_AUTOLOAD_ENABLED
+              value: "true"
+            - name: OTEL_PROPAGATORS
+              value: "baggage,tracecontext"
+            - name: OTEL_SERVICE_NAME
+              value: "faro-shop-worker"
+            - name: OTEL_TRACES_EXPORTER
+              value: "otlp"
+          command:
+            - 'bin/console'
+            - 'messenger:consume'
+            - 'async'
+            - '--time-limit=3600'
+      initContainers:
+        - name: create-schema
+          image: "ghcr.io/cedricziel/faro-shop-app-php:0.37.8-prod"
+          imagePullPolicy: IfNotPresent
+          command: ["sh", "-c", "php bin/console doctrine:migrations:migrate --no-interaction"]
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://app:!ChangeMe!@faro-shop-postgres:5432/app?serverVersion=15&charset=utf8"
+            - name: RABBITMQ_URL
+              value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
+            
+            - name: APP_ENV
+              value: "production"
+            - name: APP_SECRET
+              value: "changeme"
+            - name: FARO_URL
+              value: ""
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "http://otelcol:4318"
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: "http/protobuf"
+            - name: OTEL_LOGS_EXPORTER
+              value: "otlp"
+            - name: OTEL_METRICS_EXPORTER
+              value: "otlp"
+            - name: OTEL_PHP_AUTOLOAD_ENABLED
+              value: "true"
+            - name: OTEL_PROPAGATORS
+              value: "baggage,tracecontext"
+            - name: OTEL_SERVICE_NAME
+              value: "faro-shop-backend"
+            - name: OTEL_TRACES_EXPORTER
+              value: "otlp"
+            - name: TRUSTED_HOSTS
+              value: "^${SERVER_NAME:-example\\.com|localhost}|caddy$$"
+            - name: TRUSTED_PROXIES
+              value: "${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}"
+---
+# Source: faro-shop/templates/app.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: faro-shop-backend
+  labels:
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: faro-shop
+      app.kubernetes.io/instance: faro-shop
+      app.kubernetes.io/component: backend
+  template:
+    metadata:
+      labels:
+        helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+        app.kubernetes.io/name: faro-shop
+        app.kubernetes.io/instance: faro-shop
+        app.kubernetes.io/version: "0.37.8"
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/component: backend
+    spec:
+      serviceAccountName: faro-shop
+      securityContext:
+        {}
+      restartPolicy: Always
+      containers:
+        - name: caddy
+          securityContext:
+            {}
+          image: "ghcr.io/cedricziel/faro-shop-app-caddy:0.37.8-prod"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+          resources:
+            {}
+          volumeMounts:
+            - name: shared-data
+              mountPath: /var/run/php
+          env:
+            - name: SERVER_NAME
+              value: "http://faro-shop-backend"
+            - name: RABBITMQ_URL
+              value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
+            - name: OTEL_RESOURCE_ATTRIBUTES
+              value: "service.namespace=default,service.version=0.37.8,deployment.environment=production"
+          
+            - name: MERCURE_PUBLISHER_JWT_KEY
+              value: "!ChangeThisMercureHubJWTSecretKey!"
+            - name: MERCURE_SUBSCRIBER_JWT_KEY
+              value: "!ChangeThisMercureHubJWTSecretKey!"
+            - name: OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
+              value: "http://otelcol:4317"
+            - name: OTEL_SERVICE_NAME
+              value: "faro-shop-proxy"
+        - name: php
+          securityContext:
+            {}
+          image: "ghcr.io/cedricziel/faro-shop-app-php:0.37.8-prod"
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: shared-data
+              mountPath: /var/run/php
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://app:!ChangeMe!@faro-shop-postgres:5432/app?serverVersion=15&charset=utf8"
+            - name: MESSENGER_TRANSPORT_DSN
+              value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
+            - name: RABBITMQ_URL
+              value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
+            - name: FARO_NAMESPACE
+              value: "default"
+            - name: OTEL_RESOURCE_ATTRIBUTES
+              value: "service.namespace=default,service.version=0.37.8,deployment.environment=production"
+            
+            - name: APP_ENV
+              value: "production"
+            - name: APP_SECRET
+              value: "changeme"
+            - name: FARO_URL
+              value: ""
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "http://otelcol:4318"
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: "http/protobuf"
+            - name: OTEL_LOGS_EXPORTER
+              value: "otlp"
+            - name: OTEL_METRICS_EXPORTER
+              value: "otlp"
+            - name: OTEL_PHP_AUTOLOAD_ENABLED
+              value: "true"
+            - name: OTEL_PROPAGATORS
+              value: "baggage,tracecontext"
+            - name: OTEL_SERVICE_NAME
+              value: "faro-shop-backend"
+            - name: OTEL_TRACES_EXPORTER
+              value: "otlp"
+            - name: TRUSTED_HOSTS
+              value: "^${SERVER_NAME:-example\\.com|localhost}|caddy$$"
+            - name: TRUSTED_PROXIES
+              value: "${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}"
+      initContainers:
+        - name: create-schema
+          image: "ghcr.io/cedricziel/faro-shop-app-php:0.37.8-prod"
+          imagePullPolicy: IfNotPresent
+          command: ["sh", "-c", "php bin/console doctrine:migrations:migrate --no-interaction"]
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://app:!ChangeMe!@faro-shop-postgres:5432/app?serverVersion=15&charset=utf8"
+            - name: RABBITMQ_URL
+              value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
+            
+            - name: APP_ENV
+              value: "production"
+            - name: APP_SECRET
+              value: "changeme"
+            - name: FARO_URL
+              value: ""
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "http://otelcol:4318"
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: "http/protobuf"
+            - name: OTEL_LOGS_EXPORTER
+              value: "otlp"
+            - name: OTEL_METRICS_EXPORTER
+              value: "otlp"
+            - name: OTEL_PHP_AUTOLOAD_ENABLED
+              value: "true"
+            - name: OTEL_PROPAGATORS
+              value: "baggage,tracecontext"
+            - name: OTEL_SERVICE_NAME
+              value: "faro-shop-backend"
+            - name: OTEL_TRACES_EXPORTER
+              value: "otlp"
+            - name: TRUSTED_HOSTS
+              value: "^${SERVER_NAME:-example\\.com|localhost}|caddy$$"
+            - name: TRUSTED_PROXIES
+              value: "${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}"
+        - name: load-fixtures
+          image: "ghcr.io/cedricziel/faro-shop-app-php:0.37.8-prod"
+          imagePullPolicy: IfNotPresent
+          command: ["sh", "-c", "php bin/console doctrine:fixtures:load --no-interaction"]
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://app:!ChangeMe!@faro-shop-postgres:5432/app?serverVersion=15&charset=utf8"
+            - name: RABBITMQ_URL
+              value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
+            
+            - name: APP_ENV
+              value: "production"
+            - name: APP_SECRET
+              value: "changeme"
+            - name: FARO_URL
+              value: ""
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "http://otelcol:4318"
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: "http/protobuf"
+            - name: OTEL_LOGS_EXPORTER
+              value: "otlp"
+            - name: OTEL_METRICS_EXPORTER
+              value: "otlp"
+            - name: OTEL_PHP_AUTOLOAD_ENABLED
+              value: "true"
+            - name: OTEL_PROPAGATORS
+              value: "baggage,tracecontext"
+            - name: OTEL_SERVICE_NAME
+              value: "faro-shop-backend"
+            - name: OTEL_TRACES_EXPORTER
+              value: "otlp"
+            - name: TRUSTED_HOSTS
+              value: "^${SERVER_NAME:-example\\.com|localhost}|caddy$$"
+            - name: TRUSTED_PROXIES
+              value: "${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}"
+      volumes:
+        - name: shared-data
+          emptyDir: { }
+---
+# Source: faro-shop/templates/load-generator.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: faro-shop-load
+  labels:
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: faro-shop
+      app.kubernetes.io/instance: faro-shop
+  template:
+    metadata:
+      labels:
+        helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+        app.kubernetes.io/name: faro-shop
+        app.kubernetes.io/instance: faro-shop
+        app.kubernetes.io/version: "0.37.8"
+        app.kubernetes.io/managed-by: Helm
+    spec:
+      serviceAccountName: faro-shop
+      securityContext:
+        {}
+      restartPolicy: Always
+      containers:
+        - name: faro-shop-k6
+          command:
+            - k6
+            - run
+            - /etc/script.js
+          securityContext:
+            {}
+          image: "ghcr.io/cedricziel/faro-shop-k6:0.37.8"
+          imagePullPolicy: IfNotPresent
+          resources:
+            {}
+          env:
+            - name: WEB_HOST
+              value: faro-shop-backend
+---
+# Source: faro-shop/templates/rabbitmq.yaml
+# RabbitMQ Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: faro-shop-rabbitmq
+  labels:
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: faro-shop-rabbitmq
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: faro-shop
+        app.kubernetes.io/instance: faro-shop
+        service: faro-shop-rabbitmq
+    spec:
+      containers:
+        - name: rabbitmq
+          image: "rabbitmq:3.13-management-alpine"
+          ports:
+            - containerPort: 5672
+              name: amqp
+          env:
+            - name: RABBITMQ_DEFAULT_USER
+              value: guest
+            - name: RABBITMQ_DEFAULT_PASS
+              value: guest
+          volumeMounts:
+            - name: rabbitmq-data
+              mountPath: /var/lib/rabbitmq
+      volumes:
+        - name: rabbitmq-data
+          emptyDir: {}
+---
+# Source: faro-shop/templates/postgres-statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: faro-shop-postgres
+  labels:
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 1
+  serviceName: faro-shop-postgres
+  selector:
+    matchLabels:
+      service: faro-shop-postgres
+  template:
+    metadata:
+      labels:
+        helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+        app.kubernetes.io/name: faro-shop
+        app.kubernetes.io/instance: faro-shop
+        app.kubernetes.io/version: "0.37.8"
+        app.kubernetes.io/managed-by: Helm
+        service: faro-shop-postgres
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: faro-shop-postgres
+          image: postgres:15-alpine
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5432
+          envFrom:
+            - configMapRef:
+                name: faro-shop-postgres-secret
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: faro-shop-postgres-data
+  volumeClaimTemplates:
+    - metadata:
+        name: faro-shop-postgres-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+          
+        storageClassName: 
+        volumeMode: Filesystem
+          
+        resources:
+          requests:
+            storage: 1Gi
+---
+# Source: faro-shop/templates/tests/test-connection.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "faro-shop-backend-test-connection"
+  labels:
+    helm.sh/chart: faro-shop-0.39.0 # x-release-please-version
+    app.kubernetes.io/name: faro-shop
+    app.kubernetes.io/instance: faro-shop
+    app.kubernetes.io/version: "0.37.8"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['faro-shop-backend:80']
+  restartPolicy: Never
