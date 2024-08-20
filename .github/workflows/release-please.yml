@@ -167,8 +167,9 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         env:
           FARO_URL: ${{ secrets.APPO11Y_FARO_URL }}
+          K6_CLOUD_TOKEN: ${{ secrets.APPO11Y_K6_TOKEN }}
         with:
-          envs: FARO_URL
+          envs: FARO_URL,K6_CLOUD_TOKEN
           host: ${{ secrets.APPO11Y_DEPLOY_HOST }}
           username: ${{ secrets.APPO11Y_DEPLOY_USERNAME }}
           key: ${{ secrets.APPO11Y_DEPLOY_KEY }}
@@ -181,7 +182,8 @@ jobs:
               --set caddy.env.OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4317 \
               --set app.env.OTEL_EXPORTER_OTLP_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4318 \
               --set worker.env.OTEL_EXPORTER_OTLP_ENDPOINT=http://grafana-k8s-monitoring-grafana-agent.default.svc.cluster.local:4318 \
-              --set app.env.FARO_URL=$FARO_URL
+              --set app.env.FARO_URL=$FARO_URL \
+              --set load.token=$K6_CLOUD_TOKEN
 
   # Release App
   assets:

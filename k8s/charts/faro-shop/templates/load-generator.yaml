@@ -35,6 +35,9 @@ spec:
         - name: {{ .Release.Name }}-k6
           command:
             - k6
+            {{- if .Values.load.token ne "" }}
+            - "-o cloud"
+            {{- end }}
             - run
             - /etc/script.js
           securityContext:
@@ -46,6 +49,12 @@ spec:
           env:
             - name: WEB_HOST
               value: {{ include "faro-shop.fullname" . }}-backend
+            # if load token is not empty string, stream to cloud
+
+            {{- if .Values.load.token ne "" }}
+            - name: K6_CLOUD_TOKEN
+              value: {{ .Values.load.token }}
+            {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
