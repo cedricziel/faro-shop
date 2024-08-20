@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.38.0](https://github.com/cedricziel/faro-shop/compare/0.37.8...0.38.0) (2024-08-20)
+
+
+### Features
+
+* set project id and test id ([#705](https://github.com/cedricziel/faro-shop/issues/705)) ([e4b0553](https://github.com/cedricziel/faro-shop/commit/e4b0553c5b8f3a3a55acf32bbe6b26e0235e131f))
+* stream to cloud if token is set ([#703](https://github.com/cedricziel/faro-shop/issues/703)) ([9c61ac7](https://github.com/cedricziel/faro-shop/commit/9c61ac7903ab612ed6cd4db6bf3d86284c1b3f00))
+
+
+### Bug Fixes
+
+* bump doctrine/dbal from 4.0.5 to 4.1.0 ([#699](https://github.com/cedricziel/faro-shop/issues/699)) ([80aa41e](https://github.com/cedricziel/faro-shop/commit/80aa41e33c2c4d2ad0369cbf8a1bba35951a2ce5))
+* bump league/commonmark from 2.5.2 to 2.5.3 ([#701](https://github.com/cedricziel/faro-shop/issues/701)) ([364daf1](https://github.com/cedricziel/faro-shop/commit/364daf1b4919e908068d6d45ad844dac3d3fa086))
+* bump nesbot/carbon from 3.7.0 to 3.8.0 ([#702](https://github.com/cedricziel/faro-shop/issues/702)) ([07e8ba5](https://github.com/cedricziel/faro-shop/commit/07e8ba5ca6effc84195bc4b70b4805e5a4fe32b3))
+
 ## [0.37.8](https://github.com/cedricziel/faro-shop/compare/0.37.7...0.37.8) (2024-08-14)
 
 
