@@ -72,6 +72,7 @@ caddy:
     MERCURE_SUBSCRIBER_JWT_KEY: '!ChangeThisMercureHubJWTSecretKey!'
 
 load:
+  # k6 token
   token: ""
   project_id: ""
   test_id: ""
