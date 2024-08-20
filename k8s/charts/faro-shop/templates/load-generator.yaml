@@ -51,7 +51,15 @@ spec:
               value: {{ include "faro-shop.fullname" . }}-backend
             {{- if .Values.load.token }}
             - name: K6_CLOUD_TOKEN
-              value: {{ .Values.load.token }}
+              value: {{ .Values.load.token | quote }}
+            {{- end }}
+            {{- if .Values.load.project_id }}
+            - name: CLOUD_PROJECT_ID
+              value: {{ .Values.load.project_id | quote }}
+            {{- end }}
+            {{- if .Values.load.test_id }}
+            - name: CLOUD_TEST_ID
+              value: {{ .Values.load.test_id | quote }}
             {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
