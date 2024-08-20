@@ -49,8 +49,6 @@ spec:
           env:
             - name: WEB_HOST
               value: {{ include "faro-shop.fullname" . }}-backend
-            # if load token is not empty string, stream to cloud
-
             {{- if .Values.load.token }}
             - name: K6_CLOUD_TOKEN
               value: {{ .Values.load.token }}
