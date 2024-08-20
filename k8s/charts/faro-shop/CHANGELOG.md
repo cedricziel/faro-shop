@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.41.1](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.41.0...faro-shop-0.41.1) (2024-08-20)
+
+
+### Bug Fixes
+
+* bump chart ([#713](https://github.com/cedricziel/faro-shop/issues/713)) ([2ff9c13](https://github.com/cedricziel/faro-shop/commit/2ff9c139fc8950c6ca6980dc7f2e6315e280347e))
+
 ## [0.41.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.40.0...faro-shop-0.41.0) (2024-08-20)
 
 
