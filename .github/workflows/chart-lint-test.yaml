@@ -22,7 +22,7 @@ jobs:
           if [[ -n "$(git status --porcelain)" ]]; then
             git status --porcelain
             git diff
-            echo "Rendered Helm chart not up to date. Please run 'helm template faro-shop k8s/charts/faro-shop > k8s/faro-shop.yaml', examine changes, and commit changes." >&2
+            echo "Rendered Helm chart not up to date. Please run 'helm template faro-shop k8s/charts/faro-shop > k8s/rendered.yaml', examine changes, and commit changes." >&2
             exit 1
           fi
 
