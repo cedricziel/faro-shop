@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.38.1](https://github.com/cedricziel/faro-shop/compare/0.38.0...0.38.1) (2024-08-21)
+
+
+### Bug Fixes
+
+* bump core-js from 3.38.0 to 3.38.1 ([#715](https://github.com/cedricziel/faro-shop/issues/715)) ([c153776](https://github.com/cedricziel/faro-shop/commit/c153776354ffa74c079d1ee5682b8c8a8bcde571))
+* bump laravel/prompts from 0.1.24 to 0.1.25 ([#709](https://github.com/cedricziel/faro-shop/issues/709)) ([f495cb0](https://github.com/cedricziel/faro-shop/commit/f495cb0a497d36fa59cd58e569f1b9cf8ff83f8f))
+* bump the open-telemetry group with 3 updates ([#716](https://github.com/cedricziel/faro-shop/issues/716)) ([f299281](https://github.com/cedricziel/faro-shop/commit/f29928149467429b38edabe6a68821067cae9bb6))
+* remove k6 token ([#712](https://github.com/cedricziel/faro-shop/issues/712)) ([427b688](https://github.com/cedricziel/faro-shop/commit/427b68822443404231a85a8f68ded15b562f43ab))
+
 ## [0.38.0](https://github.com/cedricziel/faro-shop/compare/0.37.8...0.38.0) (2024-08-20)
 
 
