@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.38.2](https://github.com/cedricziel/faro-shop/compare/0.38.1...0.38.2) (2024-08-22)
+
+
+### Bug Fixes
+
+* add opentelemetry log handler to prod ([#719](https://github.com/cedricziel/faro-shop/issues/719)) ([bd4e0a5](https://github.com/cedricziel/faro-shop/commit/bd4e0a59bd7f92861071cf8b9518e420f20168f2))
+* bump phpunit/php-code-coverage from 11.0.5 to 11.0.6 ([#718](https://github.com/cedricziel/faro-shop/issues/718)) ([309c071](https://github.com/cedricziel/faro-shop/commit/309c071ce9e3f7150e68e4feb353151cef7e6265))
+
 ## [0.38.1](https://github.com/cedricziel/faro-shop/compare/0.38.0...0.38.1) (2024-08-21)
 
 
