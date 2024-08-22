@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.43.1](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.43.0...faro-shop-0.43.1) (2024-08-22)
+
+
+### Bug Fixes
+
+* set symfony app_env correctly ([#729](https://github.com/cedricziel/faro-shop/issues/729)) ([73455f6](https://github.com/cedricziel/faro-shop/commit/73455f60ee527971566a063925cf89e88dc7f340))
+
 ## [0.43.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.42.0...faro-shop-0.43.0) (2024-08-22)
 
 
