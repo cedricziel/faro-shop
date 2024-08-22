@@ -145,7 +145,7 @@ spec:
               value: "service.namespace=default,service.version=0.38.2,deployment.environment=production"
             
             - name: APP_ENV
-              value: "production"
+              value: "prod"
             - name: APP_SECRET
               value: "changeme"
             - name: OTEL_EXPORTER_OTLP_ENDPOINT
@@ -181,7 +181,7 @@ spec:
               value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
             
             - name: APP_ENV
-              value: "production"
+              value: "prod"
             - name: APP_SECRET
               value: "changeme"
             - name: FARO_URL
@@ -300,7 +300,7 @@ spec:
               value: "service.namespace=default,service.version=0.38.2,deployment.environment=production"
             
             - name: APP_ENV
-              value: "production"
+              value: "prod"
             - name: APP_SECRET
               value: "changeme"
             - name: FARO_URL
@@ -337,7 +337,7 @@ spec:
               value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
             
             - name: APP_ENV
-              value: "production"
+              value: "prod"
             - name: APP_SECRET
               value: "changeme"
             - name: FARO_URL
@@ -373,7 +373,7 @@ spec:
               value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
             
             - name: APP_ENV
-              value: "production"
+              value: "prod"
             - name: APP_SECRET
               value: "changeme"
             - name: FARO_URL
