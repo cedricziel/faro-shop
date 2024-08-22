@@ -63,3 +63,6 @@ when@prod:
                 channels: [deprecation]
                 path: php://stderr
                 formatter: monolog.formatter.json
+            otel:
+                type: service
+                id: OpenTelemetry\Contrib\Logs\Monolog\Handler
