@@ -14,7 +14,7 @@ app:
   otel:
     resource: deployment.environment=production
   env:
-    APP_ENV: production
+    APP_ENV: prod
     APP_SECRET: changeme
     FARO_URL: ''
     OTEL_PHP_AUTOLOAD_ENABLED: 'true'
@@ -32,7 +32,7 @@ worker:
   otel:
     resource: deployment.environment=production
   env:
-    APP_ENV: production
+    APP_ENV: prod
     APP_SECRET: changeme
     OTEL_PHP_AUTOLOAD_ENABLED: 'true'
     OTEL_SERVICE_NAME: faro-shop-worker
