@@ -9,6 +9,11 @@ const faroCountry = window.faroCountry || undefined;
 
 export function initializeFaro() {
     return initializeFaroReal({
+        beforeSend: (item) => {
+            delete item.meta.k6;
+            
+            return item;
+        },
         url: faroUrl,
         app: {
             name: 'faro-shop-frontend',
