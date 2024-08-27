@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.38.4](https://github.com/cedricziel/faro-shop/compare/0.38.3...0.38.4) (2024-08-27)
+
+
+### Bug Fixes
+
+* bump phpunit/php-file-iterator from 5.0.1 to 5.1.0 ([#737](https://github.com/cedricziel/faro-shop/issues/737)) ([17326ee](https://github.com/cedricziel/faro-shop/commit/17326ee4084267bc0e609aeb83390e6ab788b617))
+* bump the grafana group with 2 updates ([#739](https://github.com/cedricziel/faro-shop/issues/739)) ([584c13d](https://github.com/cedricziel/faro-shop/commit/584c13de185961bc9dc40b403b16f92aa844014b))
+
 ## [0.38.3](https://github.com/cedricziel/faro-shop/compare/0.38.2...0.38.3) (2024-08-27)
 
 
