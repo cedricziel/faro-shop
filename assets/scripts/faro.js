@@ -29,7 +29,6 @@ export function initializeFaro() {
             // This packages is optional because it increases the bundle size noticeably. Only add it if you want tracing data.
             new TracingInstrumentation({
                 resourceAttributes: {
-                    ['service.namespace']: faroNamespace,
                     ['geo.country']: faroCountry,
                 }
             }),
@@ -45,7 +44,6 @@ export function initializeFaro() {
             }),
         ],
         sessionTracking: {
-            enabled: true,
             persistent: true,
         }
     });
