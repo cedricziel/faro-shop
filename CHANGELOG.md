@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.38.3](https://github.com/cedricziel/faro-shop/compare/0.38.2...0.38.3) (2024-08-27)
+
+
+### Bug Fixes
+
+* bump @babel/preset-env from 7.25.3 to 7.25.4 ([#723](https://github.com/cedricziel/faro-shop/issues/723)) ([7e6f013](https://github.com/cedricziel/faro-shop/commit/7e6f013baa0a400835c60f0f42c7da83f328b556))
+* bump doctrine/orm from 3.2.1 to 3.2.2 ([#731](https://github.com/cedricziel/faro-shop/issues/731)) ([503a034](https://github.com/cedricziel/faro-shop/commit/503a034cc03284a5d67e1ebe92285d05001f64c7))
+* bump the open-telemetry group with 2 updates ([#732](https://github.com/cedricziel/faro-shop/issues/732)) ([6caac51](https://github.com/cedricziel/faro-shop/commit/6caac5181ed7a7196c883347b361def2b9196794))
+* bump webpack from 5.93.0 to 5.94.0 ([#724](https://github.com/cedricziel/faro-shop/issues/724)) ([772b96f](https://github.com/cedricziel/faro-shop/commit/772b96f277c851970504ab52f5dc4b81b555cf85))
+* remove k6 props to unmark payload as synthetic ([#733](https://github.com/cedricziel/faro-shop/issues/733)) ([3c6e235](https://github.com/cedricziel/faro-shop/commit/3c6e23577d534fb7a0e1919f02443f61f12f2ccd))
+* remove more defaults ([#734](https://github.com/cedricziel/faro-shop/issues/734)) ([d7435d2](https://github.com/cedricziel/faro-shop/commit/d7435d219d8668a42c43455d1e2200ddb64b1361))
+* set symfony app_env correctly ([#729](https://github.com/cedricziel/faro-shop/issues/729)) ([73455f6](https://github.com/cedricziel/faro-shop/commit/73455f60ee527971566a063925cf89e88dc7f340))
+
 ## [0.38.2](https://github.com/cedricziel/faro-shop/compare/0.38.1...0.38.2) (2024-08-22)
 
 
