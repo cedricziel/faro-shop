@@ -9,6 +9,11 @@ const faroCountry = window.faroCountry || undefined;
 
 export function initializeFaro() {
     return initializeFaroReal({
+        beforeSend: (item) => {
+            delete item.meta.k6;
+            
+            return item;
+        },
         url: faroUrl,
         app: {
             name: 'faro-shop-frontend',
@@ -18,7 +23,7 @@ export function initializeFaro() {
         },
         instrumentations: [
             // Mandatory, overwriting the instrumentations array would cause the default instrumentations to be omitted
-            ...getWebInstrumentations({enablePerformanceInstrumentation: true}),
+            ...getWebInstrumentations(),
 
             // Initialization of the tracing package.
             // This packages is optional because it increases the bundle size noticeably. Only add it if you want tracing data.
