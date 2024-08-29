@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.38.5](https://github.com/cedricziel/faro-shop/compare/0.38.4...0.38.5) (2024-08-29)
+
+
+### Bug Fixes
+
+* bump open-telemetry/sem-conv from 1.27.0 to 1.27.1 in the open-telemetry group ([#742](https://github.com/cedricziel/faro-shop/issues/742)) ([5daa9d5](https://github.com/cedricziel/faro-shop/commit/5daa9d57be253e443670aae16767eb96545fbbec))
+* bump otel/opentelemetry-collector-contrib from 0.107.0 to 0.108.0 in /docker/otelcol ([#744](https://github.com/cedricziel/faro-shop/issues/744)) ([b6aa784](https://github.com/cedricziel/faro-shop/commit/b6aa784d13230bbaf651086e433ea59fd88b6f31))
+
 ## [0.38.4](https://github.com/cedricziel/faro-shop/compare/0.38.3...0.38.4) (2024-08-27)
 
 
