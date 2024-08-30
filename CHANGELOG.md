@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.38.6](https://github.com/cedricziel/faro-shop/compare/0.38.5...0.38.6) (2024-08-30)
+
+
+### Bug Fixes
+
+* bump @symfony/webpack-encore from 4.6.1 to 4.7.0 ([#754](https://github.com/cedricziel/faro-shop/issues/754)) ([6c68445](https://github.com/cedricziel/faro-shop/commit/6c684451dbeae2ccd29e51eebca4c36388f993d7))
+* bump phpstan/phpdoc-parser from 1.29.1 to 1.30.0 ([#749](https://github.com/cedricziel/faro-shop/issues/749)) ([c1395fa](https://github.com/cedricziel/faro-shop/commit/c1395fa61e7d31be2c3a55a63af98cf36cb2096b))
+* bump twig/extra-bundle from 3.11.0 to 3.12.0 ([#748](https://github.com/cedricziel/faro-shop/issues/748)) ([0d7e366](https://github.com/cedricziel/faro-shop/commit/0d7e366b0a082628fafe7a3cae635da8ae33886d))
+* bump zenstruck/foundry from 2.0.7 to 2.0.8 ([#750](https://github.com/cedricziel/faro-shop/issues/750)) ([fc5adea](https://github.com/cedricziel/faro-shop/commit/fc5adeac0c75cfb80a3db2d255a6a6927cbb3e12))
+
 ## [0.38.5](https://github.com/cedricziel/faro-shop/compare/0.38.4...0.38.5) (2024-08-29)
 
 
