@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.38.7](https://github.com/cedricziel/faro-shop/compare/0.38.6...0.38.7) (2024-09-05)
+
+
+### Bug Fixes
+
+* bump cedricziel/faro-shop-php from 8.4.3 to 8.4.4 ([#768](https://github.com/cedricziel/faro-shop/issues/768)) ([941cfbe](https://github.com/cedricziel/faro-shop/commit/941cfbe0ff929c6317675f7ce7758a20ddab979a))
+* bump doctrine/dbal from 4.1.0 to 4.1.1 ([#765](https://github.com/cedricziel/faro-shop/issues/765)) ([207a7af](https://github.com/cedricziel/faro-shop/commit/207a7affbf0609c30f58cdf2ddd2a31c3036cfe2))
+* bump laravel/framework from 11.21.0 to 11.22.0 ([#766](https://github.com/cedricziel/faro-shop/issues/766)) ([f5019a6](https://github.com/cedricziel/faro-shop/commit/f5019a6177bbf10f7c2c931ba06790950e4208e3))
+* bump nunomaduro/termwind from 2.0.1 to 2.1.0 ([#769](https://github.com/cedricziel/faro-shop/issues/769)) ([4aa444d](https://github.com/cedricziel/faro-shop/commit/4aa444de44cac0105a168893d4e1369980e1f57c))
+* bump peter-evans/create-pull-request from 6 to 7 ([#762](https://github.com/cedricziel/faro-shop/issues/762)) ([1999245](https://github.com/cedricziel/faro-shop/commit/1999245802cb3980b8e3b79d35486df4fc5d3613))
+* bump php from 8.3.10-fpm-alpine to 8.3.11-fpm-alpine ([#759](https://github.com/cedricziel/faro-shop/issues/759)) ([32669ad](https://github.com/cedricziel/faro-shop/commit/32669adfbf75202fc63c6ac2fc3ee577b29d6042))
+* bump phpunit/phpunit from 11.3.1 to 11.3.2 ([#764](https://github.com/cedricziel/faro-shop/issues/764)) ([1ed3e85](https://github.com/cedricziel/faro-shop/commit/1ed3e852646a344da0284383f9b859f0d1f8a3fc))
+* bump phpunit/phpunit from 11.3.2 to 11.3.3 ([#767](https://github.com/cedricziel/faro-shop/issues/767)) ([32f0f2c](https://github.com/cedricziel/faro-shop/commit/32f0f2c60400d4078bace57ff1a4c6a640eda4ff))
+* bump the symfony group with 28 updates ([#756](https://github.com/cedricziel/faro-shop/issues/756)) ([f08d066](https://github.com/cedricziel/faro-shop/commit/f08d066023901d6f043d93d3e8207bd72a4f27cc))
+* bump zenstruck/foundry from 2.0.8 to 2.0.9 ([#763](https://github.com/cedricziel/faro-shop/issues/763)) ([7a3b8e9](https://github.com/cedricziel/faro-shop/commit/7a3b8e9c1bb5d99e7f1d297d9d4bea9c786cc877))
+
 ## [0.38.6](https://github.com/cedricziel/faro-shop/compare/0.38.5...0.38.6) (2024-08-30)
 
 
