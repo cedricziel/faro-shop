@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.38.8](https://github.com/cedricziel/faro-shop/compare/0.38.7...0.38.8) (2024-09-09)
+
+
+### Bug Fixes
+
+* bump nyholm/psr7 from 1.8.1 to 1.8.2 ([#775](https://github.com/cedricziel/faro-shop/issues/775)) ([a985864](https://github.com/cedricziel/faro-shop/commit/a9858646d46bd6d85a94db35a2efce6fb71bfb8e))
+* bump phpstan/phpdoc-parser from 1.30.0 to 1.30.1 ([#772](https://github.com/cedricziel/faro-shop/issues/772)) ([ea7ca1c](https://github.com/cedricziel/faro-shop/commit/ea7ca1c197e5bf1febdc8f7d430489e0a309b8f3))
+* bump phpunit/phpunit from 11.3.3 to 11.3.4 ([#773](https://github.com/cedricziel/faro-shop/issues/773)) ([428d3fa](https://github.com/cedricziel/faro-shop/commit/428d3fa740a40228ba31dcf741024dbb43b62187))
+* bump the symfony group with 8 updates ([#771](https://github.com/cedricziel/faro-shop/issues/771)) ([20cb040](https://github.com/cedricziel/faro-shop/commit/20cb0408ba0c2d7ffdffd984e0003a16c3a21ec9))
+* bump twig/extra-bundle from 3.12.0 to 3.13.0 ([#776](https://github.com/cedricziel/faro-shop/issues/776)) ([fe7f7f1](https://github.com/cedricziel/faro-shop/commit/fe7f7f191941640c1236b946a8240371402af252))
+
 ## [0.38.7](https://github.com/cedricziel/faro-shop/compare/0.38.6...0.38.7) (2024-09-05)
 
 
