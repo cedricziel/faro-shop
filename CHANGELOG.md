@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.38.9](https://github.com/cedricziel/faro-shop/compare/0.38.8...0.38.9) (2024-09-12)
+
+
+### Bug Fixes
+
+* bump otel/opentelemetry-collector-contrib from 0.108.0 to 0.109.0 in /docker/otelcol ([#783](https://github.com/cedricziel/faro-shop/issues/783)) ([be80a72](https://github.com/cedricziel/faro-shop/commit/be80a72711a559bfbb1fa0e2b9a2208347c186d4))
+* bump psr/log from 3.0.1 to 3.0.2 ([#782](https://github.com/cedricziel/faro-shop/issues/782)) ([c7b71c2](https://github.com/cedricziel/faro-shop/commit/c7b71c29a40bd30d3966882b7c625903f226f4e3))
+* bump the grafana group with 2 updates ([#784](https://github.com/cedricziel/faro-shop/issues/784)) ([c4181cf](https://github.com/cedricziel/faro-shop/commit/c4181cf826793227458d3ce524fb88cf94701cd3))
+* bump twig/twig from 3.13.0 to 3.14.0 ([#780](https://github.com/cedricziel/faro-shop/issues/780)) ([47d0d90](https://github.com/cedricziel/faro-shop/commit/47d0d90610d3c7f81da7a9932c52e05ca2f7ff35))
+
 ## [0.38.8](https://github.com/cedricziel/faro-shop/compare/0.38.7...0.38.8) (2024-09-09)
 
 
