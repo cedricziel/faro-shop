@@ -79,6 +79,9 @@ updates:
       - dependency-name: "symfony/*"
         update-types: ["version-update:semver-major"]
     groups:
+      flysystem:
+        patterns:
+        - "league/flysystem*"
       symfony:
         patterns:
         - "symfony/*"
