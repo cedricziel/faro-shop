@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.38.11](https://github.com/cedricziel/faro-shop/compare/0.38.10...0.38.11) (2024-10-01)
+
+
+### Bug Fixes
+
+* bump @symfony/webpack-encore from 4.7.0 to 5.0.0 ([#823](https://github.com/cedricziel/faro-shop/issues/823)) ([92968cc](https://github.com/cedricziel/faro-shop/commit/92968ccf09a21a40a37e39ff226308451ffa9958))
+* bump grafana/k6 from 0.53.0-with-browser to 0.54.0-with-browser in /docker/k6 ([#822](https://github.com/cedricziel/faro-shop/issues/822)) ([6032d04](https://github.com/cedricziel/faro-shop/commit/6032d04ae6ec899168622a9dcd70370aa9cf3840))
+* bump laravel/prompts from 0.2.1 to 0.3.0 ([#825](https://github.com/cedricziel/faro-shop/issues/825)) ([060234d](https://github.com/cedricziel/faro-shop/commit/060234de8a6d30992aa21dc1b7b3d876c9857193))
+* bump the grafana group with 2 updates ([#827](https://github.com/cedricziel/faro-shop/issues/827)) ([0bcaae3](https://github.com/cedricziel/faro-shop/commit/0bcaae3dc513c50eed8d09fd49993a8cda9e65dd))
+
 ## [0.38.10](https://github.com/cedricziel/faro-shop/compare/0.38.9...0.38.10) (2024-09-29)
 
 
