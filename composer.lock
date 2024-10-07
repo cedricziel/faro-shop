@@ -11918,16 +11918,16 @@
         },
         {
             "name": "tbachert/spi",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nevay/spi.git",
-                "reference": "840351ad0a5e9269150fa6c5e4a6b5745fa5ade6"
+                "reference": "2ddfaf815dafb45791a61b08170de8d583c16062"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nevay/spi/zipball/840351ad0a5e9269150fa6c5e4a6b5745fa5ade6",
-                "reference": "840351ad0a5e9269150fa6c5e4a6b5745fa5ade6",
+                "url": "https://api.github.com/repos/Nevay/spi/zipball/2ddfaf815dafb45791a61b08170de8d583c16062",
+                "reference": "2ddfaf815dafb45791a61b08170de8d583c16062",
                 "shasum": ""
             },
             "require": {
@@ -11964,9 +11964,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Nevay/spi/issues",
-                "source": "https://github.com/Nevay/spi/tree/v1.0.1"
+                "source": "https://github.com/Nevay/spi/tree/v1.0.2"
             },
-            "time": "2024-09-13T20:09:27+00:00"
+            "time": "2024-10-04T16:36:12+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
