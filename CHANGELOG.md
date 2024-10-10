@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.38.13](https://github.com/cedricziel/faro-shop/compare/0.38.12...0.38.13) (2024-10-09)
+
+
+### Bug Fixes
+
+* bump appleboy/ssh-action from 1.0.3 to 1.1.0 ([#845](https://github.com/cedricziel/faro-shop/issues/845)) ([4d52431](https://github.com/cedricziel/faro-shop/commit/4d524316ec0cfbc927a7f59fe36c09fb5af3de2e))
+* bump doctrine/common from 3.4.4 to 3.4.5 ([#850](https://github.com/cedricziel/faro-shop/issues/850)) ([a4fbc38](https://github.com/cedricziel/faro-shop/commit/a4fbc38f6009dca3eaf3acec74f7b1cc4ec52d12))
+* bump dragonmantank/cron-expression from 3.3.3 to 3.4.0 ([#849](https://github.com/cedricziel/faro-shop/issues/849)) ([b3769c1](https://github.com/cedricziel/faro-shop/commit/b3769c179d4edda92233d168303b66d9e2a5d05b))
+* bump laravel/framework from 11.26.0 to 11.27.2 ([#852](https://github.com/cedricziel/faro-shop/issues/852)) ([fad7f6e](https://github.com/cedricziel/faro-shop/commit/fad7f6ec30d737f8e6481e3a3b2a2168f7b9dc37))
+* bump league/flysystem from 3.29.0 to 3.29.1 in the flysystem group ([#847](https://github.com/cedricziel/faro-shop/issues/847)) ([90d0fe1](https://github.com/cedricziel/faro-shop/commit/90d0fe1cee6c6f527421fd9cca503bf3fdfb8804))
+* bump nette/schema from 1.3.0 to 1.3.2 ([#842](https://github.com/cedricziel/faro-shop/issues/842)) ([c6d174a](https://github.com/cedricziel/faro-shop/commit/c6d174a34176bfbcd8bed3f2be3d59a160c35787))
+* bump phpunit/php-code-coverage from 11.0.6 to 11.0.7 ([#853](https://github.com/cedricziel/faro-shop/issues/853)) ([4a45419](https://github.com/cedricziel/faro-shop/commit/4a454193be0e2fe994e6e733f56a9fed2a709297))
+* bump phpunit/phpunit from 11.3.6 to 11.4.0 ([#844](https://github.com/cedricziel/faro-shop/issues/844)) ([7cebef8](https://github.com/cedricziel/faro-shop/commit/7cebef8607135d5e57df3e4ae987d1dbf4c06bb4))
+* bump phpunit/phpunit from 11.4.0 to 11.4.1 ([#848](https://github.com/cedricziel/faro-shop/issues/848)) ([4cf63e9](https://github.com/cedricziel/faro-shop/commit/4cf63e9772994d554db8a3974bbab742297dc119))
+* bump sebastian/version from 5.0.1 to 5.0.2 ([#851](https://github.com/cedricziel/faro-shop/issues/851)) ([97097e2](https://github.com/cedricziel/faro-shop/commit/97097e2c6853c273b247eb818104baa37ab145b2))
+* bump symfony/flex from 2.4.6 to 2.4.7 in the symfony group ([#841](https://github.com/cedricziel/faro-shop/issues/841)) ([74cba79](https://github.com/cedricziel/faro-shop/commit/74cba79448a61ac07ffdede5847c014d5596ca45))
+* bump tbachert/spi from 1.0.1 to 1.0.2 ([#843](https://github.com/cedricziel/faro-shop/issues/843)) ([c862a3f](https://github.com/cedricziel/faro-shop/commit/c862a3f9b7326598c422bbd785c17102adeacc99))
+
 ## [0.38.12](https://github.com/cedricziel/faro-shop/compare/0.38.11...0.38.12) (2024-10-04)
 
 
