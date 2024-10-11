@@ -45,6 +45,7 @@ export function initializeFaro() {
         ],
         sessionTracking: {
             persistent: true,
-        }
+        },
+        trackWebVitalsAttribution: true,
     });
 }
