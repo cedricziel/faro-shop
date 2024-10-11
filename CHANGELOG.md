@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.39.0](https://github.com/cedricziel/faro-shop/compare/0.38.13...0.39.0) (2024-10-11)
+
+
+### Features
+
+* trigger release ([#862](https://github.com/cedricziel/faro-shop/issues/862)) ([3f8fe51](https://github.com/cedricziel/faro-shop/commit/3f8fe51401b6d67b701436528309555103a75992))
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.25.7 to 7.25.8 ([#860](https://github.com/cedricziel/faro-shop/issues/860)) ([a1b37d6](https://github.com/cedricziel/faro-shop/commit/a1b37d6af4364d4873a488866288b9770dc5eda5))
+* bump @babel/preset-env from 7.25.7 to 7.25.8 ([#859](https://github.com/cedricziel/faro-shop/issues/859)) ([e18c3bc](https://github.com/cedricziel/faro-shop/commit/e18c3bc0828274165f44c012641d0e33e7a04267))
+* bump doctrine/dbal from 4.1.1 to 4.2.0 ([#857](https://github.com/cedricziel/faro-shop/issues/857)) ([7e9f840](https://github.com/cedricziel/faro-shop/commit/7e9f8407463bd1d0fc22cc45356e886eb775728a))
+
 ## [0.38.13](https://github.com/cedricziel/faro-shop/compare/0.38.12...0.38.13) (2024-10-09)
 
 
