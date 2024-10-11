@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.39.1](https://github.com/cedricziel/faro-shop/compare/0.39.0...0.39.1) (2024-10-11)
+
+
+### Bug Fixes
+
+* bump doctrine/dbal from 4.2.0 to 4.2.1 ([#864](https://github.com/cedricziel/faro-shop/issues/864)) ([50d3419](https://github.com/cedricziel/faro-shop/commit/50d34198e3edeaaad6a94e45e46118823205b0d0))
+* bump doctrine/migrations from 3.8.1 to 3.8.2 ([#863](https://github.com/cedricziel/faro-shop/issues/863)) ([3a42cc7](https://github.com/cedricziel/faro-shop/commit/3a42cc7f2db6b4753f9b4bcb91e6f77a55cd804b))
+
 ## [0.39.0](https://github.com/cedricziel/faro-shop/compare/0.38.13...0.39.0) (2024-10-11)
 
 
