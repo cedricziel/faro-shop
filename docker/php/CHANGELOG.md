@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.4.6](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.4.5...php-baseimage-8.4.6) (2024-10-16)
+
+
+### Bug Fixes
+
+* bump ext-opentelemetry ([#875](https://github.com/cedricziel/faro-shop/issues/875)) ([754f322](https://github.com/cedricziel/faro-shop/commit/754f322ebd4b3278435bcc7dccad254956e69067))
+
 ## [8.4.5](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.4.4...php-baseimage-8.4.5) (2024-09-27)
 
 
