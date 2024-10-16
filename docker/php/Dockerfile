@@ -33,7 +33,7 @@ RUN set -eux; \
         protobuf \
         zip \
         amqp \
-        opentelemetry \
+        opentelemetry-^1.1 \
     ;
 
 COPY --link conf.d/app.ini $PHP_INI_DIR/conf.d/
