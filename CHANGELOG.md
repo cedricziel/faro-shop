@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.40.0](https://github.com/cedricziel/faro-shop/compare/0.39.1...0.40.0) (2024-10-16)
+
+
+### Features
+
+* update ext-opentelemetry to ^1.1 to support attributes ([#872](https://github.com/cedricziel/faro-shop/issues/872)) ([2874739](https://github.com/cedricziel/faro-shop/commit/2874739bc02961a0756ff01963c746c181a5e084))
+
+
+### Bug Fixes
+
+* bump cedricziel/faro-shop-php from 8.4.5 to 8.4.6 ([#877](https://github.com/cedricziel/faro-shop/issues/877)) ([c37e158](https://github.com/cedricziel/faro-shop/commit/c37e1587b496ec9fed2eca28a3c0efde74f026ec))
+* bump doctrine/orm from 3.2.2 to 3.3.0 ([#869](https://github.com/cedricziel/faro-shop/issues/869)) ([d2b8d5c](https://github.com/cedricziel/faro-shop/commit/d2b8d5ce7b330d6b2e10e513c32f3c0dce10a9ba))
+* bump laravel/framework from 11.27.2 to 11.28.0 ([#873](https://github.com/cedricziel/faro-shop/issues/873)) ([0404537](https://github.com/cedricziel/faro-shop/commit/040453787faa81dbf583d634335d17925e3eb778))
+* bump laravel/prompts from 0.3.0 to 0.3.1 ([#874](https://github.com/cedricziel/faro-shop/issues/874)) ([9bb507d](https://github.com/cedricziel/faro-shop/commit/9bb507d41057bfafbb4ec252a5b65f4aa75c62e0))
+* bump phpstan/phpdoc-parser from 1.32.0 to 1.33.0 ([#870](https://github.com/cedricziel/faro-shop/issues/870)) ([5336baa](https://github.com/cedricziel/faro-shop/commit/5336baa46ea89f7388ea93938c40abab39886cdf))
+
 ## [0.39.1](https://github.com/cedricziel/faro-shop/compare/0.39.0...0.39.1) (2024-10-11)
 
 
