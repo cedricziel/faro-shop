@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.40.1](https://github.com/cedricziel/faro-shop/compare/0.40.0...0.40.1) (2024-10-16)
+
+
+### Bug Fixes
+
+* bump nunomaduro/termwind from 2.1.0 to 2.2.0 ([#881](https://github.com/cedricziel/faro-shop/issues/881)) ([37820a7](https://github.com/cedricziel/faro-shop/commit/37820a79bcd3fc7e46768de332333341149fa913))
+* bump the open-telemetry group with 3 updates ([#880](https://github.com/cedricziel/faro-shop/issues/880)) ([b7f1856](https://github.com/cedricziel/faro-shop/commit/b7f18567c43f6dd78a772abdbc69efe188a4234c))
+
 ## [0.40.0](https://github.com/cedricziel/faro-shop/compare/0.39.1...0.40.0) (2024-10-16)
 
 
