@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.40.2](https://github.com/cedricziel/faro-shop/compare/0.40.1...0.40.2) (2024-10-17)
+
+
+### Bug Fixes
+
+* bump guzzlehttp/promises from 2.0.3 to 2.0.4 ([#887](https://github.com/cedricziel/faro-shop/issues/887)) ([8ad091f](https://github.com/cedricziel/faro-shop/commit/8ad091fd6350ef004337bf15789470a9a8160a4f))
+* bump laravel/framework from 11.28.0 to 11.28.1 ([#888](https://github.com/cedricziel/faro-shop/issues/888)) ([2aa6e18](https://github.com/cedricziel/faro-shop/commit/2aa6e181db5755d33e844d40631d77cc173356d9))
+* bump the grafana group with 2 updates ([#885](https://github.com/cedricziel/faro-shop/issues/885)) ([1dd80dd](https://github.com/cedricziel/faro-shop/commit/1dd80dd9677f4d009b74e3537fcd875fe4e71343))
+
 ## [0.40.1](https://github.com/cedricziel/faro-shop/compare/0.40.0...0.40.1) (2024-10-16)
 
 
