@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.40.3](https://github.com/cedricziel/faro-shop/compare/0.40.2...0.40.3) (2024-10-18)
+
+
+### Bug Fixes
+
+* bump sebastian/comparator from 6.1.0 to 6.1.1 ([#891](https://github.com/cedricziel/faro-shop/issues/891)) ([81b394d](https://github.com/cedricziel/faro-shop/commit/81b394dad1ea65576592cd85d70fa3543f2de7bc))
+
 ## [0.40.2](https://github.com/cedricziel/faro-shop/compare/0.40.1...0.40.2) (2024-10-17)
 
 
