@@ -3940,16 +3940,16 @@
         },
         {
             "name": "open-telemetry/exporter-zipkin",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/exporter-zipkin.git",
-                "reference": "4cd63c3fefbeccba70a8314a05c5b79a16ba0833"
+                "reference": "05ef43d6caa125b71774f9490b0cc7ca337394a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/exporter-zipkin/zipball/4cd63c3fefbeccba70a8314a05c5b79a16ba0833",
-                "reference": "4cd63c3fefbeccba70a8314a05c5b79a16ba0833",
+                "url": "https://api.github.com/repos/opentelemetry-php/exporter-zipkin/zipball/05ef43d6caa125b71774f9490b0cc7ca337394a0",
+                "reference": "05ef43d6caa125b71774f9490b0cc7ca337394a0",
                 "shasum": ""
             },
             "require": {
@@ -3999,7 +3999,7 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2024-08-21T00:29:20+00:00"
+            "time": "2024-10-16T12:03:20+00:00"
         },
         {
             "name": "open-telemetry/gen-otlp-protobuf",
@@ -4729,16 +4729,16 @@
         },
         {
             "name": "open-telemetry/sdk",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/sdk.git",
-                "reference": "126319e6b3996c609fded69f1e3e9dc1582c64af"
+                "reference": "fb0ff8d8279a3776bd604791e2531dd0cc147e8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/sdk/zipball/126319e6b3996c609fded69f1e3e9dc1582c64af",
-                "reference": "126319e6b3996c609fded69f1e3e9dc1582c64af",
+                "url": "https://api.github.com/repos/opentelemetry-php/sdk/zipball/fb0ff8d8279a3776bd604791e2531dd0cc147e8b",
+                "reference": "fb0ff8d8279a3776bd604791e2531dd0cc147e8b",
                 "shasum": ""
             },
             "require": {
@@ -4815,7 +4815,7 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2024-10-15T22:42:37+00:00"
+            "time": "2024-10-18T21:01:35+00:00"
         },
         {
             "name": "open-telemetry/sem-conv",
