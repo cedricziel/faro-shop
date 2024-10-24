@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.40.3](https://github.com/cedricziel/faro-shop/compare/0.40.2...0.40.3) (2024-10-23)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.25.8 to 7.25.9 ([#897](https://github.com/cedricziel/faro-shop/issues/897)) ([02eabf4](https://github.com/cedricziel/faro-shop/commit/02eabf42efe29ea56cc7db6ed00bdd2817136f74))
+* bump @babel/preset-env from 7.25.8 to 7.25.9 ([#898](https://github.com/cedricziel/faro-shop/issues/898)) ([cba27a9](https://github.com/cedricziel/faro-shop/commit/cba27a9a6e7e362977e6758e3c991de51786a43a))
+* bump doctrine/sql-formatter from 1.5.0 to 1.5.1 ([#895](https://github.com/cedricziel/faro-shop/issues/895)) ([a875f50](https://github.com/cedricziel/faro-shop/commit/a875f50b1f9cc3b033602efbc519b4e170c63766))
+* bump laravel/framework from 11.28.1 to 11.29.0 ([#896](https://github.com/cedricziel/faro-shop/issues/896)) ([f28acb6](https://github.com/cedricziel/faro-shop/commit/f28acb65863208817bb49f451b6c14eb2176779e))
+* bump otel/opentelemetry-collector-contrib from 0.111.0 to 0.112.0 in /docker/otelcol ([#901](https://github.com/cedricziel/faro-shop/issues/901)) ([c7a8a1b](https://github.com/cedricziel/faro-shop/commit/c7a8a1ba60511d8a4a57914320fcb108990abd02))
+* bump phpunit/phpunit from 11.4.1 to 11.4.2 ([#894](https://github.com/cedricziel/faro-shop/issues/894)) ([ba2b81b](https://github.com/cedricziel/faro-shop/commit/ba2b81bbf05e5e92a322e704b0f972e7fc65f663))
+* bump sebastian/comparator from 6.1.0 to 6.1.1 ([#891](https://github.com/cedricziel/faro-shop/issues/891)) ([81b394d](https://github.com/cedricziel/faro-shop/commit/81b394dad1ea65576592cd85d70fa3543f2de7bc))
+* bump symfony/stimulus-bundle from 2.20.0 to 2.21.0 in the symfony group ([#899](https://github.com/cedricziel/faro-shop/issues/899)) ([8913e79](https://github.com/cedricziel/faro-shop/commit/8913e799e580cb517f9630d298e36dd369374315))
+* bump the open-telemetry group with 2 updates ([#900](https://github.com/cedricziel/faro-shop/issues/900)) ([204ffdd](https://github.com/cedricziel/faro-shop/commit/204ffdddbac905e382fdd6a400cd1c1506479d59))
+* bump zenstruck/browser from 1.8.1 to 1.9.0 ([#893](https://github.com/cedricziel/faro-shop/issues/893)) ([7f47d83](https://github.com/cedricziel/faro-shop/commit/7f47d83b2fb9a444ad0f4d4ad40e52074f14916e))
+
 ## [0.40.2](https://github.com/cedricziel/faro-shop/compare/0.40.1...0.40.2) (2024-10-17)
 
 
