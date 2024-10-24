@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.40.4](https://github.com/cedricziel/faro-shop/compare/0.40.3...0.40.4) (2024-10-24)
+
+
+### Bug Fixes
+
+* bump the open-telemetry group with 3 updates ([#904](https://github.com/cedricziel/faro-shop/issues/904)) ([ba2e7f6](https://github.com/cedricziel/faro-shop/commit/ba2e7f64e06017097f03ffba10be2dc25b329158))
+
 ## [0.40.3](https://github.com/cedricziel/faro-shop/compare/0.40.2...0.40.3) (2024-10-23)
 
 
