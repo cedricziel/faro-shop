@@ -2,7 +2,7 @@ apiVersion: v2
 name: faro-shop
 description: Faro Demo Application
 type: application
-version: 0.56.0
+version: 0.57.0
 appVersion: 0.40.4
 maintainers:
   - name: cedricziel
