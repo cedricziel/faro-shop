@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.40.5](https://github.com/cedricziel/faro-shop/compare/0.40.4...0.40.5) (2024-10-27)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.25.9 to 7.26.0 ([#914](https://github.com/cedricziel/faro-shop/issues/914)) ([527d2b5](https://github.com/cedricziel/faro-shop/commit/527d2b5eadcbf5142ef43feac7ba2fea238690aa))
+* bump @babel/preset-env from 7.25.9 to 7.26.0 ([#913](https://github.com/cedricziel/faro-shop/issues/913)) ([14c076d](https://github.com/cedricziel/faro-shop/commit/14c076dc55cb31c980c2883d13ef97ac8683f696))
+* bump cedricziel/faro-shop-php from 8.4.6 to 8.4.7 ([#915](https://github.com/cedricziel/faro-shop/issues/915)) ([44e54f3](https://github.com/cedricziel/faro-shop/commit/44e54f3ebf3b74a6083df71b51ada230956dd075))
+* bump php from 8.3.12-fpm-alpine to 8.3.13-fpm-alpine ([#909](https://github.com/cedricziel/faro-shop/issues/909)) ([04a15f0](https://github.com/cedricziel/faro-shop/commit/04a15f079ab62dadea61a89fc65907178c87a5c9))
+
 ## [0.40.4](https://github.com/cedricziel/faro-shop/compare/0.40.3...0.40.4) (2024-10-24)
 
 
