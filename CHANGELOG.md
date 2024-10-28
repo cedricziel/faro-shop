@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.40.6](https://github.com/cedricziel/faro-shop/compare/0.40.5...0.40.6) (2024-10-28)
+
+
+### Bug Fixes
+
+* bump phpunit/phpunit from 11.4.2 to 11.4.3 ([#919](https://github.com/cedricziel/faro-shop/issues/919)) ([ef7924e](https://github.com/cedricziel/faro-shop/commit/ef7924e763d8464c1bb5749704ac9e6f442107a9))
+* bump the symfony group with 55 updates ([#918](https://github.com/cedricziel/faro-shop/issues/918)) ([21cad65](https://github.com/cedricziel/faro-shop/commit/21cad65c013bd29d0b1635e3507980553a4cb5c3))
+
 ## [0.40.5](https://github.com/cedricziel/faro-shop/compare/0.40.4...0.40.5) (2024-10-27)
 
 
