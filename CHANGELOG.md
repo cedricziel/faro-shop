@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.40.7](https://github.com/cedricziel/faro-shop/compare/0.40.6...0.40.7) (2024-10-30)
+
+
+### Bug Fixes
+
+* bump laravel/framework from 11.29.0 to 11.30.0 ([#925](https://github.com/cedricziel/faro-shop/issues/925)) ([aaed9b4](https://github.com/cedricziel/faro-shop/commit/aaed9b47f124610185496afe6d982265b155e30f))
+* bump open-telemetry/gen-otlp-protobuf from 1.2.0 to 1.2.1 in the open-telemetry group ([#924](https://github.com/cedricziel/faro-shop/issues/924)) ([fd6bb61](https://github.com/cedricziel/faro-shop/commit/fd6bb61c06475683fe5c4c63a1d4f06ea2226e0c))
+* bump sebastian/comparator from 6.1.1 to 6.2.0 ([#926](https://github.com/cedricziel/faro-shop/issues/926)) ([7bc03ae](https://github.com/cedricziel/faro-shop/commit/7bc03ae0f99ca9e6f623e5f624f736fa334abfa8))
+* bump zenstruck/assert from 1.5.0 to 1.5.1 ([#923](https://github.com/cedricziel/faro-shop/issues/923)) ([9d7894a](https://github.com/cedricziel/faro-shop/commit/9d7894ada45ea665fbc181a768500d95440878b8))
+
 ## [0.40.6](https://github.com/cedricziel/faro-shop/compare/0.40.5...0.40.6) (2024-10-28)
 
 
