@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.40.8](https://github.com/cedricziel/faro-shop/compare/0.40.7...0.40.8) (2024-11-01)
+
+
+### Bug Fixes
+
+* bump behat/mink from 1.11.0 to 1.12.0 ([#934](https://github.com/cedricziel/faro-shop/issues/934)) ([df2a2d6](https://github.com/cedricziel/faro-shop/commit/df2a2d6cef377da2bf494d0d51c1fc6cdb4ae66c))
+* bump core-js from 3.38.1 to 3.39.0 ([#930](https://github.com/cedricziel/faro-shop/issues/930)) ([f71e73e](https://github.com/cedricziel/faro-shop/commit/f71e73ed21f7ce04dec75811aa117674fd911180))
+* bump doctrine/persistence from 3.3.3 to 3.4.0 ([#933](https://github.com/cedricziel/faro-shop/issues/933)) ([e3c5f27](https://github.com/cedricziel/faro-shop/commit/e3c5f27e7b7472819be0b7b0fa4c4dd1b1216554))
+* bump sebastian/comparator from 6.2.0 to 6.2.1 ([#932](https://github.com/cedricziel/faro-shop/issues/932)) ([c846f94](https://github.com/cedricziel/faro-shop/commit/c846f946c17fe6b419970ac7516947007183aab4))
+* bump webpack from 5.95.0 to 5.96.1 ([#937](https://github.com/cedricziel/faro-shop/issues/937)) ([329db3b](https://github.com/cedricziel/faro-shop/commit/329db3b118e4bb0c12feaac070f10431d8debfce))
+* bump zenstruck/foundry from 2.2.0 to 2.2.1 ([#935](https://github.com/cedricziel/faro-shop/issues/935)) ([91882ef](https://github.com/cedricziel/faro-shop/commit/91882ef72313e730154a8d32e911602cdf71b28e))
+
 ## [0.40.7](https://github.com/cedricziel/faro-shop/compare/0.40.6...0.40.7) (2024-10-30)
 
 
