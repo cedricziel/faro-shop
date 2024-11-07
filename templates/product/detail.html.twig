@@ -50,8 +50,7 @@
         </div>
 
         <h2 class="mt-3 mb-4">Our recommendations</h2>
-        <div {{ stimulus_controller('content-loader', {'load-scripts': true, 'url':  url('ads_for_product', {'id': product.id})}) }}
-                data-action="content-loader:error->faro#onError">
+        <div {{ stimulus_controller('content-loader', {'load-scripts': true, 'url':  url('ads_for_product', {'id': product.id})}) }}>
             <i class="fas fa-spinner fa-spin"></i>
             Loading ads...
         </div>
