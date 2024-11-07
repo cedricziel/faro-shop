@@ -70,7 +70,8 @@
         "allow-plugins": {
             "php-http/discovery": false,
             "symfony/flex": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "tbachert/spi": true
         },
         "sort-packages": true
     },
