@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.40.9](https://github.com/cedricziel/faro-shop/compare/0.40.8...0.40.9) (2024-11-07)
+
+
+### Bug Fixes
+
+* bump doctrine/data-fixtures from 1.7.0 to 1.8.0 ([#944](https://github.com/cedricziel/faro-shop/issues/944)) ([0ffdc33](https://github.com/cedricziel/faro-shop/commit/0ffdc3372695ee95f50d2356c5b1695eefa4026b))
+* bump nesbot/carbon from 3.8.0 to 3.8.1 ([#940](https://github.com/cedricziel/faro-shop/issues/940)) ([8459ad1](https://github.com/cedricziel/faro-shop/commit/8459ad1d1cc65f30c83daf5c98b56e53b2b2e7f0))
+* bump phpdocumentor/reflection-docblock from 5.4.1 to 5.5.0 ([#942](https://github.com/cedricziel/faro-shop/issues/942)) ([f61d6e0](https://github.com/cedricziel/faro-shop/commit/f61d6e0867c1a09c6c00eb654aa92816c7ed4c55))
+* bump phpdocumentor/reflection-docblock from 5.5.0 to 5.5.1 ([#947](https://github.com/cedricziel/faro-shop/issues/947)) ([ec7b061](https://github.com/cedricziel/faro-shop/commit/ec7b061caea56db437147f7cdde93150ade24cd6))
+* bump phpdocumentor/type-resolver from 1.8.2 to 1.9.0 ([#939](https://github.com/cedricziel/faro-shop/issues/939)) ([d956592](https://github.com/cedricziel/faro-shop/commit/d9565924c54b923361d751a3f557104286e564cf))
+* bump the symfony group with 14 updates ([#945](https://github.com/cedricziel/faro-shop/issues/945)) ([6006652](https://github.com/cedricziel/faro-shop/commit/6006652adb6eef8ea25c14b2ba7e7bd318fbc0d6))
+* bump zenstruck/browser from 1.9.0 to 1.9.1 ([#943](https://github.com/cedricziel/faro-shop/issues/943)) ([8ea9f10](https://github.com/cedricziel/faro-shop/commit/8ea9f106db0ed4927f34c5ace75e8bfab4754728))
+* bump zenstruck/foundry from 2.2.1 to 2.2.2 ([#946](https://github.com/cedricziel/faro-shop/issues/946)) ([bb1ba83](https://github.com/cedricziel/faro-shop/commit/bb1ba831b15207498b2f64b8eff00fe744caa3d3))
+* Fix error pages not recording ([#948](https://github.com/cedricziel/faro-shop/issues/948)) ([51b7d3d](https://github.com/cedricziel/faro-shop/commit/51b7d3d5fa0d752c5dd2ce6e216a182eb7bfc582))
+
 ## [0.40.8](https://github.com/cedricziel/faro-shop/compare/0.40.7...0.40.8) (2024-11-01)
 
 
