@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.40.11](https://github.com/cedricziel/faro-shop/compare/0.40.10...0.40.11) (2024-11-12)
+
+
+### Bug Fixes
+
+* bump fakerphp/faker from 1.23.1 to 1.24.0 ([#961](https://github.com/cedricziel/faro-shop/issues/961)) ([16de1e0](https://github.com/cedricziel/faro-shop/commit/16de1e016f3cc3c24bb835317ed7b62e51b008c8))
+* bump google/protobuf from 3.25.5 to 4.28.3 ([#936](https://github.com/cedricziel/faro-shop/issues/936)) ([6cecbde](https://github.com/cedricziel/faro-shop/commit/6cecbde95e09a70aa518ea104c996e52cb0d0a67))
+* bump grafana/k6 from 0.54.0-with-browser to 0.55.0-with-browser in /docker/k6 ([#959](https://github.com/cedricziel/faro-shop/issues/959)) ([896ced0](https://github.com/cedricziel/faro-shop/commit/896ced029f76d3c04312795b1aa1075ba996e68d))
+* bump myclabs/deep-copy from 1.12.0 to 1.12.1 ([#962](https://github.com/cedricziel/faro-shop/issues/962)) ([e8431a0](https://github.com/cedricziel/faro-shop/commit/e8431a02deec93abbb680d15d43cde445852fa34))
+* bump nesbot/carbon from 3.8.1 to 3.8.2 ([#958](https://github.com/cedricziel/faro-shop/issues/958)) ([f67a91f](https://github.com/cedricziel/faro-shop/commit/f67a91ffeaf2595ac24d6639decd17f27d75374e))
+* bump otel/opentelemetry-collector-contrib from 0.112.0 to 0.113.0 in /docker/otelcol ([#957](https://github.com/cedricziel/faro-shop/issues/957)) ([cf34533](https://github.com/cedricziel/faro-shop/commit/cf3453304e03541ca754f70b8c5053f8c4a0c28b))
+* bump phpdocumentor/type-resolver from 1.9.0 to 1.10.0 ([#960](https://github.com/cedricziel/faro-shop/issues/960)) ([f4af356](https://github.com/cedricziel/faro-shop/commit/f4af356f59e54adeb715efe5fdf7fa293e4d5093))
+* bump twig/twig from 3.14.0 to 3.14.2 ([#956](https://github.com/cedricziel/faro-shop/issues/956)) ([7e79404](https://github.com/cedricziel/faro-shop/commit/7e794047af117742c6dd3ad43915fbdfbe1885b7))
+* revert to using event subscriber ([#963](https://github.com/cedricziel/faro-shop/issues/963)) ([5a65f67](https://github.com/cedricziel/faro-shop/commit/5a65f67cbb6d8b033c118574c1d2d67e1abd75c5))
+
 ## [0.40.10](https://github.com/cedricziel/faro-shop/compare/0.40.9...0.40.10) (2024-11-07)
 
 
