@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.41.0](https://github.com/cedricziel/faro-shop/compare/0.40.11...0.41.0) (2024-11-12)
+
+
+### Features
+
+* slow down homepage ([#966](https://github.com/cedricziel/faro-shop/issues/966)) ([22027c5](https://github.com/cedricziel/faro-shop/commit/22027c5b5d55437746ac46c33081aae39f2e4d9a))
+
 ## [0.40.11](https://github.com/cedricziel/faro-shop/compare/0.40.10...0.40.11) (2024-11-12)
 
 
