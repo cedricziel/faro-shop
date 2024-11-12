@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.42.0](https://github.com/cedricziel/faro-shop/compare/0.41.0...0.42.0) (2024-11-12)
+
+
+### Features
+
+* introduce redis cache ([#970](https://github.com/cedricziel/faro-shop/issues/970)) ([4ceac15](https://github.com/cedricziel/faro-shop/commit/4ceac154868d54946fdd2fa3eae85b242e594798))
+
+
+### Bug Fixes
+
+* fix redis span order ([#972](https://github.com/cedricziel/faro-shop/issues/972)) ([267e18d](https://github.com/cedricziel/faro-shop/commit/267e18d39faec9d2643e0a86eac5c1eeeef4c5ff))
+
 ## [0.41.0](https://github.com/cedricziel/faro-shop/compare/0.40.11...0.41.0) (2024-11-12)
 
 
