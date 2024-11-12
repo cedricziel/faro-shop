@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.40.10](https://github.com/cedricziel/faro-shop/compare/0.40.9...0.40.10) (2024-11-07)
+
+
+### Bug Fixes
+
+* track errors through error handler ([#951](https://github.com/cedricziel/faro-shop/issues/951)) ([5a958f8](https://github.com/cedricziel/faro-shop/commit/5a958f85d15a5a2f3843c71e5041df60b6296748))
+
 ## [0.40.9](https://github.com/cedricziel/faro-shop/compare/0.40.8...0.40.9) (2024-11-07)
 
 
