@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.42.1](https://github.com/cedricziel/faro-shop/compare/0.42.0...0.42.1) (2024-11-12)
+
+
+### Bug Fixes
+
+* fix redis span kind ([#973](https://github.com/cedricziel/faro-shop/issues/973)) ([75ce3cb](https://github.com/cedricziel/faro-shop/commit/75ce3cb420d2c845498280de8686efbb4abcebfc))
+
 ## [0.42.0](https://github.com/cedricziel/faro-shop/compare/0.41.0...0.42.0) (2024-11-12)
 
 
