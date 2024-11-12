@@ -33,6 +33,8 @@ class ProductService
         if (($currentMinute >= 0 && $currentMinute <= 5) || ($currentMinute >= 30 && $currentMinute <= 35)) {
             $redisSpan->addEvent('cache.stale');
             $redisSpan->addEvent('cache.refresh.start');
+            $redisSpan->end();
+
             $products = $this->productRepository->findAll();
 
             // Simulate a slow cache refresh
@@ -41,11 +43,12 @@ class ProductService
             $redisSpan->addEvent('cache.refresh.end');
         } else {
             $redisSpan->addEvent('cache.hit');
+            $redisSpan->end();
 
             $products = $this->productRepository->findAll();
         }
 
-        $redisSpan->end();
+
 
         return $products;
     }
