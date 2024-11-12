@@ -4,6 +4,8 @@ namespace App\Service;
 
 use App\Repository\ProductRepository;
 use OpenTelemetry\API\Instrumentation\WithSpan;
+use OpenTelemetry\API\Trace\SpanKind;
+use OpenTelemetry\API\Trace\StatusCode;
 use OpenTelemetry\API\Trace\TracerInterface;
 
 class ProductService
@@ -18,6 +20,7 @@ class ProductService
     public function findAll()
     {
         $redisSpan = $this->tracer->spanBuilder('GET products')
+            ->setSpanKind(SpanKind::KIND_CLIENT)
             ->setAttributes([
                 'db.system' => 'redis',
                 'db.statement' => 'GET products',
@@ -31,6 +34,9 @@ class ProductService
         // 5 minutes after the full hour, and 5 minutes after the half hour, slow down requests for demo purposes
         $currentMinute = (int)date('i');
         if (($currentMinute >= 0 && $currentMinute <= 5) || ($currentMinute >= 30 && $currentMinute <= 35)) {
+            $redisSpan->recordException(new \Exception('Cache server is slow'));
+            $redisSpan->setStatus(StatusCode::STATUS_ERROR, 'Cache server is slow');
+
             $redisSpan->addEvent('cache.stale');
             $redisSpan->addEvent('cache.refresh.start');
             $redisSpan->end();
