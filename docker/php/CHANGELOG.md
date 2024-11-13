@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.4.8](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.4.7...php-baseimage-8.4.8) (2024-11-13)
+
+
+### Bug Fixes
+
+* bump laravel/framework from 11.30.0 to 11.31.0 ([#985](https://github.com/cedricziel/faro-shop/issues/985)) ([c3ace48](https://github.com/cedricziel/faro-shop/commit/c3ace482ff186d0358b83a147cd92b599bc3028a))
+
 ## [8.4.7](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.4.6...php-baseimage-8.4.7) (2024-10-26)
 
 
