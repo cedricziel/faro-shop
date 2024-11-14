@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.42.3](https://github.com/cedricziel/faro-shop/compare/0.42.2...0.42.3) (2024-11-14)
+
+
+### Bug Fixes
+
+* bump the grafana group with 2 updates ([#992](https://github.com/cedricziel/faro-shop/issues/992)) ([7a99eca](https://github.com/cedricziel/faro-shop/commit/7a99eca6f33ec083a4ae6e9c7a326a0eef562896))
+
 ## [0.42.2](https://github.com/cedricziel/faro-shop/compare/0.42.1...0.42.2) (2024-11-14)
 
 
