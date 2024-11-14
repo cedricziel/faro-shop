@@ -3,6 +3,6 @@ name: faro-shop
 description: Faro Demo Application
 type: application
 version: 0.65.0
-appVersion: 0.42.1
+appVersion: 0.42.2
 maintainers:
   - name: cedricziel
