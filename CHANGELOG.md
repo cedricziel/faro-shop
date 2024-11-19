@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.42.4](https://github.com/cedricziel/faro-shop/compare/0.42.3...0.42.4) (2024-11-19)
+
+
+### Bug Fixes
+
+* bump appleboy/ssh-action from 1.1.0 to 1.2.0 ([#996](https://github.com/cedricziel/faro-shop/issues/996)) ([4d75fa9](https://github.com/cedricziel/faro-shop/commit/4d75fa9ab61856f289cc2a82e3ddbc98d2fdff33))
+* bump doctrine/doctrine-bundle from 2.13.0 to 2.13.1 ([#1001](https://github.com/cedricziel/faro-shop/issues/1001)) ([b5bc6cf](https://github.com/cedricziel/faro-shop/commit/b5bc6cfc1b707316262d5b34bf6d60a966e0b5fc))
+* bump laravel/framework from 11.31.0 to 11.32.0 ([#1000](https://github.com/cedricziel/faro-shop/issues/1000)) ([40a6f67](https://github.com/cedricziel/faro-shop/commit/40a6f67f1c99eda672448d319e9877de19483d9f))
+* bump the grafana group with 2 updates ([#1002](https://github.com/cedricziel/faro-shop/issues/1002)) ([d0dfdcf](https://github.com/cedricziel/faro-shop/commit/d0dfdcf2b72d5b00b4ee1a9f212eeb80284578ae))
+* bump twig/extra-bundle from 3.13.0 to 3.15.0 ([#999](https://github.com/cedricziel/faro-shop/issues/999)) ([3543f26](https://github.com/cedricziel/faro-shop/commit/3543f268ef7ba51e2cbfc7f6df03fe44b58b8a6c))
+* bump twig/twig from 3.14.2 to 3.15.0 ([#998](https://github.com/cedricziel/faro-shop/issues/998)) ([2423a9f](https://github.com/cedricziel/faro-shop/commit/2423a9f44727868cddec86db1128504031efc650))
+
 ## [0.42.3](https://github.com/cedricziel/faro-shop/compare/0.42.2...0.42.3) (2024-11-14)
 
 
