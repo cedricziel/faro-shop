@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.42.5](https://github.com/cedricziel/faro-shop/compare/0.42.4...0.42.5) (2024-11-20)
+
+
+### Bug Fixes
+
+* bump laravel/framework from 11.32.0 to 11.33.2 ([#1007](https://github.com/cedricziel/faro-shop/issues/1007)) ([3f4bf42](https://github.com/cedricziel/faro-shop/commit/3f4bf421bf519d35814ac381ada61b3eac267485))
+* bump laravel/serializable-closure from 1.3.6 to 1.3.7 ([#1006](https://github.com/cedricziel/faro-shop/issues/1006)) ([9d4c92c](https://github.com/cedricziel/faro-shop/commit/9d4c92c5e90acb3f535710c280fada46359c3dc2))
+* bump open-telemetry/opentelemetry-auto-laravel from 1.0.0 to 1.0.1 in the open-telemetry group ([#1005](https://github.com/cedricziel/faro-shop/issues/1005)) ([a346675](https://github.com/cedricziel/faro-shop/commit/a3466750c9a90bda4f1c88b89f2432745c8e8ad3))
+* bump otel/opentelemetry-collector-contrib from 0.113.0 to 0.114.0 in /docker/otelcol ([#1009](https://github.com/cedricziel/faro-shop/issues/1009)) ([40c15c2](https://github.com/cedricziel/faro-shop/commit/40c15c2fa505d3266075d3f3d7944e689ad4dbe0))
+
 ## [0.42.4](https://github.com/cedricziel/faro-shop/compare/0.42.3...0.42.4) (2024-11-19)
 
 
