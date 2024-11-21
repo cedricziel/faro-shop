@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.42.6](https://github.com/cedricziel/faro-shop/compare/0.42.5...0.42.6) (2024-11-21)
+
+
+### Bug Fixes
+
+* bump fakerphp/faker from 1.24.0 to 1.24.1 ([#1016](https://github.com/cedricziel/faro-shop/issues/1016)) ([b96cbeb](https://github.com/cedricziel/faro-shop/commit/b96cbebd4b25cb0c08a1c0534bae4099cedb2d14))
+* bump nunomaduro/termwind from 2.2.0 to 2.3.0 ([#1015](https://github.com/cedricziel/faro-shop/issues/1015)) ([916b2fe](https://github.com/cedricziel/faro-shop/commit/916b2fe9f2a774292c039fd1610df13fc12c791b))
+* bump the grafana group with 2 updates ([#1012](https://github.com/cedricziel/faro-shop/issues/1012)) ([8bab230](https://github.com/cedricziel/faro-shop/commit/8bab230fd6d0c0f8140f565acbb416982d9ee719))
+* bump voku/portable-ascii from 2.0.1 to 2.0.3 ([#1014](https://github.com/cedricziel/faro-shop/issues/1014)) ([0abc4ab](https://github.com/cedricziel/faro-shop/commit/0abc4ab7befc5809f29ddb5f871aabad34d20b5a))
+
 ## [0.42.5](https://github.com/cedricziel/faro-shop/compare/0.42.4...0.42.5) (2024-11-20)
 
 
