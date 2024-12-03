@@ -6,6 +6,7 @@ use App\Entity\Product;
 use App\Repository\ProductRepository;
 use OpenTelemetry\API\Trace\Span;
 use OpenTelemetry\API\Trace\StatusCode;
+use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
@@ -13,8 +14,10 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class AdController extends AbstractController
 {
-    public function __construct(private ProductRepository $productRepository)
-    {
+    public function __construct(
+        private ProductRepository $productRepository,
+        private LoggerInterface $logger,
+    ){
     }
 
     #[Route('/ads/for-home', name: 'ads_for_home')]
@@ -46,6 +49,7 @@ class AdController extends AbstractController
             Span::getCurrent()
                 ->recordException($e)
                 ->setStatus(StatusCode::STATUS_ERROR, 'Unable to fetch related products');
+            $this->logger->error(sprintf('Unable to fetch related products: %s', $e->getMessage()), ['exception' => $e]);
 
             throw $e;
         }
