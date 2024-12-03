@@ -39,6 +39,7 @@ RUN set -eux; \
     ;
 
 COPY --link docker/php/conf.d/app.ini $PHP_INI_DIR/conf.d/
+COPY --link docker/php/conf.d/opentelemetry.ini $PHP_INI_DIR/conf.d/
 
 COPY --link docker/php/php-fpm.d/zz-docker.conf /usr/local/etc/php-fpm.d/zz-docker.conf
 RUN mkdir -p /var/run/php
