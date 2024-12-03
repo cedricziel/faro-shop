@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.43.0](https://github.com/cedricziel/faro-shop/compare/0.42.7...0.43.0) (2024-12-03)
+
+
+### Features
+
+* enable attribute hooks ([#1036](https://github.com/cedricziel/faro-shop/issues/1036)) ([b0c5518](https://github.com/cedricziel/faro-shop/commit/b0c5518d934b41c2faf8a4a3d2feb62f413a38a3))
+
+
+### Bug Fixes
+
+* record exception ([#1038](https://github.com/cedricziel/faro-shop/issues/1038)) ([1985b93](https://github.com/cedricziel/faro-shop/commit/1985b939d1c721a82663d05b035339757cb78667))
+
 ## [0.42.7](https://github.com/cedricziel/faro-shop/compare/0.42.6...0.42.7) (2024-12-02)
 
 
