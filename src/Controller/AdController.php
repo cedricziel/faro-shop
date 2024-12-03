@@ -40,7 +40,15 @@ class AdController extends AbstractController
     {
         Span::getCurrent()->setAttribute('app.product.id', $product->getId());
 
-        $products = $this->productRepository->findRelated($product, 3);
+        try {
+            $products = $this->productRepository->findRelated($product, 3);
+        } catch (\Exception $e) {
+            Span::getCurrent()
+                ->recordException($e)
+                ->setStatus(StatusCode::STATUS_ERROR, 'Unable to fetch related products');
+
+            throw $e;
+        }
 
         return $this->render('ad/ads_for_product.html.twig', [
             'product' => $product,
