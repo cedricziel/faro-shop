@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.42.7](https://github.com/cedricziel/faro-shop/compare/0.42.6...0.42.7) (2024-12-02)
+
+
+### Bug Fixes
+
+* bump doctrine/doctrine-fixtures-bundle from 3.6.2 to 3.7.0 ([#1028](https://github.com/cedricziel/faro-shop/issues/1028)) ([749cca0](https://github.com/cedricziel/faro-shop/commit/749cca0f393fb198a00641cabf53c34ed9b87b6d))
+* bump google/protobuf from 4.28.3 to 4.29.0 ([#1029](https://github.com/cedricziel/faro-shop/issues/1029)) ([1ef77d8](https://github.com/cedricziel/faro-shop/commit/1ef77d888773a98952670da26a5d0b69501e592b))
+* bump laravel/framework from 11.33.2 to 11.34.0 ([#1023](https://github.com/cedricziel/faro-shop/issues/1023)) ([02a0606](https://github.com/cedricziel/faro-shop/commit/02a06060261bc9d8c765a2c1933b5ddd126cc957))
+* bump laravel/framework from 11.34.0 to 11.34.1 ([#1026](https://github.com/cedricziel/faro-shop/issues/1026)) ([3cccc7d](https://github.com/cedricziel/faro-shop/commit/3cccc7da25968f5d9042233f357b053afddceafe))
+* bump laravel/framework from 11.34.1 to 11.34.2 ([#1027](https://github.com/cedricziel/faro-shop/issues/1027)) ([600396c](https://github.com/cedricziel/faro-shop/commit/600396cdda4a4a644dfe03be1be5bd945772af33))
+* bump php from 8.3.13-fpm-alpine to 8.4.1-fpm-alpine ([#1019](https://github.com/cedricziel/faro-shop/issues/1019)) ([aeb6a82](https://github.com/cedricziel/faro-shop/commit/aeb6a8229c6a82310f796c36617954cb3dedbe1e))
+* bump phpunit/phpunit from 11.4.3 to 11.4.4 ([#1025](https://github.com/cedricziel/faro-shop/issues/1025)) ([ac7155e](https://github.com/cedricziel/faro-shop/commit/ac7155e21455114287b4212e90b20c6f3f1daeb4))
+* bump the symfony group with 24 updates ([#1024](https://github.com/cedricziel/faro-shop/issues/1024)) ([c23fc72](https://github.com/cedricziel/faro-shop/commit/c23fc728350c44c4ef3798bc4c3ef0e29d451d65))
+* bump the symfony group with 3 updates ([#1033](https://github.com/cedricziel/faro-shop/issues/1033)) ([a8e6e59](https://github.com/cedricziel/faro-shop/commit/a8e6e591ea07d5a14be1d11c81a13673ae27bf62))
+* bump the symfony group with 51 updates ([#1030](https://github.com/cedricziel/faro-shop/issues/1030)) ([3f8ed1d](https://github.com/cedricziel/faro-shop/commit/3f8ed1dd07e9a6c8ec0ebefef1baff13ceec1059))
+* bump twig/extra-bundle from 3.15.0 to 3.16.0 ([#1032](https://github.com/cedricziel/faro-shop/issues/1032)) ([be7d3ba](https://github.com/cedricziel/faro-shop/commit/be7d3ba2933c67e9bdfaed5bd9b99e89da62918d))
+* bump twig/twig from 3.15.0 to 3.16.0 ([#1031](https://github.com/cedricziel/faro-shop/issues/1031)) ([cbbc32f](https://github.com/cedricziel/faro-shop/commit/cbbc32f3fcc96f28ea4a37763558c2ac190d357c))
+
 ## [0.42.6](https://github.com/cedricziel/faro-shop/compare/0.42.5...0.42.6) (2024-11-21)
 
 
