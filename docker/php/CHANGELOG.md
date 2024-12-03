@@ -1,5 +1,17 @@
 # Changelog
 
+## [8.5.0](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.4.8...php-baseimage-8.5.0) (2024-12-03)
+
+
+### Features
+
+* enable attribute hooks ([#1036](https://github.com/cedricziel/faro-shop/issues/1036)) ([b0c5518](https://github.com/cedricziel/faro-shop/commit/b0c5518d934b41c2faf8a4a3d2feb62f413a38a3))
+
+
+### Bug Fixes
+
+* bump php from 8.3.13-fpm-alpine to 8.4.1-fpm-alpine in /docker/php ([#1021](https://github.com/cedricziel/faro-shop/issues/1021)) ([9bab4c4](https://github.com/cedricziel/faro-shop/commit/9bab4c414b78754394a3349692c6acb4dc018f43))
+
 ## [8.4.8](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.4.7...php-baseimage-8.4.8) (2024-11-13)
 
 
