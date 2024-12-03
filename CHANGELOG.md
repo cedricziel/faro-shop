@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.43.1](https://github.com/cedricziel/faro-shop/compare/0.43.0...0.43.1) (2024-12-03)
+
+
+### Bug Fixes
+
+* bump cedricziel/faro-shop-php from 8.4.8 to 8.5.0 ([#1041](https://github.com/cedricziel/faro-shop/issues/1041)) ([59192f4](https://github.com/cedricziel/faro-shop/commit/59192f4ac15ff58d0fb04e78ae69d72b52f02ceb))
+* bump webpack from 5.96.1 to 5.97.0 ([#1043](https://github.com/cedricziel/faro-shop/issues/1043)) ([7ce8fab](https://github.com/cedricziel/faro-shop/commit/7ce8fab5d7e54228451b8fa414015e08e6918083))
+
 ## [0.43.0](https://github.com/cedricziel/faro-shop/compare/0.42.7...0.43.0) (2024-12-03)
 
 
