@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.43.2](https://github.com/cedricziel/faro-shop/compare/0.43.1...0.43.2) (2024-12-06)
+
+
+### Bug Fixes
+
+* bump doctrine/doctrine-fixtures-bundle from 3.7.0 to 4.0.0 ([#1053](https://github.com/cedricziel/faro-shop/issues/1053)) ([313ad48](https://github.com/cedricziel/faro-shop/commit/313ad481841f7a5a7d947df13d90db8a6a60cb45))
+* bump google/protobuf from 4.29.0 to 4.29.1 ([#1046](https://github.com/cedricziel/faro-shop/issues/1046)) ([e2708ab](https://github.com/cedricziel/faro-shop/commit/e2708abf9008bd3a7e2bad0176749534cd7091ec))
+* bump monolog/monolog from 3.8.0 to 3.8.1 ([#1051](https://github.com/cedricziel/faro-shop/issues/1051)) ([429b580](https://github.com/cedricziel/faro-shop/commit/429b580a6dbdfc944ec6b99f5db8669d6d62d048))
+* bump otel/opentelemetry-collector-contrib from 0.114.0 to 0.115.1 in /docker/otelcol ([#1050](https://github.com/cedricziel/faro-shop/issues/1050)) ([fa1eb8a](https://github.com/cedricziel/faro-shop/commit/fa1eb8a9fb29887c6cdd0b3b4d0e37c423376418))
+* bump phpunit/phpunit from 11.4.4 to 11.5.0 ([#1052](https://github.com/cedricziel/faro-shop/issues/1052)) ([84d89e4](https://github.com/cedricziel/faro-shop/commit/84d89e4278a112227aaebab00dc0575a727c8fd7))
+* bump sebastian/exporter from 6.1.3 to 6.3.0 ([#1048](https://github.com/cedricziel/faro-shop/issues/1048)) ([595cebf](https://github.com/cedricziel/faro-shop/commit/595cebf1f705fc106039145847275a9bf80eff2f))
+* bump webpack from 5.97.0 to 5.97.1 ([#1049](https://github.com/cedricziel/faro-shop/issues/1049)) ([fd7318a](https://github.com/cedricziel/faro-shop/commit/fd7318ab89248b921af0f88d620c9aca46a75e16))
+
 ## [0.43.1](https://github.com/cedricziel/faro-shop/compare/0.43.0...0.43.1) (2024-12-03)
 
 
