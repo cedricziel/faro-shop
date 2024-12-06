@@ -9,7 +9,7 @@
         "ext-iconv": "*",
         "ext-opentelemetry": "*",
         "doctrine/doctrine-bundle": "^2.10",
-        "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "doctrine/doctrine-fixtures-bundle": "^4.0",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^3.0",
         "google/protobuf": "^4.28",
