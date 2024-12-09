@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.43.2](https://github.com/cedricziel/faro-shop/compare/0.43.1...0.43.2) (2024-12-09)
+
+
+### Bug Fixes
+
+* bump doctrine/deprecations from 1.1.3 to 1.1.4 ([#1056](https://github.com/cedricziel/faro-shop/issues/1056)) ([51c3e28](https://github.com/cedricziel/faro-shop/commit/51c3e28b9a380531bd2446d5f5b738addbda9987))
+* bump doctrine/doctrine-fixtures-bundle from 3.7.0 to 4.0.0 ([#1053](https://github.com/cedricziel/faro-shop/issues/1053)) ([313ad48](https://github.com/cedricziel/faro-shop/commit/313ad481841f7a5a7d947df13d90db8a6a60cb45))
+* bump google/protobuf from 4.29.0 to 4.29.1 ([#1046](https://github.com/cedricziel/faro-shop/issues/1046)) ([e2708ab](https://github.com/cedricziel/faro-shop/commit/e2708abf9008bd3a7e2bad0176749534cd7091ec))
+* bump league/commonmark from 2.5.3 to 2.6.0 ([#1054](https://github.com/cedricziel/faro-shop/issues/1054)) ([c41279d](https://github.com/cedricziel/faro-shop/commit/c41279d003f4d28e67aa0cf557b00ee51700e39e))
+* bump monolog/monolog from 3.8.0 to 3.8.1 ([#1051](https://github.com/cedricziel/faro-shop/issues/1051)) ([429b580](https://github.com/cedricziel/faro-shop/commit/429b580a6dbdfc944ec6b99f5db8669d6d62d048))
+* bump otel/opentelemetry-collector-contrib from 0.114.0 to 0.115.1 in /docker/otelcol ([#1050](https://github.com/cedricziel/faro-shop/issues/1050)) ([fa1eb8a](https://github.com/cedricziel/faro-shop/commit/fa1eb8a9fb29887c6cdd0b3b4d0e37c423376418))
+* bump phpdocumentor/reflection-docblock from 5.6.0 to 5.6.1 ([#1055](https://github.com/cedricziel/faro-shop/issues/1055)) ([6b80b62](https://github.com/cedricziel/faro-shop/commit/6b80b629411edec2a187f90a35f8c6f0e19bf25d))
+* bump phpunit/phpunit from 11.4.4 to 11.5.0 ([#1052](https://github.com/cedricziel/faro-shop/issues/1052)) ([84d89e4](https://github.com/cedricziel/faro-shop/commit/84d89e4278a112227aaebab00dc0575a727c8fd7))
+* bump sebastian/exporter from 6.1.3 to 6.3.0 ([#1048](https://github.com/cedricziel/faro-shop/issues/1048)) ([595cebf](https://github.com/cedricziel/faro-shop/commit/595cebf1f705fc106039145847275a9bf80eff2f))
+* bump webpack from 5.97.0 to 5.97.1 ([#1049](https://github.com/cedricziel/faro-shop/issues/1049)) ([fd7318a](https://github.com/cedricziel/faro-shop/commit/fd7318ab89248b921af0f88d620c9aca46a75e16))
+
 ## [0.43.1](https://github.com/cedricziel/faro-shop/compare/0.43.0...0.43.1) (2024-12-03)
 
 
