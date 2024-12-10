@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.43.3](https://github.com/cedricziel/faro-shop/compare/0.43.2...0.43.3) (2024-12-10)
+
+
+### Bug Fixes
+
+* bump doctrine/data-fixtures from 2.0.0 to 2.0.1 ([#1062](https://github.com/cedricziel/faro-shop/issues/1062)) ([a1cba32](https://github.com/cedricziel/faro-shop/commit/a1cba32f9cf5b4d7806809ddf4301cf70ce1f55d))
+* bump symfony/stimulus-bundle from 2.22.0 to 2.22.1 in the symfony group ([#1059](https://github.com/cedricziel/faro-shop/issues/1059)) ([8dcb27e](https://github.com/cedricziel/faro-shop/commit/8dcb27e6c8a019ed3cb9628ee012dfa9ca4a3721))
+* bump twig/extra-bundle from 3.16.0 to 3.17.0 ([#1060](https://github.com/cedricziel/faro-shop/issues/1060)) ([c1b59ca](https://github.com/cedricziel/faro-shop/commit/c1b59ca645e746a2bc579c862c55c3477e5f15b5))
+* bump twig/twig from 3.16.0 to 3.17.0 ([#1061](https://github.com/cedricziel/faro-shop/issues/1061)) ([b25f623](https://github.com/cedricziel/faro-shop/commit/b25f623977bc7eb7b900ea6916fb9a90cecf4c2b))
+
 ## [0.43.2](https://github.com/cedricziel/faro-shop/compare/0.43.1...0.43.2) (2024-12-09)
 
 
