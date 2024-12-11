@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.43.4](https://github.com/cedricziel/faro-shop/compare/0.43.3...0.43.4) (2024-12-11)
+
+
+### Bug Fixes
+
+* bump laravel/framework from 11.34.2 to 11.35.0 ([#1067](https://github.com/cedricziel/faro-shop/issues/1067)) ([9cc7e7e](https://github.com/cedricziel/faro-shop/commit/9cc7e7ed6751a010ff608f7760928b0603b89ea9))
+* bump phpunit/php-code-coverage from 11.0.7 to 11.0.8 ([#1069](https://github.com/cedricziel/faro-shop/issues/1069)) ([928d401](https://github.com/cedricziel/faro-shop/commit/928d40135ee260e6887f12be7e23ef5ead3b1ded))
+* bump the symfony group with 13 updates ([#1065](https://github.com/cedricziel/faro-shop/issues/1065)) ([cfffccf](https://github.com/cedricziel/faro-shop/commit/cfffccfc84892702527ab5e6bbdb611c69bcd3d2))
+* bump zenstruck/foundry from 2.2.2 to 2.3.0 ([#1066](https://github.com/cedricziel/faro-shop/issues/1066)) ([85c2bbd](https://github.com/cedricziel/faro-shop/commit/85c2bbd05cf51a2babc43e108cd01637d38c974b))
+
 ## [0.43.3](https://github.com/cedricziel/faro-shop/compare/0.43.2...0.43.3) (2024-12-10)
 
 
