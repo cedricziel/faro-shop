@@ -12816,16 +12816,16 @@
         },
         {
             "name": "liip/test-fixtures-bundle",
-            "version": "3.1.1",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipTestFixturesBundle.git",
-                "reference": "537bcb45e61bdef2a853caeb37643159a3b44e15"
+                "reference": "91ef15e1e4bf96c2a3b9d4374c6410bd08d5b471"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipTestFixturesBundle/zipball/537bcb45e61bdef2a853caeb37643159a3b44e15",
-                "reference": "537bcb45e61bdef2a853caeb37643159a3b44e15",
+                "url": "https://api.github.com/repos/liip/LiipTestFixturesBundle/zipball/91ef15e1e4bf96c2a3b9d4374c6410bd08d5b471",
+                "reference": "91ef15e1e4bf96c2a3b9d4374c6410bd08d5b471",
                 "shasum": ""
             },
             "require": {
@@ -12845,7 +12845,7 @@
                 "doctrine/orm": "<2.14 || >=4.0"
             },
             "require-dev": {
-                "doctrine/data-fixtures": "^1.7",
+                "doctrine/data-fixtures": "^1.7 || ^2.0.1",
                 "doctrine/doctrine-bundle": "^2.11",
                 "doctrine/doctrine-fixtures-bundle": "^3.5.1 || ^4.0",
                 "doctrine/mongodb-odm": "^2.5",
@@ -12898,9 +12898,9 @@
             ],
             "support": {
                 "issues": "https://github.com/liip/LiipTestFixturesBundle/issues",
-                "source": "https://github.com/liip/LiipTestFixturesBundle/tree/3.1.1"
+                "source": "https://github.com/liip/LiipTestFixturesBundle/tree/3.2.0"
             },
-            "time": "2024-11-12T19:08:31+00:00"
+            "time": "2024-12-12T00:36:58+00:00"
         },
         {
             "name": "masterminds/html5",
