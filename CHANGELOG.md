@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.43.5](https://github.com/cedricziel/faro-shop/compare/0.43.4...0.43.5) (2024-12-16)
+
+
+### Bug Fixes
+
+* bump helm/kind-action from 1.10.0 to 1.11.0 ([#1080](https://github.com/cedricziel/faro-shop/issues/1080)) ([a157581](https://github.com/cedricziel/faro-shop/commit/a1575812256bc9d6fed33e0da7bb084989cdcad1))
+* bump laravel/framework from 11.35.0 to 11.35.1 ([#1079](https://github.com/cedricziel/faro-shop/issues/1079)) ([fe89911](https://github.com/cedricziel/faro-shop/commit/fe89911d15e490af8f27ca2c34f6690de3f08d15))
+* bump liip/test-fixtures-bundle from 3.1.1 to 3.2.0 ([#1078](https://github.com/cedricziel/faro-shop/issues/1078)) ([b28e10c](https://github.com/cedricziel/faro-shop/commit/b28e10ca0adf106d2195ae1f844da051432e213a))
+* bump open-telemetry/api from 1.1.1 to 1.1.2 in the open-telemetry group ([#1074](https://github.com/cedricziel/faro-shop/issues/1074)) ([ad54124](https://github.com/cedricziel/faro-shop/commit/ad54124e9044aa2198a44b89091cccda794336cb))
+* bump phpunit/phpunit from 11.5.0 to 11.5.1 ([#1068](https://github.com/cedricziel/faro-shop/issues/1068)) ([2b5d894](https://github.com/cedricziel/faro-shop/commit/2b5d894b2fed77c8a2be908acbc48553a859f7b3))
+* bump sebastian/code-unit from 3.0.1 to 3.0.2 ([#1077](https://github.com/cedricziel/faro-shop/issues/1077)) ([290531e](https://github.com/cedricziel/faro-shop/commit/290531ec1b391610c09f1422a0a7c8e1c28bfcb3))
+* bump twig/twig from 3.17.0 to 3.17.1 ([#1076](https://github.com/cedricziel/faro-shop/issues/1076)) ([850b6e0](https://github.com/cedricziel/faro-shop/commit/850b6e04b9729b0deac5de6c05d7f3a1c45b1243))
+* bump zenstruck/foundry from 2.3.0 to 2.3.1 ([#1075](https://github.com/cedricziel/faro-shop/issues/1075)) ([695263a](https://github.com/cedricziel/faro-shop/commit/695263a77294530f7be15db3882cb12630c974a9))
+
 ## [0.43.4](https://github.com/cedricziel/faro-shop/compare/0.43.3...0.43.4) (2024-12-11)
 
 
