@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.43.7](https://github.com/cedricziel/faro-shop/compare/0.43.6...0.43.7) (2024-12-20)
+
+
+### Bug Fixes
+
+* bump grafana/k6 from 0.55.1-with-browser to 0.55.2-with-browser in /docker/k6 ([#1093](https://github.com/cedricziel/faro-shop/issues/1093)) ([d265400](https://github.com/cedricziel/faro-shop/commit/d265400af09ebcad3cd82a32e5b968d177929ab7))
+
 ## [0.43.6](https://github.com/cedricziel/faro-shop/compare/0.43.5...0.43.6) (2024-12-19)
 
 
