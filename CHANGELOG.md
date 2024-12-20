@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.43.6](https://github.com/cedricziel/faro-shop/compare/0.43.5...0.43.6) (2024-12-19)
+
+
+### Bug Fixes
+
+* bump doctrine/orm from 3.3.0 to 3.3.1 ([#1089](https://github.com/cedricziel/faro-shop/issues/1089)) ([19388c0](https://github.com/cedricziel/faro-shop/commit/19388c00eff56a036cface421bcb8c672c06bc89))
+* bump google/protobuf from 4.29.1 to 4.29.2 ([#1087](https://github.com/cedricziel/faro-shop/issues/1087)) ([9eae0cf](https://github.com/cedricziel/faro-shop/commit/9eae0cf36fe0199be784edaf8bf0d98736de59dc))
+* bump grafana/k6 from 0.55.0-with-browser to 0.55.1-with-browser in /docker/k6 ([#1090](https://github.com/cedricziel/faro-shop/issues/1090)) ([7441d57](https://github.com/cedricziel/faro-shop/commit/7441d577127e9c03f437c541e06e2f97516a433c))
+* bump laravel/framework from 11.35.1 to 11.36.1 ([#1086](https://github.com/cedricziel/faro-shop/issues/1086)) ([d01f08a](https://github.com/cedricziel/faro-shop/commit/d01f08aa72fee6e2453f8b3587dce23d5bcb1cc1))
+* bump laravel/serializable-closure from 2.0.0 to 2.0.1 ([#1085](https://github.com/cedricziel/faro-shop/issues/1085)) ([78b17c1](https://github.com/cedricziel/faro-shop/commit/78b17c19dd862bb82a781facb77a894f49fc1c87))
+* bump liip/test-fixtures-bundle from 3.2.0 to 3.2.1 ([#1081](https://github.com/cedricziel/faro-shop/issues/1081)) ([6b31c37](https://github.com/cedricziel/faro-shop/commit/6b31c37b3fad23b0e714d8423be9e9eeb54a08b0))
+* bump otel/opentelemetry-collector-contrib from 0.115.1 to 0.116.1 in /docker/otelcol ([#1088](https://github.com/cedricziel/faro-shop/issues/1088)) ([db04f24](https://github.com/cedricziel/faro-shop/commit/db04f248a4cd9150587a0e388a5717e35a0377f4))
+
 ## [0.43.5](https://github.com/cedricziel/faro-shop/compare/0.43.4...0.43.5) (2024-12-16)
 
 
