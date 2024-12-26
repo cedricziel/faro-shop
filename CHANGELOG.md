@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.43.7](https://github.com/cedricziel/faro-shop/compare/0.43.6...0.43.7) (2024-12-24)
+
+
+### Bug Fixes
+
+* bump cedricziel/faro-shop-php from 8.5.0 to 8.5.1 ([#1102](https://github.com/cedricziel/faro-shop/issues/1102)) ([e377bd0](https://github.com/cedricziel/faro-shop/commit/e377bd0daed8a7a12a8f69aaf8d3a82cd9c312f4))
+* bump grafana/k6 from 0.55.1-with-browser to 0.55.2-with-browser in /docker/k6 ([#1093](https://github.com/cedricziel/faro-shop/issues/1093)) ([d265400](https://github.com/cedricziel/faro-shop/commit/d265400af09ebcad3cd82a32e5b968d177929ab7))
+* bump helm/kind-action from 1.11.0 to 1.12.0 ([#1101](https://github.com/cedricziel/faro-shop/issues/1101)) ([b709734](https://github.com/cedricziel/faro-shop/commit/b709734158fe585683cb5af2bfbd6c4eba1e9d32))
+* bump nesbot/carbon from 3.8.2 to 3.8.3 ([#1098](https://github.com/cedricziel/faro-shop/issues/1098)) ([9723791](https://github.com/cedricziel/faro-shop/commit/9723791ecc253494271d12ce9917217c16e8477b))
+* bump php from 8.4.1-fpm-alpine to 8.4.2-fpm-alpine ([#1100](https://github.com/cedricziel/faro-shop/issues/1100)) ([0ab04cd](https://github.com/cedricziel/faro-shop/commit/0ab04cd2a8b44be2c6a9fcc0c5b5abe8e242497c))
+* bump phpunit/phpunit from 11.5.1 to 11.5.2 ([#1097](https://github.com/cedricziel/faro-shop/issues/1097)) ([e019b04](https://github.com/cedricziel/faro-shop/commit/e019b04d02282182bfd9ed3ec1776607978efbfc))
+* bump tijsverkoyen/css-to-inline-styles from 2.2.7 to 2.3.0 ([#1099](https://github.com/cedricziel/faro-shop/issues/1099)) ([1aa6bcb](https://github.com/cedricziel/faro-shop/commit/1aa6bcbf2cbf21ff47092bfc13cbf479e7a03f36))
+
 ## [0.43.6](https://github.com/cedricziel/faro-shop/compare/0.43.5...0.43.6) (2024-12-19)
 
 
