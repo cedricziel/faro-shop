@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.43.8](https://github.com/cedricziel/faro-shop/compare/0.43.7...0.43.8) (2025-01-06)
+
+
+### Bug Fixes
+
+* bump doctrine/common from 3.4.5 to 3.5.0 ([#1114](https://github.com/cedricziel/faro-shop/issues/1114)) ([6b4fa79](https://github.com/cedricziel/faro-shop/commit/6b4fa79acab3af7b3453f6b9f70873b89d61b4a2))
+* bump egulias/email-validator from 4.0.2 to 4.0.3 ([#1107](https://github.com/cedricziel/faro-shop/issues/1107)) ([1f6f8d0](https://github.com/cedricziel/faro-shop/commit/1f6f8d038304f037b345b35ba1053a2420427080))
+* bump laravel/framework from 11.36.1 to 11.37.0 ([#1115](https://github.com/cedricziel/faro-shop/issues/1115)) ([9b5436e](https://github.com/cedricziel/faro-shop/commit/9b5436e303c691bcece174e95d7ebe4fd7ee9736))
+* bump league/commonmark from 2.6.0 to 2.6.1 ([#1110](https://github.com/cedricziel/faro-shop/issues/1110)) ([866a7e0](https://github.com/cedricziel/faro-shop/commit/866a7e0e818300b85c92f3379f3548424fcca181))
+* bump nesbot/carbon from 3.8.3 to 3.8.4 ([#1106](https://github.com/cedricziel/faro-shop/issues/1106)) ([9a3942f](https://github.com/cedricziel/faro-shop/commit/9a3942f7d42ae46bada06fe3dbbab798c5ee81e6))
+* bump nikic/php-parser from 5.3.1 to 5.4.0 ([#1111](https://github.com/cedricziel/faro-shop/issues/1111)) ([5a9b14c](https://github.com/cedricziel/faro-shop/commit/5a9b14c423382595eec5ef18a32d00f8a4a09a8b))
+* bump symfony/stopwatch from 7.1.6 to 7.2.0 in the symfony group ([#1105](https://github.com/cedricziel/faro-shop/issues/1105)) ([4f76bc3](https://github.com/cedricziel/faro-shop/commit/4f76bc3df6fca4d9e8b05627bad0202204d1e98c))
+* bump the symfony group with 15 updates ([#1113](https://github.com/cedricziel/faro-shop/issues/1113)) ([055bfb5](https://github.com/cedricziel/faro-shop/commit/055bfb5eaf130f623c353005a45840a38a8e14d7))
+* bump twig/extra-bundle from 3.17.0 to 3.18.0 ([#1109](https://github.com/cedricziel/faro-shop/issues/1109)) ([2b65d5e](https://github.com/cedricziel/faro-shop/commit/2b65d5e447aec844fa84fc38a75f2978e1e2f1d6))
+* bump twig/twig from 3.17.1 to 3.18.0 ([#1112](https://github.com/cedricziel/faro-shop/issues/1112)) ([4bebde5](https://github.com/cedricziel/faro-shop/commit/4bebde5a12dc695dbbb7d949e20a82d55892e521))
+
 ## [0.43.7](https://github.com/cedricziel/faro-shop/compare/0.43.6...0.43.7) (2024-12-24)
 
 
