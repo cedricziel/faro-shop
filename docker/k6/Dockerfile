@@ -1,3 +1,3 @@
-FROM grafana/k6:0.55.2-with-browser
+FROM grafana/k6:0.56.0-with-browser
 
 COPY script.js /etc/script.js
