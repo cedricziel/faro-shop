@@ -27,6 +27,7 @@ kind create cluster --name faro-shop
 helm repo add grafana https://grafana.github.io/helm-charts &&
   helm repo update &&
   helm upgrade --install --atomic --timeout 300s grafana-k8s-monitoring grafana/k8s-monitoring \
+    --version ^1 \
     --namespace "faro-shop" \
     --create-namespace \
     --values k8s/kubernetes-monitoring.values.yaml
