@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.43.9](https://github.com/cedricziel/faro-shop/compare/0.43.8...0.43.9) (2025-01-09)
+
+
+### Bug Fixes
+
+* bump @symfony/stimulus-bridge from 3.2.2 to 3.2.3 ([#1124](https://github.com/cedricziel/faro-shop/issues/1124)) ([f6784d6](https://github.com/cedricziel/faro-shop/commit/f6784d67ec18c542c7f421315fc34d5baacb9cc6))
+* bump caddy from 2.8.4-alpine to 2.9.1-alpine ([#1127](https://github.com/cedricziel/faro-shop/issues/1127)) ([195a55b](https://github.com/cedricziel/faro-shop/commit/195a55b95f9df78dacfeb1616442336213204d34))
+* bump core-js from 3.39.0 to 3.40.0 ([#1121](https://github.com/cedricziel/faro-shop/issues/1121)) ([a35096a](https://github.com/cedricziel/faro-shop/commit/a35096ae009a3b1db8c59f8717af367cc8a782c0))
+* bump google/protobuf from 4.29.2 to 4.29.3 ([#1126](https://github.com/cedricziel/faro-shop/issues/1126)) ([06e696d](https://github.com/cedricziel/faro-shop/commit/06e696dc34bb15a98fc59eed247b2bdd895af073))
+* bump grafana/k6 from 0.55.2-with-browser to 0.56.0-with-browser in /docker/k6 ([#1120](https://github.com/cedricziel/faro-shop/issues/1120)) ([ecaa1e9](https://github.com/cedricziel/faro-shop/commit/ecaa1e9fe4ac483de354d6825b346e6e68cd5d11))
+* bump otel/opentelemetry-collector-contrib from 0.116.1 to 0.117.0 in /docker/otelcol ([#1123](https://github.com/cedricziel/faro-shop/issues/1123)) ([8f93f69](https://github.com/cedricziel/faro-shop/commit/8f93f69205a755d88b28e0a55c51539cb5a4edc4))
+* bump sebastian/comparator from 6.2.1 to 6.3.0 ([#1118](https://github.com/cedricziel/faro-shop/issues/1118)) ([b6b53da](https://github.com/cedricziel/faro-shop/commit/b6b53da00abc3513bced27c7d35c2637550655c8))
+* bump the open-telemetry group with 3 updates ([#1125](https://github.com/cedricziel/faro-shop/issues/1125)) ([713d4a5](https://github.com/cedricziel/faro-shop/commit/713d4a5e38235daf5a2181c6090e36f6ebd9aa99))
+
 ## [0.43.8](https://github.com/cedricziel/faro-shop/compare/0.43.7...0.43.8) (2025-01-06)
 
 
