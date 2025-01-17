@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.43.10](https://github.com/cedricziel/faro-shop/compare/0.43.9...0.43.10) (2025-01-17)
+
+
+### Bug Fixes
+
+* bump doctrine/dbal from 4.2.1 to 4.2.2 ([#1140](https://github.com/cedricziel/faro-shop/issues/1140)) ([7702107](https://github.com/cedricziel/faro-shop/commit/7702107d596a7cb0361f17b6791a92a7a5588c4c))
+* bump doctrine/doctrine-bundle from 2.13.1 to 2.13.2 ([#1139](https://github.com/cedricziel/faro-shop/issues/1139)) ([46d2eae](https://github.com/cedricziel/faro-shop/commit/46d2eaeb0efaca552ee3334aa4a8c60fbc9e1dc8))
+* bump doctrine/doctrine-migrations-bundle from 3.3.1 to 3.4.0 ([#1141](https://github.com/cedricziel/faro-shop/issues/1141)) ([6a73ce7](https://github.com/cedricziel/faro-shop/commit/6a73ce7780e21389681a8ff597563026055833ec))
+* bump laravel/framework from 11.37.0 to 11.38.0 ([#1134](https://github.com/cedricziel/faro-shop/issues/1134)) ([2fe55c8](https://github.com/cedricziel/faro-shop/commit/2fe55c81877469499e27070d3c95c759709396a4))
+* bump laravel/framework from 11.38.0 to 11.38.2 ([#1137](https://github.com/cedricziel/faro-shop/issues/1137)) ([3cf3041](https://github.com/cedricziel/faro-shop/commit/3cf304146bca3e760ad43a17fcb082f731d77c04))
+* bump laravel/prompts from 0.3.2 to 0.3.3 ([#1136](https://github.com/cedricziel/faro-shop/issues/1136)) ([bd12846](https://github.com/cedricziel/faro-shop/commit/bd128469a997bcf268347e1731922c1eae301168))
+* bump open-telemetry/gen-otlp-protobuf from 1.2.1 to 1.5.0 in the open-telemetry group ([#1138](https://github.com/cedricziel/faro-shop/issues/1138)) ([fcefb7e](https://github.com/cedricziel/faro-shop/commit/fcefb7eff0845ebd54b824dae18acfc01043ff52))
+* bump phpunit/phpunit from 11.5.2 to 11.5.3 ([#1131](https://github.com/cedricziel/faro-shop/issues/1131)) ([311208c](https://github.com/cedricziel/faro-shop/commit/311208c70a8111aef9c5e2c9437b709ff3ba04e5))
+* bump symfony/css-selector from 7.1.6 to 7.2.0 in the symfony group ([#1130](https://github.com/cedricziel/faro-shop/issues/1130)) ([4c131eb](https://github.com/cedricziel/faro-shop/commit/4c131ebff1c9940b25d25913b56ea461cc37f7ea))
+* bump symfony/maker-bundle from 1.61.0 to 1.62.0 in the symfony group ([#1133](https://github.com/cedricziel/faro-shop/issues/1133)) ([d1a54cf](https://github.com/cedricziel/faro-shop/commit/d1a54cf0ac4db510434880e6348a70a0bed98029))
+* bump symfony/maker-bundle from 1.62.0 to 1.62.1 in the symfony group ([#1135](https://github.com/cedricziel/faro-shop/issues/1135)) ([07ebf5b](https://github.com/cedricziel/faro-shop/commit/07ebf5bb104a10f5ad3434b611719605a0dff4af))
+
 ## [0.43.9](https://github.com/cedricziel/faro-shop/compare/0.43.8...0.43.9) (2025-01-09)
 
 
