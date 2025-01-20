@@ -1,5 +1,5 @@
 {
   ".": "0.43.11",
   "docker/php": "8.5.1",
-  "k8s/charts/faro-shop": "0.81.0"
+  "k8s/charts/faro-shop": "0.82.0"
 }
