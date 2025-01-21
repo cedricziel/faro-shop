@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.43.12](https://github.com/cedricziel/faro-shop/compare/0.43.11...0.43.12) (2025-01-21)
+
+
+### Bug Fixes
+
+* bump cedricziel/faro-shop-php from 8.5.1 to 8.5.2 ([#1155](https://github.com/cedricziel/faro-shop/issues/1155)) ([533d0dc](https://github.com/cedricziel/faro-shop/commit/533d0dcc80279db9227fa3d8dad41392413b7618))
+* bump doctrine/data-fixtures from 2.0.1 to 2.0.2 ([#1157](https://github.com/cedricziel/faro-shop/issues/1157)) ([c62a4aa](https://github.com/cedricziel/faro-shop/commit/c62a4aa9c8617b2d656c1439a448c09de3d189b8))
+* bump helm/chart-testing-action from 2.6.1 to 2.7.0 ([#1151](https://github.com/cedricziel/faro-shop/issues/1151)) ([1b2572b](https://github.com/cedricziel/faro-shop/commit/1b2572b783dbe2668c3db6d198725e07dce055cb))
+* bump laravel/framework from 11.38.2 to 11.39.0 ([#1156](https://github.com/cedricziel/faro-shop/issues/1156)) ([5e444fd](https://github.com/cedricziel/faro-shop/commit/5e444fd54c1ebfe179c70b19b4159cbb99e56d3b))
+* bump php from 8.4.2-fpm-alpine to 8.4.3-fpm-alpine ([#1154](https://github.com/cedricziel/faro-shop/issues/1154)) ([b67e588](https://github.com/cedricziel/faro-shop/commit/b67e588b9b1d88704eb624fd96941ac0486a301c))
+
 ## [0.43.11](https://github.com/cedricziel/faro-shop/compare/0.43.10...0.43.11) (2025-01-20)
 
 
