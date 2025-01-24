@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.43.13](https://github.com/cedricziel/faro-shop/compare/0.43.12...0.43.13) (2025-01-24)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.26.0 to 7.26.7 ([#1165](https://github.com/cedricziel/faro-shop/issues/1165)) ([e09505b](https://github.com/cedricziel/faro-shop/commit/e09505b716bc77bae28e8d0dd551869f322fede5))
+* bump @babel/preset-env from 7.26.0 to 7.26.7 ([#1164](https://github.com/cedricziel/faro-shop/issues/1164)) ([ff05d46](https://github.com/cedricziel/faro-shop/commit/ff05d46a71821c62d7f97303d5e3be4792121c75))
+* bump doctrine/sql-formatter from 1.5.1 to 1.5.2 ([#1163](https://github.com/cedricziel/faro-shop/issues/1163)) ([fef6fa3](https://github.com/cedricziel/faro-shop/commit/fef6fa396b5c905d92f48327891b3371a632da6d))
+* bump laravel/framework from 11.39.0 to 11.39.1 ([#1162](https://github.com/cedricziel/faro-shop/issues/1162)) ([3654c74](https://github.com/cedricziel/faro-shop/commit/3654c74dbc348129809c95ee95ec2c17bc3c4860))
+* bump otel/opentelemetry-collector-contrib from 0.117.0 to 0.118.0 in /docker/otelcol ([#1160](https://github.com/cedricziel/faro-shop/issues/1160)) ([a8f0ec5](https://github.com/cedricziel/faro-shop/commit/a8f0ec587beece093053f0a162c1366e1710359f))
+
 ## [0.43.12](https://github.com/cedricziel/faro-shop/compare/0.43.11...0.43.12) (2025-01-21)
 
 
