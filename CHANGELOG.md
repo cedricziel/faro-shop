@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.43.14](https://github.com/cedricziel/faro-shop/compare/0.43.13...0.43.14) (2025-01-28)
+
+
+### Bug Fixes
+
+* bump doctrine/doctrine-migrations-bundle from 3.4.0 to 3.4.1 ([#1170](https://github.com/cedricziel/faro-shop/issues/1170)) ([8f41120](https://github.com/cedricziel/faro-shop/commit/8f4112065190b71e279f3bca024c6ecf723d38f8))
+* bump laravel/framework from 11.40.0 to 11.41.0 ([#1171](https://github.com/cedricziel/faro-shop/issues/1171)) ([d506675](https://github.com/cedricziel/faro-shop/commit/d506675351845b0c15a3a3960c2042ef18940da3))
+* bump phpunit/phpunit from 11.5.3 to 11.5.4 ([#1172](https://github.com/cedricziel/faro-shop/issues/1172)) ([86d7b44](https://github.com/cedricziel/faro-shop/commit/86d7b443c4f3777ef3d76bc45f2d94652120dc4d))
+* bump the open-telemetry group with 2 updates ([#1169](https://github.com/cedricziel/faro-shop/issues/1169)) ([4b5ecf6](https://github.com/cedricziel/faro-shop/commit/4b5ecf600d1b19e9c7c679adc53a897c466f3065))
+
 ## [0.43.13](https://github.com/cedricziel/faro-shop/compare/0.43.12...0.43.13) (2025-01-24)
 
 
