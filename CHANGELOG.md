@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.43.16](https://github.com/cedricziel/faro-shop/compare/0.43.15...0.43.16) (2025-01-30)
+
+
+### Bug Fixes
+
+* bump laravel/framework from 11.41.0 to 11.41.3 ([#1184](https://github.com/cedricziel/faro-shop/issues/1184)) ([88e8cd3](https://github.com/cedricziel/faro-shop/commit/88e8cd340326001c703354d616f0eb24fe079887))
+
 ## [0.43.15](https://github.com/cedricziel/faro-shop/compare/0.43.14...0.43.15) (2025-01-29)
 
 
