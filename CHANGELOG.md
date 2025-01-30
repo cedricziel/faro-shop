@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.43.15](https://github.com/cedricziel/faro-shop/compare/0.43.14...0.43.15) (2025-01-29)
+
+
+### Bug Fixes
+
+* bump laravel/prompts from 0.3.3 to 0.3.4 ([#1178](https://github.com/cedricziel/faro-shop/issues/1178)) ([5bd8a1c](https://github.com/cedricziel/faro-shop/commit/5bd8a1cdf9f441635af8abd81177a6564d1a3d31))
+* bump phpunit/phpunit from 11.5.4 to 11.5.5 ([#1180](https://github.com/cedricziel/faro-shop/issues/1180)) ([859cb8b](https://github.com/cedricziel/faro-shop/commit/859cb8bb7134bad847dda057d7985faa3e1a5690))
+* bump the symfony group with 29 updates ([#1176](https://github.com/cedricziel/faro-shop/issues/1176)) ([56cb7ea](https://github.com/cedricziel/faro-shop/commit/56cb7ea7994dd9d3f9705e0136525d1140de2a67))
+* bump twig/extra-bundle from 3.18.0 to 3.19.0 ([#1179](https://github.com/cedricziel/faro-shop/issues/1179)) ([6d93c56](https://github.com/cedricziel/faro-shop/commit/6d93c56be83538a2dfe346fc710eeb797e99cb17))
+* bump twig/twig from 3.18.0 to 3.19.0 ([#1177](https://github.com/cedricziel/faro-shop/issues/1177)) ([53e1908](https://github.com/cedricziel/faro-shop/commit/53e1908113ca622bb6dd124f690a676f41e04801))
+
 ## [0.43.14](https://github.com/cedricziel/faro-shop/compare/0.43.13...0.43.14) (2025-01-28)
 
 
