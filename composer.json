@@ -5,6 +5,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.3",
+        "ext-apcu": "*",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-opentelemetry": "*",
@@ -112,7 +113,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "7.1.*",
+            "require": "7.2.*",
             "docker": true
         }
     },
@@ -120,11 +121,11 @@
         "liip/test-fixtures-bundle": "^3.0",
         "phpunit/phpunit": "^11.0",
         "symfony/browser-kit": "7.2.*",
-        "symfony/css-selector": "7.1.*",
+        "symfony/css-selector": "7.2.*",
         "symfony/debug-bundle": "7.2.*",
         "symfony/maker-bundle": "^1.0",
         "symfony/phpunit-bridge": "^6.3",
-        "symfony/stopwatch": "7.1.*",
+        "symfony/stopwatch": "7.2.*",
         "symfony/web-profiler-bundle": "7.2.*",
         "zenstruck/browser": "^1.8",
         "zenstruck/foundry": "^2.0"
