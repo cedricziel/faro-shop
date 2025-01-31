@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Product;
+use DateTime;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
@@ -42,7 +43,7 @@ class ProductRepository extends ServiceEntityRepository
 
     public function findRelated(Product $product, int $amount): array
     {
-        if ($product->getName() === 'Phare du Petit Minou') {
+        if ($this->should_fail()) {
             throw HttpException::fromStatusCode(Response::HTTP_BAD_REQUEST, 'DatabaseConnectionException: Connection to the database failed.');
         }
 
@@ -52,5 +53,38 @@ class ProductRepository extends ServiceEntityRepository
             ->setMaxResults($amount)
             ->getQuery()
             ->getResult();
+    }
+
+    private function should_fail(): bool
+    {
+        // dont fail in dev & test
+        if (getenv('APP_ENV') == 'dev' || getenv('APP_ENV') == 'test') {
+            return false;
+        }
+
+        $apcuKey = 'demo_start_time';
+        $resetMinute = 10; // Reset 10 minutes after the full hour
+
+        // Get the current time
+        $now = new DateTime();
+        $currentMinute = (int) $now->format('i');
+
+        // Check if stored start time exists
+        $startTime = apcu_fetch($apcuKey);
+
+        // Reset logic: if it's 10 minutes past the hour, reset the stored value
+        if ($currentMinute >= $resetMinute) {
+            apcu_delete($apcuKey);
+            $startTime = false;
+        }
+
+        // If no start time exists, generate and store it
+        if ($startTime === false) {
+            $startTime = 50 + rand(0, 15);
+            apcu_store($apcuKey, $startTime);
+        }
+
+        // Failure condition: should fail if the current minute is >= the stored start time
+        return $currentMinute >= $startTime;
     }
 }
