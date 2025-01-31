@@ -85,6 +85,11 @@ class ProductRepository extends ServiceEntityRepository
         }
 
         // Failure condition: should fail if the current minute is >= the stored start time
-        return $currentMinute >= $startTime;
+        $shouldFail = $currentMinute >= $startTime;
+        if ($shouldFail) {
+            sleep(5);
+        }
+
+        return $shouldFail;
     }
 }
