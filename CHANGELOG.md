@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.43.17](https://github.com/cedricziel/faro-shop/compare/0.43.16...0.43.17) (2025-01-31)
+
+
+### Bug Fixes
+
+* bump @symfony/stimulus-bridge from 3.2.3 to 4.0.0 ([#1183](https://github.com/cedricziel/faro-shop/issues/1183)) ([acba1cb](https://github.com/cedricziel/faro-shop/commit/acba1cba5161b2a515c899d79eefd506f9a93534))
+* bump phpunit/phpunit from 11.5.5 to 11.5.6 ([#1186](https://github.com/cedricziel/faro-shop/issues/1186)) ([ea56b59](https://github.com/cedricziel/faro-shop/commit/ea56b593e34ea0a195837647b56603066ebfb0b2))
+
 ## [0.43.16](https://github.com/cedricziel/faro-shop/compare/0.43.15...0.43.16) (2025-01-30)
 
 
