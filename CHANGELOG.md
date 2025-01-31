@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.44.0](https://github.com/cedricziel/faro-shop/compare/0.43.17...0.44.0) (2025-01-31)
+
+
+### Features
+
+* delay if should fail ([#1191](https://github.com/cedricziel/faro-shop/issues/1191)) ([5189eee](https://github.com/cedricziel/faro-shop/commit/5189eee206fbcf18881908d25fefe031a6a38962))
+
+
+### Bug Fixes
+
+* audit ([#1190](https://github.com/cedricziel/faro-shop/issues/1190)) ([b60a1f5](https://github.com/cedricziel/faro-shop/commit/b60a1f54e54d05f81e3638a872dc4b6eb103b3d4))
+* migrate to failing consistently, hourly ([#1188](https://github.com/cedricziel/faro-shop/issues/1188)) ([89e678b](https://github.com/cedricziel/faro-shop/commit/89e678b68836160124b2959b34b22483164064e5))
+
 ## [0.43.17](https://github.com/cedricziel/faro-shop/compare/0.43.16...0.43.17) (2025-01-31)
 
 
