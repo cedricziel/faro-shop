@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.44.1](https://github.com/cedricziel/faro-shop/compare/0.44.0...0.44.1) (2025-02-03)
+
+
+### Bug Fixes
+
+* bump guzzlehttp/uri-template from 1.0.3 to 1.0.4 ([#1198](https://github.com/cedricziel/faro-shop/issues/1198)) ([4c18ff4](https://github.com/cedricziel/faro-shop/commit/4c18ff49e0b3d555487f037a7e90d50825525f7d))
+* bump the grafana group with 2 updates ([#1196](https://github.com/cedricziel/faro-shop/issues/1196)) ([ffd25f4](https://github.com/cedricziel/faro-shop/commit/ffd25f4c7ac52a4005619a87b64201446373d5c3))
+* bump zenstruck/foundry from 2.3.1 to 2.3.2 ([#1195](https://github.com/cedricziel/faro-shop/issues/1195)) ([b38310c](https://github.com/cedricziel/faro-shop/commit/b38310c14ba758bdc17c182c2b128ceac16a946e))
+* bump zenstruck/foundry from 2.3.2 to 2.3.3 ([#1197](https://github.com/cedricziel/faro-shop/issues/1197)) ([033c12b](https://github.com/cedricziel/faro-shop/commit/033c12b1b6137454d5ef453c71c8dad4b42c1b58))
+
 ## [0.44.0](https://github.com/cedricziel/faro-shop/compare/0.43.17...0.44.0) (2025-01-31)
 
 
