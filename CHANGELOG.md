@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.44.2](https://github.com/cedricziel/faro-shop/compare/0.44.1...0.44.2) (2025-02-11)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.26.7 to 7.26.8 ([#1210](https://github.com/cedricziel/faro-shop/issues/1210)) ([5c5ed26](https://github.com/cedricziel/faro-shop/commit/5c5ed2621333523d054ebabfb3910dd4dc6ca6a2))
+* bump @babel/preset-env from 7.26.7 to 7.26.8 ([#1211](https://github.com/cedricziel/faro-shop/issues/1211)) ([dfec60f](https://github.com/cedricziel/faro-shop/commit/dfec60fd71c99e0960f3162d9b1c08332d021c81))
+* bump symfony/stimulus-bundle from 2.22.1 to 2.23.0 in the symfony group ([#1206](https://github.com/cedricziel/faro-shop/issues/1206)) ([de3c515](https://github.com/cedricziel/faro-shop/commit/de3c515f9a7be8519126cd71ae5746771ad04e66))
+* bump the grafana group with 2 updates ([#1209](https://github.com/cedricziel/faro-shop/issues/1209)) ([ceaf45d](https://github.com/cedricziel/faro-shop/commit/ceaf45d5f00259b0cbc80abdcaec2747699116bb))
+* bump the grafana group with 2 updates ([#1212](https://github.com/cedricziel/faro-shop/issues/1212)) ([700c02a](https://github.com/cedricziel/faro-shop/commit/700c02a8990372649ccf0e715349e7be945c84be))
+
 ## [0.44.1](https://github.com/cedricziel/faro-shop/compare/0.44.0...0.44.1) (2025-02-06)
 
 
