@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53e98d927608847bbb4a7915fdc26297",
+    "content-hash": "339edad3508fa1dc8b821e6c74a11330",
     "packages": [
         {
             "name": "brick/math",
@@ -4360,23 +4360,23 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-pdo",
-            "version": "0.0.16",
+            "version": "0.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-pdo.git",
-                "reference": "2e9793380dc5a4029be91e0b095994cef97d225a"
+                "reference": "0295db3db02d849639b9d6121f4e17b29f75d98e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/2e9793380dc5a4029be91e0b095994cef97d225a",
-                "reference": "2e9793380dc5a4029be91e0b095994cef97d225a",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/0295db3db02d849639b9d6121f4e17b29f75d98e",
+                "reference": "0295db3db02d849639b9d6121f4e17b29f75d98e",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "ext-pdo": "*",
                 "open-telemetry/api": "^1.0",
-                "open-telemetry/sem-conv": "^1.24",
+                "open-telemetry/sem-conv": "^1.30",
                 "php": "^8.2",
                 "symfony/polyfill-mbstring": "^1.31"
             },
@@ -4418,9 +4418,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.16"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.17"
             },
-            "time": "2024-10-02T01:40:26+00:00"
+            "time": "2025-02-11T21:16:06+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr15",
