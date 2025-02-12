@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.44.3](https://github.com/cedricziel/faro-shop/compare/0.44.2...0.44.3) (2025-02-12)
+
+
+### Bug Fixes
+
+* bump laravel/framework from 11.41.3 to 11.42.0 ([#1214](https://github.com/cedricziel/faro-shop/issues/1214)) ([5117939](https://github.com/cedricziel/faro-shop/commit/5117939457a6082764c1505bec13bee14bd249f7))
+* bump myclabs/deep-copy from 1.12.1 to 1.13.0 ([#1218](https://github.com/cedricziel/faro-shop/issues/1218)) ([24826e0](https://github.com/cedricziel/faro-shop/commit/24826e02d693046b33f059cf224203aaad0d6f44))
+* bump open-telemetry/opentelemetry-auto-pdo from 0.0.16 to 0.0.17 in the open-telemetry group ([#1213](https://github.com/cedricziel/faro-shop/issues/1213)) ([0aac5fd](https://github.com/cedricziel/faro-shop/commit/0aac5fd9ae81c01d98e808ccfd84f50d184bd668))
+
 ## [0.44.2](https://github.com/cedricziel/faro-shop/compare/0.44.1...0.44.2) (2025-02-11)
 
 
