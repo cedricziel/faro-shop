@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.44.4](https://github.com/cedricziel/faro-shop/compare/0.44.3...0.44.4) (2025-02-13)
+
+
+### Bug Fixes
+
+* bump grafana/k6 from 0.56.0-with-browser to 0.57.0-with-browser in /docker/k6 ([#1227](https://github.com/cedricziel/faro-shop/issues/1227)) ([1bb3979](https://github.com/cedricziel/faro-shop/commit/1bb3979384dffe528c8504d8ec6a5f4da3101e5a))
+* bump laravel/framework from 11.42.0 to 11.42.1 ([#1224](https://github.com/cedricziel/faro-shop/issues/1224)) ([53fb3eb](https://github.com/cedricziel/faro-shop/commit/53fb3eb973a290adf345028cf960ed03835b0993))
+* bump phpstan/phpdoc-parser from 2.0.0 to 2.0.1 ([#1225](https://github.com/cedricziel/faro-shop/issues/1225)) ([458654b](https://github.com/cedricziel/faro-shop/commit/458654be6def9b841a9b3a36e18ac0c209123350))
+* bump twig/extra-bundle from 3.19.0 to 3.20.0 ([#1223](https://github.com/cedricziel/faro-shop/issues/1223)) ([b828df5](https://github.com/cedricziel/faro-shop/commit/b828df5a634dd88dceb3d5149e0f8087087a0d0b))
+* bump twig/twig from 3.19.0 to 3.20.0 ([#1222](https://github.com/cedricziel/faro-shop/issues/1222)) ([b0a7c46](https://github.com/cedricziel/faro-shop/commit/b0a7c467aa0f49dd765e477b0bd5cbaf49ae9fea))
+
 ## [0.44.3](https://github.com/cedricziel/faro-shop/compare/0.44.2...0.44.3) (2025-02-12)
 
 
