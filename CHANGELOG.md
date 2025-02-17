@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.44.5](https://github.com/cedricziel/faro-shop/compare/0.44.4...0.44.5) (2025-02-17)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.26.8 to 7.26.9 ([#1234](https://github.com/cedricziel/faro-shop/issues/1234)) ([0a32f44](https://github.com/cedricziel/faro-shop/commit/0a32f449d77939a0cdc8d758da4fabb280e81df3))
+* bump @babel/preset-env from 7.26.8 to 7.26.9 ([#1233](https://github.com/cedricziel/faro-shop/issues/1233)) ([05e5fbe](https://github.com/cedricziel/faro-shop/commit/05e5fbe394cf7e74eff09fb65b5267a87fb1682e))
+* bump php from 8.4.3-fpm-alpine to 8.4.4-fpm-alpine ([#1230](https://github.com/cedricziel/faro-shop/issues/1230)) ([65a1af0](https://github.com/cedricziel/faro-shop/commit/65a1af01f3fa1fc1b141909a95ef72fe57fce06e))
+* bump webpack from 5.97.1 to 5.98.0 ([#1232](https://github.com/cedricziel/faro-shop/issues/1232)) ([6515996](https://github.com/cedricziel/faro-shop/commit/6515996473dbdb962fc09b5c92f46fa79cb61a3d))
+* bump zenstruck/foundry from 2.3.3 to 2.3.4 ([#1237](https://github.com/cedricziel/faro-shop/issues/1237)) ([606d56e](https://github.com/cedricziel/faro-shop/commit/606d56e133ca4800908931b2ba45d5d3547f187f))
+
 ## [0.44.4](https://github.com/cedricziel/faro-shop/compare/0.44.3...0.44.4) (2025-02-13)
 
 
