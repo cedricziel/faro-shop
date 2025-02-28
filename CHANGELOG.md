@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.44.7](https://github.com/cedricziel/faro-shop/compare/0.44.6...0.44.7) (2025-02-28)
+
+
+### Bug Fixes
+
+* bump brick/math from 0.12.2 to 0.12.3 ([#1263](https://github.com/cedricziel/faro-shop/issues/1263)) ([c1aa316](https://github.com/cedricziel/faro-shop/commit/c1aa316416f13eecedf0e9aee357fcb447f38d76))
+* bump googleapis/release-please-action from 4.1.3 to 4.1.4 ([#1262](https://github.com/cedricziel/faro-shop/issues/1262)) ([d2cf702](https://github.com/cedricziel/faro-shop/commit/d2cf7022de1a35543b2abc09f279e78ed873952b))
+* bump the grafana group with 2 updates ([#1260](https://github.com/cedricziel/faro-shop/issues/1260)) ([77fb7b6](https://github.com/cedricziel/faro-shop/commit/77fb7b6155f3f7828d2f16415682704a3c430a5c))
+
 ## [0.44.6](https://github.com/cedricziel/faro-shop/compare/0.44.5...0.44.6) (2025-02-26)
 
 
