@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.44.7](https://github.com/cedricziel/faro-shop/compare/0.44.6...0.44.7) (2025-03-03)
+
+
+### Bug Fixes
+
+* bump brick/math from 0.12.2 to 0.12.3 ([#1263](https://github.com/cedricziel/faro-shop/issues/1263)) ([c1aa316](https://github.com/cedricziel/faro-shop/commit/c1aa316416f13eecedf0e9aee357fcb447f38d76))
+* bump core-js from 3.40.0 to 3.41.0 ([#1266](https://github.com/cedricziel/faro-shop/issues/1266)) ([609e789](https://github.com/cedricziel/faro-shop/commit/609e7893b7223d25ffc3547a13ecbe979461afc8))
+* bump googleapis/release-please-action from 4.1.3 to 4.1.4 ([#1262](https://github.com/cedricziel/faro-shop/issues/1262)) ([d2cf702](https://github.com/cedricziel/faro-shop/commit/d2cf7022de1a35543b2abc09f279e78ed873952b))
+* bump ramsey/collection from 2.0.0 to 2.1.0 ([#1265](https://github.com/cedricziel/faro-shop/issues/1265)) ([9b1b871](https://github.com/cedricziel/faro-shop/commit/9b1b87133e6bfcdd387e4130c917666269fd9e74))
+* bump symfony/flex from 2.4.7 to 2.5.0 in the symfony group ([#1264](https://github.com/cedricziel/faro-shop/issues/1264)) ([a7fdf69](https://github.com/cedricziel/faro-shop/commit/a7fdf697d6205ea319378e8e911358fe59f96550))
+* bump the grafana group with 2 updates ([#1260](https://github.com/cedricziel/faro-shop/issues/1260)) ([77fb7b6](https://github.com/cedricziel/faro-shop/commit/77fb7b6155f3f7828d2f16415682704a3c430a5c))
+
 ## [0.44.6](https://github.com/cedricziel/faro-shop/compare/0.44.5...0.44.6) (2025-02-26)
 
 
