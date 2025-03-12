@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "339edad3508fa1dc8b821e6c74a11330",
+    "content-hash": "e0aa7fde1603a1904be7f5ae90bc4fbe",
     "packages": [
         {
             "name": "brick/math",
@@ -2391,16 +2391,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v11.44.1",
+            "version": "v11.44.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0883d4175f4e2b5c299e7087ad3c74f2ce195c6d"
+                "reference": "f85216c82cbd38b66d67ebd20ea762cb3751a4b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0883d4175f4e2b5c299e7087ad3c74f2ce195c6d",
-                "reference": "0883d4175f4e2b5c299e7087ad3c74f2ce195c6d",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f85216c82cbd38b66d67ebd20ea762cb3751a4b4",
+                "reference": "f85216c82cbd38b66d67ebd20ea762cb3751a4b4",
                 "shasum": ""
             },
             "require": {
@@ -2602,7 +2602,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-03-05T15:34:10+00:00"
+            "time": "2025-03-12T14:34:30+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -4234,16 +4234,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-ext-amqp",
-            "version": "0.0.4",
+            "version": "0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-ext-amqp.git",
-                "reference": "b4d304a81012219b46df0cb65976b617d2de43c0"
+                "reference": "f69579b2c2d265431e600acb9d37a5fff7279886"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-ext-amqp/zipball/b4d304a81012219b46df0cb65976b617d2de43c0",
-                "reference": "b4d304a81012219b46df0cb65976b617d2de43c0",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-ext-amqp/zipball/f69579b2c2d265431e600acb9d37a5fff7279886",
+                "reference": "f69579b2c2d265431e600acb9d37a5fff7279886",
                 "shasum": ""
             },
             "require": {
@@ -4251,7 +4251,7 @@
                 "ext-amqp": "*",
                 "ext-opentelemetry": "*",
                 "open-telemetry/api": "^1",
-                "open-telemetry/sem-conv": "^1.24",
+                "open-telemetry/sem-conv": "^1.30",
                 "php": "^8.2"
             },
             "require-dev": {
@@ -4262,8 +4262,8 @@
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18.4",
-                "vimeo/psalm": "^5.0"
+                "psalm/plugin-phpunit": "^0.19.2",
+                "vimeo/psalm": "6.4.0"
             },
             "type": "library",
             "autoload": {
@@ -4289,22 +4289,22 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-ext-amqp/tree/0.0.4"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-ext-amqp/tree/0.0.5"
             },
-            "time": "2024-06-25T01:39:13+00:00"
+            "time": "2025-02-25T01:30:01+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-laravel",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-laravel.git",
-                "reference": "3f32c15f996a1af38bf5a660e946b4ec842b449a"
+                "reference": "9ce166edd0f5b09f645263bf46e62e13a1396b03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-laravel/zipball/3f32c15f996a1af38bf5a660e946b4ec842b449a",
-                "reference": "3f32c15f996a1af38bf5a660e946b4ec842b449a",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-laravel/zipball/9ce166edd0f5b09f645263bf46e62e13a1396b03",
+                "reference": "9ce166edd0f5b09f645263bf46e62e13a1396b03",
                 "shasum": ""
             },
             "require": {
@@ -4312,8 +4312,8 @@
                 "ext-opentelemetry": "*",
                 "laravel/framework": "^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
                 "open-telemetry/api": "^1.0",
-                "open-telemetry/sem-conv": "^1.24",
-                "php": "^8.0"
+                "open-telemetry/sem-conv": "^1.30",
+                "php": "^8.1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.50",
@@ -4326,9 +4326,9 @@
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18.4",
+                "psalm/plugin-phpunit": "^0.19.2",
                 "spatie/laravel-ignition": "*",
-                "vimeo/psalm": "^5.0"
+                "vimeo/psalm": "6.4.0"
             },
             "type": "library",
             "autoload": {
@@ -4354,22 +4354,22 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-laravel/tree/1.0.1"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-laravel/tree/1.1.0"
             },
-            "time": "2024-10-27T21:23:49+00:00"
+            "time": "2025-02-25T04:59:59+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-pdo",
-            "version": "0.0.17",
+            "version": "0.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-pdo.git",
-                "reference": "0295db3db02d849639b9d6121f4e17b29f75d98e"
+                "reference": "940f378fb341893d0d84f8085d4ce585cf355bea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/0295db3db02d849639b9d6121f4e17b29f75d98e",
-                "reference": "0295db3db02d849639b9d6121f4e17b29f75d98e",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/940f378fb341893d0d84f8085d4ce585cf355bea",
+                "reference": "940f378fb341893d0d84f8085d4ce585cf355bea",
                 "shasum": ""
             },
             "require": {
@@ -4388,8 +4388,8 @@
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18.4",
-                "vimeo/psalm": "^5.0"
+                "psalm/plugin-phpunit": "^0.19.2",
+                "vimeo/psalm": "6.4.0"
             },
             "suggest": {
                 "ext-mbstring": "For better performance than symfony/polyfill-mbstring"
@@ -4418,29 +4418,29 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.17"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.18"
             },
-            "time": "2025-02-11T21:16:06+00:00"
+            "time": "2025-02-25T01:30:01+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr15",
-            "version": "1.0.6",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-psr15.git",
-                "reference": "92dd607ffb875161f28d5ebd5fc576a918b490c8"
+                "reference": "48a0806815c328e2ba720365437e48bb5c09b24b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr15/zipball/92dd607ffb875161f28d5ebd5fc576a918b490c8",
-                "reference": "92dd607ffb875161f28d5ebd5fc576a918b490c8",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr15/zipball/48a0806815c328e2ba720365437e48bb5c09b24b",
+                "reference": "48a0806815c328e2ba720365437e48bb5c09b24b",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "open-telemetry/api": "^1.0",
-                "open-telemetry/sem-conv": "^1.24",
-                "php": "^8.0",
+                "open-telemetry/sem-conv": "^1.30",
+                "php": "^8.1",
                 "psr/http-server-middleware": "^1"
             },
             "require-dev": {
@@ -4452,8 +4452,8 @@
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18.4",
-                "vimeo/psalm": "^5.0"
+                "psalm/plugin-phpunit": "^0.19.2",
+                "vimeo/psalm": "6.4.0"
             },
             "type": "library",
             "autoload": {
@@ -4479,29 +4479,29 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-psr15/tree/1.0.6"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-psr15/tree/1.1.0"
             },
-            "time": "2024-06-25T01:39:13+00:00"
+            "time": "2025-02-25T01:30:01+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr18",
-            "version": "1.0.4",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-psr18.git",
-                "reference": "a714d81caec358972366d2175d0c9062012406d0"
+                "reference": "30ab66602718abc927ff2f47b3c1e635a6b98df9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr18/zipball/a714d81caec358972366d2175d0c9062012406d0",
-                "reference": "a714d81caec358972366d2175d0c9062012406d0",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr18/zipball/30ab66602718abc927ff2f47b3c1e635a6b98df9",
+                "reference": "30ab66602718abc927ff2f47b3c1e635a6b98df9",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "open-telemetry/api": "^1.0",
-                "open-telemetry/sem-conv": "^1.24",
-                "php": "^8.0",
+                "open-telemetry/sem-conv": "^1.30",
+                "php": "^8.1",
                 "psr/http-client": "^1"
             },
             "require-dev": {
@@ -4513,8 +4513,8 @@
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18.4",
-                "vimeo/psalm": "^5.0"
+                "psalm/plugin-phpunit": "^0.19.2",
+                "vimeo/psalm": "6.4.0"
             },
             "type": "library",
             "autoload": {
@@ -4540,29 +4540,29 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-psr18/tree/1.0.4"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-psr18/tree/1.1.0"
             },
-            "time": "2024-06-25T01:39:13+00:00"
+            "time": "2025-02-25T01:30:01+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr3",
-            "version": "0.0.8",
+            "version": "0.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-psr3.git",
-                "reference": "fdbea5d294853810165f568534ad9719f99fcc8e"
+                "reference": "ca4b6d6e127ac49c35c3d9dab18d4cc2c639d6f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr3/zipball/fdbea5d294853810165f568534ad9719f99fcc8e",
-                "reference": "fdbea5d294853810165f568534ad9719f99fcc8e",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr3/zipball/ca4b6d6e127ac49c35c3d9dab18d4cc2c639d6f9",
+                "reference": "ca4b6d6e127ac49c35c3d9dab18d4cc2c639d6f9",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "open-telemetry/api": "^1.0",
-                "open-telemetry/sem-conv": "^1.24",
-                "php": "^8.0",
+                "open-telemetry/sem-conv": "^1.30",
+                "php": "^8.1",
                 "psr/log": "^1 || ^2 || ^3"
             },
             "require-dev": {
@@ -4576,9 +4576,9 @@
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18.4",
+                "psalm/plugin-phpunit": "^0.19.2",
                 "symfony/console": "*",
-                "vimeo/psalm": "^5.0",
+                "vimeo/psalm": "6.4.0",
                 "yiisoft/log": "*"
             },
             "type": "library",
@@ -4605,30 +4605,30 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-psr3/tree/0.0.8"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-psr3/tree/0.0.9"
             },
-            "time": "2024-10-02T12:41:32+00:00"
+            "time": "2025-02-25T01:30:01+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-slim",
-            "version": "1.0.7",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-slim.git",
-                "reference": "a4089b16add089d2233e3ff0fdc5ec8b9a1f5620"
+                "reference": "a4ff214c8fd6c040fb17275ae07e910af94905c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-slim/zipball/a4089b16add089d2233e3ff0fdc5ec8b9a1f5620",
-                "reference": "a4089b16add089d2233e3ff0fdc5ec8b9a1f5620",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-slim/zipball/a4ff214c8fd6c040fb17275ae07e910af94905c2",
+                "reference": "a4ff214c8fd6c040fb17275ae07e910af94905c2",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "ext-reflection": "*",
                 "open-telemetry/api": "^1.0",
-                "open-telemetry/sem-conv": "^1.24",
-                "php": "^8.0",
+                "open-telemetry/sem-conv": "^1.30",
+                "php": "^8.1",
                 "slim/slim": "^4"
             },
             "require-dev": {
@@ -4644,8 +4644,8 @@
                 "phpstan/phpstan-mockery": "^1.1.0",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18.4",
-                "vimeo/psalm": "^5.0"
+                "psalm/plugin-phpunit": "^0.19.2",
+                "vimeo/psalm": "6.4.0"
             },
             "type": "library",
             "autoload": {
@@ -4671,29 +4671,29 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-slim/tree/1.0.7"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-slim/tree/1.1.0"
             },
-            "time": "2024-06-25T01:39:13+00:00"
+            "time": "2025-02-25T01:30:01+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-symfony",
-            "version": "1.0.0beta30",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-symfony.git",
-                "reference": "4762c86290ab6493e40c63ddc443b1d721db578c"
+                "reference": "f57aada106dc62f021370c11e82bbf1699508ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-symfony/zipball/4762c86290ab6493e40c63ddc443b1d721db578c",
-                "reference": "4762c86290ab6493e40c63ddc443b1d721db578c",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-symfony/zipball/f57aada106dc62f021370c11e82bbf1699508ad6",
+                "reference": "f57aada106dc62f021370c11e82bbf1699508ad6",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "open-telemetry/api": "^1.0",
-                "open-telemetry/sem-conv": "^1.24",
-                "php": "^8.0",
+                "open-telemetry/sem-conv": "^1.30",
+                "php": "^8.1",
                 "symfony/http-client-contracts": "*",
                 "symfony/http-kernel": "*"
             },
@@ -4707,10 +4707,10 @@
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18.4",
+                "psalm/plugin-phpunit": "^0.19.2",
                 "symfony/http-client": "^5.4||^6.0",
                 "symfony/messenger": "^5.4||^6.0",
-                "vimeo/psalm": "^5.0"
+                "vimeo/psalm": "6.4.0"
             },
             "suggest": {
                 "open-telemetry/opentelemetry-propagation-server-timing": "Automatically propagate the context to the client through server-timing headers.",
@@ -4740,9 +4740,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-symfony/tree/1.0.0beta30"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-symfony/tree/1.0.0"
             },
-            "time": "2024-10-22T19:53:51+00:00"
+            "time": "2025-02-25T01:30:01+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-instrumentation-installer",
@@ -4787,36 +4787,37 @@
         },
         {
             "name": "open-telemetry/opentelemetry-logger-monolog",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-logger-monolog.git",
-                "reference": "da70f3678aba1e8187f889e78f3a2a55f43f6395"
+                "reference": "e188fa2c2fba5f69f92913f8ec486398e89ef971"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-logger-monolog/zipball/da70f3678aba1e8187f889e78f3a2a55f43f6395",
-                "reference": "da70f3678aba1e8187f889e78f3a2a55f43f6395",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-logger-monolog/zipball/e188fa2c2fba5f69f92913f8ec486398e89ef971",
+                "reference": "e188fa2c2fba5f69f92913f8ec486398e89ef971",
                 "shasum": ""
             },
             "require": {
                 "monolog/monolog": "^1.1|^2|^3",
-                "open-telemetry/api": "^1.0.0beta16"
+                "open-telemetry/api": "^1.0",
+                "php": "^8.1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3",
                 "google/protobuf": ">=3.5.0",
                 "guzzlehttp/guzzle": "^7.4",
                 "nyholm/psr7": "^1.6",
-                "open-telemetry/exporter-otlp": ">=1.0.0beta6",
-                "open-telemetry/sdk": ">=1.0.0beta7",
+                "open-telemetry/exporter-otlp": ">=1.0",
+                "open-telemetry/sdk": ">=1.0",
                 "phan/phan": "^5.0",
                 "phpbench/phpbench": "^1.2",
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.16",
-                "vimeo/psalm": "^4.0"
+                "psalm/plugin-phpunit": "^0.19.2",
+                "vimeo/psalm": "6.4.0"
             },
             "type": "library",
             "autoload": {
@@ -4839,31 +4840,31 @@
                 "otel"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-logger-monolog/tree/1.0.0"
+                "source": "https://github.com/opentelemetry-php/contrib-logger-monolog/tree/1.1.0"
             },
-            "time": "2023-10-17T21:44:43+00:00"
+            "time": "2025-02-25T01:30:01+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-propagation-server-timing",
-            "version": "0.0.3",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-propagator-server-timing.git",
-                "reference": "f9d7f65a78a79dc8a2aa1a5a80484ea5d3113703"
+                "reference": "174f2ef8771a0ed6c8eea5bd90ab7bc88ecccd0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-propagator-server-timing/zipball/f9d7f65a78a79dc8a2aa1a5a80484ea5d3113703",
-                "reference": "f9d7f65a78a79dc8a2aa1a5a80484ea5d3113703",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-propagator-server-timing/zipball/174f2ef8771a0ed6c8eea5bd90ab7bc88ecccd0d",
+                "reference": "174f2ef8771a0ed6c8eea5bd90ab7bc88ecccd0d",
                 "shasum": ""
             },
             "require": {
                 "open-telemetry/context": "^1.0",
-                "php": "^8.0"
+                "php": "^8.1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3",
-                "guzzlehttp/promises": "^1.5",
+                "guzzlehttp/promises": "^1.5|^2",
                 "nyholm/psr7": "^1.5",
                 "open-telemetry/sdk": "^1.0",
                 "phan/phan": "^5.0",
@@ -4871,9 +4872,9 @@
                 "phpstan/phpstan": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18.4",
+                "psalm/plugin-phpunit": "^0.19.2",
                 "symfony/http-client": "^5.4|^6.0",
-                "vimeo/psalm": "^4|^5"
+                "vimeo/psalm": "^4|^5|^6"
             },
             "type": "library",
             "autoload": {
@@ -4895,9 +4896,9 @@
                 "propagator"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-propagator-server-timing/tree/0.0.3"
+                "source": "https://github.com/opentelemetry-php/contrib-propagator-server-timing/tree/0.0.4"
             },
-            "time": "2024-08-21T06:43:12+00:00"
+            "time": "2025-02-25T01:30:01+00:00"
         },
         {
             "name": "open-telemetry/sdk",
@@ -13510,16 +13511,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.6",
+            "version": "11.5.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3c3ae14c90f244cdda95028c3e469028e8d1c02c"
+                "reference": "d42785840519401ed2113292263795eb4c0f95da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3c3ae14c90f244cdda95028c3e469028e8d1c02c",
-                "reference": "3c3ae14c90f244cdda95028c3e469028e8d1c02c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d42785840519401ed2113292263795eb4c0f95da",
+                "reference": "d42785840519401ed2113292263795eb4c0f95da",
                 "shasum": ""
             },
             "require": {
@@ -13529,18 +13530,18 @@
                 "ext-mbstring": "*",
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
-                "myclabs/deep-copy": "^1.12.1",
+                "myclabs/deep-copy": "^1.13.0",
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.2",
-                "phpunit/php-code-coverage": "^11.0.8",
+                "phpunit/php-code-coverage": "^11.0.9",
                 "phpunit/php-file-iterator": "^5.1.0",
                 "phpunit/php-invoker": "^5.0.1",
                 "phpunit/php-text-template": "^4.0.1",
                 "phpunit/php-timer": "^7.0.1",
                 "sebastian/cli-parser": "^3.0.2",
                 "sebastian/code-unit": "^3.0.2",
-                "sebastian/comparator": "^6.3.0",
+                "sebastian/comparator": "^6.3.1",
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.0",
                 "sebastian/exporter": "^6.3.0",
@@ -13591,7 +13592,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.6"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.12"
             },
             "funding": [
                 {
@@ -13607,7 +13608,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-01-31T07:03:30+00:00"
+            "time": "2025-03-07T07:31:03+00:00"
         },
         {
             "name": "sebastian/cli-parser",
