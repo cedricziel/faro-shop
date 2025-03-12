@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.44.7](https://github.com/cedricziel/faro-shop/compare/0.44.6...0.44.7) (2025-03-12)
+
+
+### Bug Fixes
+
+* bump appleboy/ssh-action from 1.2.1 to 1.2.2 ([#1278](https://github.com/cedricziel/faro-shop/issues/1278)) ([1438977](https://github.com/cedricziel/faro-shop/commit/143897743cb9d2d0ac9ba61342519347b1c4231d))
+* bump brick/math from 0.12.2 to 0.12.3 ([#1263](https://github.com/cedricziel/faro-shop/issues/1263)) ([c1aa316](https://github.com/cedricziel/faro-shop/commit/c1aa316416f13eecedf0e9aee357fcb447f38d76))
+* bump core-js from 3.40.0 to 3.41.0 ([#1266](https://github.com/cedricziel/faro-shop/issues/1266)) ([609e789](https://github.com/cedricziel/faro-shop/commit/609e7893b7223d25ffc3547a13ecbe979461afc8))
+* bump doctrine/dbal from 4.2.2 to 4.2.3 ([#1277](https://github.com/cedricziel/faro-shop/issues/1277)) ([2fb3037](https://github.com/cedricziel/faro-shop/commit/2fb30378cdc965ada5a2f2d4244f5e9839c66281))
+* bump google/protobuf from 4.29.3 to 4.30.0 ([#1268](https://github.com/cedricziel/faro-shop/issues/1268)) ([ab52d82](https://github.com/cedricziel/faro-shop/commit/ab52d82bc51650bc62a515d9d2831866dbf99216))
+* bump googleapis/release-please-action from 4.1.3 to 4.1.4 ([#1262](https://github.com/cedricziel/faro-shop/issues/1262)) ([d2cf702](https://github.com/cedricziel/faro-shop/commit/d2cf7022de1a35543b2abc09f279e78ed873952b))
+* bump googleapis/release-please-action from 4.1.4 to 4.1.5 ([#1271](https://github.com/cedricziel/faro-shop/issues/1271)) ([31773b2](https://github.com/cedricziel/faro-shop/commit/31773b286fe6daa4406eaf7e904358c2edaf42a5))
+* bump googleapis/release-please-action from 4.1.5 to 4.2.0 ([#1279](https://github.com/cedricziel/faro-shop/issues/1279)) ([71a8b23](https://github.com/cedricziel/faro-shop/commit/71a8b2367629a1febef61905fb2d2c14691a6e39))
+* bump laravel/framework from 11.44.0 to 11.44.1 ([#1270](https://github.com/cedricziel/faro-shop/issues/1270)) ([4cd4c8d](https://github.com/cedricziel/faro-shop/commit/4cd4c8d6f945b4979bf99b0aa4b992c5f7c3b6e9))
+* bump open-telemetry/api from 1.2.2 to 1.2.3 in the open-telemetry group ([#1272](https://github.com/cedricziel/faro-shop/issues/1272)) ([90f1559](https://github.com/cedricziel/faro-shop/commit/90f155995bcdb2a5fd4c23a5002295e2ce2da695))
+* bump open-telemetry/exporter-otlp from 1.2.0 to 1.2.1 in the open-telemetry group ([#1273](https://github.com/cedricziel/faro-shop/issues/1273)) ([746a278](https://github.com/cedricziel/faro-shop/commit/746a278975a1c0dc22da365e728091abe98b5956))
+* bump otel/opentelemetry-collector-contrib from 0.120.0 to 0.121.0 in /docker/otelcol ([#1267](https://github.com/cedricziel/faro-shop/issues/1267)) ([69258a3](https://github.com/cedricziel/faro-shop/commit/69258a3e65c0390f7b3ebd154b767afe100f2659))
+* bump ramsey/collection from 2.0.0 to 2.1.0 ([#1265](https://github.com/cedricziel/faro-shop/issues/1265)) ([9b1b871](https://github.com/cedricziel/faro-shop/commit/9b1b87133e6bfcdd387e4130c917666269fd9e74))
+* bump sebastian/comparator from 6.3.0 to 6.3.1 ([#1274](https://github.com/cedricziel/faro-shop/issues/1274)) ([906a8aa](https://github.com/cedricziel/faro-shop/commit/906a8aac8837e795749fde2f8c4ce9eeb04dee20))
+* bump symfony/flex from 2.4.7 to 2.5.0 in the symfony group ([#1264](https://github.com/cedricziel/faro-shop/issues/1264)) ([a7fdf69](https://github.com/cedricziel/faro-shop/commit/a7fdf697d6205ea319378e8e911358fe59f96550))
+* bump the grafana group with 2 updates ([#1260](https://github.com/cedricziel/faro-shop/issues/1260)) ([77fb7b6](https://github.com/cedricziel/faro-shop/commit/77fb7b6155f3f7828d2f16415682704a3c430a5c))
+* bump the open-telemetry group with 10 updates ([#1280](https://github.com/cedricziel/faro-shop/issues/1280)) ([146ba8f](https://github.com/cedricziel/faro-shop/commit/146ba8f39c72e985e950814758feffa822cf6258))
+* bump zenstruck/foundry from 2.3.6 to 2.3.7 ([#1276](https://github.com/cedricziel/faro-shop/issues/1276)) ([4bebbda](https://github.com/cedricziel/faro-shop/commit/4bebbda7449157fad9523080173e462676e5fdb6))
+
 ## [0.44.6](https://github.com/cedricziel/faro-shop/compare/0.44.5...0.44.6) (2025-02-26)
 
 
