@@ -5,7 +5,7 @@ kind: ServiceAccount
 metadata:
   name: faro-shop
   labels:
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
@@ -18,7 +18,7 @@ kind: ConfigMap
 metadata:
   name: faro-shop-postgres-secret
   labels:
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
@@ -34,7 +34,7 @@ kind: Service
 metadata:
   name: faro-shop-backend
   labels:
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
@@ -59,7 +59,7 @@ metadata:
   name: faro-shop-postgres
   labels:
     service: faro-shop-postgres
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
@@ -81,7 +81,7 @@ metadata:
   name: faro-shop-rabbitmq
   labels:
     service: faro-shop-postgres
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
@@ -102,7 +102,7 @@ kind: Deployment
 metadata:
   name: faro-shop-worker
   labels:
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
@@ -117,7 +117,7 @@ spec:
   template:
     metadata:
       labels:
-        helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+        helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
         app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
         app.kubernetes.io/version: "0.44.7"
@@ -213,7 +213,7 @@ kind: Deployment
 metadata:
   name: faro-shop-backend
   labels:
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
@@ -229,7 +229,7 @@ spec:
   template:
     metadata:
       labels:
-        helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+        helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
         app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
         app.kubernetes.io/version: "0.44.7"
@@ -408,7 +408,7 @@ kind: Deployment
 metadata:
   name: faro-shop-load
   labels:
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
@@ -422,7 +422,7 @@ spec:
   template:
     metadata:
       labels:
-        helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+        helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
         app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
         app.kubernetes.io/version: "0.44.7"
@@ -455,7 +455,7 @@ kind: Deployment
 metadata:
   name: faro-shop-rabbitmq
   labels:
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
@@ -496,7 +496,7 @@ kind: StatefulSet
 metadata:
   name: faro-shop-postgres
   labels:
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
@@ -510,7 +510,7 @@ spec:
   template:
     metadata:
       labels:
-        helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+        helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
         app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
         app.kubernetes.io/version: "0.44.7"
@@ -550,7 +550,7 @@ kind: Pod
 metadata:
   name: "faro-shop-backend-test-connection"
   labels:
-    helm.sh/chart: faro-shop-0.89.0 # x-release-please-version
+    helm.sh/chart: faro-shop-0.90.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
     app.kubernetes.io/version: "0.44.7"
