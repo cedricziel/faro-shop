@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.44.8](https://github.com/cedricziel/faro-shop/compare/0.44.7...0.44.8) (2025-03-13)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.26.9 to 7.26.10 ([#1283](https://github.com/cedricziel/faro-shop/issues/1283)) ([14f686f](https://github.com/cedricziel/faro-shop/commit/14f686fbf87ea3afaf55c10abd8f84fd76cbd4e2))
+* bump @grafana/faro-webpack-plugin from 0.1.2 to 0.2.0 in the grafana group ([#1282](https://github.com/cedricziel/faro-shop/issues/1282)) ([aa12c55](https://github.com/cedricziel/faro-shop/commit/aa12c5557bc6fadf7c08f3a901d4c243362fdf98))
+* bump @grafana/faro-webpack-plugin from 0.2.0 to 0.2.1 in the grafana group ([#1288](https://github.com/cedricziel/faro-shop/issues/1288)) ([3fd6859](https://github.com/cedricziel/faro-shop/commit/3fd68597adb9a98c1a4e09f8945b50e040dd275c))
+* bump liip/test-fixtures-bundle from 3.2.1 to 3.2.2 ([#1289](https://github.com/cedricziel/faro-shop/issues/1289)) ([4facbef](https://github.com/cedricziel/faro-shop/commit/4facbef48da099c6ca0ab262a0e467741cad8542))
+
 ## [0.44.7](https://github.com/cedricziel/faro-shop/compare/0.44.6...0.44.7) (2025-03-12)
 
 
