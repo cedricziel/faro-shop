@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.44.8](https://github.com/cedricziel/faro-shop/compare/0.44.7...0.44.8) (2025-03-20)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.26.9 to 7.26.10 ([#1283](https://github.com/cedricziel/faro-shop/issues/1283)) ([14f686f](https://github.com/cedricziel/faro-shop/commit/14f686fbf87ea3afaf55c10abd8f84fd76cbd4e2))
+* bump @grafana/faro-webpack-plugin from 0.1.2 to 0.2.0 in the grafana group ([#1282](https://github.com/cedricziel/faro-shop/issues/1282)) ([aa12c55](https://github.com/cedricziel/faro-shop/commit/aa12c5557bc6fadf7c08f3a901d4c243362fdf98))
+* bump @grafana/faro-webpack-plugin from 0.2.0 to 0.2.1 in the grafana group ([#1288](https://github.com/cedricziel/faro-shop/issues/1288)) ([3fd6859](https://github.com/cedricziel/faro-shop/commit/3fd68597adb9a98c1a4e09f8945b50e040dd275c))
+* bump @grafana/faro-webpack-plugin from 0.2.1 to 0.2.2 in the grafana group ([#1296](https://github.com/cedricziel/faro-shop/issues/1296)) ([376f7b8](https://github.com/cedricziel/faro-shop/commit/376f7b843013eb32a387196f627fe6c1f8a659cb))
+* bump liip/test-fixtures-bundle from 3.2.1 to 3.2.2 ([#1289](https://github.com/cedricziel/faro-shop/issues/1289)) ([4facbef](https://github.com/cedricziel/faro-shop/commit/4facbef48da099c6ca0ab262a0e467741cad8542))
+* bump open-telemetry/opentelemetry-auto-laravel from 1.1.0 to 1.1.1 in the open-telemetry group ([#1301](https://github.com/cedricziel/faro-shop/issues/1301)) ([00ea88f](https://github.com/cedricziel/faro-shop/commit/00ea88f07763be102d71cbd8ff61559f8660a7bc))
+* bump otel/opentelemetry-collector-contrib from 0.121.0 to 0.122.0 in /docker/otelcol ([#1297](https://github.com/cedricziel/faro-shop/issues/1297)) ([0541671](https://github.com/cedricziel/faro-shop/commit/0541671e62db88b5ce554f544ccfa65670534ef4))
+* bump otel/opentelemetry-collector-contrib from 0.122.0 to 0.122.1 in /docker/otelcol ([#1300](https://github.com/cedricziel/faro-shop/issues/1300)) ([6af4bde](https://github.com/cedricziel/faro-shop/commit/6af4bde6e00e071466a4dc23feb197c6ff59692b))
+* bump sebastian/code-unit from 3.0.2 to 3.0.3 ([#1299](https://github.com/cedricziel/faro-shop/issues/1299)) ([71f8f50](https://github.com/cedricziel/faro-shop/commit/71f8f500c28499d82ad233a3f40b1337eefe22e0))
+* bump sebastian/type from 5.1.0 to 5.1.2 ([#1295](https://github.com/cedricziel/faro-shop/issues/1295)) ([ff33a34](https://github.com/cedricziel/faro-shop/commit/ff33a34e51dd3c9bb7c3e9bf5b6b109f04273236))
+
 ## [0.44.7](https://github.com/cedricziel/faro-shop/compare/0.44.6...0.44.7) (2025-03-12)
 
 
