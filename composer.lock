@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0aa7fde1603a1904be7f5ae90bc4fbe",
+    "content-hash": "bd95d5e99ff5cb68e86eb60211532caf",
     "packages": [
         {
             "name": "brick/math",
@@ -4360,16 +4360,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-pdo",
-            "version": "0.0.18",
+            "version": "0.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-pdo.git",
-                "reference": "940f378fb341893d0d84f8085d4ce585cf355bea"
+                "reference": "6a63d151e545f68ca4ed530e2dcc396b839d5adb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/940f378fb341893d0d84f8085d4ce585cf355bea",
-                "reference": "940f378fb341893d0d84f8085d4ce585cf355bea",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/6a63d151e545f68ca4ed530e2dcc396b839d5adb",
+                "reference": "6a63d151e545f68ca4ed530e2dcc396b839d5adb",
                 "shasum": ""
             },
             "require": {
@@ -4418,9 +4418,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.18"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.19"
             },
-            "time": "2025-02-25T01:30:01+00:00"
+            "time": "2025-03-18T03:38:39+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr15",
