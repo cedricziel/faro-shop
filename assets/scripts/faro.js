@@ -11,7 +11,7 @@ export function initializeFaro() {
     return initializeFaroReal({
         beforeSend: (item) => {
             delete item.meta.k6;
-            
+
             return item;
         },
         url: faroUrl,
@@ -46,6 +46,7 @@ export function initializeFaro() {
         sessionTracking: {
             persistent: true,
         },
-        trackWebVitalsAttribution: true
+        trackWebVitalsAttribution: true,
+        trackUserActionsPreview: true
     });
 }
