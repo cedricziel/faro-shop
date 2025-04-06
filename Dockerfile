@@ -108,11 +108,12 @@ ARG TARGETARCH
 WORKDIR /build
 
 # Install Go and build dependencies
+# hadolint ignore=DL3018
 RUN apk add --no-cache go git
 
 # Install xcaddy and build Caddy with required modules
-RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
-RUN /root/go/bin/xcaddy build \
+RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest \
+    && /root/go/bin/xcaddy build \
     --with github.com/dunglas/mercure/caddy \
     --with github.com/dunglas/vulcain/caddy
 
