@@ -63,7 +63,7 @@
                         <div class="card-body">
                             <a id="checkout" href="{{ path('app_checkout', {'id': cart.id}) }}"
                                class="btn btn-warning w-100"
-                               data-faro-user-action-name="remove-from-cart"
+                               data-faro-user-action-name="checkout"
                                {{ stimulus_action('checkout', 'submit:prevent', 'click') }}>
                                 Checkout
                             </a>
