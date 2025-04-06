@@ -1,5 +1,51 @@
 # Changelog
 
+## [0.44.8](https://github.com/cedricziel/faro-shop/compare/0.44.7...0.44.8) (2025-04-06)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.26.9 to 7.26.10 ([#1283](https://github.com/cedricziel/faro-shop/issues/1283)) ([14f686f](https://github.com/cedricziel/faro-shop/commit/14f686fbf87ea3afaf55c10abd8f84fd76cbd4e2))
+* bump @grafana/faro-webpack-plugin from 0.1.2 to 0.2.0 in the grafana group ([#1282](https://github.com/cedricziel/faro-shop/issues/1282)) ([aa12c55](https://github.com/cedricziel/faro-shop/commit/aa12c5557bc6fadf7c08f3a901d4c243362fdf98))
+* bump @grafana/faro-webpack-plugin from 0.2.0 to 0.2.1 in the grafana group ([#1288](https://github.com/cedricziel/faro-shop/issues/1288)) ([3fd6859](https://github.com/cedricziel/faro-shop/commit/3fd68597adb9a98c1a4e09f8945b50e040dd275c))
+* bump @grafana/faro-webpack-plugin from 0.2.1 to 0.2.2 in the grafana group ([#1296](https://github.com/cedricziel/faro-shop/issues/1296)) ([376f7b8](https://github.com/cedricziel/faro-shop/commit/376f7b843013eb32a387196f627fe6c1f8a659cb))
+* bump @grafana/faro-webpack-plugin from 0.2.2 to 0.4.0 in the grafana group ([#1302](https://github.com/cedricziel/faro-shop/issues/1302)) ([d965f9b](https://github.com/cedricziel/faro-shop/commit/d965f9b278937d5e70b8b7ab574d79c4e81e2dc7))
+* bump @grafana/faro-webpack-plugin from 0.4.0 to 0.5.0 in the grafana group ([#1332](https://github.com/cedricziel/faro-shop/issues/1332)) ([ada5cf6](https://github.com/cedricziel/faro-shop/commit/ada5cf65ce700036bdbbf2adbab55539976f9411))
+* bump doctrine/doctrine-bundle from 2.13.2 to 2.14.0 ([#1305](https://github.com/cedricziel/faro-shop/issues/1305)) ([40ef210](https://github.com/cedricziel/faro-shop/commit/40ef210a0d125e99bf9fc4be6acbbe7cf312e124))
+* bump doctrine/doctrine-fixtures-bundle from 4.0.0 to 4.1.0 ([#1312](https://github.com/cedricziel/faro-shop/issues/1312)) ([48cd28d](https://github.com/cedricziel/faro-shop/commit/48cd28d44f6220b22c3eb9c48ff754163ff3996c))
+* bump doctrine/migrations from 3.8.2 to 3.8.3 ([#1308](https://github.com/cedricziel/faro-shop/issues/1308)) ([0898aa9](https://github.com/cedricziel/faro-shop/commit/0898aa9a04bdaac87a547724b55be713f9e24a7a))
+* bump doctrine/migrations from 3.8.3 to 3.9.0 ([#1311](https://github.com/cedricziel/faro-shop/issues/1311)) ([97e0d50](https://github.com/cedricziel/faro-shop/commit/97e0d502c899705a0440a90514051e57cec37990))
+* bump egulias/email-validator from 4.0.3 to 4.0.4 ([#1303](https://github.com/cedricziel/faro-shop/issues/1303)) ([37d6575](https://github.com/cedricziel/faro-shop/commit/37d657587a7925be77d27706cbae55f51d5fc8e7))
+* bump google/protobuf from 4.30.0 to 4.30.2 ([#1313](https://github.com/cedricziel/faro-shop/issues/1313)) ([e9d0208](https://github.com/cedricziel/faro-shop/commit/e9d0208a91362b98691ac64117ad67348c8ea820))
+* bump grafana/k6 from 0.57.0-with-browser to 0.58.0-with-browser in /docker/k6 ([#1322](https://github.com/cedricziel/faro-shop/issues/1322)) ([1df41d5](https://github.com/cedricziel/faro-shop/commit/1df41d587802b4f572714d286f97065b7435088c))
+* bump guzzlehttp/guzzle from 7.9.2 to 7.9.3 ([#1315](https://github.com/cedricziel/faro-shop/issues/1315)) ([55c1271](https://github.com/cedricziel/faro-shop/commit/55c1271fccdd414dff9875372f98f3b5a6576674))
+* bump guzzlehttp/promises from 2.0.4 to 2.2.0 ([#1314](https://github.com/cedricziel/faro-shop/issues/1314)) ([76b529a](https://github.com/cedricziel/faro-shop/commit/76b529a0ddced55e83ba3cc12a29fa3b44f6b961))
+* bump guzzlehttp/psr7 from 2.7.0 to 2.7.1 ([#1316](https://github.com/cedricziel/faro-shop/issues/1316)) ([76a915d](https://github.com/cedricziel/faro-shop/commit/76a915dc4a2d106c23aaeae0b35bcf21735987f0))
+* bump laravel/framework from 12.3.0 to 12.4.1 ([#1320](https://github.com/cedricziel/faro-shop/issues/1320)) ([d1d3844](https://github.com/cedricziel/faro-shop/commit/d1d3844877c6f8827879627279e3d16547210659))
+* bump laravel/framework from 12.4.1 to 12.5.0 ([#1325](https://github.com/cedricziel/faro-shop/issues/1325)) ([608094a](https://github.com/cedricziel/faro-shop/commit/608094af011e09f7d756ce511ba80bf1b52f471f))
+* bump laravel/framework from 12.5.0 to 12.7.0 ([#1327](https://github.com/cedricziel/faro-shop/issues/1327)) ([b6c5cf9](https://github.com/cedricziel/faro-shop/commit/b6c5cf9b44240d6b6e08eb10315ba65f38dfb588))
+* bump laravel/framework from 12.7.0 to 12.7.2 ([#1331](https://github.com/cedricziel/faro-shop/issues/1331)) ([187ff32](https://github.com/cedricziel/faro-shop/commit/187ff329fca1f73692778ab12d90e8b5be1323c3))
+* bump laravel/serializable-closure from 2.0.3 to 2.0.4 ([#1318](https://github.com/cedricziel/faro-shop/issues/1318)) ([8fc8007](https://github.com/cedricziel/faro-shop/commit/8fc8007fe25234e988f9bfef53c5e43f76f80d7b))
+* bump liip/test-fixtures-bundle from 3.2.1 to 3.2.2 ([#1289](https://github.com/cedricziel/faro-shop/issues/1289)) ([4facbef](https://github.com/cedricziel/faro-shop/commit/4facbef48da099c6ca0ab262a0e467741cad8542))
+* bump liip/test-fixtures-bundle from 3.2.2 to 3.3.0 ([#1324](https://github.com/cedricziel/faro-shop/issues/1324)) ([149ba28](https://github.com/cedricziel/faro-shop/commit/149ba28fdeef22e89440c30b30b65c7e4f4e62c3))
+* bump monolog/monolog from 3.8.1 to 3.9.0 ([#1309](https://github.com/cedricziel/faro-shop/issues/1309)) ([c7ae326](https://github.com/cedricziel/faro-shop/commit/c7ae32650ff45bb1dbe83b4ce7381f98665d3fbc))
+* bump nesbot/carbon from 3.8.6 to 3.9.0 ([#1326](https://github.com/cedricziel/faro-shop/issues/1326)) ([fcbba7c](https://github.com/cedricziel/faro-shop/commit/fcbba7c74d1428046e90282e22260065a80e8ea3))
+* bump nette/utils from 4.0.5 to 4.0.6 ([#1319](https://github.com/cedricziel/faro-shop/issues/1319)) ([6b8c63c](https://github.com/cedricziel/faro-shop/commit/6b8c63ce41b9f12b4d31b805321f5f0b0d4c5fa8))
+* bump open-telemetry/opentelemetry-auto-laravel from 1.1.0 to 1.1.1 in the open-telemetry group ([#1301](https://github.com/cedricziel/faro-shop/issues/1301)) ([00ea88f](https://github.com/cedricziel/faro-shop/commit/00ea88f07763be102d71cbd8ff61559f8660a7bc))
+* bump open-telemetry/opentelemetry-auto-pdo from 0.0.18 to 0.0.19 in the open-telemetry group ([#1304](https://github.com/cedricziel/faro-shop/issues/1304)) ([42cf653](https://github.com/cedricziel/faro-shop/commit/42cf6534c09b4f2c420a292e9044253d3bfab33a))
+* bump otel/opentelemetry-collector-contrib from 0.121.0 to 0.122.0 in /docker/otelcol ([#1297](https://github.com/cedricziel/faro-shop/issues/1297)) ([0541671](https://github.com/cedricziel/faro-shop/commit/0541671e62db88b5ce554f544ccfa65670534ef4))
+* bump otel/opentelemetry-collector-contrib from 0.122.0 to 0.122.1 in /docker/otelcol ([#1300](https://github.com/cedricziel/faro-shop/issues/1300)) ([6af4bde](https://github.com/cedricziel/faro-shop/commit/6af4bde6e00e071466a4dc23feb197c6ff59692b))
+* bump otel/opentelemetry-collector-contrib from 0.122.1 to 0.123.0 in /docker/otelcol ([#1323](https://github.com/cedricziel/faro-shop/issues/1323)) ([914bc1c](https://github.com/cedricziel/faro-shop/commit/914bc1cbf28aa156871d7eec83c2286924c0907f))
+* bump php from 8.4.4-fpm-alpine to 8.4.5-fpm-alpine ([#1290](https://github.com/cedricziel/faro-shop/issues/1290)) ([79afaef](https://github.com/cedricziel/faro-shop/commit/79afaef0c60e0942c0bcf97aec69fc18f456256c))
+* bump ramsey/collection from 2.1.0 to 2.1.1 ([#1307](https://github.com/cedricziel/faro-shop/issues/1307)) ([d418643](https://github.com/cedricziel/faro-shop/commit/d418643091e95df5664034b411cad4f5cecf071a))
+* bump sebastian/code-unit from 3.0.2 to 3.0.3 ([#1299](https://github.com/cedricziel/faro-shop/issues/1299)) ([71f8f50](https://github.com/cedricziel/faro-shop/commit/71f8f500c28499d82ad233a3f40b1337eefe22e0))
+* bump sebastian/type from 5.1.0 to 5.1.2 ([#1295](https://github.com/cedricziel/faro-shop/issues/1295)) ([ff33a34](https://github.com/cedricziel/faro-shop/commit/ff33a34e51dd3c9bb7c3e9bf5b6b109f04273236))
+* bump tbachert/spi from 1.0.2 to 1.0.3 ([#1328](https://github.com/cedricziel/faro-shop/issues/1328)) ([35f5d78](https://github.com/cedricziel/faro-shop/commit/35f5d78dfb951c80495f3a8d564864dd0a11bf2e))
+* bump the grafana group with 2 updates ([#1329](https://github.com/cedricziel/faro-shop/issues/1329)) ([24f4e8e](https://github.com/cedricziel/faro-shop/commit/24f4e8eb01ad973b88b5056dc4a045a3db013ec0))
+* bump the symfony group with 18 updates ([#1317](https://github.com/cedricziel/faro-shop/issues/1317)) ([be8dbfd](https://github.com/cedricziel/faro-shop/commit/be8dbfd00afe43c943c26eab5ce193018181612c))
+* bump zenstruck/foundry from 2.3.7 to 2.3.8 ([#1293](https://github.com/cedricziel/faro-shop/issues/1293)) ([ea66e0f](https://github.com/cedricziel/faro-shop/commit/ea66e0fb2880de1fc9c29b84a50b6bb6668f4a09))
+* bump zenstruck/foundry from 2.3.9 to 2.3.10 ([#1321](https://github.com/cedricziel/faro-shop/issues/1321)) ([9da3fd2](https://github.com/cedricziel/faro-shop/commit/9da3fd2ef4d15b1a3ef2470388f05fa9cdbed1c3))
+
 ## [0.44.7](https://github.com/cedricziel/faro-shop/compare/0.44.6...0.44.7) (2025-03-12)
 
 
