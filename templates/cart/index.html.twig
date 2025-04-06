@@ -38,7 +38,7 @@
                                                     {{ form_errors(item.quantity) }}
                                                 </div>
                                             </div>
-                                            {{ form_widget(item.remove, {'attr': {'class': 'btn btn-dark btn-sm'}}) }}
+                                            {{ form_widget(item.remove, {'attr': {'class': 'btn btn-dark btn-sm', 'data-faro-user-action-name': 'remove-from-cart'}}) }}
                                         </div>
                                     </div>
                                     <div class="flex-fill mr-2 text-right">
@@ -62,7 +62,9 @@
                         </ul>
                         <div class="card-body">
                             <a id="checkout" href="{{ path('app_checkout', {'id': cart.id}) }}"
-                               class="btn btn-warning w-100" {{ stimulus_action('checkout', 'submit:prevent', 'click') }}>
+                               class="btn btn-warning w-100"
+                               data-faro-user-action-name="remove-from-cart"
+                               {{ stimulus_action('checkout', 'submit:prevent', 'click') }}>
                                 Checkout
                             </a>
                         </div>
