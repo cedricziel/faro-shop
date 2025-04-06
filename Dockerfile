@@ -100,6 +100,23 @@ RUN set -eux; \
 	composer run-script --no-dev post-install-cmd; \
 	chmod +x bin/console; sync;
 
+# Caddy builder image
+FROM caddy_upstream AS caddy_builder
+
+ARG TARGETARCH
+
+WORKDIR /build
+
+# Install Go and build dependencies
+# hadolint ignore=DL3018
+RUN apk add --no-cache go git
+
+# Install xcaddy and build Caddy with required modules
+RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest \
+    && /root/go/bin/xcaddy build \
+    --with github.com/dunglas/mercure/caddy@v0.17.1 \
+    --with github.com/dunglas/vulcain/caddy
+
 # Base Caddy image
 FROM caddy_upstream AS caddy_base
 
@@ -107,8 +124,9 @@ ARG TARGETARCH
 
 WORKDIR /srv/app
 
-# Download Caddy compiled with the Mercure and Vulcain modules
-ADD --chmod=500 https://caddyserver.com/api/download?os=linux&arch=$TARGETARCH&p=github.com/dunglas/mercure/caddy&p=github.com/dunglas/vulcain/caddy /usr/bin/caddy
+# Copy the built binary from the builder stage
+COPY --from=caddy_builder --link /build/caddy /usr/bin/caddy
+RUN chmod 500 /usr/bin/caddy
 
 COPY --link docker/caddy/Caddyfile /etc/caddy/Caddyfile
 HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://localhost:2019/metrics -O - || exit 1
