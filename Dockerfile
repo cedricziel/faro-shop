@@ -109,7 +109,7 @@ WORKDIR /build
 
 # Install Go and build dependencies
 # hadolint ignore=DL3018
-RUN apk add --no-cache go git
+RUN apk add --no-cache go=1.24.2 git
 
 # Install xcaddy and build Caddy with required modules
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest \
