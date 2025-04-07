@@ -50,6 +50,7 @@
         "symfony/mime": "7.2.*",
         "symfony/monolog-bundle": "^3.8",
         "symfony/notifier": "7.2.*",
+        "symfony/polyfill-php84": "^1.31",
         "symfony/process": "7.2.*",
         "symfony/property-access": "7.2.*",
         "symfony/property-info": "7.2.*",
