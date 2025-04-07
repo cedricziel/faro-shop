@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.46.0](https://github.com/cedricziel/faro-shop/compare/0.45.3...0.46.0) (2025-04-07)
+
+
+### Features
+
+* track resources ([#1357](https://github.com/cedricziel/faro-shop/issues/1357)) ([2899cce](https://github.com/cedricziel/faro-shop/commit/2899cce18324e0e8ef78bc591330413d1ccd8017))
+
 ## [0.45.3](https://github.com/cedricziel/faro-shop/compare/0.45.2...0.45.3) (2025-04-07)
 
 
