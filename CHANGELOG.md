@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.46.1](https://github.com/cedricziel/faro-shop/compare/0.46.0...0.46.1) (2025-04-07)
+
+
+### Bug Fixes
+
+* bump cedricziel/faro-shop-php from 8.5.3 to 8.5.4 ([#1361](https://github.com/cedricziel/faro-shop/issues/1361)) ([686968e](https://github.com/cedricziel/faro-shop/commit/686968e206d42fbb0cd945c7dcdcac3784f76b49))
+* bump symfony/stimulus-bundle from 2.23.0 to 2.24.0 in the symfony group ([#1363](https://github.com/cedricziel/faro-shop/issues/1363)) ([02bd338](https://github.com/cedricziel/faro-shop/commit/02bd338feb306c4960c39130830db6fa55e2682a))
+
 ## [0.46.0](https://github.com/cedricziel/faro-shop/compare/0.45.3...0.46.0) (2025-04-07)
 
 
