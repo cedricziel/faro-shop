@@ -112,6 +112,7 @@ WORKDIR /build
 RUN apk add --no-cache go git
 
 # Install xcaddy and build Caddy with required modules for the target architecture
+# hadolint ignore=DL3059
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 RUN GOOS=$TARGETOS GOARCH=${TARGETARCH} /root/go/bin/xcaddy build \
     --with github.com/dunglas/mercure/caddy@v0.17.1 \
