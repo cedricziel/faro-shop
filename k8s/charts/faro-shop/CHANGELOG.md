@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.92.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.91.0...faro-shop-0.92.0) (2025-04-07)
+
+
+### Features
+
+* Bump app to 0.45.0 ([#1342](https://github.com/cedricziel/faro-shop/issues/1342)) ([a9f0bb4](https://github.com/cedricziel/faro-shop/commit/a9f0bb42b5187cd7bc62afa6aaaa33b9f6238d20))
+* Bump app to 0.45.1 ([#1348](https://github.com/cedricziel/faro-shop/issues/1348)) ([c34f30e](https://github.com/cedricziel/faro-shop/commit/c34f30e52d3253eb4bc70e5c91ed637325b5d801))
+
 ## [0.91.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.90.0...faro-shop-0.91.0) (2025-04-06)
 
 
