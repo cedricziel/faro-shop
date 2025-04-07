@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.45.2](https://github.com/cedricziel/faro-shop/compare/0.45.1...0.45.2) (2025-04-07)
+
+
+### Bug Fixes
+
+* migrate k6 api ([#1349](https://github.com/cedricziel/faro-shop/issues/1349)) ([fe8c8fa](https://github.com/cedricziel/faro-shop/commit/fe8c8fa533715668b5dd15ebad02798a5431bb81))
+
 ## [0.45.1](https://github.com/cedricziel/faro-shop/compare/0.45.0...0.45.1) (2025-04-07)
 
 
