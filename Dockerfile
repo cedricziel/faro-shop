@@ -103,7 +103,7 @@ RUN set -eux; \
 # Caddy builder image
 FROM caddy_upstream AS caddy_builder
 
-ARG TARGETARCH
+ARG TARGETOS TARGETARCH
 
 WORKDIR /build
 
@@ -111,16 +111,16 @@ WORKDIR /build
 # hadolint ignore=DL3018
 RUN apk add --no-cache go git
 
-# Install xcaddy and build Caddy with required modules
-RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest \
-    && /root/go/bin/xcaddy build \
+# Install xcaddy and build Caddy with required modules for the target architecture
+RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
+RUN GOOS=$TARGETOS GOARCH=${TARGETARCH} /root/go/bin/xcaddy build \
     --with github.com/dunglas/mercure/caddy@v0.17.1 \
     --with github.com/dunglas/vulcain/caddy
 
 # Base Caddy image
 FROM caddy_upstream AS caddy_base
 
-ARG TARGETARCH
+ARG TARGETOS TARGETARCH
 
 WORKDIR /srv/app
 
