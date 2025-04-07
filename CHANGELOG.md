@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.45.3](https://github.com/cedricziel/faro-shop/compare/0.45.2...0.45.3) (2025-04-07)
+
+
+### Bug Fixes
+
+* import check separately to support async checks ([#1353](https://github.com/cedricziel/faro-shop/issues/1353)) ([1c7a834](https://github.com/cedricziel/faro-shop/commit/1c7a834680fb4d554130dc97af09b8bd15ed06cc))
+
 ## [0.45.2](https://github.com/cedricziel/faro-shop/compare/0.45.1...0.45.2) (2025-04-07)
 
 
