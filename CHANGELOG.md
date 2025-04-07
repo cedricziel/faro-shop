@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.45.1](https://github.com/cedricziel/faro-shop/compare/0.45.0...0.45.1) (2025-04-07)
+
+
+### Bug Fixes
+
+* bump @symfony/stimulus-bridge from 3.2.3 to 4.0.0 ([#1194](https://github.com/cedricziel/faro-shop/issues/1194)) ([9309f3f](https://github.com/cedricziel/faro-shop/commit/9309f3f9d443b30ea70621b941ee3105bd630784))
+* upgrade k6-browser ([#1346](https://github.com/cedricziel/faro-shop/issues/1346)) ([12f7780](https://github.com/cedricziel/faro-shop/commit/12f7780a620a9adb96d2272c6007d007558f6e9a))
+* upgrade phpunit recipe ([#1344](https://github.com/cedricziel/faro-shop/issues/1344)) ([bed3cd9](https://github.com/cedricziel/faro-shop/commit/bed3cd9de1d315befc3943d39c1d65215891aa08))
+
 ## [0.45.0](https://github.com/cedricziel/faro-shop/compare/0.44.8...0.45.0) (2025-04-07)
 
 
