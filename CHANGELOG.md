@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.45.0](https://github.com/cedricziel/faro-shop/compare/0.44.8...0.45.0) (2025-04-07)
+
+
+### Features
+
+* track user actions ([#1335](https://github.com/cedricziel/faro-shop/issues/1335)) ([4f5bfa7](https://github.com/cedricziel/faro-shop/commit/4f5bfa764567bf1c816bbfbdd3922ab87890206d))
+
+
+### Bug Fixes
+
+* explicitly set TARGETOS TARGETARCH ([#1339](https://github.com/cedricziel/faro-shop/issues/1339)) ([1de8124](https://github.com/cedricziel/faro-shop/commit/1de8124979f5bea388f51cea081e3d6bc05fcf05))
+
 ## [0.44.8](https://github.com/cedricziel/faro-shop/compare/0.44.7...0.44.8) (2025-04-06)
 
 
