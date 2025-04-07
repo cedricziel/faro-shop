@@ -62,7 +62,7 @@ jobs:
 
   test:
     needs: lint
-    if: ${{ github.head_ref != 'release-please--branches--main' }}
+    #if: ${{ github.head_ref != 'release-please--branches--main' }}
     strategy:
       matrix:
         include:
