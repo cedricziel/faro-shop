@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.46.2](https://github.com/cedricziel/faro-shop/compare/0.46.1...0.46.2) (2025-04-08)
+
+
+### Bug Fixes
+
+* bump doctrine/deprecations from 1.1.4 to 1.1.5 ([#1370](https://github.com/cedricziel/faro-shop/issues/1370)) ([9ee6cfb](https://github.com/cedricziel/faro-shop/commit/9ee6cfb24fa1c3765157fe1d70ec69e164c8bc08))
+* bump open-telemetry/sdk from 1.2.2 to 1.2.3 in the open-telemetry group ([#1368](https://github.com/cedricziel/faro-shop/issues/1368)) ([a9bd20f](https://github.com/cedricziel/faro-shop/commit/a9bd20fc7884f62bce9225cc528e4e4479ab6ae7))
+* bump the grafana group with 2 updates ([#1372](https://github.com/cedricziel/faro-shop/issues/1372)) ([ce896b1](https://github.com/cedricziel/faro-shop/commit/ce896b1f74d5a6244a2b65380e546ed8e31e0047))
+* bump webpack from 5.99.0 to 5.99.2 ([#1367](https://github.com/cedricziel/faro-shop/issues/1367)) ([5797a5c](https://github.com/cedricziel/faro-shop/commit/5797a5c03ad11c4e74a9e1324c8ed25156733f67))
+
 ## [0.46.1](https://github.com/cedricziel/faro-shop/compare/0.46.0...0.46.1) (2025-04-07)
 
 
