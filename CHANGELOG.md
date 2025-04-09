@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.47.0](https://github.com/cedricziel/faro-shop/compare/0.46.2...0.47.0) (2025-04-09)
+
+
+### Features
+
+* add user actions for quantity and add-to-cart ([#1379](https://github.com/cedricziel/faro-shop/issues/1379)) ([db9dd53](https://github.com/cedricziel/faro-shop/commit/db9dd53f315e09ec00060833fb4951107020f41a))
+
+
+### Bug Fixes
+
+* bump laravel/framework from 12.7.2 to 12.8.1 ([#1377](https://github.com/cedricziel/faro-shop/issues/1377)) ([fc164a2](https://github.com/cedricziel/faro-shop/commit/fc164a21b695ecef443f3598a22aec4d76beba6c))
+* bump webpack from 5.99.2 to 5.99.3 ([#1375](https://github.com/cedricziel/faro-shop/issues/1375)) ([d3bfb2d](https://github.com/cedricziel/faro-shop/commit/d3bfb2deb592ce815427ee1c67d426481356e40e))
+* bump webpack from 5.99.3 to 5.99.5 ([#1378](https://github.com/cedricziel/faro-shop/issues/1378)) ([41c2385](https://github.com/cedricziel/faro-shop/commit/41c23855b1d7727187a992e9976c8807490a8552))
+
 ## [0.46.2](https://github.com/cedricziel/faro-shop/compare/0.46.1...0.46.2) (2025-04-08)
 
 
