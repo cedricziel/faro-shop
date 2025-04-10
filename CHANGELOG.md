@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.47.1](https://github.com/cedricziel/faro-shop/compare/0.47.0...0.47.1) (2025-04-10)
+
+
+### Bug Fixes
+
+* bump @grafana/faro-webpack-plugin from 0.5.0 to 0.5.1 in the grafana group ([#1382](https://github.com/cedricziel/faro-shop/issues/1382)) ([26d9f75](https://github.com/cedricziel/faro-shop/commit/26d9f75c0be5c575e0fdea78fee7230aa8631d70))
+
 ## [0.47.0](https://github.com/cedricziel/faro-shop/compare/0.46.2...0.47.0) (2025-04-09)
 
 
