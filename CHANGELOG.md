@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.47.1](https://github.com/cedricziel/faro-shop/compare/0.47.0...0.47.1) (2025-04-15)
+
+
+### Bug Fixes
+
+* bump @grafana/faro-webpack-plugin from 0.5.0 to 0.5.1 in the grafana group ([#1382](https://github.com/cedricziel/faro-shop/issues/1382)) ([26d9f75](https://github.com/cedricziel/faro-shop/commit/26d9f75c0be5c575e0fdea78fee7230aa8631d70))
+* bump laravel/framework from 12.8.1 to 12.9.0 ([#1390](https://github.com/cedricziel/faro-shop/issues/1390)) ([ed2483f](https://github.com/cedricziel/faro-shop/commit/ed2483ffaa91b4f9963f9720259fea55f07830ec))
+* bump open-telemetry/sdk from 1.2.3 to 1.2.4 in the open-telemetry group ([#1389](https://github.com/cedricziel/faro-shop/issues/1389)) ([99f0430](https://github.com/cedricziel/faro-shop/commit/99f0430304d088fc1bf4e847ee0e8fcf6d05f7b1))
+* bump php from 8.4.5-fpm-alpine to 8.4.6-fpm-alpine ([#1387](https://github.com/cedricziel/faro-shop/issues/1387)) ([b202b7c](https://github.com/cedricziel/faro-shop/commit/b202b7c9e63c4674dc380be59654533539525fbb))
+* bump phpdocumentor/reflection-docblock from 5.6.1 to 5.6.2 ([#1384](https://github.com/cedricziel/faro-shop/issues/1384)) ([b8b6aa4](https://github.com/cedricziel/faro-shop/commit/b8b6aa477a85520286d50636d0877be1a74e06dd))
+* bump the grafana group with 2 updates ([#1388](https://github.com/cedricziel/faro-shop/issues/1388)) ([b466571](https://github.com/cedricziel/faro-shop/commit/b46657181539ead399e7308ba4fdd94da4eed4a8))
+
 ## [0.47.0](https://github.com/cedricziel/faro-shop/compare/0.46.2...0.47.0) (2025-04-09)
 
 
