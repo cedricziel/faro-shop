@@ -15189,16 +15189,16 @@
         },
         {
             "name": "zenstruck/foundry",
-            "version": "v2.3.10",
+            "version": "v2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zenstruck/foundry.git",
-                "reference": "76c2d4ac9d9c08fd80ca2cb216b42abef46ae3f3"
+                "reference": "90c47bff9ba369e080a26ebbe630b2ee1176d47e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zenstruck/foundry/zipball/76c2d4ac9d9c08fd80ca2cb216b42abef46ae3f3",
-                "reference": "76c2d4ac9d9c08fd80ca2cb216b42abef46ae3f3",
+                "url": "https://api.github.com/repos/zenstruck/foundry/zipball/90c47bff9ba369e080a26ebbe630b2ee1176d47e",
+                "reference": "90c47bff9ba369e080a26ebbe630b2ee1176d47e",
                 "shasum": ""
             },
             "require": {
@@ -15208,6 +15208,7 @@
                 "symfony/deprecation-contracts": "^2.2|^3.0",
                 "symfony/framework-bundle": "^6.4|^7.0",
                 "symfony/property-access": "^6.4|^7.0",
+                "symfony/property-info": "^6.4|^7.0",
                 "symfony/var-exporter": "^6.4.9|~7.0.9|^7.1.2",
                 "zenstruck/assert": "^1.4"
             },
@@ -15222,7 +15223,7 @@
                 "doctrine/mongodb-odm": "^2.4",
                 "doctrine/mongodb-odm-bundle": "^4.6|^5.0",
                 "doctrine/orm": "^2.16|^3.0",
-                "phpunit/phpunit": "^9.5.0 || ^10.0 || ^11.0",
+                "phpunit/phpunit": "^9.5.0 || ^10.0 || ^11.0 || ^12.0",
                 "symfony/console": "^6.4|^7.0",
                 "symfony/dotenv": "^6.4|^7.0",
                 "symfony/maker-bundle": "^1.55",
@@ -15282,7 +15283,7 @@
             ],
             "support": {
                 "issues": "https://github.com/zenstruck/foundry/issues",
-                "source": "https://github.com/zenstruck/foundry/tree/v2.3.10"
+                "source": "https://github.com/zenstruck/foundry/tree/v2.4.1"
             },
             "funding": [
                 {
@@ -15290,7 +15291,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-31T09:53:36+00:00"
+            "time": "2025-04-15T07:03:08+00:00"
         }
     ],
     "aliases": [],
