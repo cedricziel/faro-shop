@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.47.2](https://github.com/cedricziel/faro-shop/compare/0.47.1...0.47.2) (2025-04-17)
+
+
+### Bug Fixes
+
+* bump laravel/framework from 12.9.0 to 12.9.1 ([#1394](https://github.com/cedricziel/faro-shop/issues/1394)) ([2239e4d](https://github.com/cedricziel/faro-shop/commit/2239e4d99d582bf57ef96f2e3cdae129312c745a))
+* bump laravel/framework from 12.9.1 to 12.9.2 ([#1397](https://github.com/cedricziel/faro-shop/issues/1397)) ([029e93f](https://github.com/cedricziel/faro-shop/commit/029e93f6313771d29b76cdefaf5486ffb3d41da3))
+* bump the grafana group with 2 updates ([#1396](https://github.com/cedricziel/faro-shop/issues/1396)) ([3487da8](https://github.com/cedricziel/faro-shop/commit/3487da8e7929b95c7916917dc66fb68c52e7b000))
+* bump zenstruck/foundry from 2.4.1 to 2.4.2 ([#1398](https://github.com/cedricziel/faro-shop/issues/1398)) ([09ff03b](https://github.com/cedricziel/faro-shop/commit/09ff03b5d5562fc399cd28c846b951a4c509af89))
+
 ## [0.47.1](https://github.com/cedricziel/faro-shop/compare/0.47.0...0.47.1) (2025-04-15)
 
 
