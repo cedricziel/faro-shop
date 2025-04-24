@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.47.3](https://github.com/cedricziel/faro-shop/compare/0.47.2...0.47.3) (2025-04-24)
+
+
+### Bug Fixes
+
+* bump @symfony/stimulus-bridge from 4.0.0 to 4.0.1 ([#1405](https://github.com/cedricziel/faro-shop/issues/1405)) ([4711f59](https://github.com/cedricziel/faro-shop/commit/4711f593542dd57606034f419c47c9135c527cdc))
+* bump cedricziel/faro-shop-php from 8.5.4 to 8.5.5 ([#1403](https://github.com/cedricziel/faro-shop/issues/1403)) ([53c0422](https://github.com/cedricziel/faro-shop/commit/53c0422d6939fd08c7c52344f82ded200f3e8f54))
+* bump laravel/framework from 12.9.2 to 12.10.0 ([#1406](https://github.com/cedricziel/faro-shop/issues/1406)) ([81fb988](https://github.com/cedricziel/faro-shop/commit/81fb988fc60cd3ce8b0a68a6684cd9dae4b3a34a))
+* bump league/commonmark from 2.6.1 to 2.6.2 ([#1404](https://github.com/cedricziel/faro-shop/issues/1404)) ([6c6bee4](https://github.com/cedricziel/faro-shop/commit/6c6bee44e650e9205728f0fbf4db6f5e013b1b03))
+* bump webpack from 5.99.5 to 5.99.6 ([#1401](https://github.com/cedricziel/faro-shop/issues/1401)) ([adb0ba2](https://github.com/cedricziel/faro-shop/commit/adb0ba2cbb1068eadbfc8a28d152ece8dfd2db84))
+* pin vulcain ([#1412](https://github.com/cedricziel/faro-shop/issues/1412)) ([689009c](https://github.com/cedricziel/faro-shop/commit/689009ce9a068aa87b42d919d7685cf9890ecdfc))
+
 ## [0.47.2](https://github.com/cedricziel/faro-shop/compare/0.47.1...0.47.2) (2025-04-17)
 
 
