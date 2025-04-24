@@ -117,7 +117,7 @@ RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 # hadolint ignore=DL3059
 RUN GOOS=$TARGETOS GOARCH=${TARGETARCH} /root/go/bin/xcaddy build \
     --with github.com/dunglas/mercure/caddy@v0.17.1 \
-    --with github.com/dunglas/vulcain/caddy
+    --with github.com/dunglas/vulcain/caddy@v1.1.1
 
 # Base Caddy image
 FROM caddy_upstream AS caddy_base
