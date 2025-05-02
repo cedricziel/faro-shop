@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b23fdc44124ce852d6c75c3f5103b043",
+    "content-hash": "9e43af96a297bd633b0bcbc26d70441b",
     "packages": [
         {
             "name": "brick/math",
@@ -2302,16 +2302,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.11.1",
+            "version": "v12.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "bd0d62bd9c5196728e428cd695d89ec8640daac1"
+                "reference": "8f6cd73696068c28f30f5964556ec9d14e5d90d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/bd0d62bd9c5196728e428cd695d89ec8640daac1",
-                "reference": "bd0d62bd9c5196728e428cd695d89ec8640daac1",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/8f6cd73696068c28f30f5964556ec9d14e5d90d7",
+                "reference": "8f6cd73696068c28f30f5964556ec9d14e5d90d7",
                 "shasum": ""
             },
             "require": {
@@ -2513,7 +2513,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-04-30T13:48:39+00:00"
+            "time": "2025-05-01T16:13:12+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -3291,16 +3291,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.9.0",
+            "version": "3.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "6d16a8a015166fe54e22c042e0805c5363aef50d"
+                "reference": "ced71f79398ece168e24f7f7710462f462310d4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/6d16a8a015166fe54e22c042e0805c5363aef50d",
-                "reference": "6d16a8a015166fe54e22c042e0805c5363aef50d",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/ced71f79398ece168e24f7f7710462f462310d4d",
+                "reference": "ced71f79398ece168e24f7f7710462f462310d4d",
                 "shasum": ""
             },
             "require": {
@@ -3393,7 +3393,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-27T12:57:33+00:00"
+            "time": "2025-05-01T19:51:51+00:00"
         },
         {
             "name": "nette/schema",
@@ -4206,16 +4206,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-laravel",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-laravel.git",
-                "reference": "c5abce57a50c1a2dd53c6e1d998002a80123736c"
+                "reference": "7cfb0b436823520dce3992f3a1a0eb8e6b02da3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-laravel/zipball/c5abce57a50c1a2dd53c6e1d998002a80123736c",
-                "reference": "c5abce57a50c1a2dd53c6e1d998002a80123736c",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-laravel/zipball/7cfb0b436823520dce3992f3a1a0eb8e6b02da3a",
+                "reference": "7cfb0b436823520dce3992f3a1a0eb8e6b02da3a",
                 "shasum": ""
             },
             "require": {
@@ -4265,22 +4265,22 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-laravel/tree/1.1.1"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-laravel/tree/1.2.0"
             },
-            "time": "2025-03-16T10:37:48+00:00"
+            "time": "2025-04-14T03:40:36+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-pdo",
-            "version": "0.0.19",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-pdo.git",
-                "reference": "6a63d151e545f68ca4ed530e2dcc396b839d5adb"
+                "reference": "a6bd1076900dfc0e3d96379e0f05a038892b9bd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/6a63d151e545f68ca4ed530e2dcc396b839d5adb",
-                "reference": "6a63d151e545f68ca4ed530e2dcc396b839d5adb",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/a6bd1076900dfc0e3d96379e0f05a038892b9bd0",
+                "reference": "a6bd1076900dfc0e3d96379e0f05a038892b9bd0",
                 "shasum": ""
             },
             "require": {
@@ -4294,6 +4294,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3",
                 "open-telemetry/sdk": "^1.0",
+                "open-telemetry/test-utils": "^0.2.0",
                 "phan/phan": "^5.0",
                 "php-http/mock-client": "*",
                 "phpstan/phpstan": "^1.1",
@@ -4329,9 +4330,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.0.19"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.1.0"
             },
-            "time": "2025-03-18T03:38:39+00:00"
+            "time": "2025-04-09T21:17:02+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr15",
@@ -4457,16 +4458,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr3",
-            "version": "0.0.9",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-psr3.git",
-                "reference": "ca4b6d6e127ac49c35c3d9dab18d4cc2c639d6f9"
+                "reference": "ba4c814467ad72de0a9f29f39c9a7a600c6dfc33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr3/zipball/ca4b6d6e127ac49c35c3d9dab18d4cc2c639d6f9",
-                "reference": "ca4b6d6e127ac49c35c3d9dab18d4cc2c639d6f9",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-psr3/zipball/ba4c814467ad72de0a9f29f39c9a7a600c6dfc33",
+                "reference": "ba4c814467ad72de0a9f29f39c9a7a600c6dfc33",
                 "shasum": ""
             },
             "require": {
@@ -4489,6 +4490,7 @@
                 "phpunit/phpunit": "^9.5",
                 "psalm/plugin-phpunit": "^0.19.2",
                 "symfony/console": "*",
+                "symfony/uid": "*",
                 "vimeo/psalm": "6.4.0",
                 "yiisoft/log": "*"
             },
@@ -4516,9 +4518,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-psr3/tree/0.0.9"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-psr3/tree/0.1.0"
             },
-            "time": "2025-02-25T01:30:01+00:00"
+            "time": "2025-05-02T05:37:28+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-slim",
@@ -4757,16 +4759,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-propagation-server-timing",
-            "version": "0.0.4",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-propagator-server-timing.git",
-                "reference": "174f2ef8771a0ed6c8eea5bd90ab7bc88ecccd0d"
+                "reference": "6fdf3514e9b1293190403d000fe0fa4e4550a3f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-propagator-server-timing/zipball/174f2ef8771a0ed6c8eea5bd90ab7bc88ecccd0d",
-                "reference": "174f2ef8771a0ed6c8eea5bd90ab7bc88ecccd0d",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-propagator-server-timing/zipball/6fdf3514e9b1293190403d000fe0fa4e4550a3f6",
+                "reference": "6fdf3514e9b1293190403d000fe0fa4e4550a3f6",
                 "shasum": ""
             },
             "require": {
@@ -4807,9 +4809,9 @@
                 "propagator"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-propagator-server-timing/tree/0.0.4"
+                "source": "https://github.com/opentelemetry-php/contrib-propagator-server-timing/tree/0.1.0"
             },
-            "time": "2025-02-25T01:30:01+00:00"
+            "time": "2025-04-07T22:56:27+00:00"
         },
         {
             "name": "open-telemetry/sdk",
