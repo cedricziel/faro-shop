@@ -8,7 +8,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
 automountServiceAccountToken: true
 ---
@@ -21,7 +21,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
 data:
   POSTGRES_DB: "app"
@@ -37,7 +37,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/component: backend
 spec:
@@ -62,7 +62,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
 spec:
   type: NodePort
@@ -84,7 +84,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
 spec:
     ports:
@@ -105,7 +105,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/component: worker
 spec:
@@ -120,7 +120,7 @@ spec:
         helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
         app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
-        app.kubernetes.io/version: "0.47.5"
+        app.kubernetes.io/version: "0.47.6"
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/component: worker
     spec:
@@ -132,7 +132,7 @@ spec:
         - name: php
           securityContext:
             {}
-          image: "ghcr.io/cedricziel/faro-shop-app-php:0.47.5-prod"
+          image: "ghcr.io/cedricziel/faro-shop-app-php:0.47.6-prod"
           imagePullPolicy: IfNotPresent
           env:
             - name: DATABASE_URL
@@ -142,7 +142,7 @@ spec:
             - name: RABBITMQ_URL
               value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
             - name: OTEL_RESOURCE_ATTRIBUTES
-              value: "service.namespace=default,service.version=0.47.5,deployment.environment=production"
+              value: "service.namespace=default,service.version=0.47.6,deployment.environment=production"
             
             - name: APP_ENV
               value: "prod"
@@ -171,7 +171,7 @@ spec:
             - '--time-limit=3600'
       initContainers:
         - name: create-schema
-          image: "ghcr.io/cedricziel/faro-shop-app-php:0.47.5-prod"
+          image: "ghcr.io/cedricziel/faro-shop-app-php:0.47.6-prod"
           imagePullPolicy: IfNotPresent
           command: ["sh", "-c", "php bin/console doctrine:migrations:migrate --no-interaction"]
           env:
@@ -216,7 +216,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/component: backend
 spec:
@@ -232,7 +232,7 @@ spec:
         helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
         app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
-        app.kubernetes.io/version: "0.47.5"
+        app.kubernetes.io/version: "0.47.6"
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/component: backend
     spec:
@@ -244,7 +244,7 @@ spec:
         - name: caddy
           securityContext:
             {}
-          image: "ghcr.io/cedricziel/faro-shop-app-caddy:0.47.5-prod"
+          image: "ghcr.io/cedricziel/faro-shop-app-caddy:0.47.6-prod"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -269,7 +269,7 @@ spec:
             - name: RABBITMQ_URL
               value: amqp://guest:guest@faro-shop-rabbitmq:5672/%2f/messages
             - name: OTEL_RESOURCE_ATTRIBUTES
-              value: "service.namespace=default,service.version=0.47.5,deployment.environment=production"
+              value: "service.namespace=default,service.version=0.47.6,deployment.environment=production"
           
             - name: MERCURE_PUBLISHER_JWT_KEY
               value: "!ChangeThisMercureHubJWTSecretKey!"
@@ -282,7 +282,7 @@ spec:
         - name: php
           securityContext:
             {}
-          image: "ghcr.io/cedricziel/faro-shop-app-php:0.47.5-prod"
+          image: "ghcr.io/cedricziel/faro-shop-app-php:0.47.6-prod"
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: shared-data
@@ -297,7 +297,7 @@ spec:
             - name: FARO_NAMESPACE
               value: "default"
             - name: OTEL_RESOURCE_ATTRIBUTES
-              value: "service.namespace=default,service.version=0.47.5,deployment.environment=production"
+              value: "service.namespace=default,service.version=0.47.6,deployment.environment=production"
             
             - name: APP_ENV
               value: "prod"
@@ -327,7 +327,7 @@ spec:
               value: "${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}"
       initContainers:
         - name: create-schema
-          image: "ghcr.io/cedricziel/faro-shop-app-php:0.47.5-prod"
+          image: "ghcr.io/cedricziel/faro-shop-app-php:0.47.6-prod"
           imagePullPolicy: IfNotPresent
           command: ["sh", "-c", "php bin/console doctrine:migrations:migrate --no-interaction"]
           env:
@@ -363,7 +363,7 @@ spec:
             - name: TRUSTED_PROXIES
               value: "${TRUSTED_PROXIES:-127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16}"
         - name: load-fixtures
-          image: "ghcr.io/cedricziel/faro-shop-app-php:0.47.5-prod"
+          image: "ghcr.io/cedricziel/faro-shop-app-php:0.47.6-prod"
           imagePullPolicy: IfNotPresent
           command: ["sh", "-c", "php bin/console doctrine:fixtures:load --no-interaction"]
           env:
@@ -411,7 +411,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
 spec:
   replicas: 1
@@ -425,7 +425,7 @@ spec:
         helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
         app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
-        app.kubernetes.io/version: "0.47.5"
+        app.kubernetes.io/version: "0.47.6"
         app.kubernetes.io/managed-by: Helm
     spec:
       serviceAccountName: faro-shop
@@ -440,7 +440,7 @@ spec:
             - /etc/script.js
           securityContext:
             {}
-          image: "ghcr.io/cedricziel/faro-shop-k6:0.47.5"
+          image: "ghcr.io/cedricziel/faro-shop-k6:0.47.6"
           imagePullPolicy: IfNotPresent
           resources:
             {}
@@ -458,7 +458,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
 spec:
   replicas: 1
@@ -499,7 +499,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
 spec:
   replicas: 1
@@ -513,7 +513,7 @@ spec:
         helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
         app.kubernetes.io/name: faro-shop
         app.kubernetes.io/instance: faro-shop
-        app.kubernetes.io/version: "0.47.5"
+        app.kubernetes.io/version: "0.47.6"
         app.kubernetes.io/managed-by: Helm
         service: faro-shop-postgres
     spec:
@@ -553,7 +553,7 @@ metadata:
     helm.sh/chart: faro-shop-0.103.0 # x-release-please-version
     app.kubernetes.io/name: faro-shop
     app.kubernetes.io/instance: faro-shop
-    app.kubernetes.io/version: "0.47.5"
+    app.kubernetes.io/version: "0.47.6"
     app.kubernetes.io/managed-by: Helm
   annotations:
     "helm.sh/hook": test
