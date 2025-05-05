@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.47.6](https://github.com/cedricziel/faro-shop/compare/0.47.5...0.47.6) (2025-05-05)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.26.10 to 7.27.1 ([#1428](https://github.com/cedricziel/faro-shop/issues/1428)) ([bd94821](https://github.com/cedricziel/faro-shop/commit/bd94821a9e3025cbb3f576c8724431555952a961))
+* bump @babel/preset-env from 7.26.9 to 7.27.1 ([#1427](https://github.com/cedricziel/faro-shop/issues/1427)) ([de7d8a1](https://github.com/cedricziel/faro-shop/commit/de7d8a1e12d1809f9f177aa2c12bf28da18081fb))
+* bump core-js from 3.41.0 to 3.42.0 ([#1426](https://github.com/cedricziel/faro-shop/issues/1426)) ([dd1424b](https://github.com/cedricziel/faro-shop/commit/dd1424b8a49227eb995d3b904a765c6b11e7ab54))
+* bump doctrine/orm from 3.3.2 to 3.3.3 ([#1437](https://github.com/cedricziel/faro-shop/issues/1437)) ([8537401](https://github.com/cedricziel/faro-shop/commit/853740165f9e06b05edd888f099d0d2107101c77))
+* bump grafana/k6 from 0.58.0-with-browser to 0.59.0-with-browser in /docker/k6 ([#1442](https://github.com/cedricziel/faro-shop/issues/1442)) ([358b5ed](https://github.com/cedricziel/faro-shop/commit/358b5ed70997c87b4eab921b89a54159e8ebbaf8))
+* bump laravel/framework from 12.10.2 to 12.11.1 ([#1425](https://github.com/cedricziel/faro-shop/issues/1425)) ([921b271](https://github.com/cedricziel/faro-shop/commit/921b271938f6d02bd75adeb411a7b53189605b2e))
+* bump league/commonmark from 2.6.2 to 2.7.0 ([#1439](https://github.com/cedricziel/faro-shop/issues/1439)) ([3a37a75](https://github.com/cedricziel/faro-shop/commit/3a37a75f1c454f3a7356f39458a3d1d4a0a2d940))
+* bump myclabs/deep-copy from 1.13.0 to 1.13.1 ([#1424](https://github.com/cedricziel/faro-shop/issues/1424)) ([26c13e8](https://github.com/cedricziel/faro-shop/commit/26c13e841b1a7c04c69251ea8e748dc682c0cfce))
+* bump symfony/maker-bundle from 1.62.1 to 1.63.0 in the symfony group ([#1422](https://github.com/cedricziel/faro-shop/issues/1422)) ([cb206d9](https://github.com/cedricziel/faro-shop/commit/cb206d90305b51e9e66329e1d0944fcfed8e6fda))
+* bump the grafana group with 2 updates ([#1441](https://github.com/cedricziel/faro-shop/issues/1441)) ([21be4d5](https://github.com/cedricziel/faro-shop/commit/21be4d51ab3a0e08486fecef456b47bc6f6b2611))
+* bump the open-telemetry group with 3 updates ([#1438](https://github.com/cedricziel/faro-shop/issues/1438)) ([17c16e6](https://github.com/cedricziel/faro-shop/commit/17c16e6ea018851ce0d3ca5ce85c41bfa64d2ebe))
+* bump the open-telemetry group with 4 updates ([#1431](https://github.com/cedricziel/faro-shop/issues/1431)) ([ae10606](https://github.com/cedricziel/faro-shop/commit/ae10606d7704fbedc26572034e7c4a6affc90144))
+* bump the symfony group with 31 updates ([#1430](https://github.com/cedricziel/faro-shop/issues/1430)) ([c046027](https://github.com/cedricziel/faro-shop/commit/c04602762cc885d7871ad01aa4ce894dc7dbdb13))
+* bump twig/extra-bundle from 3.20.0 to 3.21.0 ([#1432](https://github.com/cedricziel/faro-shop/issues/1432)) ([c78765b](https://github.com/cedricziel/faro-shop/commit/c78765b1c8755d323bd7be671e6eda5acfcf8f14))
+* bump twig/twig from 3.21.0 to 3.21.1 ([#1440](https://github.com/cedricziel/faro-shop/issues/1440)) ([2da1eb4](https://github.com/cedricziel/faro-shop/commit/2da1eb4dfbe5140ac5169083a025184abc5261b6))
+* bump vlucas/phpdotenv from 5.6.1 to 5.6.2 ([#1429](https://github.com/cedricziel/faro-shop/issues/1429)) ([90d7bab](https://github.com/cedricziel/faro-shop/commit/90d7baba2d44234c9fce30c3cce8168c1df5bdde))
+
 ## [0.47.5](https://github.com/cedricziel/faro-shop/compare/0.47.4...0.47.5) (2025-04-25)
 
 
