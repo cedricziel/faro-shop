@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.47.7](https://github.com/cedricziel/faro-shop/compare/0.47.6...0.47.7) (2025-05-07)
+
+
+### Bug Fixes
+
+* bump @babel/preset-env from 7.27.1 to 7.27.2 ([#1449](https://github.com/cedricziel/faro-shop/issues/1449)) ([b09e3d9](https://github.com/cedricziel/faro-shop/commit/b09e3d9b955cbd7da8c13a20b4c646b858cdecb1))
+* bump doctrine/doctrine-migrations-bundle from 3.4.1 to 3.4.2 ([#1446](https://github.com/cedricziel/faro-shop/issues/1446)) ([8b962bc](https://github.com/cedricziel/faro-shop/commit/8b962bc1a1ef3fac9b68f9500cf205769836103d))
+* bump the grafana group with 2 updates ([#1451](https://github.com/cedricziel/faro-shop/issues/1451)) ([77b6e5d](https://github.com/cedricziel/faro-shop/commit/77b6e5dc2eb8e5f82da1333f46df9adba5684625))
+* bump webpack from 5.99.7 to 5.99.8 ([#1450](https://github.com/cedricziel/faro-shop/issues/1450)) ([af5353f](https://github.com/cedricziel/faro-shop/commit/af5353f66d090c54a0bab8071b4c3f436e8f81a0))
+* bump zenstruck/foundry from 2.4.2 to 2.4.3 ([#1445](https://github.com/cedricziel/faro-shop/issues/1445)) ([b4f0c55](https://github.com/cedricziel/faro-shop/commit/b4f0c55a2889a1ef5c371f78ae97be59068c5032))
+
 ## [0.47.6](https://github.com/cedricziel/faro-shop/compare/0.47.5...0.47.6) (2025-05-05)
 
 
