@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.5.6](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.5.5...php-baseimage-8.5.6) (2025-05-09)
+
+
+### Bug Fixes
+
+* bump php from 8.4.6-fpm-alpine to 8.4.7-fpm-alpine in /docker/php ([#1462](https://github.com/cedricziel/faro-shop/issues/1462)) ([fa601fe](https://github.com/cedricziel/faro-shop/commit/fa601fe346ff9abd8b02b59faf1a8eefd4b77837))
+
 ## [8.5.5](https://github.com/cedricziel/faro-shop/compare/php-baseimage-8.5.4...php-baseimage-8.5.5) (2025-04-18)
 
 
