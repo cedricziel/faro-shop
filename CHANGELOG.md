@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.47.8](https://github.com/cedricziel/faro-shop/compare/0.47.7...0.47.8) (2025-05-09)
+
+
+### Bug Fixes
+
+* bump laravel/framework from 12.12.0 to 12.13.0 ([#1456](https://github.com/cedricziel/faro-shop/issues/1456)) ([9390b18](https://github.com/cedricziel/faro-shop/commit/9390b18bf0b0be4c62cc4e072ce8790b8a435afc))
+
 ## [0.47.7](https://github.com/cedricziel/faro-shop/compare/0.47.6...0.47.7) (2025-05-07)
 
 
