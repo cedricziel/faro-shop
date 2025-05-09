@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.47.9](https://github.com/cedricziel/faro-shop/compare/0.47.8...0.47.9) (2025-05-09)
+
+
+### Bug Fixes
+
+* bump grafana/k6 from 0.59.0-with-browser to 1.0.0-with-browser in /docker/k6 ([#1447](https://github.com/cedricziel/faro-shop/issues/1447)) ([7cd7bcd](https://github.com/cedricziel/faro-shop/commit/7cd7bcdd2b97f151a8d237db20506ae3a23f81ea))
+* bump nunomaduro/termwind from 2.3.0 to 2.3.1 ([#1455](https://github.com/cedricziel/faro-shop/issues/1455)) ([95fb03d](https://github.com/cedricziel/faro-shop/commit/95fb03d66ffb02cd162d7487a4bae1e7a2147539))
+* bump open-telemetry/context from 1.2.0 to 1.2.1 in the open-telemetry group ([#1454](https://github.com/cedricziel/faro-shop/issues/1454)) ([9d61e14](https://github.com/cedricziel/faro-shop/commit/9d61e1402d0134809e6b2cc3e9e7fdd7f63cba14))
+* bump php from 8.4.6-fpm-alpine to 8.4.7-fpm-alpine ([#1464](https://github.com/cedricziel/faro-shop/issues/1464)) ([5887f79](https://github.com/cedricziel/faro-shop/commit/5887f795345153de0b60947e6d6cd12031d081a9))
+
 ## [0.47.8](https://github.com/cedricziel/faro-shop/compare/0.47.7...0.47.8) (2025-05-09)
 
 
