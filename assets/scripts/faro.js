@@ -48,6 +48,7 @@ export function initializeFaro() {
         },
         trackWebVitalsAttribution: true,
         trackUserActionsPreview: true,
-        trackResources: true
+        trackResources: true,
+        trackGeolocation: true
     });
 }
