@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.47.10](https://github.com/cedricziel/faro-shop/compare/0.47.9...0.47.10) (2025-05-12)
+
+
+### Bug Fixes
+
+* bump cedricziel/faro-shop-php from 8.5.5 to 8.5.6 ([#1467](https://github.com/cedricziel/faro-shop/issues/1467)) ([cc82cc4](https://github.com/cedricziel/faro-shop/commit/cc82cc418c4037eeff79c06fc595470cbdda96bb))
+
 ## [0.47.9](https://github.com/cedricziel/faro-shop/compare/0.47.8...0.47.9) (2025-05-09)
 
 
