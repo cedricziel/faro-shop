@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.47.11](https://github.com/cedricziel/faro-shop/compare/0.47.10...0.47.11) (2025-05-12)
+
+
+### Bug Fixes
+
+* bump symfony/flex from 2.5.0 to 2.5.1 in the symfony group ([#1471](https://github.com/cedricziel/faro-shop/issues/1471)) ([1d6ad91](https://github.com/cedricziel/faro-shop/commit/1d6ad91f73571353c28f3f7c1f6a8c383911a9c3))
+
 ## [0.47.10](https://github.com/cedricziel/faro-shop/compare/0.47.9...0.47.10) (2025-05-12)
 
 
