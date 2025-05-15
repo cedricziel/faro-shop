@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.47.12](https://github.com/cedricziel/faro-shop/compare/0.47.11...0.47.12) (2025-05-15)
+
+
+### Bug Fixes
+
+* bump google/protobuf from 4.30.2 to 4.31.0 ([#1482](https://github.com/cedricziel/faro-shop/issues/1482)) ([0a8f9a4](https://github.com/cedricziel/faro-shop/commit/0a8f9a4f83cd6e02e4e849959804199abe644cbb))
+* bump laravel/framework from 12.13.0 to 12.14.0 ([#1477](https://github.com/cedricziel/faro-shop/issues/1477)) ([4d1e466](https://github.com/cedricziel/faro-shop/commit/4d1e466bf7ae231695ea1744a0e752cd90e98466))
+* bump laravel/framework from 12.14.0 to 12.14.1 ([#1481](https://github.com/cedricziel/faro-shop/issues/1481)) ([6e83adf](https://github.com/cedricziel/faro-shop/commit/6e83adf3e37dcfac8390c3ad15a287dc010c90fa))
+* bump otel/opentelemetry-collector-contrib from 0.123.0 to 0.126.0 in /docker/otelcol ([#1480](https://github.com/cedricziel/faro-shop/issues/1480)) ([245d12e](https://github.com/cedricziel/faro-shop/commit/245d12ef454c91a183cd594e7b252154bbd5445b))
+* bump the open-telemetry group with 3 updates ([#1476](https://github.com/cedricziel/faro-shop/issues/1476)) ([ab666de](https://github.com/cedricziel/faro-shop/commit/ab666ded4e24924743e256fcfbda087f8a674b92))
+* bump zenstruck/foundry from 2.4.3 to 2.5.0 ([#1478](https://github.com/cedricziel/faro-shop/issues/1478)) ([d123c0a](https://github.com/cedricziel/faro-shop/commit/d123c0a1143abeec8c928e4d8e87453113db251e))
+
 ## [0.47.11](https://github.com/cedricziel/faro-shop/compare/0.47.10...0.47.11) (2025-05-12)
 
 
