@@ -20,7 +20,7 @@
         "open-telemetry/api": "^1",
         "open-telemetry/exporter-otlp": "^1",
         "open-telemetry/exporter-zipkin": "^1",
-        "open-telemetry/opentelemetry-auto-ext-amqp": "^0.0.5",
+        "open-telemetry/opentelemetry-auto-ext-amqp": "^0.0.6",
         "open-telemetry/opentelemetry-auto-laravel": "^1.0.0",
         "open-telemetry/opentelemetry-auto-pdo": "^0.1.0",
         "open-telemetry/opentelemetry-auto-psr3": "^0.1.0",
