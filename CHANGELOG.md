@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.47.12](https://github.com/cedricziel/faro-shop/compare/0.47.11...0.47.12) (2025-05-27)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.27.1 to 7.27.3 ([#1498](https://github.com/cedricziel/faro-shop/issues/1498)) ([cd571d8](https://github.com/cedricziel/faro-shop/commit/cd571d8f6d3060a7c1ce539c0bf7bd687f6b3568))
+* bump google/protobuf from 4.30.2 to 4.31.0 ([#1482](https://github.com/cedricziel/faro-shop/issues/1482)) ([0a8f9a4](https://github.com/cedricziel/faro-shop/commit/0a8f9a4f83cd6e02e4e849959804199abe644cbb))
+* bump laravel/framework from 12.13.0 to 12.14.0 ([#1477](https://github.com/cedricziel/faro-shop/issues/1477)) ([4d1e466](https://github.com/cedricziel/faro-shop/commit/4d1e466bf7ae231695ea1744a0e752cd90e98466))
+* bump laravel/framework from 12.14.0 to 12.14.1 ([#1481](https://github.com/cedricziel/faro-shop/issues/1481)) ([6e83adf](https://github.com/cedricziel/faro-shop/commit/6e83adf3e37dcfac8390c3ad15a287dc010c90fa))
+* bump otel/opentelemetry-collector-contrib from 0.123.0 to 0.126.0 in /docker/otelcol ([#1480](https://github.com/cedricziel/faro-shop/issues/1480)) ([245d12e](https://github.com/cedricziel/faro-shop/commit/245d12ef454c91a183cd594e7b252154bbd5445b))
+* bump otel/opentelemetry-collector-contrib from 0.126.0 to 0.127.0 in /docker/otelcol ([#1497](https://github.com/cedricziel/faro-shop/issues/1497)) ([3726851](https://github.com/cedricziel/faro-shop/commit/3726851374dadfb848f585acefd44d05134b3491))
+* bump sebastian/environment from 7.2.0 to 7.2.1 ([#1489](https://github.com/cedricziel/faro-shop/issues/1489)) ([c2e00f2](https://github.com/cedricziel/faro-shop/commit/c2e00f22242d15b29c838d3bc7d9beaf2a60d41c))
+* bump symfony/flex from 2.5.1 to 2.6.0 in the symfony group ([#1488](https://github.com/cedricziel/faro-shop/issues/1488)) ([c978f26](https://github.com/cedricziel/faro-shop/commit/c978f26b4bb4a86cd87b615db38d9e9287e25c61))
+* bump symfony/flex from 2.6.0 to 2.7.0 in the symfony group ([#1494](https://github.com/cedricziel/faro-shop/issues/1494)) ([f30a46c](https://github.com/cedricziel/faro-shop/commit/f30a46cfd926f4987aefd35f21a43530acf72819))
+* bump symfony/stimulus-bundle from 2.24.0 to 2.25.1 in the symfony group ([#1483](https://github.com/cedricziel/faro-shop/issues/1483)) ([39f90f0](https://github.com/cedricziel/faro-shop/commit/39f90f0ce2248bbe8459f50c0be7589203fbdad9))
+* bump symfony/stimulus-bundle from 2.25.1 to 2.25.2 in the symfony group ([#1485](https://github.com/cedricziel/faro-shop/issues/1485)) ([f334fdc](https://github.com/cedricziel/faro-shop/commit/f334fdc82e1676c3b87cf6c660f31e3b3da0e3d9))
+* bump the grafana group with 2 updates ([#1491](https://github.com/cedricziel/faro-shop/issues/1491)) ([ba4cae9](https://github.com/cedricziel/faro-shop/commit/ba4cae9e132ad7dd4567472b716eca8306835a37))
+* bump the open-telemetry group with 2 updates ([#1492](https://github.com/cedricziel/faro-shop/issues/1492)) ([e6df89c](https://github.com/cedricziel/faro-shop/commit/e6df89c0c2700e8c7cfddc117ba7795709421435))
+* bump the open-telemetry group with 3 updates ([#1476](https://github.com/cedricziel/faro-shop/issues/1476)) ([ab666de](https://github.com/cedricziel/faro-shop/commit/ab666ded4e24924743e256fcfbda087f8a674b92))
+* bump the open-telemetry group with 8 updates ([#1486](https://github.com/cedricziel/faro-shop/issues/1486)) ([55c4803](https://github.com/cedricziel/faro-shop/commit/55c480397979a9e0e4a507229f0bd19531111079))
+* bump the symfony group with 6 updates ([#1495](https://github.com/cedricziel/faro-shop/issues/1495)) ([2d1aba1](https://github.com/cedricziel/faro-shop/commit/2d1aba1390de423acebebfc7bb6a37ba9b53db4a))
+* bump webpack from 5.99.8 to 5.99.9 ([#1484](https://github.com/cedricziel/faro-shop/issues/1484)) ([ca525ca](https://github.com/cedricziel/faro-shop/commit/ca525ca580612b333e4065f8e3c599fa8ca391d2))
+* bump zenstruck/foundry from 2.4.3 to 2.5.0 ([#1478](https://github.com/cedricziel/faro-shop/issues/1478)) ([d123c0a](https://github.com/cedricziel/faro-shop/commit/d123c0a1143abeec8c928e4d8e87453113db251e))
+* bump zenstruck/foundry from 2.5.0 to 2.5.1 ([#1493](https://github.com/cedricziel/faro-shop/issues/1493)) ([38b6ab7](https://github.com/cedricziel/faro-shop/commit/38b6ab788b439990826f68a603f0dd6d53369ee8))
+* bump zenstruck/foundry from 2.5.1 to 2.5.2 ([#1496](https://github.com/cedricziel/faro-shop/issues/1496)) ([7d2fa25](https://github.com/cedricziel/faro-shop/commit/7d2fa2580b7193c53e6189c4bab670a09cb7673f))
+
 ## [0.47.11](https://github.com/cedricziel/faro-shop/compare/0.47.10...0.47.11) (2025-05-12)
 
 
