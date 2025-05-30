@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.47.13](https://github.com/cedricziel/faro-shop/compare/0.47.12...0.47.13) (2025-05-30)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.27.3 to 7.27.4 ([#1506](https://github.com/cedricziel/faro-shop/issues/1506)) ([cbc2e42](https://github.com/cedricziel/faro-shop/commit/cbc2e42f4730e23309db832778cf272e69dec8af))
+* bump laravel/framework from 12.15.0 to 12.16.0 ([#1502](https://github.com/cedricziel/faro-shop/issues/1502)) ([81c15d7](https://github.com/cedricziel/faro-shop/commit/81c15d729e8c5101a9823ce3b9eab1c9f5b92e4f))
+* bump symfony/flex from 2.7.0 to 2.7.1 in the symfony group ([#1501](https://github.com/cedricziel/faro-shop/issues/1501)) ([8e9f776](https://github.com/cedricziel/faro-shop/commit/8e9f77652801582bd97c1c44e85a3034f2aea248))
+* bump the symfony group with 2 updates ([#1507](https://github.com/cedricziel/faro-shop/issues/1507)) ([cd36c90](https://github.com/cedricziel/faro-shop/commit/cd36c907b874c557e82646f784fcc7fc88c69386))
+* bump the symfony group with 52 updates ([#1504](https://github.com/cedricziel/faro-shop/issues/1504)) ([e98c02f](https://github.com/cedricziel/faro-shop/commit/e98c02f36b7d3fee1e6d4656501ffca2e04b629b))
+
 ## [0.47.12](https://github.com/cedricziel/faro-shop/compare/0.47.11...0.47.12) (2025-05-27)
 
 
