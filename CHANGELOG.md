@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.47.14](https://github.com/cedricziel/faro-shop/compare/0.47.13...0.47.14) (2025-06-02)
+
+
+### Bug Fixes
+
+* bump nikic/php-parser from 5.4.0 to 5.5.0 ([#1514](https://github.com/cedricziel/faro-shop/issues/1514)) ([7f6650f](https://github.com/cedricziel/faro-shop/commit/7f6650fa4a07a880b725b932ddd87e3d308c3baf))
+* bump ramsey/uuid from 4.7.6 to 4.8.1 ([#1513](https://github.com/cedricziel/faro-shop/issues/1513)) ([a2b0ada](https://github.com/cedricziel/faro-shop/commit/a2b0ada2890ebb41c2deeda5200630e2fba4d2bc))
+* bump zenstruck/foundry from 2.5.3 to 2.5.4 ([#1510](https://github.com/cedricziel/faro-shop/issues/1510)) ([8a990db](https://github.com/cedricziel/faro-shop/commit/8a990db22f031e7e2724ab40c6aaf6c81b78743a))
+
 ## [0.47.13](https://github.com/cedricziel/faro-shop/compare/0.47.12...0.47.13) (2025-05-30)
 
 
