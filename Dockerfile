@@ -1,7 +1,7 @@
 #syntax=docker/dockerfile:1.4
 
-FROM php:8.4.5-fpm-alpine AS php_upstream
-FROM ghcr.io/cedricziel/faro-shop-php:8.5.3 AS php_base_image
+FROM php:8.4.7-fpm-alpine AS php_upstream
+FROM ghcr.io/cedricziel/faro-shop-php:8.5.6 AS php_base_image
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 FROM composer/composer:2-bin AS composer_upstream
 FROM --platform=$BUILDPLATFORM caddy:2.9.1-alpine AS caddy_upstream
@@ -117,7 +117,7 @@ RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 # hadolint ignore=DL3059
 RUN GOOS=$TARGETOS GOARCH=${TARGETARCH} /root/go/bin/xcaddy build \
     --with github.com/dunglas/mercure/caddy@v0.17.1 \
-    --with github.com/dunglas/vulcain/caddy
+    --with github.com/dunglas/vulcain/caddy@v1.1.1
 
 # Base Caddy image
 FROM caddy_upstream AS caddy_base

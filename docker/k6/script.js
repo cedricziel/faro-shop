@@ -1,5 +1,6 @@
 import http from 'k6/http';
-import { check, sleep } from 'k6';
+import { sleep } from 'k6';
+import { check } from 'https://jslib.k6.io/k6-utils/1.5.0/index.js';
 import { browser } from 'k6/browser';
 
 export const options = {
@@ -28,8 +29,8 @@ if (__ENV.K6_CLOUD_TOKEN) {
 }
 
 export default async function () {
-    const context = browser.newContext();
-    const page = context.newPage();
+    const context = await browser.newContext();
+    const page = await context.newPage();
 
     http.get(`http://${__ENV.WEB_HOST}`);
     sleep(1);
@@ -45,12 +46,12 @@ export default async function () {
         await Promise.all([page.waitForNavigation(), detailPageButton.click()]);
         sleep(1);
 
-        check(page, {
-            'header': p => p.locator('h1').textContent() == 'Faros',
+        check(page.locator('h1'), {
+            'header': async (h1) => (await h1.textContent()) == 'Faros',
         });
 
         // Product detail page
-        page.locator('input[name="add_to_cart[quantity]"]').type(1);
+        await page.locator('input[name="add_to_cart[quantity]"]').type(1);
         const addButton = page.locator('button#add_to_cart_add')
 
         await Promise.all([page.waitForNavigation(), addButton.click()]);
@@ -62,12 +63,12 @@ export default async function () {
         await Promise.all([page.waitForNavigation(), checkoutButton.click()]);
         sleep(1);
 
-        check(page, {
-            'header': p => p.locator('h1').textContent() == 'Checkout Succeeded!',
+        check(page.locator('h1'), {
+            'header': async (h1) => (await h1.textContent()) == 'Checkout Succeeded!',
         });
 
-        page.waitForTimeout(5000);
+        await page.waitForTimeout(5000);
     } finally {
-        page.close();
+        await page.close();
     }
 }

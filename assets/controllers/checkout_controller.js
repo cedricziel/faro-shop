@@ -23,8 +23,6 @@ export default class extends Controller {
     async submit(event) {
         event.preventDefault();
 
-        faro.api.pushEvent('checkout');
-
         try {
             await fetch(this.apiValue, {
                 headers: {

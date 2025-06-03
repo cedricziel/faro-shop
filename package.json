@@ -1,15 +1,15 @@
 {
     "devDependencies": {
-        "@babel/core": "^7.26.10",
-        "@babel/preset-env": "^7.26.9",
-        "@grafana/faro-webpack-plugin": "^0.5.0",
+        "@babel/core": "^7.27.4",
+        "@babel/preset-env": "^7.27.2",
+        "@grafana/faro-webpack-plugin": "^0.5.1",
         "@hotwired/stimulus": "^3.0.0",
-        "@symfony/stimulus-bridge": "^4.0.0",
+        "@symfony/stimulus-bridge": "^4.0.1",
         "@symfony/webpack-encore": "^5.1.0",
-        "core-js": "^3.41.0",
+        "core-js": "^3.42.0",
         "git-revision-webpack-plugin": "^5.0.0",
         "regenerator-runtime": "^0.14.1",
-        "webpack": "^5.98.0",
+        "webpack": "^5.99.9",
         "webpack-cli": "^5.1.4",
         "webpack-notifier": "^1.15.0"
     },
@@ -22,8 +22,8 @@
         "build": "encore production --progress --profile"
     },
     "dependencies": {
-        "@grafana/faro-web-sdk": "^1.14.3",
-        "@grafana/faro-web-tracing": "^1.14.3",
+        "@grafana/faro-web-sdk": "^1.18.2",
+        "@grafana/faro-web-tracing": "^1.18.2",
         "@stimulus-components/content-loader": "^5.0.0"
     }
 }
