@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.47.15](https://github.com/cedricziel/faro-shop/compare/0.47.14...0.47.15) (2025-06-04)
+
+
+### Bug Fixes
+
+* bump google/protobuf from 4.31.0 to 4.31.1 ([#1505](https://github.com/cedricziel/faro-shop/issues/1505)) ([2e5e3ff](https://github.com/cedricziel/faro-shop/commit/2e5e3ffa607b9a7e63cf5b98f5028bd4a715e56c))
+* bump laravel/framework from 12.16.0 to 12.17.0 ([#1518](https://github.com/cedricziel/faro-shop/issues/1518)) ([d2c1dfc](https://github.com/cedricziel/faro-shop/commit/d2c1dfc1f19cfad78481ec31a412526fd9d9d26b))
+* test chart cross-platform ([#1347](https://github.com/cedricziel/faro-shop/issues/1347)) ([9f212b4](https://github.com/cedricziel/faro-shop/commit/9f212b4eaed51e1a78390c23efd004584761c159))
+
 ## [0.47.14](https://github.com/cedricziel/faro-shop/compare/0.47.13...0.47.14) (2025-06-02)
 
 
