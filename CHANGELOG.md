@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.47.16](https://github.com/cedricziel/faro-shop/compare/0.47.15...0.47.16) (2025-06-06)
+
+
+### Bug Fixes
+
+* bump liip/test-fixtures-bundle from 3.3.0 to 3.4.0 ([#1527](https://github.com/cedricziel/faro-shop/issues/1527)) ([d3b943e](https://github.com/cedricziel/faro-shop/commit/d3b943e5d056d7b65a248d858acc5be0bc9923a1))
+* bump symfony/stimulus-bundle from 2.25.2 to 2.26.0 in the symfony group ([#1525](https://github.com/cedricziel/faro-shop/issues/1525)) ([a53ac0d](https://github.com/cedricziel/faro-shop/commit/a53ac0de63394cecc331e02367d17ba7cc24d58b))
+* bump zenstruck/foundry from 2.5.4 to 2.5.5 ([#1523](https://github.com/cedricziel/faro-shop/issues/1523)) ([fbf1884](https://github.com/cedricziel/faro-shop/commit/fbf1884a84723647575ecada43980c2093b1cf26))
+* bump zenstruck/foundry from 2.5.5 to 2.6.0 ([#1524](https://github.com/cedricziel/faro-shop/issues/1524)) ([5fa5225](https://github.com/cedricziel/faro-shop/commit/5fa52253ceee311a064d247b1b88f3b42c4bc9f6))
+
 ## [0.47.15](https://github.com/cedricziel/faro-shop/compare/0.47.14...0.47.15) (2025-06-04)
 
 
