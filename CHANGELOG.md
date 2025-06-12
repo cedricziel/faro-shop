@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.47.17](https://github.com/cedricziel/faro-shop/compare/0.47.16...0.47.17) (2025-06-12)
+
+
+### Bug Fixes
+
+* bump cedricziel/faro-shop-php from 8.5.6 to 8.5.7 ([#1540](https://github.com/cedricziel/faro-shop/issues/1540)) ([de44d48](https://github.com/cedricziel/faro-shop/commit/de44d4868a0e7f2b513534518c1b434b2600f7d9))
+* bump laravel/framework from 12.17.0 to 12.18.0 ([#1539](https://github.com/cedricziel/faro-shop/issues/1539)) ([b476470](https://github.com/cedricziel/faro-shop/commit/b4764706ee2995ea80cd9a6df93c654d95082156))
+* bump nesbot/carbon from 3.9.1 to 3.10.0 ([#1541](https://github.com/cedricziel/faro-shop/issues/1541)) ([5998aeb](https://github.com/cedricziel/faro-shop/commit/5998aeb58bd542b47df1b7fd8314f474a8b96629))
+* bump otel/opentelemetry-collector-contrib from 0.127.0 to 0.128.0 in /docker/otelcol ([#1537](https://github.com/cedricziel/faro-shop/issues/1537)) ([901b1da](https://github.com/cedricziel/faro-shop/commit/901b1da8dc03750de15fdb1c49feb836a13b646a))
+
 ## [0.47.16](https://github.com/cedricziel/faro-shop/compare/0.47.15...0.47.16) (2025-06-09)
 
 
