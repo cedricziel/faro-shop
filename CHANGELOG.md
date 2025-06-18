@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.47.18](https://github.com/cedricziel/faro-shop/compare/0.47.17...0.47.18) (2025-06-18)
+
+
+### Bug Fixes
+
+* bump doctrine/dbal from 4.2.3 to 4.2.4 ([#1548](https://github.com/cedricziel/faro-shop/issues/1548)) ([bd91dc2](https://github.com/cedricziel/faro-shop/commit/bd91dc2c7716058a8bd5b84992c78281bcbb3883))
+* bump doctrine/doctrine-bundle from 2.14.0 to 2.14.1 ([#1545](https://github.com/cedricziel/faro-shop/issues/1545)) ([b6171d4](https://github.com/cedricziel/faro-shop/commit/b6171d4ca42de69865d16cf1e2074f17f8b3cf79))
+* bump doctrine/doctrine-bundle from 2.14.1 to 2.15.0 ([#1549](https://github.com/cedricziel/faro-shop/issues/1549)) ([364abd6](https://github.com/cedricziel/faro-shop/commit/364abd6d053c727031b011deb9fe93af329c1312))
+* bump doctrine/orm from 3.3.3 to 3.4.0 ([#1546](https://github.com/cedricziel/faro-shop/issues/1546)) ([04ca068](https://github.com/cedricziel/faro-shop/commit/04ca0689a4dc2ee7b9ba8bf766c89dee882dfa2a))
+* bump open-telemetry/opentelemetry-auto-laravel from 1.2.1 to 1.2.2 in the open-telemetry group ([#1550](https://github.com/cedricziel/faro-shop/issues/1550)) ([ee149ca](https://github.com/cedricziel/faro-shop/commit/ee149ca75bbb6bc6cf07557b8e7cc4178ea24b96))
+* bump phpunit/php-code-coverage from 11.0.9 to 11.0.10 ([#1552](https://github.com/cedricziel/faro-shop/issues/1552)) ([43ffd52](https://github.com/cedricziel/faro-shop/commit/43ffd52f9d08e64a9f8234cf3cbf606595978ed0))
+
 ## [0.47.17](https://github.com/cedricziel/faro-shop/compare/0.47.16...0.47.17) (2025-06-12)
 
 
