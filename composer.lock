@@ -4588,16 +4588,16 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-symfony",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-symfony.git",
-                "reference": "38adb6f6c2aefed98a386e8effae25374cba374d"
+                "reference": "0ade1e2b40de0a6349c2976c392df4ac21657acb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-symfony/zipball/38adb6f6c2aefed98a386e8effae25374cba374d",
-                "reference": "38adb6f6c2aefed98a386e8effae25374cba374d",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-symfony/zipball/0ade1e2b40de0a6349c2976c392df4ac21657acb",
+                "reference": "0ade1e2b40de0a6349c2976c392df4ac21657acb",
                 "shasum": ""
             },
             "require": {
@@ -4651,9 +4651,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-symfony/tree/1.0.1"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-symfony/tree/1.0.2"
             },
-            "time": "2025-05-14T00:19:47+00:00"
+            "time": "2025-07-09T00:12:10+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-instrumentation-installer",
