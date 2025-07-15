@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.47.19](https://github.com/cedricziel/faro-shop/compare/0.47.18...0.47.19) (2025-07-15)
+
+
+### Bug Fixes
+
+* bump cedricziel/faro-shop-php from 8.5.7 to 8.5.8 ([#1592](https://github.com/cedricziel/faro-shop/issues/1592)) ([b7090bb](https://github.com/cedricziel/faro-shop/commit/b7090bb6b6d1bb5f06ea55f01e0f60002da2f65d))
+* bump doctrine/dbal from 4.2.4 to 4.3.0 ([#1597](https://github.com/cedricziel/faro-shop/issues/1597)) ([960eac2](https://github.com/cedricziel/faro-shop/commit/960eac251b2da85748a48ce7e4c8e5f1608d646b))
+* bump otel/opentelemetry-collector-contrib from 0.129.1 to 0.130.0 in /docker/otelcol ([#1600](https://github.com/cedricziel/faro-shop/issues/1600)) ([08aba2d](https://github.com/cedricziel/faro-shop/commit/08aba2d9c8fc1e36ad2e0ba75fa749eefd176d7d))
+* bump phpstan/phpdoc-parser from 2.1.0 to 2.2.0 ([#1599](https://github.com/cedricziel/faro-shop/issues/1599)) ([6361fc9](https://github.com/cedricziel/faro-shop/commit/6361fc9e3d9693aef3e86f457f6bc3f1a609ebdb))
+* bump symfony/css-selector from 7.2.0 to 7.3.0 in the symfony group ([#1595](https://github.com/cedricziel/faro-shop/issues/1595)) ([320587e](https://github.com/cedricziel/faro-shop/commit/320587e782efcd10adb8a4485f16bec93e69374a))
+* bump the grafana group with 2 updates ([#1594](https://github.com/cedricziel/faro-shop/issues/1594)) ([3bd34b7](https://github.com/cedricziel/faro-shop/commit/3bd34b75ebbac56196fdcae560a5d75785c2f3af))
+* bump webpack from 5.100.0 to 5.100.1 ([#1596](https://github.com/cedricziel/faro-shop/issues/1596)) ([8d65bd0](https://github.com/cedricziel/faro-shop/commit/8d65bd015483bd21390f29c90a671a45883e90d4))
+* bump webpack from 5.100.1 to 5.100.2 ([#1601](https://github.com/cedricziel/faro-shop/issues/1601)) ([db068e9](https://github.com/cedricziel/faro-shop/commit/db068e9a37bc3a65f7d4beb144b7e44b35268bad))
+
 ## [0.47.18](https://github.com/cedricziel/faro-shop/compare/0.47.17...0.47.18) (2025-07-10)
 
 
