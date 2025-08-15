@@ -45,7 +45,7 @@ jobs:
     if: ${{ needs.release-please.outputs.php_release_created }}
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -102,7 +102,7 @@ jobs:
     steps:
       # Add Helm Chart to Release
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Package Helm Chart
@@ -125,7 +125,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: gh-pages
 
@@ -194,7 +194,7 @@ jobs:
 
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Cache node_modules
         uses: actions/cache@v4
@@ -235,7 +235,7 @@ jobs:
       packages: write
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - run: cp env.template .env
         shell: bash
@@ -330,7 +330,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Bump appVersion in chart
         uses: mikefarah/yq@master
