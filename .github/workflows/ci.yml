@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Lint Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
 
@@ -47,7 +47,7 @@ jobs:
       version: ${{ steps.version.outputs.VERSION }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Get Version
         id: version
@@ -64,7 +64,7 @@ jobs:
 
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Cache node_modules
         uses: actions/cache@v4
@@ -105,7 +105,7 @@ jobs:
       packages: write
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - run: cp env.template .env
         shell: bash
