@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.47.21](https://github.com/cedricziel/faro-shop/compare/0.47.20...0.47.21) (2025-08-26)
+
+
+### Bug Fixes
+
+* Bump cedricziel/faro-shop-php from 8.5.8 to 8.5.9 ([#1678](https://github.com/cedricziel/faro-shop/issues/1678)) ([2fcf917](https://github.com/cedricziel/faro-shop/commit/2fcf917de8e5f9d54347f756f8e6957b481f9d8a))
+* Bump composer/semver from 3.4.3 to 3.4.4 ([#1676](https://github.com/cedricziel/faro-shop/issues/1676)) ([925ae57](https://github.com/cedricziel/faro-shop/commit/925ae57455a71bf707137adfa0251dfbfa5659a0))
+* Bump core-js from 3.45.0 to 3.45.1 ([#1680](https://github.com/cedricziel/faro-shop/issues/1680)) ([7497a10](https://github.com/cedricziel/faro-shop/commit/7497a1064e8813dc476f147eac307ba60952881b))
+* Bump doctrine/persistence from 4.0.0 to 4.1.0 ([#1683](https://github.com/cedricziel/faro-shop/issues/1683)) ([c3ea5ec](https://github.com/cedricziel/faro-shop/commit/c3ea5ec744fb132cb35c7dc7de7ac8e8a42c1c0b))
+* Bump googleapis/release-please-action from 4.2.0 to 4.3.0 ([#1679](https://github.com/cedricziel/faro-shop/issues/1679)) ([96f4d5b](https://github.com/cedricziel/faro-shop/commit/96f4d5b950606cd23579d6c87f99e82daa4ddfcc))
+* Bump guzzlehttp/promises from 2.2.0 to 2.3.0 ([#1682](https://github.com/cedricziel/faro-shop/issues/1682)) ([1e4f052](https://github.com/cedricziel/faro-shop/commit/1e4f052e2217a865d02a01972c9dd83d1af27870))
+* Bump guzzlehttp/uri-template from 1.0.4 to 1.0.5 ([#1684](https://github.com/cedricziel/faro-shop/issues/1684)) ([6220430](https://github.com/cedricziel/faro-shop/commit/62204307d6db8f1d755506b94fa48c96bf70d981))
+* Bump phpoption/phpoption from 1.9.3 to 1.9.4 ([#1675](https://github.com/cedricziel/faro-shop/issues/1675)) ([a6e2b89](https://github.com/cedricziel/faro-shop/commit/a6e2b8928570a85ee4a305c594a4f0a7392caaf0))
+* Bump slim/slim from 4.14.0 to 4.15.0 ([#1685](https://github.com/cedricziel/faro-shop/issues/1685)) ([7821f33](https://github.com/cedricziel/faro-shop/commit/7821f33c429c1f0d0cb5f106c8b563a6a11838d3))
+* Bump symfony/flex from 2.8.1 to 2.8.2 in the symfony group ([#1681](https://github.com/cedricziel/faro-shop/issues/1681)) ([fa25887](https://github.com/cedricziel/faro-shop/commit/fa25887c474e0962d03e53b01a9af0ce9bb3a7da))
+
 ## [0.47.20](https://github.com/cedricziel/faro-shop/compare/0.47.19...0.47.20) (2025-08-20)
 
 
