@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0ae8248599c8c556ea24710384050b5",
+    "content-hash": "b17f724685ff9837b0990ae710627208",
     "packages": [
         {
             "name": "brick/math",
@@ -4270,23 +4270,23 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-pdo",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-pdo.git",
-                "reference": "63c7bdbb914e422f5cd198259e2bc7d229c8ea33"
+                "reference": "7a267a801d8337e9a7bff9de644c808d8d789e0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/63c7bdbb914e422f5cd198259e2bc7d229c8ea33",
-                "reference": "63c7bdbb914e422f5cd198259e2bc7d229c8ea33",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-pdo/zipball/7a267a801d8337e9a7bff9de644c808d8d789e0d",
+                "reference": "7a267a801d8337e9a7bff9de644c808d8d789e0d",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "ext-pdo": "*",
                 "open-telemetry/api": "^1.0",
-                "open-telemetry/sem-conv": "^1.32",
+                "open-telemetry/sem-conv": "^1.36",
                 "php": "^8.2",
                 "symfony/polyfill-mbstring": "^1.31"
             },
@@ -4329,9 +4329,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.1.1"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-pdo/tree/0.2.0"
             },
-            "time": "2025-05-14T00:19:47+00:00"
+            "time": "2025-08-07T23:05:06+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-psr15",
@@ -4523,23 +4523,23 @@
         },
         {
             "name": "open-telemetry/opentelemetry-auto-slim",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/contrib-auto-slim.git",
-                "reference": "252cd48825b8d3834708624fd2530330d314e045"
+                "reference": "6ac3ab8d24c6162acec1afa9ad05cf3d9943c7ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-slim/zipball/252cd48825b8d3834708624fd2530330d314e045",
-                "reference": "252cd48825b8d3834708624fd2530330d314e045",
+                "url": "https://api.github.com/repos/opentelemetry-php/contrib-auto-slim/zipball/6ac3ab8d24c6162acec1afa9ad05cf3d9943c7ec",
+                "reference": "6ac3ab8d24c6162acec1afa9ad05cf3d9943c7ec",
                 "shasum": ""
             },
             "require": {
                 "ext-opentelemetry": "*",
                 "ext-reflection": "*",
                 "open-telemetry/api": "^1.0",
-                "open-telemetry/sem-conv": "^1.32",
+                "open-telemetry/sem-conv": "^1.36",
                 "php": "^8.1",
                 "slim/slim": "^4"
             },
@@ -4583,9 +4583,9 @@
                 "tracing"
             ],
             "support": {
-                "source": "https://github.com/opentelemetry-php/contrib-auto-slim/tree/1.1.1"
+                "source": "https://github.com/opentelemetry-php/contrib-auto-slim/tree/1.2.0"
             },
-            "time": "2025-05-14T00:19:47+00:00"
+            "time": "2025-08-07T23:06:10+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-auto-symfony",
@@ -13373,16 +13373,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "11.0.10",
+            "version": "11.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "1a800a7446add2d79cc6b3c01c45381810367d76"
+                "reference": "4f7722aa9a7b76aa775e2d9d4e95d1ea16eeeef4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/1a800a7446add2d79cc6b3c01c45381810367d76",
-                "reference": "1a800a7446add2d79cc6b3c01c45381810367d76",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/4f7722aa9a7b76aa775e2d9d4e95d1ea16eeeef4",
+                "reference": "4f7722aa9a7b76aa775e2d9d4e95d1ea16eeeef4",
                 "shasum": ""
             },
             "require": {
@@ -13439,7 +13439,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/show"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/11.0.11"
             },
             "funding": [
                 {
@@ -13459,7 +13459,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-06-18T08:56:18+00:00"
+            "time": "2025-08-27T14:37:49+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
