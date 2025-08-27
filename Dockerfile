@@ -4,7 +4,7 @@ FROM php:8.4.11-fpm-alpine AS php_upstream
 FROM ghcr.io/cedricziel/faro-shop-php:8.5.9 AS php_base_image
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 FROM composer/composer:2-bin AS composer_upstream
-FROM --platform=$BUILDPLATFORM caddy:2.9.1-alpine AS caddy_upstream
+FROM --platform=$BUILDPLATFORM caddy:2.10.2-alpine AS caddy_upstream
 
 # Base PHP image
 FROM php_upstream AS php_base
