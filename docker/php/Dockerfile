@@ -1,4 +1,4 @@
-FROM php:8.4.11-fpm-alpine AS php_upstream
+FROM php:8.4.12-fpm-alpine AS php_upstream
 
 FROM mlocati/php-extension-installer:2 AS php_extension_installer_upstream
 
