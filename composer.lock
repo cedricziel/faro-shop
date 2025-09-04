@@ -4911,16 +4911,16 @@
         },
         {
             "name": "open-telemetry/sem-conv",
-            "version": "1.36.0",
+            "version": "1.37.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opentelemetry-php/sem-conv.git",
-                "reference": "60dd18fd21d45e6f4234ecab89c14021b6e3de9a"
+                "reference": "8da7ec497c881e39afa6657d72586e27efbd29a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opentelemetry-php/sem-conv/zipball/60dd18fd21d45e6f4234ecab89c14021b6e3de9a",
-                "reference": "60dd18fd21d45e6f4234ecab89c14021b6e3de9a",
+                "url": "https://api.github.com/repos/opentelemetry-php/sem-conv/zipball/8da7ec497c881e39afa6657d72586e27efbd29a1",
+                "reference": "8da7ec497c881e39afa6657d72586e27efbd29a1",
                 "shasum": ""
             },
             "require": {
@@ -4964,7 +4964,7 @@
                 "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
-            "time": "2025-08-04T03:22:08+00:00"
+            "time": "2025-09-03T12:08:10+00:00"
         },
         {
             "name": "php-http/discovery",
