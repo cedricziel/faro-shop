@@ -30,7 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Lint Dockerfile
-        uses: hadolint/hadolint-action@v3.2.0
+        uses: hadolint/hadolint-action@v3.3.0
 
   build-base-image:
     runs-on: ubuntu-latest
