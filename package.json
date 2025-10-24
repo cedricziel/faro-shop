@@ -1,6 +1,6 @@
 {
     "devDependencies": {
-        "@babel/core": "^7.28.4",
+        "@babel/core": "^7.28.5",
         "@babel/preset-env": "^7.28.3",
         "@grafana/faro-webpack-plugin": "^0.7.0",
         "@hotwired/stimulus": "^3.0.0",
