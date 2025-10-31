@@ -113,7 +113,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ needs.release-please.outputs.helm_release_tag_name }} ${{ needs.release-please.outputs.helm_release_tag_name }}.tgz
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: chart-archive
           path: ${{ needs.release-please.outputs.helm_release_tag_name }}.tgz
@@ -134,7 +134,7 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v6
         with:
           name: chart-archive
 
@@ -219,7 +219,7 @@ jobs:
           FARO_STACK_ID: ${{ vars.FARO_STACK_ID }}
 
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: build
           path: public/build
@@ -241,7 +241,7 @@ jobs:
         shell: bash
 
       - name: Download assets
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: build
           path: public/build
