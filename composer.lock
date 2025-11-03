@@ -15425,27 +15425,27 @@
         },
         {
             "name": "zenstruck/assert",
-            "version": "v1.5.1",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zenstruck/assert.git",
-                "reference": "39554ce3a275fbf8c870b251e620101f644e9277"
+                "reference": "f333d554e9f8e275e221f5b27bdbdc1b0aadbf02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zenstruck/assert/zipball/39554ce3a275fbf8c870b251e620101f644e9277",
-                "reference": "39554ce3a275fbf8c870b251e620101f644e9277",
+                "url": "https://api.github.com/repos/zenstruck/assert/zipball/f333d554e9f8e275e221f5b27bdbdc1b0aadbf02",
+                "reference": "f333d554e9f8e275e221f5b27bdbdc1b0aadbf02",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0",
                 "symfony/polyfill-php81": "^1.23",
-                "symfony/var-exporter": "^5.4|^6.0|^7.0"
+                "symfony/var-exporter": "^5.4|^6.0|^7.0|^8.0"
             },
             "require-dev": {
                 "phpstan/phpstan": "^1.4",
                 "phpunit/phpunit": "^9.5.21",
-                "symfony/phpunit-bridge": "^6.3|^7.0"
+                "symfony/phpunit-bridge": "^6.3|^7.0|^8.0"
             },
             "type": "library",
             "autoload": {
@@ -15472,15 +15472,19 @@
             ],
             "support": {
                 "issues": "https://github.com/zenstruck/assert/issues",
-                "source": "https://github.com/zenstruck/assert/tree/v1.5.1"
+                "source": "https://github.com/zenstruck/assert/tree/v1.6.0"
             },
             "funding": [
                 {
                     "url": "https://github.com/kbond",
                     "type": "github"
+                },
+                {
+                    "url": "https://github.com/nikophil",
+                    "type": "github"
                 }
             ],
-            "time": "2024-10-28T18:08:12+00:00"
+            "time": "2025-11-02T14:41:16+00:00"
         },
         {
             "name": "zenstruck/browser",
