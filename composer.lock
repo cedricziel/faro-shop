@@ -15490,20 +15490,20 @@
         },
         {
             "name": "zenstruck/assert",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zenstruck/assert.git",
-                "reference": "f333d554e9f8e275e221f5b27bdbdc1b0aadbf02"
+                "reference": "1e32d48847d4e82c345112ca226b21a1a792af0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zenstruck/assert/zipball/f333d554e9f8e275e221f5b27bdbdc1b0aadbf02",
-                "reference": "f333d554e9f8e275e221f5b27bdbdc1b0aadbf02",
+                "url": "https://api.github.com/repos/zenstruck/assert/zipball/1e32d48847d4e82c345112ca226b21a1a792af0a",
+                "reference": "1e32d48847d4e82c345112ca226b21a1a792af0a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "symfony/polyfill-php81": "^1.23",
                 "symfony/var-exporter": "^5.4|^6.0|^7.0|^8.0"
             },
@@ -15537,7 +15537,7 @@
             ],
             "support": {
                 "issues": "https://github.com/zenstruck/assert/issues",
-                "source": "https://github.com/zenstruck/assert/tree/v1.6.0"
+                "source": "https://github.com/zenstruck/assert/tree/v1.7.0"
             },
             "funding": [
                 {
@@ -15549,7 +15549,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-02T14:41:16+00:00"
+            "time": "2025-12-07T01:59:12+00:00"
         },
         {
             "name": "zenstruck/browser",
