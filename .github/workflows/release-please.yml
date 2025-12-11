@@ -45,7 +45,7 @@ jobs:
     if: ${{ needs.release-please.outputs.php_release_created }}
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -102,7 +102,7 @@ jobs:
     steps:
       # Add Helm Chart to Release
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Package Helm Chart
@@ -113,7 +113,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ needs.release-please.outputs.helm_release_tag_name }} ${{ needs.release-please.outputs.helm_release_tag_name }}.tgz
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: chart-archive
           path: ${{ needs.release-please.outputs.helm_release_tag_name }}.tgz
@@ -125,7 +125,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: gh-pages
 
@@ -134,7 +134,7 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v6
         with:
           name: chart-archive
 
@@ -194,7 +194,7 @@ jobs:
 
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Cache node_modules
         uses: actions/cache@v4
@@ -219,7 +219,7 @@ jobs:
           FARO_STACK_ID: ${{ vars.FARO_STACK_ID }}
 
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: build
           path: public/build
@@ -235,13 +235,13 @@ jobs:
       packages: write
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - run: cp env.template .env
         shell: bash
 
       - name: Download assets
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: build
           path: public/build
@@ -330,7 +330,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Bump appVersion in chart
         uses: mikefarah/yq@master
