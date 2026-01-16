@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.116.1](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.116.0...faro-shop-0.116.1) (2026-01-16)
+
+
+### Bug Fixes
+
+* bump league/uri-interfaces from 7.7.0 to 7.8.0 ([#1945](https://github.com/cedricziel/faro-shop/issues/1945)) ([02869fd](https://github.com/cedricziel/faro-shop/commit/02869fd4a7fb6e69cba743a27bc8ba0086652185))
+
 ## [0.116.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.115.0...faro-shop-0.116.0) (2025-08-08)
 
 
