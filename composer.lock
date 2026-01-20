@@ -15696,16 +15696,16 @@
         },
         {
             "name": "zenstruck/foundry",
-            "version": "v2.8.4",
+            "version": "v2.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zenstruck/foundry.git",
-                "reference": "f76b711ec83a4c7a1ff2bd7d3abc4a6ed8f2e44e"
+                "reference": "654a2d9f23857fdc75d37d522fcb4e56bf8b0015"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zenstruck/foundry/zipball/f76b711ec83a4c7a1ff2bd7d3abc4a6ed8f2e44e",
-                "reference": "f76b711ec83a4c7a1ff2bd7d3abc4a6ed8f2e44e",
+                "url": "https://api.github.com/repos/zenstruck/foundry/zipball/654a2d9f23857fdc75d37d522fcb4e56bf8b0015",
+                "reference": "654a2d9f23857fdc75d37d522fcb4e56bf8b0015",
                 "shasum": ""
             },
             "require": {
@@ -15713,6 +15713,7 @@
                 "php": ">=8.1",
                 "symfony/deprecation-contracts": "^2.2|^3.0",
                 "symfony/polyfill-php84": "^1.32",
+                "symfony/polyfill-php85": "^1.33",
                 "symfony/property-access": "^6.4|^7.0|^8.0",
                 "symfony/property-info": "^6.4|^7.0|^8.0",
                 "symfony/var-exporter": "^6.4.9|~7.0.9|^7.1.2|^8.0",
@@ -15738,6 +15739,7 @@
                 "symfony/console": "^6.4|^7.0|^8.0",
                 "symfony/dotenv": "^6.4|^7.0|^8.0",
                 "symfony/event-dispatcher": "^6.4|^7.0|^8.0",
+                "symfony/flex": "^2.10",
                 "symfony/framework-bundle": "^6.4|^7.0|^8.0",
                 "symfony/maker-bundle": "^1.55",
                 "symfony/phpunit-bridge": "^6.4.26|^7.0|^8.0",
@@ -15753,6 +15755,9 @@
             "extra": {
                 "psalm": {
                     "pluginClass": "Zenstruck\\Foundry\\Psalm\\FoundryPlugin"
+                },
+                "symfony": {
+                    "allow-contrib": false
                 },
                 "bamarni-bin": {
                     "bin-links": true,
@@ -15799,7 +15804,7 @@
             ],
             "support": {
                 "issues": "https://github.com/zenstruck/foundry/issues",
-                "source": "https://github.com/zenstruck/foundry/tree/v2.8.4"
+                "source": "https://github.com/zenstruck/foundry/tree/v2.8.5"
             },
             "funding": [
                 {
@@ -15811,7 +15816,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-12-23T14:33:33+00:00"
+            "time": "2026-01-20T13:32:24+00:00"
         }
     ],
     "aliases": [],
