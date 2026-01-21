@@ -15696,20 +15696,20 @@
         },
         {
             "name": "zenstruck/foundry",
-            "version": "v2.8.5",
+            "version": "v2.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zenstruck/foundry.git",
-                "reference": "654a2d9f23857fdc75d37d522fcb4e56bf8b0015"
+                "reference": "6b2c338241148ad1e8ee980b38d40703514cd685"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zenstruck/foundry/zipball/654a2d9f23857fdc75d37d522fcb4e56bf8b0015",
-                "reference": "654a2d9f23857fdc75d37d522fcb4e56bf8b0015",
+                "url": "https://api.github.com/repos/zenstruck/foundry/zipball/6b2c338241148ad1e8ee980b38d40703514cd685",
+                "reference": "6b2c338241148ad1e8ee980b38d40703514cd685",
                 "shasum": ""
             },
             "require": {
-                "fakerphp/faker": "^1.23",
+                "fakerphp/faker": "^1.24",
                 "php": ">=8.1",
                 "symfony/deprecation-contracts": "^2.2|^3.0",
                 "symfony/polyfill-php84": "^1.32",
@@ -15804,7 +15804,7 @@
             ],
             "support": {
                 "issues": "https://github.com/zenstruck/foundry/issues",
-                "source": "https://github.com/zenstruck/foundry/tree/v2.8.5"
+                "source": "https://github.com/zenstruck/foundry/tree/v2.8.6"
             },
             "funding": [
                 {
@@ -15816,7 +15816,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-20T13:32:24+00:00"
+            "time": "2026-01-20T19:53:12+00:00"
         }
     ],
     "aliases": [],
