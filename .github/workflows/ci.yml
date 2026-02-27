@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Lint Dockerfile
         uses: hadolint/hadolint-action@v3.3.0
 
@@ -47,7 +47,7 @@ jobs:
       version: ${{ steps.version.outputs.VERSION }}
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Get Version
         id: version
@@ -64,10 +64,10 @@ jobs:
 
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Cache node_modules
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: npm-cache-node-modules
         with:
           path: node_modules
@@ -89,7 +89,7 @@ jobs:
           FARO_STACK_ID: ${{ vars.FARO_STACK_ID }}
 
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build
           path: public/build
@@ -105,13 +105,13 @@ jobs:
       packages: write
     steps:
       - name: Fetch source from event
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - run: cp env.template .env
         shell: bash
 
       - name: Download assets
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: build
           path: public/build
