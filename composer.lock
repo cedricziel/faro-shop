@@ -1882,16 +1882,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.11.1",
+            "version": "7.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "5af96f374e0ab4ebd747b8310888c99d3adb0a8c"
+                "reference": "bf5f35ad4b774b9d7c5766c02035e865e7e3fdab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/5af96f374e0ab4ebd747b8310888c99d3adb0a8c",
-                "reference": "5af96f374e0ab4ebd747b8310888c99d3adb0a8c",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/bf5f35ad4b774b9d7c5766c02035e865e7e3fdab",
+                "reference": "bf5f35ad4b774b9d7c5766c02035e865e7e3fdab",
                 "shasum": ""
             },
             "require": {
@@ -1990,7 +1990,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.11.1"
+                "source": "https://github.com/guzzle/guzzle/tree/7.11.2"
             },
             "funding": [
                 {
@@ -2006,7 +2006,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-06-07T22:54:06+00:00"
+            "time": "2026-06-12T21:49:57+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -2094,16 +2094,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.11.0",
+            "version": "2.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "bbb5e61349fa5cb822b3e87842b951088b76b81f"
+                "reference": "640e2897bbee822dbc8af761d49e1a29b1f2a6b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/bbb5e61349fa5cb822b3e87842b951088b76b81f",
-                "reference": "bbb5e61349fa5cb822b3e87842b951088b76b81f",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/640e2897bbee822dbc8af761d49e1a29b1f2a6b1",
+                "reference": "640e2897bbee822dbc8af761d49e1a29b1f2a6b1",
                 "shasum": ""
             },
             "require": {
@@ -2193,7 +2193,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.11.0"
+                "source": "https://github.com/guzzle/psr7/tree/2.11.1"
             },
             "funding": [
                 {
@@ -2209,7 +2209,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-06-02T12:30:48+00:00"
+            "time": "2026-06-12T21:50:12+00:00"
         },
         {
             "name": "guzzlehttp/uri-template",
@@ -2299,16 +2299,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v13.15.0",
+            "version": "v13.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7e23b2aa4e1133a43835c93a810b4bedc40e425b"
+                "reference": "66d5cdac5afd508dc6519ca59f5cc9b2c93a2b67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7e23b2aa4e1133a43835c93a810b4bedc40e425b",
-                "reference": "7e23b2aa4e1133a43835c93a810b4bedc40e425b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/66d5cdac5afd508dc6519ca59f5cc9b2c93a2b67",
+                "reference": "66d5cdac5afd508dc6519ca59f5cc9b2c93a2b67",
                 "shasum": ""
             },
             "require": {
@@ -2519,7 +2519,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-06-09T13:45:51+00:00"
+            "time": "2026-06-16T15:21:58+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -13001,16 +13001,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "9007ea6f45ecf352a9422b36644e4bfc039b9155"
+                "reference": "2ccb7c2e821038c03a3e6e1700c570c158c55f70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/9007ea6f45ecf352a9422b36644e4bfc039b9155",
-                "reference": "9007ea6f45ecf352a9422b36644e4bfc039b9155",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/2ccb7c2e821038c03a3e6e1700c570c158c55f70",
+                "reference": "2ccb7c2e821038c03a3e6e1700c570c158c55f70",
                 "shasum": ""
             },
             "require": {
@@ -13061,9 +13061,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/2.4.0"
+                "source": "https://github.com/webmozarts/assert/tree/2.4.1"
             },
-            "time": "2026-05-20T13:07:01+00:00"
+            "time": "2026-06-15T15:31:57+00:00"
         }
     ],
     "packages-dev": [
