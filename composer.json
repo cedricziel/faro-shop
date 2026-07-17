@@ -13,7 +13,7 @@
         "doctrine/doctrine-fixtures-bundle": "^4.0",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^3.0",
-        "google/protobuf": "^4.28",
+        "google/protobuf": "^5.35",
         "guzzlehttp/guzzle": "^7.8",
         "guzzlehttp/promises": "^2.0",
         "nyholm/psr7": "^1.8",
