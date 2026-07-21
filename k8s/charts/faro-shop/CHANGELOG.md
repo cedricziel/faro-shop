@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.116.1](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.116.0...faro-shop-0.116.1) (2026-05-22)
+
+
+### Bug Fixes
+
+* Bump guzzlehttp/promises from 2.4.0 to 2.4.1 ([#2172](https://github.com/cedricziel/faro-shop/issues/2172)) ([24d4fd2](https://github.com/cedricziel/faro-shop/commit/24d4fd2ef026e927b0e2e81b1642384d5495f1d6))
+
 ## [0.116.0](https://github.com/cedricziel/faro-shop/compare/faro-shop-0.115.0...faro-shop-0.116.0) (2025-08-08)
 
 
